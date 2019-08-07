@@ -30,7 +30,7 @@ August 19, 2019
 ----
 ## about me
 
-![family picture](images\IMG_5266_edit.jpg)
+![family picture](..\images\IMG_5266_edit.jpg)
 
 ----
 ## education
@@ -46,17 +46,17 @@ August 19, 2019
 
 ----
 ## research
-![picture of chopped carbon fiber prepreg](images\Formosa_Chopped_Carbon_Fiber_CSc_bw.jpg)
+![picture of chopped carbon fiber prepreg](..\images\Formosa_Chopped_Carbon_Fiber_CSc_bw.jpg)
 
 ----
 ## research
-![picture of lamborghini symbol made from compression molded chopped carbon fiber](images\lamborghini-chopped-fiber-badges-rough.jpg)
+![picture of lamborghini symbol made from compression molded chopped carbon fiber](..\images\lamborghini-chopped-fiber-badges-rough.jpg)
 
 ----
 ## research
 
   <div class='left'>
-![picture illustrating the fused deposition modeling 3D printing process, where plastic filament is melted and deposited next to other filament, and fuses together](images\3D-printing.png)
+![picture illustrating the fused deposition modeling 3D printing process, where plastic filament is melted and deposited next to other filament, and fuses together](..\images\3D-printing.png)
   </div>
 
   <div class='right'>
@@ -196,8 +196,8 @@ August 19, 2019
 
 -   When you have something more important than class to take care of it, please take care of it outside of class
 
-Calculus of Tensors
-===================
+---
+# Calculus of Tensors
 
 ----
 ## scalars, vectors, matrices

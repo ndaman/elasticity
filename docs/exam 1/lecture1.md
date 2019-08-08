@@ -359,48 +359,35 @@ $$\[\\sigma\] = \\begin{bmatrix}
     c\_{21} & c\_{22}
     \\end{bmatrix}$
 
--   *c*<sub>11</sub> = *a*<sub>11</sub>*b*<sub>11</sub> + *a*<sub>12</sub>*b*<sub>21</sub>
-
--   *c*<sub>12</sub> = *a*<sub>11</sub>*b*<sub>21</sub> + *a*<sub>12</sub>*b*<sub>22</sub>
-
--   *c*<sub>*i*j*</sub> = *a*<sub>*i*k*</sub>*b*<sub>*k*j*</sub>
+-   <!-- .element class="fragment"-->*c*<sub>11</sub> = *a*<sub>11</sub>*b*<sub>11</sub> + *a*<sub>12</sub>*b*<sub>21</sub>
+-   <!-- .element class="fragment"-->*c*<sub>12</sub> = *a*<sub>11</sub>*b*<sub>21</sub> + *a*<sub>12</sub>*b*<sub>22</sub>
+-   <!-- .element class="fragment" -->*c*<sub>*ij*</sub> = *a*<sub>*ik*</sub>*b*<sub>*kj*</sub>
 
 ----
 ## symmetry
 
 -   Symmetry can be a very powerful tool in Elasticity
-
 -   Here we define some useful forms of symmetry in index notation
-
 -   Symmetric
+    -   *a*<sub>*ij...z*</sub> = *a*<sub>*z...ji*</sub>
+    -   *a*<sub>*ij...m...n...z*</sub> = *a*<sub>*ij...n...m...z*</sub>
 
-    -   *a*<sub>*i*j*...*z*</sub> = *a*<sub>*z*...*j*i*</sub>
-
-    -   *a*<sub>*i*j*...*m*...*n*...*z*</sub> = *a*<sub>*i*j*...*n*...*m*...*z*</sub>
-
+----
+## anti-symmetry
 -   Anti-symmetric (skew symmetric)
-
-    -   *a*<sub>*i*j*...*z*</sub> = −*a*<sub>*z*...*j*i*</sub>
-
-    -   *a*<sub>*i*j*...*m*...*n*...*z*</sub> = −*a*<sub>*i*j*...*n*...*m*...*z*</sub>
+    -   *a*<sub>*ij...z*</sub> = −*a*<sub>*z...ji*</sub>
+    -   *a*<sub>*ij...m...n...z*</sub> = −*a*<sub>*ij...n...m...z*</sub>
 
 ----
 ## symmetry
 
 -   Useful identity
-
-    -   If *a*<sub>*i*j*...*m*...*n*...*k*</sub> is symmetric in *m*n* and *b*<sub>*p*q*...*m*...*n*...*r*</sub> is antisymmetric in *m*n*, then the product is zero
-
-    -   *a*<sub>*i*j*...*m*...*n*...*k*</sub>*b*<sub>*p*q*...*m*...*n*...*r*</sub> = 0
-
+    -   If *a*<sub>*ij...m...n...k*</sub> is symmetric in *mn* and *b*<sub>*pq...m...n...r*</sub> is antisymmetric in *mn*, then the product is zero
+    -   *a*<sub>*ij...m...n...k*</sub>*b*<sub>*pq...m...n...r*</sub> = 0
 -   We can also write any tensor as the sum of its symmetric and anti-symmetric parts
-
     -   $a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
-
 -   This textbook uses a special shortcut notation for the symmetric and anti-symmetric portions of a tensor
-
     -   Symmetric: $a\_{(ij)} = \\frac{1}{2}(a\_{ij}+a\_{ji})$
-
     -   Anti-symmetric: $a\_{\[ij\]} = \\frac{1}{2}(a\_{ij}-a\_{ji})$
 
 ----

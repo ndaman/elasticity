@@ -129,18 +129,34 @@ August 19, 2019
 ----
 ## tentative outline
 
--   Chapter 6 - Energy principles
-    -   6 Nov - 13 Nov (3 lectures)
--   Chapter 7-8 - Two-dimensional problems
-    -   15 Nov - 27 Nov (3 lectures)
--   Chapter 10 - Complex variables
-    -   1 Dec - 3 Dec
--   Special topics
-    -   No homework
-    -   Not on final exam
-    -   Anisotropic elasticity
-    -   Heterogeneous materials
-    -   Numerical applications (finite elements)
+<div class="left">
+<ul>
+	<li>Chapter 6 - Energy principles</li>
+	<ul>
+		<li>6 Nov - 13 Nov (3 lectures)</li>
+	</ul>
+	<li>Chapter 7-8 - Two-dimensional problems</li>
+	<ul>
+		<li>15 Nov - 27 Nov (3 lectures)</li>
+	</ul>
+	<li>Chapter 10 - Complex variables</li>
+	<ul>
+		<li>1 Dec - 3 Dec</li>
+	</ul>
+</ul>
+</div>
+<div class="right">
+	<ul>
+		<li>Special topics</li>
+		<ul>
+			<li>No homework</li>
+			<li>Not on final exam</li>
+			<li>Anisotropic elasticity</li>
+			<li>Heterogeneous materials</li>
+			<li>Numerical applications (finite elements)</li>
+		</ul>
+	</ul>
+</div>
 
 ----
 ## final exam

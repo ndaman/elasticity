@@ -103,10 +103,9 @@ August 19, 2019
 -   Let me know if you do not receive the e-mail, you may need to update your information in Blackboard
 -   Take advantage of office hours, this is time that I have already set aside for you
 -   If the regular office hours do not work for your schedule, send me an e-mail and we can work out a time to meet
--   While in person visits are often the most helpful, I will always try to answer questions as best as I can via e-mail
 
 ----
-## tentative course outline
+## tentative outline
 
 -   Chapter 1 - Calculus of tensors
     -   19 Aug - 28 Aug (4 lectures)
@@ -116,49 +115,31 @@ August 19, 2019
     -   18 Sep
 
 ----
-## tentative course outline
+## tentative outline
 
 -   Chapter 3 - Stress
-
     -   20 Sep - 27 Sep (3 lectures)
-
 -   Chapter 4 - Constitutive equations
-
     -   2 Oct - 9 Oct (3 lectures)
-
 -   Chapter 5 - Solution strategies
-
     -   11 Oct - 23 Oct (3 lectures)
-
 -   Exam 2 (Chapters 3-5)
-
     -   1 Nov
 
 ----
-## tentative course outline
+## tentative outline
 
 -   Chapter 6 - Energy principles
-
     -   6 Nov - 13 Nov (3 lectures)
-
 -   Chapter 7-8 - Two-dimensional problems
-
     -   15 Nov - 27 Nov (3 lectures)
-
 -   Chapter 10 - Complex variables
-
     -   1 Dec - 3 Dec
-
 -   Special topics
-
     -   No homework
-
     -   Not on final exam
-
     -   Anisotropic elasticity
-
     -   Heterogeneous materials
-
     -   Numerical applications (finite elements)
 
 ----

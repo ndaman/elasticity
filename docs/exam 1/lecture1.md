@@ -30,7 +30,7 @@ August 19, 2019
 ----
 ## about me
 
-![family picture](..\images\IMG_5266_edit.jpg) <!-- .element width=75% -->
+![family picture](..\images\IMG_5266_edit.jpg) <!-- .element width="75%" -->
 
 ----
 ## education
@@ -131,15 +131,15 @@ August 19, 2019
 
 <div class="left">
 <ul>
-	<li>Chapter 6 - Energy principles</li>
+	<li>Ch 6 - Energy principles</li>
 	<ul>
 		<li>6 Nov - 13 Nov (3 lectures)</li>
 	</ul>
-	<li>Chapter 7-8 - Two-dimensional problems</li>
+	<li>Ch 7-8 - 2D problems</li>
 	<ul>
 		<li>15 Nov - 27 Nov (3 lectures)</li>
 	</ul>
-	<li>Chapter 10 - Complex variables</li>
+	<li>Ch 10 - Complex variables</li>
 	<ul>
 		<li>1 Dec - 3 Dec</li>
 	</ul>
@@ -161,12 +161,9 @@ August 19, 2019
 ----
 ## final exam
 
--   Wednesday 13 December
-
+-   Wednesday 11 December
 -   3:00 - 4:50 pm
-
 -   Cannot take final exam at any other time, make travel plans accordingly
-
 -   Comprehensive
 
 ----

@@ -20,6 +20,7 @@ August 19, 2019
 * introduction
 * syllabus and schedule
 * calculus of tensors
+* examples
 
 <!-- vim-markdown-toc -->
 
@@ -493,7 +494,7 @@ $$u\_{i,j} = \\frac{\\partial}{\\partial x\_j} u\_i = \\begin{bmatrix}
 \\end{bmatrix}$$
 
 ---
-examples
+# examples
 
 ----
 ## example 1

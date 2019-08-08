@@ -20,7 +20,6 @@ August 19, 2019
 * introduction
 * syllabus and schedule
 * calculus of tensors
-* Examples
 
 <!-- vim-markdown-toc -->
 
@@ -386,6 +385,10 @@ $$\[\\sigma\] = \\begin{bmatrix}
     -   *a*<sub>*ij...m...n...k*</sub>*b*<sub>*pq...m...n...r*</sub> = 0
 -   We can also write any tensor as the sum of its symmetric and anti-symmetric parts
     -   $a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
+
+----
+## symmetry
+
 -   This textbook uses a special shortcut notation for the symmetric and anti-symmetric portions of a tensor
     -   Symmetric: $a\_{(ij)} = \\frac{1}{2}(a\_{ij}+a\_{ji})$
     -   Anti-symmetric: $a\_{\[ij\]} = \\frac{1}{2}(a\_{ij}-a\_{ji})$
@@ -394,120 +397,120 @@ $$\[\\sigma\] = \\begin{bmatrix}
 ## special symbols
 
 -   For convenience we define two symbols in index notation
-
 -   *Kronecker delta* is a general tensor form of the Identity Matrix
-    $$\\delta\_{ij} = \\left\\{
-    \\begin{array}{ll}
-    1& \\text{if $i=j$}\\\\
-    0& \\text{otherwise}
-    \\end{array}
-    \\right. = \\begin{bmatrix}
-    1 & 0 & 0\\\\
-    0 & 1 & 0 \\\\
-    0 & 0 & 1
-    \\end{bmatrix}$$
+
+$$\\delta\_{ij} = \\left\\{
+\\begin{array}{ll}
+1& \\text{if $i=j$}\\\\
+0& \\text{otherwise}
+\\end{array}
+\\right. = \\begin{bmatrix}
+1 & 0 & 0\\\\
+0 & 1 & 0 \\\\
+0 & 0 & 1
+\\end{bmatrix}$$
 
 -   Is also used for higher order tensors
 
--   *δ*<sub>*i*j*</sub> = *δ*<sub>*j*i*</sub>
+----
+## Kronecker delta
 
--   *δ*<sub>*i*i*</sub>= 3
-
--   *δ*<sub>*i*j*</sub>*a*<sub>*j*</sub>= *a*<sub>*i*</sub>
-
--   *δ*<sub>*i*j*</sub>*a*<sub>*i*j*</sub>= *a*<sub>*i*i*</sub>
+-   *δ*<sub>*ij*</sub> = *δ*<sub>*ji*</sub>
+-   *δ*<sub>*ii*</sub>= 3
+-   *δ*<sub>*ij*</sub>*a*<sub>*j*</sub>= *a*<sub>*i*</sub>
+-   *δ*<sub>*ij*</sub>*a*<sub>*ij*</sub>= *a*<sub>*ii*</sub>
 
 ----
 ## special symbols
 
 -   *alternating symbol* or *permutation symbol*
-    $$\\epsilon\_{ijk} = \\left\\{
-    \\begin{array}{rl}
-    1 & \\text{if $ijk$ is an even permutation of 1,2,3}\\\\
-    -1 & \\text{if $ijk$ is an odd permutation of 1,2,3}\\\\
-    0 & \\text{otherwise}
-    \\end{array}
-    \\right.$$
+
+$$\\epsilon\_{ijk} = \\left\\{
+\\begin{array}{rl}
+1 & \\text{if $ijk$ is an even permutation of 1,2,3}\\\\
+-1 & \\text{if $ijk$ is an odd permutation of 1,2,3}\\\\
+0 & \\text{otherwise}
+\\end{array}
+\\right.$$
+
+----
+## permutation symbol
 
 -   This symbol is not used as frequently as the *Kronecker delta*
-
 -   For our uses in this course, it is enough to know that 123, 231, and 312 are even permutations
-
 -   321, 132, 213 are odd permutations
-
 -   all other indexes are zero
-
--   *ϵ*<sub>*i*j*k*</sub>*ϵ*<sub>*i*m*n*</sub> = *δ*<sub>*j*m*</sub>*δ*<sub>*k*n*</sub> − *δ*<sub>*j*n*</sub>*δ*<sub>*m*k*</sub>
+-   *ϵ*<sub>*ijk*</sub>*ϵ*<sub>*imn*</sub> = *δ*<sub>*jm*</sub>*δ*<sub>*kn*</sub> − *δ*<sub>*jn*</sub>*δ*<sub>*mk*</sub>
 
 ----
 ## determinant
 
 -   We use the alternating symbol for writing determinants and cross-products
-    $$\\det\[a\_{ij}\] = |a\_{ij}| = \\begin{vmatrix}
-    a\_{11} & a\_{12} & a\_{13}\\\\
-    a\_{21} & a\_{22} & a\_{23}\\\\
-    a\_{31} & a\_{32} & a\_{33}
-    \\end{vmatrix}
-    = \\epsilon\_{ijk}a\_{i1} a\_{j2} a\_{k3}$$
-    $$\\det\[a\_{ij}\] = \\frac{1}{6}\\epsilon\_{ijk} \\epsilon\_{pqr}a\_{ip}a\_{jq}a\_{kr}$$
+
+$$\\det\[a\_{ij}\] = |a\_{ij}| = \\begin{vmatrix}
+a\_{11} & a\_{12} & a\_{13}\\\\
+a\_{21} & a\_{22} & a\_{23}\\\\
+a\_{31} & a\_{32} & a\_{33}
+\\end{vmatrix}
+= \\epsilon\_{ijk}a\_{i1} a\_{j2} a\_{k3}$$
+
+$$\\det\[a\_{ij}\] = \\frac{1}{6}\\epsilon\_{ijk} \\epsilon\_{pqr}a\_{ip}a\_{jq}a\_{kr}$$
 
 ----
 ## cross product
 
 -   The cross-product can be written as a determinant:
-    $$\\hat{a} \\times \\hat{b} = \\begin{vmatrix}
-    \\hat{e}\_1 & \\hat{e}\_2 & \\hat{e}\_3\\\\
-    a\_1 & a\_2 & a\_3 \\\\
-    b\_1 & b\_2 & b\_3
-    \\end{vmatrix}$$
+
+$$\\hat{a} \\times \\hat{b} = \\begin{vmatrix}
+\\hat{e}\_1 & \\hat{e}\_2 & \\hat{e}\_3\\\\
+a\_1 & a\_2 & a\_3 \\\\
+b\_1 & b\_2 & b\_3
+\\end{vmatrix}$$
 
 -   Or in index notation
-    $$\\hat{a} \\times \\hat{b} = \\epsilon\_{ijk} a\_j b\_k \\hat{e}\_i$$
+
+$$\\hat{a} \\times \\hat{b} = \\epsilon\_{ijk} a\_j b\_k \\hat{e}\_i$$
 
 ----
 ## partial derivative
 
 -   We indicate (partial) derivatives using a comma
-
 -   In three dimensions, we take the partial derivative with respect to each variable (*x*, *y*, *z* or *x*<sub>1</sub>, *x*<sub>2</sub>, *x*<sub>3</sub>)
-
 -   For example a scalar property, such as density, can have a different value at any point in space
-
 -   *ρ* = *ρ*(*x*<sub>1</sub>, *x*<sub>2</sub>, *x*<sub>3</sub>)
-    $$\\rho\_{,i} = \\frac{\\partial}{\\partial x\_i} \\rho = \\left\\langle \\frac{\\partial \\rho }{\\partial x\_1}, \\frac{\\partial \\rho }{\\partial x\_2}, \\frac{\\partial \\rho }{\\partial x\_3} \\right\\rangle$$
+
+$$\\rho\_{,i} = \\frac{\\partial}{\\partial x\_i} \\rho = \\left\\langle \\frac{\\partial \\rho }{\\partial x\_1}, \\frac{\\partial \\rho }{\\partial x\_2}, \\frac{\\partial \\rho }{\\partial x\_3} \\right\\rangle$$
 
 ----
 ## partial derivative
 
 -   Similarly, if we take the partial derivative of a vector, it produces a matrix
-    $$u\_{i,j} = \\frac{\\partial}{\\partial x\_j} u\_i = \\begin{bmatrix}
-    \\frac{\\partial u\_1}{\\partial x\_1} & \\frac{\\partial u\_1}{\\partial x\_2} & \\frac{\\partial u\_1}{\\partial x\_3}\\\\
-    \\frac{\\partial u\_2}{\\partial x\_1} & \\frac{\\partial u\_2}{\\partial x\_2} & \\frac{\\partial u\_2}{\\partial x\_3}\\\\
-    \\frac{\\partial u\_3}{\\partial x\_1} & \\frac{\\partial u\_3}{\\partial x\_2} & \\frac{\\partial u\_3}{\\partial x\_3}
-    \\end{bmatrix}$$
 
-Examples
-========
+$$u\_{i,j} = \\frac{\\partial}{\\partial x\_j} u\_i = \\begin{bmatrix}
+\\frac{\\partial u\_1}{\\partial x\_1} & \\frac{\\partial u\_1}{\\partial x\_2} & \\frac{\\partial u\_1}{\\partial x\_3}\\\\
+\\frac{\\partial u\_2}{\\partial x\_1} & \\frac{\\partial u\_2}{\\partial x\_2} & \\frac{\\partial u\_2}{\\partial x\_3}\\\\
+\\frac{\\partial u\_3}{\\partial x\_1} & \\frac{\\partial u\_3}{\\partial x\_2} & \\frac{\\partial u\_3}{\\partial x\_3}
+\\end{bmatrix}$$
+
+---
+examples
 
 ----
 ## example 1
 
 -   Write the following in conventional notation
-    *T*<sub>*i*j*, *j*</sub> + *F*<sub>*i*</sub> = 0
-
--   The comma indicates a partial derivative
-
--   The first index, *i*, is not repeated in any terms, so it is a “free index”
-
+    *T*<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
+-   <!-- .element class="fragment" --> The comma indicates a partial derivative
+-   <!-- .element class="fragment" --> The first index, *i*, is not repeated in any terms, so it is a “free index”
     -   This means in a 3D coordinate system, we will have at least three equations
-
--   The second index, *j*, is repeated in the first term, indicating summation.
-
+-   <!-- .element class="fragment" --> The second index, *j*, is repeated in the first term, indicating summation.
     -   We will have exactly three equations
 
 ----
 ## example 1 (solution)
-*T*<sub>*i*j*, *j*</sub> + *F*<sub>*i*</sub> = 0
+
+*T*<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
+
 $$\\begin{aligned}
 \\frac{\\partial T\_{11}}{\\partial x\_1} + \\frac{\\partial T\_{12}}{\\partial x\_2} + \\frac{\\partial T\_{13}}{\\partial x\_3} + F\_1= 0\\\\
 \\frac{\\partial T\_{21}}{\\partial x\_1} + \\frac{\\partial T\_{22}}{\\partial x\_2} + \\frac{\\partial T\_{23}}{\\partial x\_3} + F\_2= 0\\\\
@@ -517,26 +520,18 @@ $$\\begin{aligned}
 ## example 2
 
 -   Identify whether the following expressions represent a scalar, vector, or matrix
-
 -   If index notation is used incorrectly, give a reason why
-
 -   *A*<sub>*i*</sub> = *B*<sub>*i*</sub>
-
 -   *A*<sub>*i*</sub> = *B*<sub>*i*</sub> + *C*<sub>*i*</sub>*D*<sub>*i*</sub>
-
--   *δ*<sub>*i*j*</sub>*A*<sub>*i*</sub>*B*<sub>*j*</sub>
-
+-   *δ*<sub>*ij*</sub>*A*<sub>*i*</sub>*B*<sub>*j*</sub>
 -   $\\phi = \\frac{\\partial F\_i}{\\partial x\_i}$
 
 ----
 ## example 2 (solution)
 
 -   Vector equation
-
 -   Incorrect use of index notation, *i* used as both free and dummy index
-
 -   Scalar value (both indexes are dummy indexes)
-
 -   Scalar value (could also be written *F*<sub>*i*, *i*</sub>)
 
 

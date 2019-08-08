@@ -213,7 +213,7 @@ August 19, 2019
 
 *ρ* = 25
 
-**u** = ⟨*x*, *y*⟩
+*u* = ⟨*x*, *y*⟩
 
 $$\[\\sigma\] = \\begin{bmatrix}
 \\sigma\_{xx} & \\sigma\_{xy} \\\\
@@ -309,20 +309,20 @@ $$\[\\sigma\] = \\begin{bmatrix}
 
 -   The usual laws (commutative, associative, distributive) still apply
 -   *a*<sub>*i*</sub> + *b*<sub>*i*</sub> = *b*<sub>*i*</sub> + *a*<sub>*i*</sub>
--   *a*<sub>*i**j*</sub>*b*<sub>*k*</sub> = *b*<sub>*k*</sub>*a*<sub>*i**j*</sub>
+-   *a*<sub>*ij*</sub>*b*<sub>*k*</sub> = *b*<sub>*k*</sub>*a*<sub>*ij*</sub>
 -   *a*<sub>*i*</sub> + (*b*<sub>*i*</sub> + *c*<sub>*i*</sub>)=(*a*<sub>*i*</sub> + *b*<sub>*i*</sub>)+*c*<sub>*i*</sub>
--   *a*<sub>*i*</sub>(*b*<sub>*j**k*</sub>*c*<sub>*l*</sub>)=(*a*<sub>*i*</sub>*b*<sub>*j**k*</sub>)*c*<sub>*l*</sub>
+-   *a*<sub>*i*</sub>(*b*<sub>*jk*</sub>*c*<sub>*l*</sub>)=(*a*<sub>*i*</sub>*b*<sub>*jk*</sub>)*c*<sub>*l*</sub>
 -   *a*<sub>*ij*</sub>(*b*<sub>*k*</sub> + *c*<sub>*k*</sub>)=*a*<sub>*ij*</sub>*b*<sub>*k*</sub> + *a*<sub>*ij*</sub>*c*<sub>*k*</sub>
 
 ----
 ## equality
 
 -   What does this mean? <!-- .element class="fragment" -->
-    -   *a*<sub>*i*</sub> = *b*<sub>*i*</sub> <!-- .element class="fragment" --> 
-    -   *a*<sub>1</sub> = *b*<sub>1</sub>, *a*<sub>2</sub> = *b*<sub>2</sub>, etc. <!-- .element class="fragment" --> 
+    -  <!-- .element class="fragment" -->  *a*<sub>*i*</sub> = *b*<sub>*i*</sub> 
+    -  <!-- .element class="fragment" --> *a*<sub>1</sub> = *b*<sub>1</sub>, *a*<sub>2</sub> = *b*<sub>2</sub>, etc. 
 -   What about this? <!-- .element class="fragment" --> 
-    -   *a*<sub>*i*</sub> = *b*<sub>*j*</sub> <!-- .element class="fragment" --> 
-    -   Doesn’t make sense, incorrect use of index notation <!-- .element class="fragment" --> 
+    -  <!-- .element class="fragment" --> *a*<sub>*i*</sub> = *b*<sub>*j*</sub> 
+    -  <!-- .element class="fragment" -->  Doesn’t make sense, incorrect use of index notation 
 
 ----
 ## dummy index
@@ -330,21 +330,16 @@ $$\[\\sigma\] = \\begin{bmatrix}
 -   When an index is repeated in the same term, it is referred to as a “dummy index”
 -   The dummy index indicates summation over all axes
 -   e.g. *a*<sub>*ii*</sub> = *a*<sub>11</sub> + *a*<sub>22</sub> + *a*<sub>33</sub>
-
 -   Note: summation on a matrix will reduce to a scalar, summation on higher order tensors will reduce the order by 2
 
 ----
 ## dummy index
 
 -   The dummy index can be triggered by any repeated index in a .
-
 -   Summation or not?
-
-    -   *a*<sub>*i*</sub> + *b*<sub>*i**j*</sub>*c*<sub>*j*</sub>
-
-    -   *a*<sub>*i**j*</sub> + *b*<sub>*i**j*</sub>
-
-    -   *a*<sub>*i**j*</sub> + *b*<sub>*i**j*</sub>*c*<sub>*j*</sub>
+    -   *a*<sub>*i*</sub> + *b*<sub>*ij*</sub>*c*<sub>*j*</sub>
+    -   *a*<sub>*ij*</sub> + *b*<sub>*ij*</sub>
+    -   *a*<sub>*ij*</sub> + *b*<sub>*ij*</sub>*c*<sub>*j*</sub>
 
 ----
 ## matrix multiplication
@@ -368,7 +363,7 @@ $$\[\\sigma\] = \\begin{bmatrix}
 
 -   *c*<sub>12</sub> = *a*<sub>11</sub>*b*<sub>21</sub> + *a*<sub>12</sub>*b*<sub>22</sub>
 
--   *c*<sub>*i**j*</sub> = *a*<sub>*i**k*</sub>*b*<sub>*k**j*</sub>
+-   *c*<sub>*i*j*</sub> = *a*<sub>*i*k*</sub>*b*<sub>*k*j*</sub>
 
 ----
 ## symmetry
@@ -379,24 +374,24 @@ $$\[\\sigma\] = \\begin{bmatrix}
 
 -   Symmetric
 
-    -   *a*<sub>*i**j*...*z*</sub> = *a*<sub>*z*...*j**i*</sub>
+    -   *a*<sub>*i*j*...*z*</sub> = *a*<sub>*z*...*j*i*</sub>
 
-    -   *a*<sub>*i**j*...*m*...*n*...*z*</sub> = *a*<sub>*i**j*...*n*...*m*...*z*</sub>
+    -   *a*<sub>*i*j*...*m*...*n*...*z*</sub> = *a*<sub>*i*j*...*n*...*m*...*z*</sub>
 
 -   Anti-symmetric (skew symmetric)
 
-    -   *a*<sub>*i**j*...*z*</sub> = −*a*<sub>*z*...*j**i*</sub>
+    -   *a*<sub>*i*j*...*z*</sub> = −*a*<sub>*z*...*j*i*</sub>
 
-    -   *a*<sub>*i**j*...*m*...*n*...*z*</sub> = −*a*<sub>*i**j*...*n*...*m*...*z*</sub>
+    -   *a*<sub>*i*j*...*m*...*n*...*z*</sub> = −*a*<sub>*i*j*...*n*...*m*...*z*</sub>
 
 ----
 ## symmetry
 
 -   Useful identity
 
-    -   If *a*<sub>*i**j*...*m*...*n*...*k*</sub> is symmetric in *m**n* and *b*<sub>*p**q*...*m*...*n*...*r*</sub> is antisymmetric in *m**n*, then the product is zero
+    -   If *a*<sub>*i*j*...*m*...*n*...*k*</sub> is symmetric in *m*n* and *b*<sub>*p*q*...*m*...*n*...*r*</sub> is antisymmetric in *m*n*, then the product is zero
 
-    -   *a*<sub>*i**j*...*m*...*n*...*k*</sub>*b*<sub>*p**q*...*m*...*n*...*r*</sub> = 0
+    -   *a*<sub>*i*j*...*m*...*n*...*k*</sub>*b*<sub>*p*q*...*m*...*n*...*r*</sub> = 0
 
 -   We can also write any tensor as the sum of its symmetric and anti-symmetric parts
 
@@ -427,13 +422,13 @@ $$\[\\sigma\] = \\begin{bmatrix}
 
 -   Is also used for higher order tensors
 
--   *δ*<sub>*i**j*</sub> = *δ*<sub>*j**i*</sub>
+-   *δ*<sub>*i*j*</sub> = *δ*<sub>*j*i*</sub>
 
--   *δ*<sub>*i**i*</sub>= 3
+-   *δ*<sub>*i*i*</sub>= 3
 
--   *δ*<sub>*i**j*</sub>*a*<sub>*j*</sub>= *a*<sub>*i*</sub>
+-   *δ*<sub>*i*j*</sub>*a*<sub>*j*</sub>= *a*<sub>*i*</sub>
 
--   *δ*<sub>*i**j*</sub>*a*<sub>*i**j*</sub>= *a*<sub>*i**i*</sub>
+-   *δ*<sub>*i*j*</sub>*a*<sub>*i*j*</sub>= *a*<sub>*i*i*</sub>
 
 ----
 ## special symbols
@@ -455,7 +450,7 @@ $$\[\\sigma\] = \\begin{bmatrix}
 
 -   all other indexes are zero
 
--   *ϵ*<sub>*i**j**k*</sub>*ϵ*<sub>*i**m**n*</sub> = *δ*<sub>*j**m*</sub>*δ*<sub>*k**n*</sub> − *δ*<sub>*j**n*</sub>*δ*<sub>*m**k*</sub>
+-   *ϵ*<sub>*i*j*k*</sub>*ϵ*<sub>*i*m*n*</sub> = *δ*<sub>*j*m*</sub>*δ*<sub>*k*n*</sub> − *δ*<sub>*j*n*</sub>*δ*<sub>*m*k*</sub>
 
 ----
 ## determinant
@@ -511,7 +506,7 @@ Examples
 ## example 1
 
 -   Write the following in conventional notation
-    *T*<sub>*i**j*, *j*</sub> + *F*<sub>*i*</sub> = 0
+    *T*<sub>*i*j*, *j*</sub> + *F*<sub>*i*</sub> = 0
 
 -   The comma indicates a partial derivative
 
@@ -525,7 +520,7 @@ Examples
 
 ----
 ## example 1 (solution)
-*T*<sub>*i**j*, *j*</sub> + *F*<sub>*i*</sub> = 0
+*T*<sub>*i*j*, *j*</sub> + *F*<sub>*i*</sub> = 0
 $$\\begin{aligned}
 \\frac{\\partial T\_{11}}{\\partial x\_1} + \\frac{\\partial T\_{12}}{\\partial x\_2} + \\frac{\\partial T\_{13}}{\\partial x\_3} + F\_1= 0\\\\
 \\frac{\\partial T\_{21}}{\\partial x\_1} + \\frac{\\partial T\_{22}}{\\partial x\_2} + \\frac{\\partial T\_{23}}{\\partial x\_3} + F\_2= 0\\\\
@@ -542,7 +537,7 @@ $$\\begin{aligned}
 
 -   *A*<sub>*i*</sub> = *B*<sub>*i*</sub> + *C*<sub>*i*</sub>*D*<sub>*i*</sub>
 
--   *δ*<sub>*i**j*</sub>*A*<sub>*i*</sub>*B*<sub>*j*</sub>
+-   *δ*<sub>*i*j*</sub>*A*<sub>*i*</sub>*B*<sub>*j*</sub>
 
 -   $\\phi = \\frac{\\partial F\_i}{\\partial x\_i}$
 

@@ -30,7 +30,7 @@ August 19, 2019
 ----
 ## about me
 
-![family picture](..\images\IMG_5266_edit.jpg)
+![family picture](..\images\IMG_5266_edit.jpg) <!-- .element width=75% -->
 
 ----
 ## education

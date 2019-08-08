@@ -297,11 +297,8 @@ $$\[\\sigma\] = \\begin{bmatrix}
 ## multiplication
 
 -   We can multiply a scalar by a vector
-
--   *λ**a*<sub>*i*</sub> = ⟨*λ**a*<sub>1</sub>, *λ**a*<sub>2</sub>⟩
-
+-   *λa*<sub>*i*</sub> = ⟨*λa*<sub>1</sub>, *λa*<sub>2</sub>⟩
 -   Or multiply two vectors
-
 -   $c\_{ij} = a\_i b\_j = \\begin{bmatrix}
     a\_1 b\_1 & a\_1 b\_2 \\\\
     a\_2 b\_1 & a\_2 b\_2
@@ -311,40 +308,28 @@ $$\[\\sigma\] = \\begin{bmatrix}
 ## math laws
 
 -   The usual laws (commutative, associative, distributive) still apply
-
 -   *a*<sub>*i*</sub> + *b*<sub>*i*</sub> = *b*<sub>*i*</sub> + *a*<sub>*i*</sub>
-
 -   *a*<sub>*i**j*</sub>*b*<sub>*k*</sub> = *b*<sub>*k*</sub>*a*<sub>*i**j*</sub>
-
 -   *a*<sub>*i*</sub> + (*b*<sub>*i*</sub> + *c*<sub>*i*</sub>)=(*a*<sub>*i*</sub> + *b*<sub>*i*</sub>)+*c*<sub>*i*</sub>
-
 -   *a*<sub>*i*</sub>(*b*<sub>*j**k*</sub>*c*<sub>*l*</sub>)=(*a*<sub>*i*</sub>*b*<sub>*j**k*</sub>)*c*<sub>*l*</sub>
-
--   *a*<sub>*i**j*</sub>(*b*<sub>*k*</sub> + *c*<sub>*k*</sub>)=*a*<sub>*i**j*</sub>*b*<sub>*k*</sub> + *a*<sub>*i**j*</sub>*c*<sub>*k*</sub>
+-   *a*<sub>*ij*</sub>(*b*<sub>*k*</sub> + *c*<sub>*k*</sub>)=*a*<sub>*ij*</sub>*b*<sub>*k*</sub> + *a*<sub>*ij*</sub>*c*<sub>*k*</sub>
 
 ----
 ## equality
 
--   What does this mean?
-
-    -   *a*<sub>*i*</sub> = *b*<sub>*i*</sub>
-
-    -   *a*<sub>1</sub> = *b*<sub>1</sub>, *a*<sub>2</sub> = *b*<sub>2</sub>, etc.
-
--   What about this?
-
-    -   *a*<sub>*i*</sub> = *b*<sub>*j*</sub>
-
-    -   Doesn’t make sense, incorrect use of index notation
+-   What does this mean? <!-- .element class="fragment" -->
+    -   *a*<sub>*i*</sub> = *b*<sub>*i*</sub> <!-- .element class="fragment" --> 
+    -   *a*<sub>1</sub> = *b*<sub>1</sub>, *a*<sub>2</sub> = *b*<sub>2</sub>, etc. <!-- .element class="fragment" --> 
+-   What about this? <!-- .element class="fragment" --> 
+    -   *a*<sub>*i*</sub> = *b*<sub>*j*</sub> <!-- .element class="fragment" --> 
+    -   Doesn’t make sense, incorrect use of index notation <!-- .element class="fragment" --> 
 
 ----
 ## dummy index
 
 -   When an index is repeated in the same term, it is referred to as a “dummy index”
-
 -   The dummy index indicates summation over all axes
-
--   e.g. *a*<sub>*i**i*</sub> = *a*<sub>11</sub> + *a*<sub>22</sub> + *a*<sub>33</sub>
+-   e.g. *a*<sub>*ii*</sub> = *a*<sub>11</sub> + *a*<sub>22</sub> + *a*<sub>33</sub>
 
 -   Note: summation on a matrix will reduce to a scalar, summation on higher order tensors will reduce the order by 2
 

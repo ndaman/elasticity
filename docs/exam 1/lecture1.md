@@ -19,7 +19,7 @@ August 19, 2019
 
 * introduction
 * syllabus and schedule
-* Calculus of Tensors
+* calculus of tensors
 * Examples
 
 <!-- vim-markdown-toc -->
@@ -170,56 +170,51 @@ August 19, 2019
 ## grades
 
 -   Grade breakdown
-
     -   Homework 15%
-
     -   Exam 1 25%
-
     -   Exam 2 25%
-
     -   Final Exam 35%
-
 -   Follow a traditional grading scale
 
 ----
 ## class expectations
 
 -   Consider the cost (to you or others) of your being in class
-
 -   I ask that you refrain from distracting behaviors during class
-
 -   When you have something more important than class to take care of it, please take care of it outside of class
 
 ---
-# Calculus of Tensors
+# calculus of tensors
 
 ----
-## scalars, vectors, matrices
+## scalars
 
 -   Scalar
-
     -   single value (at a point)
-
     -   e.g. temperature, density
 
+----
+## vectors
+
 -   Vector
-
     -   expressed in terms of coordinate system
-
     -   one-dimensional array
-
     -   e.g. displacement
 
+----
+## matrices
+
 -   Matrix
-
     -   two-dimensional array
-
     -   e.g. stress, strain
 
 ----
 ## scalars, vectors, matrices
+
 *ρ* = 25
+
 **u** = ⟨*x*, *y*⟩
+
 $$\[\\sigma\] = \\begin{bmatrix}
 \\sigma\_{xx} & \\sigma\_{xy} \\\\
 \\sigma\_{yx} & \\sigma\_{yy}
@@ -228,79 +223,71 @@ $$\[\\sigma\] = \\begin{bmatrix}
 ----
 ## scalars, vectors, matrices
 
--   In two dimensions
-
-    -   Scalars have 1 term
-
-    -   Vectors have 2 terms
-
-    -   Matrices have 4 terms
-
--   In three dimensions
-
-    -   Scalars have 1 term
-
-    -   Vectors have 3 terms
-
-    -   Matrices have 9 terms
+<div class="left">
+	<ul>
+		<li>In two dimensions</li>
+		<ul>
+      <li>Scalars have 1 term</li>				
+			<li>Vectors have 2 terms</li>
+			<li>Matrices have 4 terms</li>
+		</ul>
+	</ul>	
+</div>
+<div class="right">
+	<ul>
+		<li>In three dimensions</li>
+		<ul>
+			<li>Scalars have 1 term</li>
+			<li>Vectors have 3 terms</li>
+			<li>Matrices have 9 terms</li>
+		</ul>
+	</ul>
+</div>
 
 ----
 ## tensors
 
 -   Formal definition for tensors later in the course
-
 -   Scalar = 0-order tensor
-
 -   Vector = 1st-order tensor
-
 -   Matrix = 2nd-order tensor
 
+----
+## tensors
+
 -   We will also use higher-order tensors in this course
-
 -   High-order tensors are difficult to write
-
 -   It can even be difficult to distinguish vectors, scalars, and matrices in some notations
-
 -   Index notation is used to address these problems
 
 ----
 ## index notation
 
 -   Use subscripts to indicate when a variable has multiple values
-
 -   *ρ* has no subscript, and thus it must be a scalar
-
 -   *u*<sub>*i*</sub> has one subscript, *i*, indicating it has multiple values
-
 -   “Multiple” means the number of coordinate system axes, unless otherwise specified.
-
 -   *u*<sub>*i*</sub> = ⟨*u*<sub>1</sub>, *u*<sub>2</sub>, *u*<sub>3</sub>⟩
 
 ----
 ## index notation
 
--   *σ*<sub>*i**j*</sub> has two subscripts, *i* and *j*, meaning it spans the coordinate system in two directions.
-
+-   *σ*<sub>*ij*</sub> has two subscripts, *i* and *j*, meaning it spans the coordinate system in two directions.
 -   $\\sigma\_{ij} = \\begin{bmatrix}
     \\sigma\_{11} & \\sigma\_{12}\\\\
     \\sigma\_{21} & \\sigma\_{22}
     \\end{bmatrix}$
 
 -   We can use this notation for any order of tensor
-
 -   In 3D, we need a fourth-order tensor to define material stiffness, we write this in index notation as
-
--   *C*<sub>*i**j**k**l*</sub>
+-   *C*<sub>*ijkl*</sub>
 
 ----
 ## addition
 
 -   We can do arithmetic in index notation
-
 -   *a*<sub>*i*</sub> + *b*<sub>*i*</sub> = ⟨*a*<sub>1</sub> + *b*<sub>1</sub>, *a*<sub>2</sub> + *b*<sub>2</sub>⟩
-
 -   We can also use a different index in the two variables to create a matrix
-
 -   $c\_{ij} = a\_i + b\_j = \\begin{bmatrix}
     a\_1 + b\_1 & a\_1 + b\_2 \\\\
     a\_2 + b\_1 & a\_2 + b\_2

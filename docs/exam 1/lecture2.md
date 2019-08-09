@@ -199,7 +199,7 @@ $$a\_{(ij)} = \\frac{1}{2} \\left (
 \\end{bmatrix}$$
 
 ----
-## example Anti-symmetric portion
+## example anti-symmetric portion
 
 $$a\_{(ij)} = \\frac{1}{2}(a\_{ij} - a\_{ji})$$
 
@@ -257,7 +257,7 @@ $$T\_{ij} = \\begin{bmatrix}
 ----
 ## two dimensions
 
-TODO: figure
+![2D axis to illustrate coordinate transformation](../images/transform2D.png)
 
 ----
 ## dimensions
@@ -270,7 +270,7 @@ TODO: figure
 ----
 ## two dimensions
 
-TODO: figure
+![2D axis with unit vectors along the axes to illustrate coordinate transformation](../images/transform2D-unit.png)
 
 ----
 ## two dimensions
@@ -302,7 +302,7 @@ $$\\begin{aligned}
 -   $v = 2\\sqrt{2}\\langle \\frac{\\sqrt{2}}{2},\\frac{\\sqrt{2}}{2} \\rangle, 0 \\langle -\\frac{\\sqrt{2}}{2},\\frac{\\sqrt{2}}{2} \\rangle = \\langle 2, 2 \\rangle$
 
 ----
-## general transformation
+## general 
 
 -   Coordinate transformation can become much more complicated in three dimensions, and with higher-order tensors
 -   It is convenient to define a general form of the coordinate transformation in index notation
@@ -311,7 +311,7 @@ $$\\begin{aligned}
     *Q*<sub>*ij*</sub> = cos(*x*<sub>*i*</sub><sup>′</sup>, *x*<sub>*j*</sub>)
 
 ----
-## general transformation
+## general 
 
 -   We can use this form on our 2D transformation example
 
@@ -328,7 +328,7 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 \\end{bmatrix}\\end{aligned}$$
 
 ----
-## general transformation
+## general 
 
 -   We can transform any-order tensor using *Q*<sub>*ij*</sub>
 -   Vectors (first-order tensors): *v*<sub>*i*</sub><sup>′</sup> = *Q*<sub>*ij*</sub>*v*<sub>*j*</sub>
@@ -336,7 +336,7 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 -   Fourth-order tensors: *C*<sub>*ijkl*</sub><sup>′</sup> = *Q*<sub>*im*</sub>*Q*<sub>*jn*</sub>*Q*<sub>*ko*</sub>*Q*<sub>*lp*</sub>*C*<sub>*mnop*</sub>
 
 ----
-## general transformation
+## general 
 
 -   We can similarly use *Q*<sub>*ij*</sub> to find tensors in the original coordinate system
 -   Vectors (first-order tensors): *v*<sub>*i*</sub> = *Q*<sub>*ji*</sub>*v*<sub>*j*</sub><sup>′</sup>
@@ -344,7 +344,7 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 -   Fourth-order tensors: *C*<sub>*ijkl*</sub> = *Q*<sub>*mi*</sub>*Q*<sub>*nj*</sub>*Q*<sub>*ok*</sub>*Q*<sub>*pl*</sub>*C*<sub>*mnop*</sub><sup>′</sup>
 
 ----
-## general transformation
+## general 
 
 -   We can derive some interesting properties of the transformation tensor, *Q*<sub>*ij*</sub>
 -   We know that *v*<sub>*i*</sub> = *Q*<sub>*ji*</sub>*v*<sub>*j*</sub><sup>′</sup> and that *v*<sub>*i*</sub><sup>′</sup> = *Q*<sub>*ij*</sub>*v*<sub>*j*</sub>
@@ -359,21 +359,26 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 ----
 ## example
 
-TODO: Figure
-
--   Find *Q*<sub>*ij*</sub><sup>1</sup> for rotation of 60<sup>∘</sup> about *x*<sub>2</sub>
--   Find *Q*<sub>*ij*</sub><sup>2</sup> for rotation of 30<sup>∘</sup> about *x*<sub>3</sub><sup>′</sup>
--   Find *e*<sub>*i*</sub><sup>′′</sup> after both rotations
+<div class="left">
+	![empty 3D coordinate system with axes labeled for example problem](../images/example-a.png)
+</div>
+<div class="right">
+  <ul>
+    	<li>Find *Q*<sub>*ij*</sub><sup>1</sup> for rotation of 60<sup>∘</sup> about *x*<sub>2</sub> </li>
+			<li>Find *Q*<sub>*ij*</sub><sup>2</sup> for rotation of 30<sup>∘</sup> about *x*<sub>3</sub><sup>′</sup> </li>
+			<li>Find *e*<sub>*i*</sub><sup>′′</sup> after both rotations </li>
+    </ul>
+</div>
 
 ----
 ## example
 
-TODO: Figure
+![3d coordinate system after first rotation](../images/example-b.png)
 
 ----
 ## example
 
-TODO: figure
+![3d coordinate system after second rotation](../images/example-c.png)
 
 ----
 ## example

@@ -255,12 +255,12 @@ $$T\_{ij} = \\begin{bmatrix}
 # coordinate transformation
 
 ----
-## coordinate transformation in two dimensions
+## two dimensions
 
 TODO: figure
 
 ----
-## coordinate transformation in two dimensions
+## dimensions
 
 -   The vector, *v*, remains fixed, but we transform our coordinate system
 -   In the new coordinate system, the *x*<sub>2</sub><sup>′</sup> portion of *v* is zero.
@@ -268,12 +268,12 @@ TODO: figure
 -   $\\hat{e}\_1$ is a unit vector in the direction of *x*<sub>1</sub>, while $\\hat{e}\_1^\\prime$ is a unit vector in the direction of *x*<sub>1</sub><sup>′</sup>
 
 ----
-## coordinate transformation in two dimensions
+## two dimensions
 
 TODO: figure
 
 ----
-## coordinate transformation in two dimensions
+## two dimensions
 
 -   For this example, let us assume *v* = ⟨2, 2⟩ and *θ* = 45<sup>∘</sup>
 -   We can write the transformed unit vectors, $\\hat{e}\_1^\\prime$ and $\\hat{e}\_2^\\prime$ in terms of $\\hat{e}\_1$, $\\hat{e}\_2$ and the angle of rotation, *θ*.
@@ -283,7 +283,7 @@ $$\\begin{aligned}
 \\hat{e}\_2^\\prime &= \\langle -\\hat{e}\_1 \\sin \\theta , \\hat{e}\_2 \\cos \\theta \\rangle\\end{aligned}$$
 
 ----
-## coordinate transformation in two dimensions
+## two dimensions
 
 -   We can write the vector, *v*, in terms of the unit vectors describing our axis system
 -   $v = v\_1 \\hat{e}\_1 + v\_2 \\hat{e}\_2$
@@ -291,7 +291,7 @@ $$\\begin{aligned}
 -   *v* = ⟨2, 2⟩=2⟨1, 0⟩+2⟨0, 1⟩
 
 ----
-## coordinate transformation in two dimensions
+## two dimensions
 
 -   When expressed in the transformed coordinate system, we refer to *v*<sup>′</sup>
 -   *v*<sup>′</sup> = ⟨*v*<sub>1</sub>cos*θ* + *v*<sub>2</sub>sin*θ*, −*v*<sub>1</sub>sin*θ* + *v*<sub>2</sub>cos*θ*⟩
@@ -302,7 +302,7 @@ $$\\begin{aligned}
 -   $v = 2\\sqrt{2}\\langle \\frac{\\sqrt{2}}{2},\\frac{\\sqrt{2}}{2} \\rangle, 0 \\langle -\\frac{\\sqrt{2}}{2},\\frac{\\sqrt{2}}{2} \\rangle = \\langle 2, 2 \\rangle$
 
 ----
-## general coordinate transformation
+## general transformation
 
 -   Coordinate transformation can become much more complicated in three dimensions, and with higher-order tensors
 -   It is convenient to define a general form of the coordinate transformation in index notation
@@ -311,7 +311,7 @@ $$\\begin{aligned}
     *Q*<sub>*ij*</sub> = cos(*x*<sub>*i*</sub><sup>′</sup>, *x*<sub>*j*</sub>)
 
 ----
-## general coordinate transformation
+## general transformation
 
 -   We can use this form on our 2D transformation example
 
@@ -328,7 +328,7 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 \\end{bmatrix}\\end{aligned}$$
 
 ----
-## general coordinate transformation
+## general transformation
 
 -   We can transform any-order tensor using *Q*<sub>*ij*</sub>
 -   Vectors (first-order tensors): *v*<sub>*i*</sub><sup>′</sup> = *Q*<sub>*ij*</sub>*v*<sub>*j*</sub>
@@ -336,7 +336,7 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 -   Fourth-order tensors: *C*<sub>*ijkl*</sub><sup>′</sup> = *Q*<sub>*im*</sub>*Q*<sub>*jn*</sub>*Q*<sub>*ko*</sub>*Q*<sub>*lp*</sub>*C*<sub>*mnop*</sub>
 
 ----
-## general coordinate transformation
+## general transformation
 
 -   We can similarly use *Q*<sub>*ij*</sub> to find tensors in the original coordinate system
 -   Vectors (first-order tensors): *v*<sub>*i*</sub> = *Q*<sub>*ji*</sub>*v*<sub>*j*</sub><sup>′</sup>
@@ -344,7 +344,7 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 -   Fourth-order tensors: *C*<sub>*ijkl*</sub> = *Q*<sub>*mi*</sub>*Q*<sub>*nj*</sub>*Q*<sub>*ok*</sub>*Q*<sub>*pl*</sub>*C*<sub>*mnop*</sub><sup>′</sup>
 
 ----
-## general coordinate transformation
+## general transformation
 
 -   We can derive some interesting properties of the transformation tensor, *Q*<sub>*ij*</sub>
 -   We know that *v*<sub>*i*</sub> = *Q*<sub>*ji*</sub>*v*<sub>*j*</sub><sup>′</sup> and that *v*<sub>*i*</sub><sup>′</sup> = *Q*<sub>*ij*</sub>*v*<sub>*j*</sub>

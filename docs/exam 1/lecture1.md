@@ -7,10 +7,10 @@ August 19, 2019
 ----
 ## upcoming schedule
 
--   Aug 21 - Intro to Elasticity
--   Aug 23 - Coordinate Transformation
--   Aug 28 - Principal Values
--   Aug 30 - Tensor Calculus
+-   Aug 19 - Intro to Elasticity
+-   Aug 21 - Coordinate Transformation
+-   Aug 26 - Principal Values
+-   Aug 28 - Tensor Calculus
 
 ----
 ## outline
@@ -110,7 +110,7 @@ August 19, 2019
 -   Chapter 1 - Calculus of tensors
     -   19 Aug - 28 Aug (4 lectures)
 -   Chapter 2 - Kinematics
-    -   6 Sep - 13 Sep (3 lectures)
+    -   4 Sep - 11 Sep (3 lectures)
 -   Exam 1 (covers Chapter 1-2)
     -   18 Sep
 
@@ -118,13 +118,13 @@ August 19, 2019
 ## tentative outline
 
 -   Chapter 3 - Stress
-    -   20 Sep - 27 Sep (3 lectures)
+    -   23 Sep - 30 Sep (3 lectures)
 -   Chapter 4 - Constitutive equations
     -   2 Oct - 9 Oct (3 lectures)
 -   Chapter 5 - Solution strategies
-    -   11 Oct - 23 Oct (3 lectures)
+    -   16 Oct - 23 Oct (3 lectures)
 -   Exam 2 (Chapters 3-5)
-    -   1 Nov
+    -   30 Oct
 
 ----
 ## tentative outline
@@ -133,15 +133,15 @@ August 19, 2019
 <ul>
 	<li>Ch 6 - Energy principles</li>
 	<ul>
-		<li>6 Nov - 13 Nov (3 lectures)</li>
+		<li>4 Nov - 11 Nov (3 lectures)</li>
 	</ul>
 	<li>Ch 7-8 - 2D problems</li>
 	<ul>
-		<li>15 Nov - 27 Nov (3 lectures)</li>
+		<li>13 Nov - 20 Nov (3 lectures)</li>
 	</ul>
 	<li>Ch 10 - Complex variables</li>
 	<ul>
-		<li>1 Dec - 3 Dec</li>
+		<li>2 Dec - 4 Dec</li>
 	</ul>
 </ul>
 </div>

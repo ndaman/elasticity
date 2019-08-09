@@ -102,6 +102,13 @@ August 19, 2019
 # syllabus and schedule
 
 ----
+## course website
+
+-   All class materials will be posted on the [class website](https://ndaman.github.io/elasticity/#/)
+-   I will also make an effort to post to Blackboard, but it takes a little more effort, so you may need to remind me
+-   The website uses the same format as my presentations, so treat it like slides (navigate with arrow keys)
+
+----
 ## course textbook
 
 -   Martin H. Saad, *Elasticity: Theory, Application, and Numerics*

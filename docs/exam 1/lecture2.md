@@ -1,46 +1,37 @@
+# AE731
+## Theory of Elasticity
+Dr. Nicholas Smith<br/>
+Wichita State University, Department of Aerospace Engineering
+August 21, 2019
+
 ----
 ## upcoming schedule
 
--   Aug 23 - Coordinate Transformation
-
--   Aug 28 - Principal Values
-
--   Aug 30 - Tensor Calculus
-
--   Sep 4 - Labor Day (No Class)
-
--   Sep 6 - Homework 1 Due, Displacement and Strain
+-   Aug 21 - Coordinate Transformation
+-   Aug 26 - Principal Values
+-   Aug 28 - Tensor Calculus
+-   Sep 2 - Labor Day
+-   Sep 4 - Displacement and Strain, Homework 1 Due
 
 ----
-## AIAA event
+## outline
 
--   August 25, 2017 at 1:00
-
--   123 Wallace Hall
-
--   Dr. Thomas Wayman, Group Head for supersonics division at Gulfstream
-
-Review
-======
+---
+# review
 
 ----
 ## office hours
 
--   Tues 2-3
-
+-   TBD
 -   Homework will generally be due on Wednesdays
-
 -   Feel free to e-mail me for an appointment outside office hours if the time does not work for you
 
 ----
 ## homework
 
--   Homework 1 is available on Blackboard if you want to start working on it
-
--   Due on September 6 (I do not accept late homework)
-
+-   Homework 1 is available on Blackboard and course website if you want to start working on it
+-   Due on September 4 (I do not accept late homework)
 -   Covers all of Chapter 1, relatively difficult, don’t wait until last minute
-
 -   Study groups help a lot (but submit your own work)
 
 ----

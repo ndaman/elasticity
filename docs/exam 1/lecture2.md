@@ -16,6 +16,15 @@ August 21, 2019
 ----
 ## outline
 
+<!-- vim-markdown-toc GFM -->
+
+* review
+* group problems
+* coordinate transformation
+* examples
+
+<!-- vim-markdown-toc -->
+
 ---
 # review
 
@@ -37,7 +46,8 @@ August 21, 2019
 ----
 ## index notation
 
--   Free index vs. dummy index
+Free index vs. dummy index
+
 <div class="left">
   <ul>
   	<li>is not repeated on any term</li>
@@ -107,16 +117,11 @@ August 21, 2019
 ## example
 
 -   Solve the equation below for *U*<sub>*k*</sub> in terms of *P*<sub>*i*</sub> and *a*<sub>*i*</sub>.
-
-$$\\mu \\left\[ \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j \\right\] U\_k = P\_j$$
-
+-   $$\\mu \\left\[ \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j \\right\] U\_k = P\_j$$
 -   Multiply both sides by *a*<sub>*j*</sub>
-
-$$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j a\_j \\right\] U\_k = P\_j a\_j$$
-
+-		$$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j a\_j \\right\] U\_k = P\_j a\_j$$
 -   The dummy indexes can be changed
-
-$$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] U\_k = P\_j a\_j$$
+-		$$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] U\_k = P\_j a\_j$$
 
 ----
 ## example

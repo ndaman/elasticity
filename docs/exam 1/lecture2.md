@@ -127,59 +127,42 @@ Free index vs. dummy index
 ## example
 
 -   *a*<sub>*j*</sub>*δ*<sub>*kj*</sub> = *a*<sub>*k*</sub>
-
-$$\\mu U\_k \\left\[ a\_k a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] = P\_j a\_j$$
-
+-		$$\\mu U\_k \\left\[ a\_k a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] = P\_j a\_j$$
 -   Factoring
-
-$$\\mu U\_k a\_k a\_i a\_i \\left\[ 1 + \\frac{1}{1-2\\nu} \\right\] = P\_j a\_j$$
-
+-		$$\\mu U\_k a\_k a\_i a\_i \\left\[ 1 + \\frac{1}{1-2\\nu} \\right\] = P\_j a\_j$$
 -   Simplifying
-
-$$\\mu U\_k a\_k a\_i a\_i \\left\[ \\frac{2(1-\\nu)}{1-2\\nu} \\right\] = P\_j a\_j$$
+-		$$\\mu U\_k a\_k a\_i a\_i \\left\[ \\frac{2(1-\\nu)}{1-2\\nu} \\right\] = P\_j a\_j$$
 
 ----
 ## example
 
 -   Solve for *U*<sub>*k*</sub>*a*<sub>*k*</sub>
-
-$$U\_k a\_k = \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) }$$
-
+-		$$U\_k a\_k = \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) }$$
 -   This is a scalar equation, we need to find *U*<sub>*j*</sub>, but we substitute this back into the original equation.
-
 -   First, expand the original equation
-
-$$\\mu U\_k \\delta\_{kj} a\_i a\_i + \\mu U\_k \\frac{1}{1-2\\nu} a\_k a\_j = P\_j$$
+-		$$\\mu U\_k \\delta\_{kj} a\_i a\_i + \\mu U\_k \\frac{1}{1-2\\nu} a\_k a\_j = P\_j$$
 
 ----
 ## example
 
 -   After substitution, we find
-
-$$\\mu U\_j a\_i a\_i + \\mu \\frac{1}{1-2\\nu} \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) } a\_j = P\_j$$
-
+-		$$\\mu U\_j a\_i a\_i + \\mu \\frac{1}{1-2\\nu} \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) } a\_j = P\_j$$
 -   The index *j* is repeated too many times, so we need to change *P*<sub>*j*</sub>*a*<sub>*j*</sub> to a different index
-
-$$\\mu U\_j a\_i a\_i + \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j = P\_j$$
-
+-		$$\\mu U\_j a\_i a\_i + \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j = P\_j$$
 -   We can now solve for *U*<sub>*j*</sub>
-
-$$U\_j  = \\frac{1}{\\mu a\_i a\_i} \\left\[P\_j - \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j\\right\]$$
+-		$$U\_j  = \\frac{1}{\\mu a\_i a\_i} \\left\[P\_j - \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j\\right\]$$
 
 ----
 ## symmetry
 
 -   Two types of symmetry: symmetry and antisymmetry
-
 -   Symmetry: *a*<sub>*ij*</sub> = *a*<sub>*ji*</sub>
-
 -   Anti-symmetry: *a*<sub>*ij*</sub> = −*a*<sub>*ji*</sub>
 
 ----
 ## symmetry
 
 -   We can break any tensor up into symmetric and anti-symmetric portions
-
 -   $a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
 
 ----

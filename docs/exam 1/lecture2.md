@@ -257,7 +257,7 @@ $$T\_{ij} = \\begin{bmatrix}
 ----
 ## two dimensions
 
-![2D axis to illustrate coordinate transformation](../images/transform2D.png)
+![2D axis to illustrate coordinate transformation](../images/transform2D.png) <!-- .element width="80%" -->
 
 ----
 ## dimensions
@@ -270,7 +270,7 @@ $$T\_{ij} = \\begin{bmatrix}
 ----
 ## two dimensions
 
-![2D axis with unit vectors along the axes to illustrate coordinate transformation](../images/transform2D-unit.png)
+![2D axis with unit vectors along the axes to illustrate coordinate transformation](../images/transform2D-unit.png) <!-- .element width="80%" --> 
 
 ----
 ## two dimensions
@@ -373,12 +373,12 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 ----
 ## example
 
-![3d coordinate system after first rotation](../images/example-b.png)
+![3d coordinate system after first rotation](../images/example-b.png) <!-- .element width="80%" --> 
 
 ----
 ## example
 
-![3d coordinate system after second rotation](../images/example-c.png)
+![3d coordinate system after second rotation](../images/example-c.png)<!-- .element width="80%" --> 
 
 ----
 ## example

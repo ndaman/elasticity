@@ -66,6 +66,20 @@ August 19, 2019
   <li> Sometimes composites hurt more than they help when not utilized properly </li>
   </div>
 
+----
+## research
+
+<div class="left">
+	<ul>
+		<li>Thermoplastic composites offer many advantages over thermoset</li>
+		<li>Production speed, recyclability</li>
+		<li>Also have challenges, such as bonding/welding</li>
+	</ul>
+</div>
+<div class="right">
+	![thermoplastic welding](../images/Welding-thermoplastic-composites.jpg)
+</div>
+
 
 ----
 ## classes

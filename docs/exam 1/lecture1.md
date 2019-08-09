@@ -484,7 +484,7 @@ b\_1 & b\_2 & b\_3
 
 -   Or in index notation
 
-$$\\hat{a} \\times \\hat{b} = \\epsilon\_{ijk} a\_j b\_k \\hat{e}\_i$$
+$$\\hat{a} \\times \\hat{b} = \\epsilon\_{ijk} \\hat{e}\_i a\_j b\_k $$
 
 ----
 ## partial derivative

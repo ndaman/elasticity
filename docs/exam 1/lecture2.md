@@ -373,12 +373,12 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 ----
 ## example
 
-![3d coordinate system after first rotation](../images/example-b.png) <!-- .element width="60%" --> 
+![3d coordinate system after first rotation](../images/example-b.png) <!-- .element width="50%" --> 
 
 ----
 ## example
 
-![3d coordinate system after second rotation](../images/example-c.png)<!-- .element width="60%" --> 
+![3d coordinate system after second rotation](../images/example-c.png)<!-- .element width="50%" --> 
 
 ----
 ## example

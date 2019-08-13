@@ -344,6 +344,12 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 -   Fourth-order tensors: *C*<sub>*ijkl*</sub> = *Q*<sub>*mi*</sub>*Q*<sub>*nj*</sub>*Q*<sub>*ok*</sub>*Q*<sub>*pl*</sub>*C*<sub>*mnop*</sub><sup>′</sup>
 
 ----
+## mental/emotional health warning
+
+-		Some texts flip the definition of *Q*<sub>*ij*</sub>, and then flip their transformation law accordingly
+-		Any time you use tensor transformation, make sure you are following a consistent set of transformation laws
+
+----
 ## general 
 
 -   We can derive some interesting properties of the transformation tensor, *Q*<sub>*ij*</sub>

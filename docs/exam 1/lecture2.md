@@ -127,11 +127,11 @@ Free index vs. dummy index
 ## example
 
 -   *a*<sub>*j*</sub>*δ*<sub>*kj*</sub> = *a*<sub>*k*</sub>
--		$$\\mu U\_k \\left\[ a\_k a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] = P\_j a\_j$$
--   Factoring
--		$$\\mu U\_k a\_k a\_i a\_i \\left\[ 1 + \\frac{1}{1-2\\nu} \\right\] = P\_j a\_j$$
--   Simplifying
--		$$\\mu U\_k a\_k a\_i a\_i \\left\[ \\frac{2(1-\\nu)}{1-2\\nu} \\right\] = P\_j a\_j$$
+-		<!-- .element style="list-style-type: none" --> $$\\mu U\_k \\left\[ a\_k a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] = P\_j a\_j$$
+-   <!-- .element class="fragment" -->Factoring
+-		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu U\_k a\_k a\_i a\_i \\left\[ 1 + \\frac{1}{1-2\\nu} \\right\] = P\_j a\_j$$
+-   <!-- .element class="fragment" -->Simplifying
+-		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu U\_k a\_k a\_i a\_i \\left\[ \\frac{2(1-\\nu)}{1-2\\nu} \\right\] = P\_j a\_j$$
 
 ----
 ## example

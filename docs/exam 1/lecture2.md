@@ -121,7 +121,7 @@ Free index vs. dummy index
 -   <!-- .element class="fragment" --> Multiply both sides by *a*<sub>*j*</sub>
 -		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j a\_j \\right\] U\_k = P\_j a\_j$$
 -   <!-- .element class="fragment" -->The dummy indexes can be changed
--		<!-- .element styl="list-style-type: none", class="fragment" --> $$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] U\_k = P\_j a\_j$$
+-		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] U\_k = P\_j a\_j$$
 
 ----
 ## example
@@ -137,20 +137,20 @@ Free index vs. dummy index
 ## example
 
 -   Solve for *U*<sub>*k*</sub>*a*<sub>*k*</sub>
--		$$U\_k a\_k = \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) }$$
--   This is a scalar equation, we need to find *U*<sub>*j*</sub>, but we substitute this back into the original equation.
--   First, expand the original equation
--		$$\\mu U\_k \\delta\_{kj} a\_i a\_i + \\mu U\_k \\frac{1}{1-2\\nu} a\_k a\_j = P\_j$$
+-		<!-- .element style="list-style-type: none" --> $$U\_k a\_k = \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) }$$
+-   <!-- .element class="fragment" -->This is a scalar equation, we need to find *U*<sub>*j*</sub>, but we substitute this back into the original equation.
+-   <!-- .element class="fragment" -->First, expand the original equation
+-		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu U\_k \\delta\_{kj} a\_i a\_i + \\mu U\_k \\frac{1}{1-2\\nu} a\_k a\_j = P\_j$$
 
 ----
 ## example
 
 -   After substitution, we find
--		$$\\mu U\_j a\_i a\_i + \\mu \\frac{1}{1-2\\nu} \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) } a\_j = P\_j$$
--   The index *j* is repeated too many times, so we need to change *P*<sub>*j*</sub>*a*<sub>*j*</sub> to a different index
--		$$\\mu U\_j a\_i a\_i + \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j = P\_j$$
--   We can now solve for *U*<sub>*j*</sub>
--		$$U\_j  = \\frac{1}{\\mu a\_i a\_i} \\left\[P\_j - \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j\\right\]$$
+-		<!-- .element style="list-style-type: none" -->$$\\mu U\_j a\_i a\_i + \\mu \\frac{1}{1-2\\nu} \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) } a\_j = P\_j$$
+-   <!-- .element class="fragment" -->The index *j* is repeated too many times, so we need to change *P*<sub>*j*</sub>*a*<sub>*j*</sub> to a different index
+-		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu U\_j a\_i a\_i + \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j = P\_j$$
+-   <!-- .element class="fragment" -->We can now solve for *U*<sub>*j*</sub>
+-		<!-- .element style="list-style-type: none", class="fragment" --> $$U\_j  = \\frac{1}{\\mu a\_i a\_i} \\left\[P\_j - \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j\\right\]$$
 
 ----
 ## symmetry
@@ -163,7 +163,7 @@ Free index vs. dummy index
 ## symmetry
 
 -   We can break any tensor up into symmetric and anti-symmetric portions
--   $a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
+-   <!-- .element style="list-style-type: none" -->$a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
 
 ----
 ## example

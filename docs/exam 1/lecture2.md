@@ -117,11 +117,11 @@ Free index vs. dummy index
 ## example
 
 -   Solve the equation below for *U*<sub>*k*</sub> in terms of *P*<sub>*i*</sub> and *a*<sub>*i*</sub>.
--   <!-- .element list-style-type: none --> $$\\mu \\left\[ \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j \\right\] U\_k = P\_j$$
+-   <!-- .element style="list-style-type: none" --> $$\\mu \\left\[ \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j \\right\] U\_k = P\_j$$
 -   <!-- .element class="fragment" --> Multiply both sides by *a*<sub>*j*</sub>
--		<!-- .element list-style-type: none, class="fragment" --> $$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j a\_j \\right\] U\_k = P\_j a\_j$$
+-		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j a\_j \\right\] U\_k = P\_j a\_j$$
 -   <!-- .element class="fragment" -->The dummy indexes can be changed
--		<!-- .element list-style-type: none, class="fragment" --> $$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] U\_k = P\_j a\_j$$
+-		<!-- .element styl="list-style-type: none", class="fragment" --> $$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] U\_k = P\_j a\_j$$
 
 ----
 ## example

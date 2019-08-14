@@ -176,7 +176,7 @@ $$Q\_{ij}^2 = \\begin{bmatrix}
 -   How do we find *e*<sub>*i*</sub><sup>′′</sup> in terms of *e*<sub>*i*</sub>?
 -   *e*<sub>*i*</sub><sup>′′</sup> = *Q*<sub>*ij*</sub><sup>2</sup>*Q*<sub>*jk*</sub><sup>1</sup>*e*<sub>*k*</sub>
 
-----
+---
 # principal directions
 
 ----
@@ -280,7 +280,7 @@ $$A\_{ij}^\\prime = \\begin{bmatrix}
 \\end{bmatrix}$$
 
 ---
-examples
+# examples
 
 ----
 ## example

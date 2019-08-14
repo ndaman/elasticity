@@ -13,6 +13,18 @@ August 26, 2019
 -   Sep 4 - Displacement and Strain, Homework 1 Due
 -   Sep 9 - Strain Transformation
 
+----
+## outline
+
+<!-- vim-markdown-toc GFM -->
+
+* coordinate transformation
+* examples
+* principal directions
+* examples
+
+<!-- vim-markdown-toc -->
+
 ---
 # coordinate transformation
 

@@ -13,6 +13,20 @@ August 28, 2019
 -   Sep 9 - Strain Transformation
 -   Sep 11 - Exam 1 Review
 
+----
+## outline
+
+<!-- vim-markdown-toc GFM -->
+
+* group problems
+* review
+* tensor algebra
+* Tensor Calculus
+* Other Coordinate Systems
+* Chapter Summary
+
+<!-- vim-markdown-toc -->
+
 ---
 # group problems
 
@@ -86,7 +100,7 @@ end; end; end; end;
 ```
 
 ----
-## programming with index notation
+## programming
 
 -   In general, when programming an expression in index notation there are a few things to be careful about
     1.  Your programming language’s start index (C and Python start at 0, MATLAB and Fortran start at 1)
@@ -187,8 +201,8 @@ $$\\hat{a} \\times \\hat{b} = \\epsilon\_{ijk} a\_j b\_k$$
 
 -   It is often convenient to write expressions in matrix notation to use MATLAB or graphing calculators
 -   We need to be careful how this is done, in index notation left and right multiplication are identical, but this is not the case for matrices
-    \[*A*\]\[*B*\]=*A*<sub>*ij*</sub>*B*<sub>*jk*</sub>
-    \[*B*\]\[*A*\]=*B*<sub>*ij*</sub>*A*<sub>*jk*</sub> = *A*<sub>*jk*</sub>*B*<sub>*ij*</sub>
+- <!-- .element style="list-style-type:none" -->    \[*A*\]\[*B*\]=*A*<sub>*ij*</sub>*B*<sub>*jk*</sub>
+- <!-- .element style="list-style-type:none" -->    \[*B*\]\[*A*\]=*B*<sub>*ij*</sub>*A*<sub>*jk*</sub> = *A*<sub>*jk*</sub>*B*<sub>*ij*</sub>
 
 ----
 ## converting to matrix math
@@ -204,7 +218,7 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 ----
-## converting to matrix math
+## converting to matrix
 
 -   Sometimes our expression is more complex (involves more terms)
 -   e.g. transformation of a matrix
@@ -212,8 +226,8 @@ $$\\begin{aligned}
     1.  Re-arrange so dummy indexes are adjacent
         *Q*<sub>*ip*</sub>*a*<sub>*pq*</sub>*Q*<sub>*jq*</sub>
     2.  Identify which (if any) tensors are transposed (dummy indexes should be on the inside of adjacent terms without a transpose)
-        $$Q\_{ip} a\_{pq} \\alert{Q\_{jq}}$$
-        \[*Q*\]\[*a*\]\[*Q*\]<sup>*T*</sup>
+- <!-- .element style="list-style-type:none" -->        *Q*<sub>*ip*</sub> *a* <sub>*ip*</sub> <span style="color:red">Q <sub>*jq*</sub></span>
+- <!-- .element style="list-style-type:none" -->        \[*Q*\]\[*a*\]\[*Q*\]<sup>*T*</sup>
 
 ----
 ## example

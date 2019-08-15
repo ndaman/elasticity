@@ -21,9 +21,9 @@ August 28, 2019
 * group problems
 * review
 * tensor algebra
-* Tensor Calculus
-* Other Coordinate Systems
-* Chapter Summary
+* tensor calculus
+* other coordinate systems
+* chapter summary
 
 <!-- vim-markdown-toc -->
 
@@ -226,7 +226,7 @@ $$\\begin{aligned}
     1.  Re-arrange so dummy indexes are adjacent
         *Q*<sub>*ip*</sub>*a*<sub>*pq*</sub>*Q*<sub>*jq*</sub>
     2.  Identify which (if any) tensors are transposed (dummy indexes should be on the inside of adjacent terms without a transpose)
-- <!-- .element style="list-style-type:none" -->        *Q*<sub>*ip*</sub> *a* <sub>*ip*</sub> <span style="color:red">Q <sub>*jq*</sub></span>
+- <!-- .element style="list-style-type:none" -->        *Q*<sub>*ip*</sub> *a* <sub>*pq*</sub> <span style="color:red">Q <sub>*jq*</sub></span>
 - <!-- .element style="list-style-type:none" -->        \[*Q*\]\[*a*\]\[*Q*\]<sup>*T*</sup>
 
 ----
@@ -235,225 +235,225 @@ $$\\begin{aligned}
 -   Convert the expression in index notation to Matrix notation
     *A*<sub>*ik*</sub>*B*<sub>*jl*</sub>*C*<sub>*ml*</sub>*D*<sub>*mk*</sub>
 
-    1.  Re-arrange to so that dummy indexes are in adjacent terms
-        *A*<sub>*ik*</sub>*D*<sub>*mk*</sub>*C*<sub>*ml*</sub>*B*<sub>*jl*</sub>
+  1.  <!-- .element class="fragment" -->Re-arrange to so that dummy indexes are in adjacent terms
+		-   <!-- .element style="list-style-type:none" class="fragment" -->        *A*<sub>*ik*</sub>*D*<sub>*mk*</sub>*C*<sub>*ml*</sub>*B*<sub>*jl*</sub>
 
-    2.  Identify which terms are transposed
-        $$A\_{ik} \\alert{D\_{mk}} C\_{ml} \\alert{B\_{jl}}$$
-        \[*A*\]\[*D*\]<sup>*T*</sup>\[*C*\]\[*B*\]<sup>*T*</sup>
+  2.  <!-- .element class="fragment" -->Identify which terms are transposed
+		- <!-- .element style="list-style-type:none" class="fragment" --> *A*<sub>*ik*</sub> <span style="color:red">*D*<sub>*mk*</sub></span>*C* <sub>*ml*</sub> <span style="color:red">*B*<sub>*jl*</sub></span>
+		- <!-- .element style="list-style-type:none" class="fragment" --> \[*A*\]\[*D*\]<sup>*T*</sup>\[*C*\]\[*B*\]<sup>*T*</sup>
 
-Tensor Calculus
-===============
+---
+# tensor calculus
 
 ----
 ## partial derivatives
 
 -   We usually omit the (*x*<sub>*i*</sub>), but most variables we deal with are functions of *x*<sub>*i*</sub>
-
 -   These are referred to as field variables. e.g.
-    $$\\begin{aligned}
-    {2}
-            a &= a(x\_1, x\_2, x\_3) & &= a(x\_i) \\\\
-            a\_i &= a\_i(x\_1, x\_2, x\_3) & &= a\_i(x\_i) \\\\
-            a\_{ij} &= a\_{ij}(x\_1, x\_2, x\_3) & &= a\_{ij}(x\_i)
-            \\end{aligned}$$
+
+$$\\begin{aligned}
+	a &= a(x\_1, x\_2, x\_3) & &= a(x\_i) \\\\
+	a\_i &= a\_i(x\_1, x\_2, x\_3) & &= a\_i(x\_i) \\\\
+	a\_{ij} &= a\_{ij}(x\_1, x\_2, x\_3) & &= a\_{ij}(x\_i)
+\\end{aligned}$$
 
 ----
 ## partial derivatives
 
 -   We can use comma notation to simplify taking partial derivatives of field variables
-    $$\\begin{aligned}
-            a\_{,i} &= \\frac{\\partial}{\\partial x\_i} a \\\\
-            a\_{i,j} &= \\frac{\\partial}{\\partial x\_j} a\_i \\\\
-            a\_{ij,k} &= \\frac{\\partial}{\\partial x\_k} a\_{ij} \\\\
-            \\end{aligned}$$
+
+$$\\begin{aligned}
+	a\_{,i} &= \\frac{\\partial}{\\partial x\_i} a \\\\
+	a\_{i,j} &= \\frac{\\partial}{\\partial x\_j} a\_i \\\\
+	a\_{ij,k} &= \\frac{\\partial}{\\partial x\_k} a\_{ij} \\\\
+\\end{aligned}$$
 
 ----
 ## partial derivatives
 
 -   Free index and dummy index conventions still apply to the comma notation
-
 -   *a*<sub>,*i*</sub> expands to
-    $$\\left \\langle \\frac{\\partial}{\\partial x\_1} a, \\frac{\\partial}{\\partial x\_2} a, \\frac{\\partial}{\\partial x\_3} a \\right \\rangle$$
-
+- <!-- .element style="list-style-type:none" -->   $$\\left \\langle \\frac{\\partial}{\\partial x\_1} a, \\frac{\\partial}{\\partial x\_2} a, \\frac{\\partial}{\\partial x\_3} a \\right \\rangle$$
 -   But *b*<sub>*i*, *i*</sub> becomes
-    $$\\frac{\\partial}{\\partial x\_1} b\_1 + \\frac{\\partial}{\\partial x\_2} b\_2+ \\frac{\\partial}{\\partial x\_3} b\_3$$
+- <!-- .element style="list-style-type:none" -->   $$\\frac{\\partial}{\\partial x\_1} b\_1 + \\frac{\\partial}{\\partial x\_2} b\_2+ \\frac{\\partial}{\\partial x\_3} b\_3$$
+
+----
+## partial derivatives
 
 -   And *b*<sub>*i*, *j*</sub> is
-    $$\\begin{bmatrix}
-            b\_{1,1} & b\_{1,2} & b\_{1,3}\\\\
-            b\_{2,1} & b\_{2,2} & b\_{2,3}\\\\
-            b\_{3,1} & b\_{3,2} & b\_{3,3}
-            \\end{bmatrix}$$
+
+$$\\begin{bmatrix}
+	b\_{1,1} & b\_{1,2} & b\_{1,3}\\\\
+	b\_{2,1} & b\_{2,2} & b\_{2,3}\\\\
+	b\_{3,1} & b\_{3,2} & b\_{3,3}
+\\end{bmatrix}$$
 
 ----
 ## gradient
 
 -   The gradient operator, ∇, is often used to indicate partial differentiation in matrix and vector notation
-
 -   We can represent ∇ as a vector
-    $$\\nabla = \\left\\langle \\frac{\\partial}{\\partial x\_1}, \\frac{\\partial}{\\partial x\_2}, \\frac{\\partial}{\\partial x\_3} \\right \\rangle$$
-
+- <!-- .element style="list-style-type:none" -->   $$\\nabla = \\left\\langle \\frac{\\partial}{\\partial x\_1}, \\frac{\\partial}{\\partial x\_2}, \\frac{\\partial}{\\partial x\_3} \\right \\rangle$$
 -   ∇ is also referred to as the *del operator*
 
 ----
 ## gradient
 
 -   We can convert between vector notation and index notation for many common operations using the ∇.
-    $$\\begin{aligned}
-            \\nabla \\phi &= \\phi\_{,i}\\\\
-            \\nabla^2 \\phi &= \\phi\_{,ii}\\\\
-            \\nabla \\hat{u} &= u\_{i,j}\\\\
-            \\nabla \\cdot \\hat{u} &= u\_{i,i} \\\\
-            \\nabla \\times \\hat{u} &= \\epsilon\_{ijk} u\_{k,j} \\\\
-            \\nabla^2 \\hat{u} &= u\_{i,kk}
-            \\end{aligned}$$
+
+$$\\begin{aligned}
+	\\nabla \\phi &= \\phi\_{,i}\\\\
+	\\nabla^2 \\phi &= \\phi\_{,ii}\\\\
+	\\nabla \\hat{u} &= u\_{i,j}\\\\
+	\\nabla \\cdot \\hat{u} &= u\_{i,i} \\\\
+	\\nabla \\times \\hat{u} &= \\epsilon\_{ijk} u\_{k,j} \\\\
+	\\nabla^2 \\hat{u} &= u\_{i,kk}
+\\end{aligned}$$
 
 ----
 ## divergence theorem
 
 -   The Divergence Theorem (or Gauss Theorem) for a vector field, $\\hat{u}$,
-    $$\\iint\_S \\hat{u} \\cdot \\hat{n} dS = \\iiint \\nabla \\cdot \\hat{u} dV$$
-
+- <!-- .element style="list-style-type:none" -->   $$\\iint\_S \\hat{u} \\cdot \\hat{n} dS = \\iiint \\nabla \\cdot \\hat{u} dV$$
 -   is also valid for tensors of any order
-    ∬<sub>*S*</sub>*a*<sub>*ij*...*k*</sub>*n*<sub>*k*</sub>*dS* = ∭<sub>*V*</sub>*a*<sub>*ij*...*k*, *k*</sub>*dV*
+- <!-- .element style="list-style-type:none" -->   ∬<sub>*S*</sub>*a*<sub>*ij*...*k*</sub>*n*<sub>*k*</sub>*dS* = ∭<sub>*V*</sub>*a*<sub>*ij*...*k*, *k*</sub>*dV*
 
 ----
 ## stokes theorem
 
 -   Stokes theorem for a vector field, $\\hat{u}$,
-    $$\\oint \\hat{u}\\cdot d\\hat{r} = \\iint\_S \\left(\\nabla \\times \\hat{u}\\right)\\cdot \\hat{n} dS$$
-
+- <!-- .element style="list-style-type:none" -->   $$\\oint \\hat{u}\\cdot d\\hat{r} = \\iint\_S \\left(\\nabla \\times \\hat{u}\\right)\\cdot \\hat{n} dS$$
 -   also applies for tensors of any order
-    ∮*a*<sub>*ij*...*k*</sub>*dx*<sub>*t*</sub> = ∬<sub>*S*</sub>*ϵ*<sub>*rst*</sub>*a*<sub>*ij*...*k*, *s*</sub>*n*<sub>*r*</sub>*dS*
+- <!-- .element style="list-style-type:none" -->   ∮*a*<sub>*ij*...*k*</sub>*dx*<sub>*t*</sub> = ∬<sub>*S*</sub>*ϵ*<sub>*rst*</sub>*a*<sub>*ij*...*k*, *s*</sub>*n*<sub>*r*</sub>*dS*
 
 ----
 ## green’s theorem
 
 -   Green’s theorem is merely a simplification of Stokes theorem in a planar domain.
-
 -   If we write the vector field, $\\hat{u} = f \\hat{e\_1} + g\\hat{e\_2}$, we find
-    $$\\iint\_S \\left( \\frac{\\partial g}{\\partial x\_1} - \\frac{\\partial f}{\\partial x\_2}\\right) dx dy = \\int\_C (f dx + g dy)$$
+- <!-- .element style="list-style-type:none" -->   $$\\iint\_S \\left( \\frac{\\partial g}{\\partial x\_1} - \\frac{\\partial f}{\\partial x\_2}\\right) dx dy = \\int\_C (f dx + g dy)$$
 
 ----
 ## zero-value theorem
 
 -   The zero-value theorem is particularly useful in variational calculus, which we will use later in the course
-
 -   If we know that
-    ∭<sub>*V*</sub>*f*<sub>*ij*...*k*</sub>*dV* = 0
-
+- <!-- .element style="list-style-type:none" -->   ∭<sub>*V*</sub>*f*<sub>*ij*...*k*</sub>*dV* = 0
 -   then
-    *f*<sub>*ij*...*k*</sub> = 0
+- <!-- .element style="list-style-type:none" -->   *f*<sub>*ij*...*k*</sub> = 0
 
-Other Coordinate Systems
-========================
+---
+# other coordinate systems
 
 ----
 ## curvilinear coordinates
 
 -   We discussed coordinate transformations earlier
-
 -   However, we often desire to use other coordinate systems entirely
-
 -   Polar coordinates (in 2D) are an example of this
-
 -   In 3D, we can use cylindrical or spherical coordinates
 
 ----
 ## cylindrical coordinates
 
-(0,0,0) – (3,0,0) node\[below left\] ----
-## *x*<sub>1</sub></span>; (0,0,0) – (0,3,0) node\[right\] <span>*x*<sub>2</sub></span>; (0,0,0) – (0,0,3) node\[above\] <span>*x*<sub>3</sub></span>; (0,0,0) – (2,0,0) node\[below\] <span>*r*</span>; ; (0,0,0) – (0,0,2) node\[above left\] <span>*z*;
+![cylindrical coordinate system axis](../images/cylindrical-axis.png) <!-- .element width="60%" -->
 
 ----
 ## cylindrical coordinates
 
 -   We can convert between Cartesian and cylindrical coordinate systems
-    $$\\begin{aligned}
-            x\_1 &= r\\cos \\theta \\\\
-            x\_2 &= r\\sin \\theta \\\\
-            x\_3 &= z
-            \\end{aligned}$$
+
+$$\\begin{aligned}
+  x\_1 &= r\\cos \\theta \\\\
+  x\_2 &= r\\sin \\theta \\\\
+  x\_3 &= z
+\\end{aligned}$$
+
+----
+## cylindrical coordinates
 
 -   Or to convert from Cartesian to cylindrical
-    $$\\begin{aligned}
-            r &= \\sqrt{x\_1^2 + x\_2^2}\\\\
-            \\theta &= \\tan^{-1} \\left(\\frac{x\_2}{x\_1}\\right)\\\\
-            z &= x\_3
-            \\end{aligned}$$
+
+$$\\begin{aligned}
+  r &= \\sqrt{x\_1^2 + x\_2^2}\\\\
+  \\theta &= \\tan^{-1} \\left(\\frac{x\_2}{x\_1}\\right)\\\\
+  z &= x\_3
+\\end{aligned}$$
 
 ----
 ## spherical coordinates
-
-(0,0,0) – (3,0,0) node\[below left\] ----
-## *x*<sub>1</sub></span>; (0,0,0) – (0,3,0) node\[right\] <span>*x*<sub>2</sub></span>; (0,0,0) – (0,0,3) node\[above\] <span>*x*<sub>3</sub></span>; (0,0,0) – (P) node\[above right\] <span>*r*; (0,0,0) – (Pxy); (P) – (Pxy); ;
+                                                                       
+![spherical coodrinate system axis](../images/spherical-axis.png) <!-- .element width="60%" -->
 
 ----
 ## spherical coordinates
 
 -   We can convert between Cartesian and spherical coordinate systems
-    $$\\begin{aligned}
-            x\_1 &= r\\cos \\theta \\sin \\phi \\\\
-            x\_2 &= r\\sin \\theta \\sin \\phi \\\\
-            x\_3 &= r\\cos \\phi
-            \\end{aligned}$$
+-  <!-- .element style="list-style-type:none" --> 
+$$\\begin{aligned}
+  x\_1 &= r\\cos \\theta \\sin \\phi \\\\
+  x\_2 &= r\\sin \\theta \\sin \\phi \\\\
+  x\_3 &= r\\cos \\phi
+\\end{aligned}$$
+
+----
+## spherical coordinates
 
 -   Or to convert from Cartesian to cylindrical
-    $$\\begin{aligned}
-            r &= \\sqrt{x\_1^2 + x\_2^2 + x\_3^2}\\\\
-            \\phi &= \\cos ^{-1} \\left(\\frac{x\_3}{\\sqrt{x\_1^2 + x\_2^2 + x\_3^2}}\\right)\\\\
-            \\theta &= \\tan^{-1} \\left(\\frac{x\_2}{x\_1}\\right)
-            \\end{aligned}$$
+-  <!-- .element style="list-style-type:none" --> 
+$$\\begin{aligned}
+  r &= \\sqrt{x\_1^2 + x\_2^2 + x\_3^2}\\\\
+  \\phi &= \\cos ^{-1} \\left(\\frac{x\_3}{\\sqrt{x\_1^2 + x\_2^2 + x\_3^2}}\\right)\\\\
+  \\theta &= \\tan^{-1} \\left(\\frac{x\_2}{x\_1}\\right)
+\\end{aligned}$$
 
 ----
 ## calculus in cylindrical coordinates
+
 $$\\begin{aligned}
     \\nabla f &= \\frac{\\partial f}{\\partial r} \\hat{r} + \\frac{1}{r}\\frac{\\partial f}{\\partial \\theta} \\hat{\\theta} + \\frac{\\partial f}{\\partial z}\\hat{z}\\\\
     \\nabla \\cdot \\mathbf{u} &= \\frac{1}{r} \\frac{\\partial (r u\_r)}{\\partial r} + \\frac{1}{r} \\frac{\\partial u\_\\theta}{\\partial \\theta} + \\frac{\\partial u\_z}{\\partial z}\\\\
     \\nabla \\times \\mathbf{u} &= \\left(\\frac{1}{r}\\frac{\\partial u\_z}{\\partial \\theta} - \\frac{\\partial u\_\\theta}{\\partial z}\\right)\\hat{r} +
     \\left(\\frac{\\partial u\_r}{\\partial z} - \\frac{\\partial u\_z}{\\partial r}\\right)\\hat{\\theta} +
     \\frac{1}{r}\\left(\\frac{\\partial (r u\_\\theta)}{\\partial r} - \\frac{\\partial u\_r}{\\partial \\theta}\\right) \\hat{z}
-    \\end{aligned}$$
+\\end{aligned}$$
 
 ----
 ## calculus in spherical coordinates
+
 $$\\begin{aligned}
     \\nabla f =& \\frac{\\partial f}{\\partial r} \\hat{r} + \\frac{1}{r}\\frac{\\partial f}{\\partial \\phi} \\hat{\\phi} + \\frac{1}{r \\sin \\phi}\\frac{\\partial f}{\\partial \\theta}\\hat{\\theta}\\\\
     \\nabla \\cdot \\mathbf{u} =& \\frac{1}{r^2} \\frac{\\partial (r^2 u\_r)}{\\partial r} + \\frac{1}{r \\sin \\phi} \\frac{\\partial (u\_\\phi \\sin \\phi)}{\\partial \\phi} + \\frac{1}{r \\sin \\phi}\\frac{\\partial u\_\\theta}{\\partial \\theta}\\\\
     \\nabla \\times \\mathbf{u} =& \\frac{1}{r\\sin \\phi}\\left(\\frac{\\partial (u\_\\theta \\sin \\phi)}{\\partial \\phi} - \\frac{\\partial u\_\\phi}{\\partial \\theta}\\right)\\hat{r} +
     \\frac{1}{r}\\left(\\frac{1}{\\sin \\phi}\\frac{\\partial u\_r}{\\partial \\theta} - \\frac{\\partial (r u\_\\theta)}{\\partial r}\\right)\\hat{\\phi} + \\\\
     & \\frac{1}{r}\\left(\\frac{\\partial (r u\_\\phi)}{\\partial r} - \\frac{\\partial u\_r}{\\partial \\phi}\\right) \\hat{\\theta}
-    \\end{aligned}$$
+\\end{aligned}$$
 
-Chapter Summary
-===============
+---
+# chapter summary
 
 ----
 ## topics
 
 -   Index notation
-
     -   Free index vs. dummy index
-
     -   Solving matrix and vector equations
-
     -   Translation to matrix expressions
-
     -   Programming with index notation
 
+----
+## topics
+
 -   Coordinate transformation
-
     -   Direction cosines
-
     -   Compound transformations (multiple rotations)
-
     -   Vector, matrix, and general tensor transformation
 
+----
+## topics
+
 -   Principal values, directions, and invariants
-
 -   Partial derivative notation
-
 -   Cylindrical and spherical coordinates
 
 

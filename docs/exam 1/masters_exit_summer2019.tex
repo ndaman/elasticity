@@ -1,0 +1,117 @@
+\documentclass[12pt, oneside]{article}
+\usepackage{amssymb,amsmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{textpos}
+\usepackage{float}
+%\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{tikz-3dplot}
+\usepackage{pgfopts}
+\usepackage{circuitikz}
+\usepackage{afterpage}
+\usepackage{structuralanalysis}
+
+\begin{document}
+\begin{textblock*}{4cm}(-1.7cm,-2.3cm)
+\noindent {\scriptsize AE731 Exit Exam Summer 2019}
+\end{textblock*}
+
+%Do not modify other than putting your name where stated
+\begin{textblock*}{8cm}(12.5cm,-1cm)
+\noindent {Name: }
+\end{textblock*}
+%Do not modify other than typing your acknowledgement where stated
+\begin{textblock*}{13.5cm}(-1.7cm,-1.8cm)
+%\noindent \textit{\footnotesize Acknowledgement: Your acknowledgement for collaboration and other sources goes here. }
+\end{textblock*}
+
+\vspace{1cm}
+
+%Do not modify other than typing the homework number after #
+\begin{center}
+\textbf{\Large AE 731 - Elasticity}
+\end{center}
+
+
+%Rest should contain your solution for the homework. Feel free to improvise in ways that you believe make grading easier.
+\begin{enumerate}
+%TODO change numbers
+
+\item
+Digital image correlation (DIC) can be used in stead of strain gages to measure strain during a tensile test.
+Often, strain gages are attached to the back side of a specimen to confirm the DIC measurements.
+After allowing another student to conduct a test for you, you realize they attached three separate gages at unknown angles instead of using a standard rosette.
+Assuming the DIC measurements are correct, find  the angles for each of the strain gages.
+\textbf{Note:} This drawing is for illustration only, do not assume anything about the sign or magnitude of the angles from this drawing.
+
+\begin{figure}[H]
+	\centering
+	\begin{circuitikz}[scale=2]
+		\draw[->,thick] (0,0) -- (4,0) node[right] {$x$};
+		\draw[->,thick] (0,0) -- (0,2) node[above] {$y$};
+		\draw (1,0.0) to[R=$\varepsilon_a$] (2.9319,0.5176);
+		\draw (1,0.0) to[R=$\varepsilon_b$] (2.414,1.414);
+		\draw (1,0.0) to[R=$\varepsilon_c$] (0.482,1.932);
+		\begin{scope}[shift={(1,0.0)}]
+			\draw (1.7,0) arc (0:15:1.7) node at (2.1,0.25) {$\theta_1$};
+			\draw (1.545,0.414) arc (15:45:1.6) node at (1.5,0.9) {$\theta_2$};
+			\draw (-.388,1.449) arc (105:45:1.5) node at (0.5,1.7) {$\theta_3$};
+		\end{scope}
+	\end{circuitikz}
+\end{figure}
+DIC measurements:
+\begin{align*}
+\begin{Bmatrix}
+\epsilon_{xx} \\ \epsilon_{yy} \\ \epsilon_{xy}
+\end{Bmatrix} =
+\begin{Bmatrix}
+0.006\\-0.002\\0.000
+\end{Bmatrix}
+\end{align*}
+Strain gage measurements:
+\begin{align*}
+\begin{Bmatrix}
+\varepsilon_{a} \\ \varepsilon_{b} \\ \varepsilon_{c}
+\end{Bmatrix} =
+\begin{Bmatrix}
+0.00482\\0.00303\\-0.00095
+\end{Bmatrix}
+\end{align*}
+
+\newpage
+\afterpage{\null\newpage}
+
+\item
+Under what circumstances (if any) is the following symmetric 2D stress field in static equilibrium?
+Assume all body forces (including inertia) are zero.
+\begin{align}
+	\sigma_{11} &= k_1 x_1 + 3 x_2^2\\
+	\sigma_{22} &= 2x_1 + 4x_2\\
+	\sigma_{12} = \sigma_{21} &= a + bx_1 + cx_1^2 + dx_2 + ex_2^2 + fx_1x_2
+\end{align}
+
+\newpage
+
+\item
+Determine the state of stress in a large plate, with a small hole, uniformly loaded in the y-direction remote from the hole.
+Use the provided table (last page) to select the appropriate stress function.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\textwidth]{./hole-remotey}
+	\caption{Hole in an infinite sheet remotely loaded along y¬-direction.}
+\end{figure}
+\end{enumerate}
+
+\afterpage{\null\newpage}
+\newpage
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{./stress-functions}
+	\caption{Stress functions}
+\end{figure}
+\end{document}

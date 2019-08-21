@@ -19,6 +19,8 @@ August 21, 2019
 <!-- vim-markdown-toc GFM -->
 
 * review
+* examples
+* index notation algebra
 * group problems
 * coordinate transformation
 * examples
@@ -31,7 +33,7 @@ August 21, 2019
 ----
 ## office hours
 
--   TBD
+-   TBD, Only 4 have responded, right now looks like M or W 3 - 4
 -   Homework will generally be due on Wednesdays
 -   Feel free to e-mail me for an appointment outside office hours if the time does not work for you
 
@@ -67,6 +69,217 @@ Free index vs. dummy index
 	
 </div>
 
+----
+## symmetry
+
+-   Two types of symmetry: symmetry and antisymmetry
+-   Symmetry: *a*<sub>*ij*</sub> = *a*<sub>*ji*</sub>
+-   Anti-symmetry: *a*<sub>*ij*</sub> = −*a*<sub>*ji*</sub>
+
+----
+## symmetry
+
+-   We can break any tensor up into symmetric and anti-symmetric portions
+-   <!-- .element style="list-style-type: none" -->$a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
+
+----
+## example
+
+-   Find symmetric and anti-symmetric portions of
+
+$$\\begin{bmatrix}
+1 & 4 & 3\\\\
+2 & 1 & 5\\\\
+4 & 3 & 6
+\\end{bmatrix}$$
+
+----
+## example symmetric portion
+
+$$a\_{(ij)} = \\frac{1}{2}(a\_{ij} + a\_{ji})$$
+
+$$a\_{(ij)} = \\frac{1}{2} \\left (
+\\begin{bmatrix}
+1 & 4 & 3\\\\
+2 & 1 & 5\\\\
+4 & 3 & 6
+\\end{bmatrix}+
+\\begin{bmatrix}
+1 & 2 & 4\\\\
+4 & 1 & 3\\\\
+3 & 5 & 6
+\\end{bmatrix}\\right)
+= \\begin{bmatrix}
+1 & 3 & 3.5\\\\
+3 & 1 & 4\\\\
+3.5 & 4 & 6
+\\end{bmatrix}$$
+
+----
+## example anti-symmetric portion
+
+$$a\_{(ij)} = \\frac{1}{2}(a\_{ij} - a\_{ji})$$
+
+$$a\_{(ij)} = \\frac{1}{2} \\left (
+\\begin{bmatrix}
+1 & 4 & 3\\\\
+2 & 1 & 5\\\\
+4 & 3 & 6
+\\end{bmatrix}-
+\\begin{bmatrix}
+1 & 2 & 4\\\\
+4 & 1 & 3\\\\
+3 & 5 & 6
+\\end{bmatrix}\\right)
+= \\begin{bmatrix}
+0 & 1 & -0.5\\\\
+-1 & 0 & 1\\\\
+0.5 & -1 & 0
+\\end{bmatrix}$$
+
+----
+## special symbols
+
+-   For convenience we define two symbols in index notation
+-   *Kronecker delta* is a general tensor form of the Identity Matrix
+
+$$\\delta\_{ij} = \\left\\{
+\\begin{array}{ll}
+1& \\text{if $i=j$}\\\\
+0& \\text{otherwise}
+\\end{array}
+\\right. = \\begin{bmatrix}
+1 & 0 & 0\\\\
+0 & 1 & 0 \\\\
+0 & 0 & 1
+\\end{bmatrix}$$
+
+-   Is also used for higher order tensors
+
+----
+## Kronecker delta
+
+-   *δ*<sub>*ij*</sub> = *δ*<sub>*ji*</sub>
+-   *δ*<sub>*ii*</sub>= 3
+-   *δ*<sub>*ij*</sub>*a*<sub>*j*</sub>= *a*<sub>*i*</sub>
+-   *δ*<sub>*ij*</sub>*a*<sub>*ij*</sub>= *a*<sub>*ii*</sub>
+
+----
+## special symbols
+
+-   *alternating symbol* or *permutation symbol*
+
+$$\\epsilon\_{ijk} = \\left\\{
+\\begin{array}{rl}
+1 & \\text{if $ijk$ is an even permutation of 1,2,3}\\\\
+-1 & \\text{if $ijk$ is an odd permutation of 1,2,3}\\\\
+0 & \\text{otherwise}
+\\end{array}
+\\right.$$
+
+----
+## permutation symbol
+
+-   This symbol is not used as frequently as the *Kronecker delta*
+-   For our uses in this course, it is enough to know that 123, 231, and 312 are even permutations
+-   321, 132, 213 are odd permutations
+-   all other indexes are zero
+-   *ϵ*<sub>*ijk*</sub>*ϵ*<sub>*imn*</sub> = *δ*<sub>*jm*</sub>*δ*<sub>*kn*</sub> − *δ*<sub>*jn*</sub>*δ*<sub>*mk*</sub>
+
+----
+## determinant
+
+-   We use the alternating symbol for writing determinants and cross-products
+
+$$\\det\[a\_{ij}\] = |a\_{ij}| = \\begin{vmatrix}
+a\_{11} & a\_{12} & a\_{13}\\\\
+a\_{21} & a\_{22} & a\_{23}\\\\
+a\_{31} & a\_{32} & a\_{33}
+\\end{vmatrix}
+= \\epsilon\_{ijk}a\_{i1} a\_{j2} a\_{k3}$$
+
+$$\\det\[a\_{ij}\] = \\frac{1}{6}\\epsilon\_{ijk} \\epsilon\_{pqr}a\_{ip}a\_{jq}a\_{kr}$$
+
+----
+## cross product
+
+-   The cross-product can be written as a determinant:
+
+$$\\hat{a} \\times \\hat{b} = \\begin{vmatrix}
+\\hat{e}\_1 & \\hat{e}\_2 & \\hat{e}\_3\\\\
+a\_1 & a\_2 & a\_3 \\\\
+b\_1 & b\_2 & b\_3
+\\end{vmatrix}$$
+
+-   Or in index notation
+
+$$\\hat{a} \\times \\hat{b} = \\epsilon\_{ijk} \\hat{e}\_i a\_j b\_k $$
+
+----
+## partial derivative
+
+-   We indicate (partial) derivatives using a comma
+-   In three dimensions, we take the partial derivative with respect to each variable (*x*, *y*, *z* or *x*<sub>1</sub>, *x*<sub>2</sub>, *x*<sub>3</sub>)
+-   For example a scalar property, such as density, can have a different value at any point in space
+-   *ρ* = *ρ*(*x*<sub>1</sub>, *x*<sub>2</sub>, *x*<sub>3</sub>)
+
+$$\\rho\_{,i} = \\frac{\\partial}{\\partial x\_i} \\rho = \\left\\langle \\frac{\\partial \\rho }{\\partial x\_1}, \\frac{\\partial \\rho }{\\partial x\_2}, \\frac{\\partial \\rho }{\\partial x\_3} \\right\\rangle$$
+
+----
+## partial derivative
+
+-   Similarly, if we take the partial derivative of a vector, it produces a matrix
+
+$$u\_{i,j} = \\frac{\\partial}{\\partial x\_j} u\_i = \\begin{bmatrix}
+\\frac{\\partial u\_1}{\\partial x\_1} & \\frac{\\partial u\_1}{\\partial x\_2} & \\frac{\\partial u\_1}{\\partial x\_3}\\\\
+\\frac{\\partial u\_2}{\\partial x\_1} & \\frac{\\partial u\_2}{\\partial x\_2} & \\frac{\\partial u\_2}{\\partial x\_3}\\\\
+\\frac{\\partial u\_3}{\\partial x\_1} & \\frac{\\partial u\_3}{\\partial x\_2} & \\frac{\\partial u\_3}{\\partial x\_3}
+\\end{bmatrix}$$
+
+---
+# examples
+
+----
+## example 1
+
+-   Write the following in conventional notation
+    *T*<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
+-   <!-- .element class="fragment" --> The comma indicates a partial derivative
+-   <!-- .element class="fragment" --> The first index, *i*, is not repeated in any terms, so it is a “free index”
+    -   This means in a 3D coordinate system, we will have at least three equations
+-   <!-- .element class="fragment" --> The second index, *j*, is repeated in the first term, indicating summation.
+    -   We will have exactly three equations
+
+----
+## example 1 (solution)
+
+*T*<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
+
+$$\\begin{aligned}
+\\frac{\\partial T\_{11}}{\\partial x\_1} + \\frac{\\partial T\_{12}}{\\partial x\_2} + \\frac{\\partial T\_{13}}{\\partial x\_3} + F\_1= 0\\\\
+\\frac{\\partial T\_{21}}{\\partial x\_1} + \\frac{\\partial T\_{22}}{\\partial x\_2} + \\frac{\\partial T\_{23}}{\\partial x\_3} + F\_2= 0\\\\
+\\frac{\\partial T\_{31}}{\\partial x\_1} + \\frac{\\partial T\_{32}}{\\partial x\_2} + \\frac{\\partial T\_{33}}{\\partial x\_3} + F\_3= 0\\\\\\end{aligned}$$
+
+----
+## example 2
+
+-   Identify whether the following expressions represent a scalar, vector, or matrix
+-   If index notation is used incorrectly, give a reason why
+-   *A*<sub>*i*</sub> = *B*<sub>*i*</sub>
+-   *A*<sub>*i*</sub> = *B*<sub>*i*</sub> + *C*<sub>*i*</sub>*D*<sub>*i*</sub>
+-   *δ*<sub>*ij*</sub>*A*<sub>*i*</sub>*B*<sub>*j*</sub>
+-   $\\phi = \\frac{\\partial F\_i}{\\partial x\_i}$
+
+----
+## example 2 (solution)
+
+-   Vector equation
+-   Incorrect use of index notation, *i* used as both free and dummy index
+-   Scalar value (both indexes are dummy indexes)
+-   Scalar value (could also be written *F*<sub>*i*, *i*</sub>)
+
+---
+# index notation algebra
 
 ----
 ## substitution
@@ -152,73 +365,6 @@ Free index vs. dummy index
 -   <!-- .element class="fragment" -->We can now solve for *U*<sub>*j*</sub>
 -		<!-- .element style="list-style-type: none", class="fragment" --> $$U\_j  = \\frac{1}{\\mu a\_i a\_i} \\left\[P\_j - \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j\\right\]$$
 
-----
-## symmetry
-
--   Two types of symmetry: symmetry and antisymmetry
--   Symmetry: *a*<sub>*ij*</sub> = *a*<sub>*ji*</sub>
--   Anti-symmetry: *a*<sub>*ij*</sub> = −*a*<sub>*ji*</sub>
-
-----
-## symmetry
-
--   We can break any tensor up into symmetric and anti-symmetric portions
--   <!-- .element style="list-style-type: none" -->$a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
-
-----
-## example
-
--   Find symmetric and anti-symmetric portions of
-
-$$\\begin{bmatrix}
-1 & 4 & 3\\\\
-2 & 1 & 5\\\\
-4 & 3 & 6
-\\end{bmatrix}$$
-
-----
-## example symmetric portion
-
-$$a\_{(ij)} = \\frac{1}{2}(a\_{ij} + a\_{ji})$$
-
-$$a\_{(ij)} = \\frac{1}{2} \\left (
-\\begin{bmatrix}
-1 & 4 & 3\\\\
-2 & 1 & 5\\\\
-4 & 3 & 6
-\\end{bmatrix}+
-\\begin{bmatrix}
-1 & 2 & 4\\\\
-4 & 1 & 3\\\\
-3 & 5 & 6
-\\end{bmatrix}\\right)
-= \\begin{bmatrix}
-1 & 3 & 3.5\\\\
-3 & 1 & 4\\\\
-3.5 & 4 & 6
-\\end{bmatrix}$$
-
-----
-## example anti-symmetric portion
-
-$$a\_{(ij)} = \\frac{1}{2}(a\_{ij} - a\_{ji})$$
-
-$$a\_{(ij)} = \\frac{1}{2} \\left (
-\\begin{bmatrix}
-1 & 4 & 3\\\\
-2 & 1 & 5\\\\
-4 & 3 & 6
-\\end{bmatrix}-
-\\begin{bmatrix}
-1 & 2 & 4\\\\
-4 & 1 & 3\\\\
-3 & 5 & 6
-\\end{bmatrix}\\right)
-= \\begin{bmatrix}
-0 & 1 & -0.5\\\\
--1 & 0 & 1\\\\
-0.5 & -1 & 0
-\\end{bmatrix}$$
 
 ---
 # group problems

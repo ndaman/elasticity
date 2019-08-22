@@ -66,6 +66,7 @@ Septeber 4, 2019
 -   A *deformation* is a comparison of two states. The deformation of a material point is expressed as
 $$x\_i = x\_i(x\_1^0, x\_2^0, x\_3^0) \\quad \\text{or} \\quad x\_i^0 = x\_i^0(x\_1, x\_2, x\_3)$$
 -   For example, consider the 2D deformation
+
 $$\\begin{Bmatrix}
 		x\_1 \\\\ x\_2
 	\\end{Bmatrix} =

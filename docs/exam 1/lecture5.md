@@ -422,6 +422,9 @@ $$e\_{ij} = \\begin{bmatrix}
 	xy & \\frac{1}{2}x^2 & 3z^2
 \\end{bmatrix}$$
 
+----
+## example
+
 -   We start by integrating the diagonal terms
 - <!-- .element style="list-style-type:none" -->   *u* = ∫*yzdx* = *xyz* + *f*(*y*, *z*)
 - <!-- .element style="list-style-type:none" -->   *v* = ∫2*ydy* = *y*<sup>2</sup> + *g*(*x*, *z*)
@@ -432,7 +435,8 @@ $$e\_{ij} = \\begin{bmatrix}
 
 -   Next we need to find the shear terms
 
-$$\\begin{aligned}
+<div class="left">
+ $$\\begin{aligned}
 	e\_{xy} &= \\frac{1}{2}(u\_{,y}+v\_{,x})\\\\
 	xz &= \\frac{1}{2}(xz + f\_{,y} + g\_{,x})
 \\end{aligned}$$
@@ -440,16 +444,18 @@ $$\\begin{aligned}
 	e\_{xz} &= \\frac{1}{2}(u\_{,z}+w\_{,x})\\\\
 	xy &= \\frac{1}{2}(xy + f\_{,z} + h\_{,x})
 \\end{aligned}$$
+</div>
+<div class="right">
 $$\\begin{aligned}
 	e\_{yz} &= \\frac{1}{2}(v\_{,z}+w\_{,y})\\\\
 	\\frac{1}{2}x^2 &= \\frac{1}{2}(g\_{,z} + h\_{,y})
 \\end{aligned}$$
+</div>
 
 ----
 ## example
 
 -   Note that we cannot uniquely solve this (any arbitrary rotation *ω* can be added and will still produce a valid strain)
-
 -   Let *f*(*y*, *z*)=0
 
 $$\\begin{aligned}

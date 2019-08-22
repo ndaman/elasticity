@@ -64,12 +64,9 @@ Septeber 4, 2019
 ## deformation
 
 -   A *deformation* is a comparison of two states. The deformation of a material point is expressed as
-$$\\begin{gathered}
-	x\_i = x\_i(x\_1^0, x\_2^0, x\_3^0) \\quad \\text{or} \\quad x\_i^0 = x\_i^0(x\_1, x\_2, x\_3)
-\\end{gathered}$$
+$$x\_i = x\_i(x\_1^0, x\_2^0, x\_3^0) \\quad \\text{or} \\quad x\_i^0 = x\_i^0(x\_1, x\_2, x\_3)$$
 -   For example, consider the 2D deformation
-$$\\begin{gathered}
-	\\begin{Bmatrix}
+$$\\begin{Bmatrix}
 		x\_1 \\\\ x\_2
 	\\end{Bmatrix} =
 	\\begin{Bmatrix}
@@ -80,8 +77,7 @@ $$\\begin{gathered}
 	\\end{Bmatrix}
 		= \\begin{Bmatrix}
 		\\frac{1}{2} x\_1 \\\\ x\_2
-	 \\end{Bmatrix}
-\\end{gathered}$$
+\\end{Bmatrix}$$
 
 ----
 ## deformation
@@ -307,7 +303,7 @@ $$\\begin{aligned}
 ----
 ## geometric description
 
-![cube undergoes an arbitrary translation and deformation, which is used to describe strain](..\images\geometric-strain.png)
+![cube undergoes an arbitrary translation and deformation, which is used to describe strain](..\images\geometric-strain.png) <!-- .element width="50%" -->
 
 ----
 ## geometric description
@@ -321,11 +317,14 @@ $$\\begin{aligned}
 	&= dx \\sqrt{1 + 2\\frac{\\partial u}{\\partial x} + \\left(\\frac{\\partial u}{\\partial x}\\right)^2+ \\left(\\frac{\\partial v}{\\partial x}\\right)^2}
 \\end{aligned}$$
 
+----
+## geometric description
+
 -   For small deformation, we assume $\\frac{\\partial v}{\\partial x}$ is small when compared with $\\frac{\\partial u}{\\partial x}$, which gives
 - <!-- .element style="list-style-type:none" -->   $$A^\\prime B^\\prime = \\left(1 + \\frac{\\partial u}{\\partial x}\\right)dx$$
 
 ----
-## geometric description of strain
+## geometric description
 
 $$\\begin{aligned}
 	\\varepsilon\_x &= \\frac{A^\\prime B^\\prime - AB}{AB} = \\frac{\\left(1 + \\frac{\\partial u}{\\partial x}\\right)dx - dx}{dx} \\\\
@@ -336,7 +335,7 @@ $$\\begin{aligned}
 - <!-- .element style="list-style-type:none" -->   $$\\varepsilon\_y = \\frac{\\partial v}{\\partial y}$$
 
 ----
-## geometric description of strain
+## geometric description
 
 -   Engineering shear strain is defined as the change in angle between two originally orthogonal directions
 - <!-- .element style="list-style-type:none" -->   $$\\gamma\_{xy} = \\frac{\\pi}{2} - \\angle D^\\prime A^\\prime B^\\prime = \\alpha + \\beta$$
@@ -348,7 +347,7 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 ----
-## geometric description of strain
+## geometric description
 
 -   The other shear terms can be found in the same way
 
@@ -357,6 +356,9 @@ $$\\begin{aligned}
 	\\gamma\_{xz} &= \\frac{\\partial u}{\\partial z} + \\frac{\\partial w}{\\partial x}\\\\
 	\\gamma\_{yz} &= \\frac{\\partial v}{\\partial z} + \\frac{\\partial w}{\\partial y}
 \\end{aligned}$$
+
+----
+## geometric description
 
 -   Engineering strain and tensor strain definitions differ only in shear terms
 - <!-- .element style="list-style-type:none" -->   $$e\_{ij} = \\frac{1}{2} \\left(u\_{i,j} + u\_{j,i}\\right)$$
@@ -373,7 +375,7 @@ $$\\begin{Bmatrix}
 	xy^2z \\\\ xz \\\\ z^3
 \\end{Bmatrix}$$
 
--   Deformation gradient:
+- <!-- .element class="fragment" -->  Deformation gradient:
 
 $$F = u\_{i,j} = \\begin{bmatrix}
 	y^2 z & 2 xyz & xy^2\\\\

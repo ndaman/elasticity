@@ -376,13 +376,16 @@ $$\\begin{Bmatrix}
 	xy^2z \\\\ xz \\\\ z^3
 \\end{Bmatrix}$$
 
-- <!-- .element class="fragment" -->  Deformation gradient:
-
+<div class="fragment">
+	<ul>
+		<li>Deformation gradient:</li>
+	</ul>
 $$F = u\_{i,j} = \\begin{bmatrix}
 	y^2 z & 2 xyz & xy^2\\\\
 	z & 0 & x\\\\
 	0 & 0 & 3z^2
 \\end{bmatrix}$$
+</div>
 
 ----
 ## example

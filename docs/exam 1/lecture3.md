@@ -18,12 +18,44 @@ August 26, 2019
 
 <!-- vim-markdown-toc GFM -->
 
+* group problems
 * coordinate transformation
 * examples
 * principal directions
 * examples
 
 <!-- vim-markdown-toc -->
+
+---
+# group problems
+
+----
+## group 1 
+
+Identify the dummy and free indexes in each of the following expressions. Indicate the tensor order of the expression. If index notation is used incorrectly, identify why it is used incorrectly and propose a correction.
+
+1.  *a*<sub>*i*</sub>*b*<sub>*j*</sub>*c*<sub>*k*</sub> + *d*<sub>*ijk*</sub>
+2.  *a*<sub>*ii*</sub>*b*<sub>*k*</sub> + *c*<sub>*kk*</sub>*d*<sub>*j*</sub>
+3.  *C*<sub>*ijkl*</sub>*ϵ*<sub>*kl*</sub>
+
+----
+## group 2 
+
+Is it possible to factor *n*<sub>*i*</sub> from the following equation? If so, factor it.
+
+*T*<sub>*ij*</sub>*n*<sub>*j*</sub> − *λn*<sub>*i*</sub> = 0
+
+----
+## group 3 
+
+Find the symmetric, *S*<sub>*ij*</sub>, and anti-symmetric, *A*<sub>*ij*</sub>, portions of *T*<sub>*ij*</sub>. 
+Verify that *S*<sub>*ij*</sub> + *A*<sub>*ij*</sub> = *T*<sub>*ij*</sub>
+
+$$T\_{ij} = \\begin{bmatrix}
+	1 & 0 & 3\\\\
+	0 & 1 & 2\\\\
+	3 & 0 & 3
+\\end{bmatrix}$$
 
 ---
 # coordinate transformation

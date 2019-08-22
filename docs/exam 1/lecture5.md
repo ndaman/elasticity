@@ -91,10 +91,16 @@ $$\\begin{gathered}
 ----
 ## displacement
 
--   A displacement is the shortest distance traveled when a particle moves from one location to another
--   Displacement is identical in Eulerian and Lagrangian descriptions
-- <!-- .element style="list-style-type:none" -->   *u*<sub>*i*</sub> = (*x*<sub>*i*</sub> − *x*<sub>*i*</sub><sup>0</sup>)
-![an illustration of displacement showing the shortest distance between a point before and after a horizontal stretch](..\images\displacement.png)
+<div class="left">
+	<ul>
+		<li>A displacement is the shortest distance traveled when a particle moves from one location to another </li>
+		<li>Displacement is identical in Eulerian and Lagrangian descriptions </li>
+		<li style="list-style-type:none">*u*<sub>*i*</sub> = (*x*<sub>*i*</sub> − *x*<sub>*i*</sub><sup>0</sup>) </li>
+	</ul>
+</div>
+<div class="right">
+	![an illustration of displacement showing the shortest distance between a point before and after a horizontal stretch](..\images\displacement.png)
+</div>
 
 ---
 # small deformation theory
@@ -234,7 +240,7 @@ $$F = \\begin{bmatrix}
 ## pure shear
 
 - <!-- .element style="list-style-type:none" -->$$\\frac{\\partial u\_1}{\\partial x\_1} = 1$$
-- <!-- .element style="list-style-type:none" -->*u*<sub>1</sub> = *x*<sub>1</sub> + *f*(*x*<sub>2</sub>)
+- <!-- .element style="list-style-type:none" -->$$u_1 = x_1 + f(x_2)$$
 - <!-- .element style="list-style-type:none" -->$$\\frac{\\partial u\_1}{\\partial x\_2} = \\frac{1}{2}$$
 - <!-- .element style="list-style-type:none" -->$$\\frac{\\partial f}{\\partial x\_2} = \\frac{1}{2}$$
 - <!-- .element style="list-style-type:none" -->$$u\_1 = x\_1 + \\frac{1}{2} x\_2$$
@@ -243,7 +249,7 @@ $$F = \\begin{bmatrix}
 ## pure shear
 
 - <!-- .element style="list-style-type:none" -->$$\\frac{\\partial u\_2}{\\partial x\_2} = 1$$
-- <!-- .element style="list-style-type:none" -->*u*<sub>2</sub> = *x*<sub>2</sub> + *g*(*x*<sub>1</sub>)
+- <!-- .element style="list-style-type:none" -->$$u_2 = x_2 + g(x_1)$$
 - <!-- .element style="list-style-type:none" -->$$\\frac{\\partial u\_2}{\\partial x\_1} = \\frac{1}{2}$$
 - <!-- .element style="list-style-type:none" -->$$\\frac{\\partial g}{\\partial x\_1} = \\frac{1}{2}$$
 - <!-- .element style="list-style-type:none" -->$$u\_2 = x\_2 + \\frac{1}{2} x\_1$$
@@ -251,7 +257,7 @@ $$F = \\begin{bmatrix}
 ----
 ## pure shear
 
-![a square before and after a pure shear deformation, with no rotation, as described by our previous equations](..\images\pure-shear.png)
+![a square before and after a pure shear deformation, with no rotation, as described by our previous equations](..\images\pure-shear.png) <!-- .element width="50%" -->
 
 ---
 # strain
@@ -270,9 +276,8 @@ $$\\begin{aligned}
 -   *ω*<sub>*ij*</sub> is known as the rotation tensor
 
 ----
-## geometric description of strain
+## geometric description
 
--   Strain definitions
 -   Engineering strain
 - <!-- .element style="list-style-type:none" -->   $$e^E = \\frac{\\Delta L}{L\_0}$$
 -   True strain
@@ -281,7 +286,7 @@ $$\\begin{aligned}
 - <!-- .element style="list-style-type:none" -->   $$e^L = \\int\_{L\_0}^L e^T = \\int\_{L\_0}^L \\frac{dl}{l} = \\ln \\left(\\frac{L}{L\_0}\\right)$$
 
 ----
-## geometric description of strain
+## geometric description
 
 -   Large strain: *ΔL* = *L*<sub>0</sub>
 
@@ -300,12 +305,12 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 ----
-## geometric description of strain
+## geometric description
 
 ![cube undergoes an arbitrary translation and deformation, which is used to describe strain](..\images\geometric-strain.png)
 
 ----
-## geometric description of strain
+## geometric description
 
 -   The extensional strain in the x-direction (engineering strain) is defined by
 - <!-- .element style="list-style-type:none" -->   $$\\varepsilon\_x = \\frac{A^\\prime B^\\prime - AB}{AB}$$

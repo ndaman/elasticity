@@ -53,6 +53,10 @@ Septeber 4, 2019
 -   We refer to the undeformed configuration as *x*<sub>*i*</sub><sup>0</sup> and the deformed configuration as *x*<sub>*i*</sub>
 -   If some quantity, *ϕ* is expressed in the undeformed configuration as *ϕ*(*x*<sub>1</sub><sup>0</sup>, *x*<sub>2</sub><sup>0</sup>, *x*<sub>3</sub><sup>0</sup>, *t*) then the material derivative is
 - <!-- .element style="list-style-type:none" -->   $$\\frac{d\\phi}{dt} = \\frac{\\partial \\phi}{\\partial t}$$
+
+----
+## material derivatives
+
 -   However in Eulerian form $\\bar{\\phi} (x\_1, x\_2, x\_3, t) = \\phi(x\_1^0,x\_2^0,x\_3^0,t)$ the material derivative becomes
 - <!-- .element style="list-style-type:none" -->   $$\\frac{d\\bar{\\phi}}{dt} = \\frac{\\partial \\bar{\\phi}}{\\partial t} + \\frac{\\partial \\bar{ \\phi}}{\\partial x\_j}\\frac{d x\_j}{dt}$$
 
@@ -60,24 +64,24 @@ Septeber 4, 2019
 ## deformation
 
 -   A *deformation* is a comparison of two states. The deformation of a material point is expressed as
-- <!-- .element style="list-style-type:none" -->   $$\\begin{gathered}
-            x\_i = x\_i(x\_1^0, x\_2^0, x\_3^0) \\quad \\text{or} \\quad x\_i^0 = x\_i^0(x\_1, x\_2, x\_3)
-            \\end{gathered}$$
+$$\\begin{gathered}
+	x\_i = x\_i(x\_1^0, x\_2^0, x\_3^0) \\quad \\text{or} \\quad x\_i^0 = x\_i^0(x\_1, x\_2, x\_3)
+\\end{gathered}$$
 -   For example, consider the 2D deformation
-- <!-- .element style="list-style-type:none" -->   $$\\begin{gathered}
-            \\begin{Bmatrix}
-            x\_1 \\\\ x\_2
-            \\end{Bmatrix} =
-            \\begin{Bmatrix}
-            2 x\_1^0 \\\\ x\_2^0
-            \\end{Bmatrix} \\quad \\text{or} \\quad
-            \\begin{Bmatrix}
-            x\_1^0 \\\\ x\_2^0
-            \\end{Bmatrix}
-             = \\begin{Bmatrix}
-             \\frac{1}{2} x\_1 \\\\ x\_2
-             \\end{Bmatrix}
-            \\end{gathered}$$
+$$\\begin{gathered}
+	\\begin{Bmatrix}
+		x\_1 \\\\ x\_2
+	\\end{Bmatrix} =
+	\\begin{Bmatrix}
+		2 x\_1^0 \\\\ x\_2^0
+	\\end{Bmatrix} \\quad \\text{or} \\quad
+	\\begin{Bmatrix}
+		x\_1^0 \\\\ x\_2^0
+	\\end{Bmatrix}
+		= \\begin{Bmatrix}
+		\\frac{1}{2} x\_1 \\\\ x\_2
+	 \\end{Bmatrix}
+\\end{gathered}$$
 
 ----
 ## deformation

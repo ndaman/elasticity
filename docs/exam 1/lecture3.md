@@ -5,6 +5,19 @@ Wichita State University, Department of Aerospace Engineering
 August 26, 2019
 
 ----
+## rest easy Captain
+
+<div class="left">
+	<img src="..\images\captain-luck.jpg">
+</div>
+
+<div class="right">
+	<p>Dearest mother —
+<br />The quill has never felt more heavy. I have made the decision to holster my sidearm permanently. I shall battle no more. The decision is difficult, but, as the hogs taught me, I must be true to myself. I am coming home to care for you and the farm. 
+<br />— Andrew
+</div>
+
+----
 ## upcoming schedule
 
 -   Aug 26 - Principal Values

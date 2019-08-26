@@ -26,6 +26,14 @@ August 26, 2019
 
 <!-- vim-markdown-toc -->
 
+----
+## office hours
+
+-   The votes are in and office hours will be Mondays from 3:00 - 4:00
+-   As an alternative, AE 837 (Advanced Damage Tolerance) office hours are Wednesdays from 3:00 - 4:00
+-   My office - WH 200D
+-   If you cannot make it to those hours just e-mail me to set an appointment
+
 ---
 # group problems
 

@@ -210,7 +210,7 @@ $$\\hat{a} \\times \\hat{b} = \\epsilon\_{ijk} a\_j b\_k$$
 -   Some useful relations
 
 $$\\begin{aligned}
-	\[A\]\[B\] & = A\_{ij} B\_{jk}\\\\
+	\[A\]\[A\]\[B\] & = A\_{ij} B\_{jk}\\\\
 	\[A\]\[B\]^T & = A\_{ij} B\_{kj}\\\\
 	\[A\]^T\[B\] & = A\_{ji} B\_{jk}\\\\
 	tr(\[A\]\[B\]) & = A\_{ij} B\_{ji}\\\\

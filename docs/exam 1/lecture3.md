@@ -7,11 +7,11 @@ August 26, 2019
 ----
 ## rest easy Captain
 
-<div class="left">
+<div class="left" style="width:30%">
 	<img src="..\images\captain-luck.jpg">
 </div>
 
-<div class="right">
+<div class="right" style="width:65%">
 	<p>Dearest mother —
 <br />The quill has never felt more heavy. I have made the decision to holster my sidearm permanently. I shall battle no more. The decision is difficult, but, as the hogs taught me, I must be true to myself. I am coming home to care for you and the farm. 
 <br />— Andrew

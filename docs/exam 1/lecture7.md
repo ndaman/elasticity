@@ -232,6 +232,7 @@ $$\\begin{aligned}
     -   Principal directions
     -   Tensor calculus
 
+----
 ## topics
 
 -   Chapter 2
@@ -277,7 +278,7 @@ $$\\begin{aligned}
 		- <!-- .element style="list-style-type:none" class="fragment" --> \[*A*\]\[*D*\]<sup>*T*</sup>\[*C*\]\[*B*\]<sup>*T*</sup>
 
 ----
-## solving equations in index notation
+## solving 
 
 -   Solve the following equation for *E*<sub>*k*</sub> in terms of *C*<sub>*ij*</sub>, *V*<sub>*ij*</sub>, and *a*<sub>*i*</sub>.
 - <!-- .element style="list-style-type:none" -->   *E*<sub>*k*</sub>*δ*<sub>*ik*</sub> = *C*<sub>*kj*</sub>(*V*<sub>*ij*</sub>*a*<sub>*k*</sub> − *E*<sub>*k*</sub>*δ*<sub>*ij*</sub>)
@@ -289,7 +290,7 @@ $$\\begin{aligned}
 - <!-- .element style="list-style-type:none" -->    Hint: First solve for *A*<sub>*kk*</sub> in terms of *B*<sub>*ij*</sub>, then substitute that to solve for *A*<sub>*ij*</sub>
 
 ----
-## coordinate transformation
+## transformation
 
 -   We can express any tensor quantity in terms of a rotated coordinate system
 -   The direction cosines help to find the coordinates in the transformed system

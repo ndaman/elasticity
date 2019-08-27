@@ -2,7 +2,7 @@
 ## Theory of Elasticity
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
-Septeber 4, 2019
+September 4, 2019
 
 ----
 ## upcoming schedule

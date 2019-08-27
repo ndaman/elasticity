@@ -39,6 +39,9 @@ $$\\begin{Bmatrix}
 	xy^2z \\\\ xz \\\\ z^3
 \\end{Bmatrix}$$
 
+----
+## example
+
 -   Deformation gradient:
 	
 $$F = u\_{i,j} = \\begin{bmatrix}
@@ -81,6 +84,9 @@ $$e\_{ij} = \\begin{bmatrix}
 	xz & 2y & \\frac{1}{2}x^2\\\\
 	xy & \\frac{1}{2}x^2 & 3z^2
 \\end{bmatrix}$$
+
+----
+## example
 
 -   We start by integrating the diagonal terms
 -   *u* = ∫*yzdx* = *xyz* + *f*(*y*, *z*)
@@ -178,7 +184,7 @@ $$\\epsilon\_{ij} = \\begin{bmatrix}
 ## principal strains
 
 -   Principal strains are found in exactly the same way as principal values discussed in Chapter 1
-- <!-- .element style="list-style-type:none" -->`$$\det\[e_{ij} e\delta_{ij}\]=0$$`
+- <!-- .element style="list-style-type:none" -->`$$\det[e_{ij} e\delta_{ij}]=0$$`
 -   Invariants can also be found in the same fashion as in any other tensor
 
 $$\\begin{aligned}
@@ -235,7 +241,7 @@ $$\\begin{bmatrix}
 -   Substituting the relationships found earlier
 - <!-- .element style="list-style-type:none" -->   $$\\frac{V^\\prime - V}{V} = \\frac{LWH(1+e\_1+e\_2+e\_3) - LWH}{LWH}$$
 -   Which simplifies to
--   *e*<sub>1</sub> + *e*<sub>2</sub> + *e*<sub>3</sub> = *ϑ*<sub>1</sub>
+- <!-- .element style="list-style-type:none" -->	 `$$e_1 + e_2 + e_3 = \vartheta_1 $$`
 
 ---
 # special strain definitions
@@ -261,6 +267,10 @@ $$\\begin{aligned}
 -   The usual tensor transformation applies to the strain tensor as well
 -   *e*<sub>*ij*</sub><sup>′</sup> = *Q*<sub>*im*</sub>*Q*<sub>*jn*</sub>*e*<sub>*mn*</sub>
 -   In many instances, however, we are only concerned with the strain within a plane (for example, when using strain gages).
+
+----
+## strain transformation
+
 -   For an in-plane rotation (rotation about *z*-axis), we find
 
 $$Q\_{ij} = \\begin{bmatrix}
@@ -284,6 +294,9 @@ $$\\begin{aligned}
 	e^\\prime\_{xy} &= -e\_x \\sin \\theta \\cos \\theta + e\_y \\sin \\theta \\cos \\theta + e\_{xy} (\\cos^2 \\theta - \\sin^2 \\theta)
 \\end{aligned}$$
 
+----
+## strain transformation
+
 -   This is often re-written using the double-angle formulas
 
 $$\\begin{aligned}
@@ -302,7 +315,7 @@ $$\\begin{aligned}
 ----
 ## example
 
-![strain gage rosettes example problem](..\images\rosette-example.png)
+![strain gage rosettes example problem](..\images\rosette-example.png) <!-- .element width="70%" -->
 
 ----
 ## example
@@ -311,14 +324,18 @@ $$\\begin{aligned}
 -   Note that *e*<sub>*y*</sub> = *ϵ*<sub>*b*</sub> = −0.002
 -   Set coordinate system so that *ϵ*<sub>*b*</sub> = *e*<sub>*x*</sub><sup>′</sup>.
 -   Use equation for *e*<sub>*x*</sub><sup>′</sup> with *θ* = 30.
-- <!-- .element style="list-style-type:none" -->   $$\\alert{e^\\prime\_x} = \\frac{e\_x + \\alert{e\_y}}{2} + \\frac{e\_x - \\alert{e\_y}}{2}\\cos 60 + e\_{xy} \\sin 60$$
+- <!-- .element style="list-style-type:none" -->   $$e^\\prime\_x = \\frac{e\_x + e\_y}{2} + \\frac{e\_x - e\_y}{2}\\cos 60 + e\_{xy} \\sin 60$$
 
 ----
 ## example
 
 -   We have two unknowns in this equation, so we need another
 -   We can use the equation for *e*<sub>*y*</sub><sup>′</sup> with *θ* = 60 so that *ϵ*<sub>*b*</sub> = *e*<sub>*x*</sub><sup>′</sup>
-- <!-- .element style="list-style-type:none" -->   $$\\alert{e^\\prime\_y} = \\frac{e\_x + \\alert{e\_y}}{2} - \\frac{e\_x - \\alert{e\_y}}{2}\\cos 120 - e\_{xy} \\sin 120$$
+- <!-- .element style="list-style-type:none" -->   $$e^\\prime\_y = \\frac{e\_x + e\_y}{2} - \\frac{e\_x - e\_y}{2}\\cos 120 - e\_{xy} \\sin 120$$
+
+----
+## example
+
 -   Substituting known values and simplifying:
 
 $$\\begin{aligned}

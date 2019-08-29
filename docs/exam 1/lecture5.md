@@ -16,7 +16,6 @@ September 4, 2019
 ----
 ## outline
 
-
 <!-- vim-markdown-toc GFM -->
 
 * general deformation

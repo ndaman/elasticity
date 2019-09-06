@@ -184,7 +184,7 @@ $$\\epsilon\_{ij} = \\begin{bmatrix}
 ## principal strains
 
 -   Principal strains are found in exactly the same way as principal values discussed in Chapter 1
-- <!-- .element style="list-style-type:none" -->`$$\det[e_{ij} e\delta_{ij}]=0$$`
+- <!-- .element style="list-style-type:none" -->`$$\det[e_{ij} - e\delta_{ij}]=0$$`
 -   Invariants can also be found in the same fashion as in any other tensor
 
 $$\\begin{aligned}

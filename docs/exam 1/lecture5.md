@@ -342,7 +342,7 @@ $$\\begin{aligned}
 -   For small strains, *α* ≈ tan*α* and *β* ≈ tan*β*.
 
 $$\\begin{aligned}
-	\\gamma\_{xy} &= \\frac{\\frac{\\partial v}{\\partial x}dx}{dx + \\frac{\\partial u}{\\partial x dx}} + \\frac{\\frac{\\partial u}{\\partial y}dy}{dy + \\frac{\\partial v}{\\partial y dx}}\\\\
+	\\gamma\_{xy} &= \\frac{\\frac{\\partial v}{\\partial x}dx}{dx + \\frac{\\partial u}{\\partial x}dx} + \\frac{\\frac{\\partial u}{\\partial y}dy}{dy + \\frac{\\partial v}{\\partial y }dy}\\\\
 	&\\approx \\frac{\\partial u}{\\partial y} + \\frac{\\partial v}{\\partial x}
 \\end{aligned}$$
 

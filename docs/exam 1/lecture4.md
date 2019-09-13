@@ -201,8 +201,10 @@ $$\\hat{a} \\times \\hat{b} = \\epsilon\_{ijk} a\_j b\_k$$
 
 -   It is often convenient to write expressions in matrix notation to use MATLAB or graphing calculators
 -   We need to be careful how this is done, in index notation left and right multiplication are identical, but this is not the case for matrices
-- <!-- .element style="list-style-type:none" -->    \[*A*\]\[*B*\]=*A*<sub>*ij*</sub>*B*<sub>*jk*</sub>
-- <!-- .element style="list-style-type:none" -->    \[*B*\]\[*A*\]=*B*<sub>*ij*</sub>*A*<sub>*jk*</sub> = *A*<sub>*jk*</sub>*B*<sub>*ij*</sub>
+- <!-- .element style="list-style-type:none" -->    
+\[*A*\]\[*B*\]=*A*<sub>*ij*</sub>*B*<sub>*jk*</sub>
+- <!-- .element style="list-style-type:none" -->    
+\[*B*\]\[*A*\]=*B*<sub>*ij*</sub>*A*<sub>*jk*</sub> = *A*<sub>*jk*</sub>*B*<sub>*ij*</sub>
 
 ----
 ## converting to matrix math
@@ -226,8 +228,10 @@ $$\\begin{aligned}
     1.  Re-arrange so dummy indexes are adjacent
         *Q*<sub>*ip*</sub>*a*<sub>*pq*</sub>*Q*<sub>*jq*</sub>
     2.  Identify which (if any) tensors are transposed (dummy indexes should be on the inside of adjacent terms without a transpose)
-- <!-- .element style="list-style-type:none" -->        *Q*<sub>*ip*</sub> *a* <sub>*pq*</sub> <span style="color:red">Q <sub>*jq*</sub></span>
-- <!-- .element style="list-style-type:none" -->        \[*Q*\]\[*a*\]\[*Q*\]<sup>*T*</sup>
+- <!-- .element style="list-style-type:none" -->        
+_Q_<sub>*ip*</sub> *a* <sub>*pq*</sub> <span style="color:red">Q <sub>*jq*</sub></span>
+- <!-- .element style="list-style-type:none" -->        
+\[*Q*\]\[*a*\]\[*Q*\]<sup>*T*</sup>
 
 ----
 ## example
@@ -236,11 +240,14 @@ $$\\begin{aligned}
     *A*<sub>*ik*</sub>*B*<sub>*jl*</sub>*C*<sub>*ml*</sub>*D*<sub>*mk*</sub>
 
   1.  <!-- .element class="fragment" -->Re-arrange to so that dummy indexes are in adjacent terms
-		-   <!-- .element style="list-style-type:none" class="fragment" -->        *A*<sub>*ik*</sub>*D*<sub>*mk*</sub>*C*<sub>*ml*</sub>*B*<sub>*jl*</sub>
+		-   <!-- .element style="list-style-type:none" class="fragment" -->        
+_A_<sub>*ik*</sub>*D*<sub>*mk*</sub>*C*<sub>*ml*</sub>*B*<sub>*jl*</sub>
 
   2.  <!-- .element class="fragment" -->Identify which terms are transposed
-		- <!-- .element style="list-style-type:none" class="fragment" --> *A*<sub>*ik*</sub> <span style="color:red">*D*<sub>*mk*</sub></span>*C* <sub>*ml*</sub> <span style="color:red">*B*<sub>*jl*</sub></span>
-		- <!-- .element style="list-style-type:none" class="fragment" --> \[*A*\]\[*D*\]<sup>*T*</sup>\[*C*\]\[*B*\]<sup>*T*</sup>
+		- <!-- .element style="list-style-type:none" class="fragment" --> 
+_A_<sub>*ik*</sub> <span style="color:red">*D*<sub>*mk*</sub></span>*C* <sub>*ml*</sub> <span style="color:red">*B*<sub>*jl*</sub></span>
+		- <!-- .element style="list-style-type:none" class="fragment" --> 
+\[*A*\]\[*D*\]<sup>*T*</sup>\[*C*\]\[*B*\]<sup>*T*</sup>
 
 ---
 # tensor calculus
@@ -273,9 +280,11 @@ $$\\begin{aligned}
 
 -   Free index and dummy index conventions still apply to the comma notation
 -   *a*<sub>,*i*</sub> expands to
-- <!-- .element style="list-style-type:none" -->   $$\\left \\langle \\frac{\\partial}{\\partial x\_1} a, \\frac{\\partial}{\\partial x\_2} a, \\frac{\\partial}{\\partial x\_3} a \\right \\rangle$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\left \\langle \\frac{\\partial}{\\partial x\_1} a, \\frac{\\partial}{\\partial x\_2} a, \\frac{\\partial}{\\partial x\_3} a \\right \\rangle$$
 -   But *b*<sub>*i*, *i*</sub> becomes
-- <!-- .element style="list-style-type:none" -->   $$\\frac{\\partial}{\\partial x\_1} b\_1 + \\frac{\\partial}{\\partial x\_2} b\_2+ \\frac{\\partial}{\\partial x\_3} b\_3$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\frac{\\partial}{\\partial x\_1} b\_1 + \\frac{\\partial}{\\partial x\_2} b\_2+ \\frac{\\partial}{\\partial x\_3} b\_3$$
 
 ----
 ## partial derivatives
@@ -293,7 +302,8 @@ $$\\begin{bmatrix}
 
 -   The gradient operator, ∇, is often used to indicate partial differentiation in matrix and vector notation
 -   We can represent ∇ as a vector
-- <!-- .element style="list-style-type:none" -->   $$\\nabla = \\left\\langle \\frac{\\partial}{\\partial x\_1}, \\frac{\\partial}{\\partial x\_2}, \\frac{\\partial}{\\partial x\_3} \\right \\rangle$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\nabla = \\left\\langle \\frac{\\partial}{\\partial x\_1}, \\frac{\\partial}{\\partial x\_2}, \\frac{\\partial}{\\partial x\_3} \\right \\rangle$$
 -   ∇ is also referred to as the *del operator*
 
 ----
@@ -314,33 +324,40 @@ $$\\begin{aligned}
 ## divergence theorem
 
 -   The Divergence Theorem (or Gauss Theorem) for a vector field, $\\hat{u}$,
-- <!-- .element style="list-style-type:none" -->   $$\\iint\_S \\hat{u} \\cdot \\hat{n} dS = \\iiint \\nabla \\cdot \\hat{u} dV$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\iint\_S \\hat{u} \\cdot \\hat{n} dS = \\iiint \\nabla \\cdot \\hat{u} dV$$
 -   is also valid for tensors of any order
-- <!-- .element style="list-style-type:none" -->   ∬<sub>*S*</sub>*a*<sub>*ij*...*k*</sub>*n*<sub>*k*</sub>*dS* = ∭<sub>*V*</sub>*a*<sub>*ij*...*k*, *k*</sub>*dV*
+- <!-- .element style="list-style-type:none" -->   
+∬<sub>*S*</sub>*a*<sub>*ij*...*k*</sub>*n*<sub>*k*</sub>*dS* = ∭<sub>*V*</sub>*a*<sub>*ij*...*k*, *k*</sub>*dV*
 
 ----
 ## stokes theorem
 
 -   Stokes theorem for a vector field, $\\hat{u}$,
-- <!-- .element style="list-style-type:none" -->   $$\\oint \\hat{u}\\cdot d\\hat{r} = \\iint\_S \\left(\\nabla \\times \\hat{u}\\right)\\cdot \\hat{n} dS$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\oint \\hat{u}\\cdot d\\hat{r} = \\iint\_S \\left(\\nabla \\times \\hat{u}\\right)\\cdot \\hat{n} dS$$
 -   also applies for tensors of any order
-- <!-- .element style="list-style-type:none" -->   ∮*a*<sub>*ij*...*k*</sub>*dx*<sub>*t*</sub> = ∬<sub>*S*</sub>*ϵ*<sub>*rst*</sub>*a*<sub>*ij*...*k*, *s*</sub>*n*<sub>*r*</sub>*dS*
+- <!-- .element style="list-style-type:none" -->   
+∮*a*<sub>*ij*...*k*</sub>*dx*<sub>*t*</sub> = ∬<sub>*S*</sub>*ϵ*<sub>*rst*</sub>*a*<sub>*ij*...*k*, *s*</sub>*n*<sub>*r*</sub>*dS*
 
 ----
 ## green’s theorem
 
 -   Green’s theorem is merely a simplification of Stokes theorem in a planar domain.
 -   If we write the vector field, $\\hat{u} = f \\hat{e\_1} + g\\hat{e\_2}$, we find
-- <!-- .element style="list-style-type:none" -->   $$\\iint\_S \\left( \\frac{\\partial g}{\\partial x\_1} - \\frac{\\partial f}{\\partial x\_2}\\right) dx dy = \\int\_C (f dx + g dy)$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\iint\_S \\left( \\frac{\\partial g}{\\partial x\_1} - \\frac{\\partial f}{\\partial x\_2}\\right) dx dy = \\int\_C (f dx + g dy)$$
 
 ----
 ## zero-value theorem
 
 -   The zero-value theorem is particularly useful in variational calculus, which we will use later in the course
 -   If we know that
-- <!-- .element style="list-style-type:none" -->   ∭<sub>*V*</sub>*f*<sub>*ij*...*k*</sub>*dV* = 0
+- <!-- .element style="list-style-type:none" -->   
+∭<sub>*V*</sub>*f*<sub>*ij*...*k*</sub>*dV* = 0
 -   then
-- <!-- .element style="list-style-type:none" -->   *f*<sub>*ij*...*k*</sub> = 0
+- <!-- .element style="list-style-type:none" -->   
+_f_<sub>*ij*...*k*</sub> = 0
 
 ---
 # other coordinate systems

@@ -5,12 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <title>AE731 Theory of Elasticity</title>
-        <link rel="stylesheet" href="./css/reveal.css">
-        <link rel="stylesheet" href="./css/theme/shocker.css" id="theme">
-        <link rel="stylesheet" href="./css/highlight/zenburn.css">
-        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
-
-
+        <link rel="stylesheet" href="./reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="./reveal.js/css/theme/shocker.css" id="theme">
+        <link rel="stylesheet" href="./reveal.js/css/highlight/zenburn.css">
+				<script>
+					var link = document.createElement( 'link' );
+					link.rel = 'stylesheet';
+					link.type = 'text/css';
+					link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+					document.getElementsByTagName( 'head' )[0].appendChild( link );
+				</script>
     </head>
     <body>
 
@@ -27,33 +31,33 @@ August 19, 2019
 </script></section><section  data-markdown data-separator="^\n---$"
 data-separator-vertical="^\n----$"><script type="text/template">
 ## class docs
-- Syllabus [html](.\handouts\syllabus_fall2019.html) [pdf](.\handouts\syllabus_fall2019.pdf)
+- Syllabus [html](./handouts/syllabus_fall2019.html) [pdf](./handouts/syllabus_fall2019.pdf)
 - Office Hours - WH 200D Mondays 3:00 - 4:00
 
 ----
 ## homework
-- Homework 1 [pdf](.\homework\hw1.pdf) [solutions](.\homework\hw1-soln.pdf)
-- Homework 2 [pdf](.\homework\hw2.pdf)
+- Homework 1 [pdf](./homework/hw1.pdf) [solutions](./homework/hw1-soln.pdf)
+- Homework 2 [pdf](./homework/hw2.pdf)
 - Homework 3
 
 ---
 
-## exam 1 lectures
-- 1 - Intro to elasticity [html](.\exam 1\lecture1.html) [pdf](.\handouts\lecture1.pdf)
-- 2 - Coordinate transformation [html](.\exam 1\lecture2.html) [pdf](.\handouts\lecture2.pdf)
-- 3 - Principal values [html](.\exam 1\lecture3.html) [pdf](.\handouts\Lecture 3 - principal values.pdf)
-- 4 - Tensor Calculus [html](.\exam 1\lecture4.html) [pdf](.\handouts\Lecture 4 - tensor calculus.pdf)
-	- Addendum - principal values and invariants [html](.\exam 1\addendum.html) [pdf](.\handouts\Addendum - principal values and invariants.pdf)
-- 5 - Displacement and Strain [html](.\exam 1\lecture5.html) [pdf](.\handouts\Lecture 5 - displacement and strain.pdf)
-- 6 - Principal Strains [html](.\exam 1\lecture6.html) [pdf](.\handouts\Lecture 6 - strain transformation.pdf)
-- 7 - Exam 1 Review [html](.\exam 1\lecture7.html) [pdf](.\handouts\Lecture 7 - exam review.pdf)
+## exam%201 lectures
+- 1 - Intro to elasticity [html](./exam%201/lecture1.html) [pdf](./handouts/lecture1.pdf)
+- 2 - Coordinate transformation [html](./exam%201/lecture2.html) [pdf](./handouts/lecture2.pdf)
+- 3 - Principal values [html](./exam%201/lecture3.html) [pdf](./handouts/Lecture%203%20-%20principal%20values.pdf)
+- 4 - Tensor Calculus [html](./exam%201/lecture4.html) [pdf](./handouts/Lecture%204%20-%20tensor%20calculus.pdf)
+	- Addendum - principal values and invariants [html](./exam%201/addendum.html) [pdf](./handouts/Addendum%20-%20principal%20values%20and%20invariants.pdf)
+- 5 - Displacement and Strain [html](./exam%201/lecture5.html) [pdf](./handouts/Lecture%205%20-%20displacement%20and%20strain.pdf)
+- 6 - Principal Strains [html](./exam%201/lecture6.html) [pdf](./handouts/Lecture%206%20-%20strain%20transformation.pdf)
+- 7 - Exam 1 Review [html](./exam%201/lecture7.html) [pdf](./handouts/Lecture%207%20-%20exam%20review.pdf)
 
 ----
 
-## exam 1 review material
+## exam%201 review material
 
-- Exam 1 (2015) [pdf](.\homework\exam1.pdf)
-- Exam 1 (2017) [pdf](.\homework\exam1-f17.pdf)
+- Exam 1 (2015) [pdf](./homework/exam1.pdf)
+- Exam 1 (2017) [pdf](./homework/exam1-f17.pdf)
 
 ----
 
@@ -72,8 +76,8 @@ data-separator-vertical="^\n----$"><script type="text/template">
 </script></section></div>
         </div>
 
-        <script src="./lib/js/head.min.js"></script>
-        <script src="./js/reveal.js"></script>
+        <script src="./reveal.js/lib/js/head.min.js"></script>
+        <script src="./reveal.js/js/reveal.js"></script>
 
         <script>
             function extend() {
@@ -91,13 +95,13 @@ data-separator-vertical="^\n----$"><script type="text/template">
 
             // Optional libraries used to extend on reveal.js
             var deps = [
-              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: './plugin/zoom-js/zoom.js', async: true },
-              { src: './plugin/notes/notes.js', async: true },
-              { src: './plugin/math/math.js', async: true }
+              { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: './reveal.js/plugin/notes/notes.js', async: true },
+              { src: './reveal.js/plugin/math/math.js', async: true }
             ];
 
             // default options to init reveal.js

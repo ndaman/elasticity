@@ -51,21 +51,20 @@ August 21, 2019
 Free index vs. dummy index
 
 <div class="left">
-  <ul>
-  	<li>is not repeated on any term</li>
-		<li>takes all values (1,2,3)</li>
-		<li>e.g. *u*<sub>*i*</sub> = ⟨*u*<sub>1</sub>, *u*<sub>2</sub>, *u*<sub>3</sub>⟩ </li>
-		<li>must match across terms in an express or equation</li>
-  </ul>
+
+-  	is not repeated on any term
+-		takes all values (1,2,3)
+-		e.g. *u*<sub>*i*</sub> = ⟨*u*<sub>1</sub>, *u*<sub>2</sub>, *u*<sub>3</sub>⟩ 
+-		must match across terms in an express or equation
+
 </div>
 
 <div class="right">
-	<ul>
-		<li>is repeated on at least one term</li>
-		<li>indicates summation over all values</li>
-		<li>e.g. *σ*<sub>*ii*</sub> = *σ*<sub>11</sub> + *σ*<sub>22</sub> + *σ*<sub>33</sub> </li>
-		<li>can not be used more than twice in the same term (*A*<sub>*ij*</sub>*B*<sub>*jk*</sub>*C*<sub>*kl*</sub> is good, *A*<sub>*ij*</sub>*B*<sub>*ij*</sub>*C*<sub>*ij*</sub> is not) </li>
-	</ul>
+
+-		is repeated on at least one term
+-		indicates summation over all values
+-		e.g. *σ*<sub>*ii*</sub> = *σ*<sub>11</sub> + *σ*<sub>22</sub> + *σ*<sub>33</sub> 
+-		can not be used more than twice in the same term (*A*<sub>*ij*</sub>*B*<sub>*jk*</sub>*C*<sub>*kl*</sub> is good, *A*<sub>*ij*</sub>*B*<sub>*ij*</sub>*C*<sub>*ij*</sub> is not) 
 	
 </div>
 
@@ -80,7 +79,7 @@ Free index vs. dummy index
 ## symmetry
 
 -   We can break any tensor up into symmetric and anti-symmetric portions
--   <!-- .element style="list-style-type: none" -->$a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
+-   <!-- .element style="list-style-type: none" --> $a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
 
 ----
 ## example

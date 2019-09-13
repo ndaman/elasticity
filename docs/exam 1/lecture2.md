@@ -79,7 +79,8 @@ Free index vs. dummy index
 ## symmetry
 
 -   We can break any tensor up into symmetric and anti-symmetric portions
--   <!-- .element style="list-style-type: none" --> $a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
+-   <!-- .element style="list-style-type: none" --> 
+$a\_{ij} = \\frac{1}{2} (a\_{ij} + a\_{ji}) + \\frac{1}{2} (a\_{ij} - a\_{ji})$
 
 ----
 ## example
@@ -244,9 +245,11 @@ $$u\_{i,j} = \\frac{\\partial}{\\partial x\_j} u\_i = \\begin{bmatrix}
 -   Write the following in conventional notation
     *T*<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
 -   <!-- .element class="fragment" --> The comma indicates a partial derivative
--   <!-- .element class="fragment" --> The first index, *i*, is not repeated in any terms, so it is a “free index”
+-   <!-- .element class="fragment" --> The first index, 
+_i_, is not repeated in any terms, so it is a “free index”
     -   This means in a 3D coordinate system, we will have at least three equations
--   <!-- .element class="fragment" --> The second index, *j*, is repeated in the first term, indicating summation.
+-   <!-- .element class="fragment" --> The second index, 
+_j_, is repeated in the first term, indicating summation.
     -   We will have exactly three equations
 
 ----
@@ -329,40 +332,55 @@ $$\\begin{aligned}
 ## example
 
 -   Solve the equation below for *U*<sub>*k*</sub> in terms of *P*<sub>*i*</sub> and *a*<sub>*i*</sub>.
--   <!-- .element style="list-style-type: none" --> $$\\mu \\left\[ \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j \\right\] U\_k = P\_j$$
--   <!-- .element class="fragment" --> Multiply both sides by *a*<sub>*j*</sub>
--		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j a\_j \\right\] U\_k = P\_j a\_j$$
+-   <!-- .element style="list-style-type: none" --> 
+$$\\mu \\left\[ \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j \\right\] U\_k = P\_j$$
+-   <!-- .element class="fragment" --> Multiply both sides by 
+_a_<sub>*j*</sub>
+-		<!-- .element style="list-style-type: none", class="fragment" --> 
+$$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_j a\_j \\right\] U\_k = P\_j a\_j$$
 -   <!-- .element class="fragment" -->The dummy indexes can be changed
--		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] U\_k = P\_j a\_j$$
+-		<!-- .element style="list-style-type: none", class="fragment" --> 
+$$\\mu \\left\[ a\_j \\delta\_{kj} a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] U\_k = P\_j a\_j$$
 
 ----
 ## example
 
 -   *a*<sub>*j*</sub>*δ*<sub>*kj*</sub> = *a*<sub>*k*</sub>
--		<!-- .element style="list-style-type: none" --> $$\\mu U\_k \\left\[ a\_k a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] = P\_j a\_j$$
+-		<!-- .element style="list-style-type: none" --> 
+$$\\mu U\_k \\left\[ a\_k a\_i a\_i + \\frac{1}{1-2\\nu} a\_k a\_i a\_i \\right\] = P\_j a\_j$$
 -   <!-- .element class="fragment" -->Factoring
--		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu U\_k a\_k a\_i a\_i \\left\[ 1 + \\frac{1}{1-2\\nu} \\right\] = P\_j a\_j$$
+-		<!-- .element style="list-style-type: none", class="fragment" --> 
+$$\\mu U\_k a\_k a\_i a\_i \\left\[ 1 + \\frac{1}{1-2\\nu} \\right\] = P\_j a\_j$$
 -   <!-- .element class="fragment" -->Simplifying
--		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu U\_k a\_k a\_i a\_i \\left\[ \\frac{2(1-\\nu)}{1-2\\nu} \\right\] = P\_j a\_j$$
+-		<!-- .element style="list-style-type: none", class="fragment" --> 
+$$\\mu U\_k a\_k a\_i a\_i \\left\[ \\frac{2(1-\\nu)}{1-2\\nu} \\right\] = P\_j a\_j$$
 
 ----
 ## example
 
 -   Solve for *U*<sub>*k*</sub>*a*<sub>*k*</sub>
--		<!-- .element style="list-style-type: none" --> $$U\_k a\_k = \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) }$$
--   <!-- .element class="fragment" -->This is a scalar equation, we need to find *U*<sub>*j*</sub>, but we substitute this back into the original equation.
+-		<!-- .element style="list-style-type: none" --> 
+$$U\_k a\_k = \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) }$$
+-   <!-- .element class="fragment" -->This is a scalar equation, we need to find 
+_U_<sub>*j*</sub>, but we substitute this back into the original equation.
 -   <!-- .element class="fragment" -->First, expand the original equation
--		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu U\_k \\delta\_{kj} a\_i a\_i + \\mu U\_k \\frac{1}{1-2\\nu} a\_k a\_j = P\_j$$
+-		<!-- .element style="list-style-type: none", class="fragment" --> 
+$$\\mu U\_k \\delta\_{kj} a\_i a\_i + \\mu U\_k \\frac{1}{1-2\\nu} a\_k a\_j = P\_j$$
 
 ----
 ## example
 
 -   After substitution, we find
--		<!-- .element style="list-style-type: none" -->$$\\mu U\_j a\_i a\_i + \\mu \\frac{1}{1-2\\nu} \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) } a\_j = P\_j$$
--   <!-- .element class="fragment" -->The index *j* is repeated too many times, so we need to change *P*<sub>*j*</sub>*a*<sub>*j*</sub> to a different index
--		<!-- .element style="list-style-type: none", class="fragment" --> $$\\mu U\_j a\_i a\_i + \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j = P\_j$$
--   <!-- .element class="fragment" -->We can now solve for *U*<sub>*j*</sub>
--		<!-- .element style="list-style-type: none", class="fragment" --> $$U\_j  = \\frac{1}{\\mu a\_i a\_i} \\left\[P\_j - \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j\\right\]$$
+-		<!-- .element style="list-style-type: none" -->
+$$\\mu U\_j a\_i a\_i + \\mu \\frac{1}{1-2\\nu} \\frac{P\_j a\_j(1-2\\nu)}{2\\mu a\_i a\_i (1-\\nu) } a\_j = P\_j$$
+-   <!-- .element class="fragment" -->
+The index *j* is repeated too many times, so we need to change *P*<sub>*j*</sub>*a*<sub>*j*</sub> to a different index
+-		<!-- .element style="list-style-type: none", class="fragment" --> 
+$$\\mu U\_j a\_i a\_i + \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j = P\_j$$
+-   <!-- .element class="fragment" -->
+We can now solve for *U*<sub>*j*</sub>
+-		<!-- .element style="list-style-type: none", class="fragment" --> 
+$$U\_j  = \\frac{1}{\\mu a\_i a\_i} \\left\[P\_j - \\frac{P\_k a\_k}{2 a\_i a\_i (1-\\nu) } a\_j\\right\]$$
 
 
 ---
@@ -511,14 +529,16 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 ## example
 
 <div class="left">
-	![empty 3D coordinate system with axes labeled for example problem](../images/example-a.png)
+
+![empty 3D coordinate system with axes labeled for example problem](../images/example-a.png)
 </div>
+
 <div class="right">
-  <ul>
-    	<li>Find *Q*<sub>*ij*</sub><sup>1</sup> for rotation of 60<sup>∘</sup> about *x*<sub>2</sub> </li>
-			<li>Find *Q*<sub>*ij*</sub><sup>2</sup> for rotation of 30<sup>∘</sup> about *x*<sub>3</sub><sup>′</sup> </li>
-			<li>Find *e*<sub>*i*</sub><sup>′′</sup> after both rotations </li>
-    </ul>
+
+-   Find *Q*<sub>*ij*</sub><sup>1</sup> for rotation of 60<sup>∘</sup> about *x*<sub>2</sub> 
+-   Find *Q*<sub>*ij*</sub><sup>2</sup> for rotation of 30<sup>∘</sup> about *x*<sub>3</sub><sup>′</sup> 
+-   Find *e*<sub>*i*</sub><sup>′′</sup> after both rotations 
+
 </div>
 
 ----

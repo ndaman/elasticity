@@ -30,7 +30,7 @@ August 19, 2019
 ----
 ## about me
 
-![family picture](..\images\IMG_5266_edit.jpg) <!-- .element width="75%" -->
+![family picture](../images/IMG_5266_edit.jpg) <!-- .element width="75%" -->
 
 ----
 ## education
@@ -46,17 +46,17 @@ August 19, 2019
 
 ----
 ## research
-![picture of chopped carbon fiber prepreg](..\images\Formosa_Chopped_Carbon_Fiber_CSc_bw.jpg)
+![picture of chopped carbon fiber prepreg](../images/Formosa_Chopped_Carbon_Fiber_CSc_bw.jpg)
 
 ----
 ## research
-![picture of lamborghini symbol made from compression molded chopped carbon fiber](..\images\lamborghini-chopped-fiber-badges-rough.jpg)
+![picture of lamborghini symbol made from compression molded chopped carbon fiber](../images/lamborghini-chopped-fiber-badges-rough.jpg)
 
 ----
 ## research
 
   <div class='left'>
-![picture illustrating the fused deposition modeling 3D printing process, where plastic filament is melted and deposited next to other filament, and fuses together](..\images\3D-printing.png)
+![picture illustrating the fused deposition modeling 3D printing process, where plastic filament is melted and deposited next to other filament, and fuses together](../images/3D-printing.png)
   </div>
 
   <div class='right'>
@@ -77,7 +77,9 @@ August 19, 2019
 	</ul>
 </div>
 <div class="right">
-	![thermoplastic welding](../images/Welding-thermoplastic-composites.jpg)
+
+![thermoplastic welding](../images/Welding-thermoplastic-composites.jpg)
+
 </div>
 
 
@@ -339,10 +341,13 @@ $$\[\\sigma\] = \\begin{bmatrix}
 ## equality
 
 -   What does this mean? <!-- .element class="fragment" -->
-    -  <!-- .element class="fragment" -->  *a*<sub>*i*</sub> = *b*<sub>*i*</sub> 
-    -  <!-- .element class="fragment" --> *a*<sub>1</sub> = *b*<sub>1</sub>, *a*<sub>2</sub> = *b*<sub>2</sub>, etc. 
+    -  <!-- .element class="fragment" -->  
+*a*<sub>*i*</sub> = *b*<sub>*i*</sub> 
+    -  <!-- .element class="fragment" --> 
+*a*<sub>1</sub> = *b*<sub>1</sub>, *a*<sub>2</sub> = *b*<sub>2</sub>, etc. 
 -   What about this? <!-- .element class="fragment" --> 
-    -  <!-- .element class="fragment" --> *a*<sub>*i*</sub> = *b*<sub>*j*</sub> 
+    -  <!-- .element class="fragment" --> 
+*a*<sub>*i*</sub> = *b*<sub>*j*</sub> 
     -  <!-- .element class="fragment" -->  Doesn’t make sense, incorrect use of index notation 
 
 ----

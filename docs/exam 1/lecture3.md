@@ -193,14 +193,16 @@ Q\_{ij} &= \\cos (x\_i^\\prime, x\_j)\\\\ &= \\begin{bmatrix}
 ## example
 
 <div class="left">
-	![empty 3D coordinate system with axes labeled for example problem](../images/example-a.png)
+
+![empty 3D coordinate system with axes labeled for example problem](../images/example-a.png)
+
 </div>
 <div class="right">
-  <ul>
-    	<li>Find *Q*<sub>*ij*</sub><sup>1</sup> for rotation of 60<sup>∘</sup> about *x*<sub>2</sub> </li>
-			<li>Find *Q*<sub>*ij*</sub><sup>2</sup> for rotation of 30<sup>∘</sup> about *x*<sub>3</sub><sup>′</sup> </li>
-			<li>Find *e*<sub>*i*</sub><sup>′′</sup> after both rotations </li>
-    </ul>
+
+-   Find *Q*<sub>*ij*</sub><sup>1</sup> for rotation of 60<sup>∘</sup> about *x*<sub>2</sub> 
+-   Find *Q*<sub>*ij*</sub><sup>2</sup> for rotation of 30<sup>∘</sup> about *x*<sub>3</sub><sup>′</sup> 
+-   Find *e*<sub>*i*</sub><sup>′′</sup> after both rotations 
+
 </div>
 
 ----
@@ -520,7 +522,9 @@ $$II\_\\alpha = \\frac{1}{2}(196 - 84) = 56$$
 ## example
 
 -   Third invariant
-    *III*<sub>*α*</sub> = det\[*a*<sub>*ij*</sub>\]
-    *III*<sub>*α*</sub> = 8 × (3 × 3 − 1 × 1)=64
+
+*III*<sub>*α*</sub> = det\[*a*<sub>*ij*</sub>\]
+
+*III*<sub>*α*</sub> = 8 × (3 × 3 − 1 × 1)=64
 
 

@@ -342,12 +342,12 @@ $$\[\\sigma\] = \\begin{bmatrix}
 
 -   What does this mean? <!-- .element class="fragment" -->
     -  <!-- .element class="fragment" -->  
-*a*<sub>*i*</sub> = *b*<sub>*i*</sub> 
+_a_<sub>*i*</sub> = *b*<sub>*i*</sub> 
     -  <!-- .element class="fragment" --> 
-*a*<sub>1</sub> = *b*<sub>1</sub>, *a*<sub>2</sub> = *b*<sub>2</sub>, etc. 
+_a_<sub>1</sub> = *b*<sub>1</sub>, *a*<sub>2</sub> = *b*<sub>2</sub>, etc. 
 -   What about this? <!-- .element class="fragment" --> 
     -  <!-- .element class="fragment" --> 
-*a*<sub>*i*</sub> = *b*<sub>*j*</sub> 
+_a_<sub>*i*</sub> = *b*<sub>*j*</sub> 
     -  <!-- .element class="fragment" -->  Doesn’t make sense, incorrect use of index notation 
 
 ----
@@ -386,11 +386,11 @@ $$\[\\sigma\] = \\begin{bmatrix}
     \\end{bmatrix}$
 
 -   <!-- .element class="fragment"-->
-*c*<sub>11</sub> = *a*<sub>11</sub>*b*<sub>11</sub> + *a*<sub>12</sub>*b*<sub>21</sub>
+_c_<sub>11</sub> = *a*<sub>11</sub>*b*<sub>11</sub> + *a*<sub>12</sub>*b*<sub>21</sub>
 -   <!-- .element class="fragment"-->
-*c*<sub>12</sub> = *a*<sub>11</sub>*b*<sub>21</sub> + *a*<sub>12</sub>*b*<sub>22</sub>
+_c_<sub>12</sub> = *a*<sub>11</sub>*b*<sub>21</sub> + *a*<sub>12</sub>*b*<sub>22</sub>
 -   <!-- .element class="fragment" -->
-*c*<sub>*ij*</sub> = *a*<sub>*ik*</sub>*b*<sub>*kj*</sub>
+_c_<sub>*ij*</sub> = *a*<sub>*ik*</sub>*b*<sub>*kj*</sub>
 
 ----
 ## symmetry
@@ -531,9 +531,11 @@ $$u\_{i,j} = \\frac{\\partial}{\\partial x\_j} u\_i = \\begin{bmatrix}
 -   Write the following in conventional notation
     *T*<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
 -   <!-- .element class="fragment" --> The comma indicates a partial derivative
--   <!-- .element class="fragment" --> The first index, _i_, is not repeated in any terms, so it is a “free index”
+-   <!-- .element class="fragment" --> The first index, 
+_i_, is not repeated in any terms, so it is a “free index”
     -   This means in a 3D coordinate system, we will have at least three equations
--   <!-- .element class="fragment" --> The second index, _j_, is repeated in the first term, indicating summation.
+-   <!-- .element class="fragment" --> The second index, 
+_j_, is repeated in the first term, indicating summation.
     -   We will have exactly three equations
 
 ----

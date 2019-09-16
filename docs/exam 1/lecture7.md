@@ -300,18 +300,21 @@ _E_<sub>*k*</sub>*δ*<sub>*ik*</sub> = *C*<sub>*kj*</sub>(*V*<sub>*ij*</sub>
 -   Solve the following equation for *U*<sub>*k*</sub> in terms of *a*<sub>*i*</sub> and *P*<sub>*j*</sub>
 -   <!-- .element style="list-style-type:none" -->
 $$\\mu \\left\\{\\delta\_{kj}a\_ia\_i + \\frac{1}{1-2\\nu}a\_ka\_j\\right\\}U\_k = P\_j$$
-- <!-- .element style="list-style-type:none" -->    Hint: First solve for *U*<sub>*k*</sub>*a*<sub>*k*</sub>, then substitute that relationship to solve for *U*<sub>*k*</sub>
+- <!-- .element style="list-style-type:none" -->    
+Hint: First solve for *U*<sub>*k*</sub>*a*<sub>*k*</sub>, then substitute that relationship to solve for *U*<sub>*k*</sub>
 -   Solve the following equation for *A*<sub>*ij*</sub> in terms of *B*<sub>*ij*</sub>
 - <!-- .element style="list-style-type:none" -->   
 _B_<sub>*ij*</sub> = *A*<sub>*ij*</sub> + *A*<sub>*kk*</sub>*δ*<sub>*ij*</sub>
-- <!-- .element style="list-style-type:none" -->    Hint: First solve for *A*<sub>*kk*</sub> in terms of *B*<sub>*ij*</sub>, then substitute that to solve for *A*<sub>*ij*</sub>
+- <!-- .element style="list-style-type:none" -->    
+Hint: First solve for *A*<sub>*kk*</sub> in terms of *B*<sub>*ij*</sub>, then substitute that to solve for *A*<sub>*ij*</sub>
 
 ----
 ## transformation
 
 -   We can express any tensor quantity in terms of a rotated coordinate system
 -   The direction cosines help to find the coordinates in the transformed system
-- <!-- .element style="list-style-type:none" -->   *Q*<sub>*ij*</sub> = cos(*x*<sub>*i*</sub><sup>′</sup>,*x*<sub>*j*</sub>)
+- <!-- .element style="list-style-type:none" -->   
+_Q_<sub>*ij*</sub> = cos(*x*<sub>*i*</sub><sup>′</sup>,*x*<sub>*j*</sub>)
 -   Any-order tensor can be expressed in this form
 
 $$\\begin{aligned}
@@ -328,14 +331,16 @@ $$\\begin{aligned}
 -   In the 2D coordinate transformation example, we were able to eliminate one value from a vector using coordinate transformation
 -   For second-order tensors, we desire to find the “principal values” where all non-diagonal terms are zero
 -   The direction determined by the unit vector, *n*<sub>*j*</sub>, is said to be the *principal direction* or *eigenvector* of the symmetric second-order tensor, *a*<sub>*ij*</sub> if there exists a parameter, *λ*, such that
-- <!-- .element style="list-style-type:none" -->   *a*<sub>*ij*</sub>*n*<sub>*j*</sub> = *λn*<sub>*i*</sub>
+- <!-- .element style="list-style-type:none" -->   
+_a_<sub>*ij*</sub>*n*<sub>*j*</sub> = *λn*<sub>*i*</sub>
 -   Where *λ* is called the *principal value* or *eigenvalue* of the tensor
 
 ----
 ## principal values
 
 -   We can re-write the equation
-- <!-- .element style="list-style-type:none" -->   (*a*<sub>*ij*</sub> − *λδ*<sub>*ij*</sub>)*n*<sub>*j*</sub> = 0
+- <!-- .element style="list-style-type:none" -->   
+(*a*<sub>*ij*</sub> − *λδ*<sub>*ij*</sub>)*n*<sub>*j*</sub> = 0
 -   This system of equations has a non-trivial solution if and only if det[*a*<sub>*ij*</sub> − *λδ*<sub>*ij*</sub>]=0
 -   This equation is known as the characteristic equation, and we solve it to find the principal values of a tensor
 
@@ -430,7 +435,8 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 -   We know that *n*<sub>2</sub> = 0. If we let *n*<sub>3</sub> = 1, we find $n\_1 = \\frac{1}{2}$
-- <!-- .element style="list-style-type:none" -->   $$n^1 = \\langle \\frac{1}{2}, 0, 1 \\rangle$$
+- <!-- .element style="list-style-type:none" -->   
+$$n^1 = \\langle \\frac{1}{2}, 0, 1 \\rangle$$
 
 ----
 ## example
@@ -579,7 +585,7 @@ $$\\begin{gathered}
 	\\end{Bmatrix}
 \\end{gathered}$$
 
-![a square stretched in the x-direction](..\images\deformation.png)
+![a square stretched in the x-direction](../images/deformation.png)
 
 ----
 ## displacement
@@ -637,9 +643,12 @@ $$e\_{ij} = \\begin{bmatrix}
 \\end{bmatrix}$$
 
 -   We start by integrating the diagonal terms
-- <!-- .element style="list-style-type:none" -->   *u* = ∫*yzdx* = *xyz* + *f*(*y*, *z*)
-- <!-- .element style="list-style-type:none" -->   *v* = ∫2*ydy* = *y*<sup>2</sup> + *g*(*x*, *z*)
-- <!-- .element style="list-style-type:none" -->   *w* = ∫3*z*<sup>2</sup>*dz* = *z*<sup>3</sup> + *h*(*x*, *y*)
+- <!-- .element style="list-style-type:none" -->   
+*u* = ∫*yzdx* = *xyz* + *f*(*y*, *z*)
+- <!-- .element style="list-style-type:none" -->   
+*v* = ∫2*ydy* = *y*<sup>2</sup> + *g*(*x*, *z*)
+- <!-- .element style="list-style-type:none" -->   
+*w* = ∫3*z*<sup>2</sup>*dz* = *z*<sup>3</sup> + *h*(*x*, *y*)
 
 ----
 ## example

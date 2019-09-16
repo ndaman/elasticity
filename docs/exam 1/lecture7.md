@@ -644,11 +644,11 @@ $$e\_{ij} = \\begin{bmatrix}
 
 -   We start by integrating the diagonal terms
 - <!-- .element style="list-style-type:none" -->   
-*u* = ∫*yzdx* = *xyz* + *f*(*y*, *z*)
+_u_ = ∫*yzdx* = *xyz* + *f*(*y*, *z*)
 - <!-- .element style="list-style-type:none" -->   
-*v* = ∫2*ydy* = *y*<sup>2</sup> + *g*(*x*, *z*)
+_v_ = ∫2*ydy* = *y*<sup>2</sup> + *g*(*x*, *z*)
 - <!-- .element style="list-style-type:none" -->   
-*w* = ∫3*z*<sup>2</sup>*dz* = *z*<sup>3</sup> + *h*(*x*, *y*)
+_w_ = ∫3*z*<sup>2</sup>*dz* = *z*<sup>3</sup> + *h*(*x*, *y*)
 
 ----
 ## example

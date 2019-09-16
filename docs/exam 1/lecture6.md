@@ -54,7 +54,8 @@ $$F = u\_{i,j} = \\begin{bmatrix}
 ## example
 
 -   Strain tensor
--   <!-- .element style="list-style-type:none" -->   $$e\_{ij} = \\frac{1}{2}(u\_{i,j} + u\_{j,i})$$
+-   <!-- .element style="list-style-type:none" -->   
+$$e\_{ij} = \\frac{1}{2}(u\_{i,j} + u\_{j,i})$$
 
 $$e\_{ij} = \\begin{bmatrix}
 	y^2 z & xyz + \\frac{1}{2}z & \\frac{1}{2}xy^2\\\\
@@ -66,7 +67,8 @@ $$e\_{ij} = \\begin{bmatrix}
 ## example
 
 -   Rotation tensor
-- <!-- .element style="list-style-type:none" -->   $$\\omega\_{ij} = \\frac{1}{2}(u\_{i,j} - u\_{j,i})$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\omega\_{ij} = \\frac{1}{2}(u\_{i,j} - u\_{j,i})$$
 
 $$\\omega\_{ij} = \\begin{bmatrix}
 	0 & xyz - \\frac{1}{2}z & \\frac{1}{2}xy^2\\\\
@@ -184,7 +186,8 @@ $$\\epsilon\_{ij} = \\begin{bmatrix}
 ## principal strains
 
 -   Principal strains are found in exactly the same way as principal values discussed in Chapter 1
-- <!-- .element style="list-style-type:none" -->`$$\det[e_{ij} - e\delta_{ij}]=0$$`
+- <!-- .element style="list-style-type:none" -->
+$$\det[e_{ij} - e\delta_{ij}]=0$$
 -   Invariants can also be found in the same fashion as in any other tensor
 
 $$\\begin{aligned}
@@ -213,7 +216,7 @@ $$\\begin{bmatrix}
 
 -   Consider a rectangular prism with edges oriented in the principal directions
 
-![A rectangular prism before and after some volumetric stretch](..\images\dilatation.png) <!-- .element width="50%" -->
+![A rectangular prism before and after some volumetric stretch](../images/dilatation.png) <!-- .element width="50%" -->
 
 ----
 ## volume change
@@ -221,8 +224,10 @@ $$\\begin{bmatrix}
 -   The volume before deformation is *V* = *LWH*
 -   The volume after deformation is given by *V*<sup>′</sup> = *L*<sup>′</sup>*W*<sup>′</sup>*H*<sup>′</sup>
 -   We can relate the side lengths after deformation to strains
-- <!-- .element style="list-style-type:none" -->   $$e\_1 = \\frac{L^\\prime - L}{L}$$
-- <!-- .element style="list-style-type:none" -->   $$Le_1 + L = L^\prime$$
+- <!-- .element style="list-style-type:none" -->   
+$$e\_1 = \\frac{L^\\prime - L}{L}$$
+- <!-- .element style="list-style-type:none" -->   
+$$Le_1 + L = L^\prime$$
 -   We can now write the volume as *V*<sup>′</sup> = *L*(1 + *e*<sub>1</sub>)*W*(1 + *e*<sub>2</sub>)*H*(1 + *e*<sub>3</sub>)
 
 ----
@@ -237,11 +242,14 @@ $$\\begin{bmatrix}
 ## volume change
 
 -   A “dilatation” is defined as the change in volume divided by the original volume
-- <!-- .element style="list-style-type:none" -->   $$\\frac{\\Delta V}{V} = \\frac{V^\\prime - V}{V}$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\frac{\\Delta V}{V} = \\frac{V^\\prime - V}{V}$$
 -   Substituting the relationships found earlier
-- <!-- .element style="list-style-type:none" -->   $$\\frac{V^\\prime - V}{V} = \\frac{LWH(1+e\_1+e\_2+e\_3) - LWH}{LWH}$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\frac{V^\\prime - V}{V} = \\frac{LWH(1+e\_1+e\_2+e\_3) - LWH}{LWH}$$
 -   Which simplifies to
-- <!-- .element style="list-style-type:none" -->	 `$$e_1 + e_2 + e_3 = \vartheta_1 $$`
+- <!-- .element style="list-style-type:none" -->	 
+$$e_1 + e_2 + e_3 = \vartheta_1 $$
 
 ---
 # special strain definitions
@@ -256,7 +264,8 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 -   The *deviatoric strain* is found by subtracting the spherical strain from the strain tensor
-- <!-- .element style="list-style-type:none" -->   $$\\hat{e}\_{ij} = e\_{ij} - \\frac{1}{3} e\_{kk} \\delta\_{ij}$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\hat{e}\_{ij} = e\_{ij} - \\frac{1}{3} e\_{kk} \\delta\_{ij}$$
 
 ---
 # strain transformation
@@ -315,7 +324,7 @@ $$\\begin{aligned}
 ----
 ## example
 
-![strain gage rosettes example problem](..\images\rosette-example.png) <!-- .element width="70%" -->
+![strain gage rosettes example problem](../images/rosette-example.png) <!-- .element width="70%" -->
 
 ----
 ## example
@@ -324,14 +333,16 @@ $$\\begin{aligned}
 -   Note that *e*<sub>*y*</sub> = *ϵ*<sub>*b*</sub> = −0.002
 -   Set coordinate system so that *ϵ*<sub>*b*</sub> = *e*<sub>*x*</sub><sup>′</sup>.
 -   Use equation for *e*<sub>*x*</sub><sup>′</sup> with *θ* = 30.
-- <!-- .element style="list-style-type:none" -->   $$e^\\prime\_x = \\frac{e\_x + e\_y}{2} + \\frac{e\_x - e\_y}{2}\\cos 60 + e\_{xy} \\sin 60$$
+- <!-- .element style="list-style-type:none" -->   
+$$e^\\prime\_x = \\frac{e\_x + e\_y}{2} + \\frac{e\_x - e\_y}{2}\\cos 60 + e\_{xy} \\sin 60$$
 
 ----
 ## example
 
 -   We have two unknowns in this equation, so we need another
 -   We can use the equation for *e*<sub>*y*</sub><sup>′</sup> with *θ* = 60 so that *ϵ*<sub>*b*</sub> = *e*<sub>*x*</sub><sup>′</sup>
-- <!-- .element style="list-style-type:none" -->   $$e^\\prime\_y = \\frac{e\_x + e\_y}{2} - \\frac{e\_x - e\_y}{2}\\cos 120 - e\_{xy} \\sin 120$$
+- <!-- .element style="list-style-type:none" -->   
+$$e^\\prime\_y = \\frac{e\_x + e\_y}{2} - \\frac{e\_x - e\_y}{2}\\cos 120 - e\_{xy} \\sin 120$$
 
 ----
 ## example

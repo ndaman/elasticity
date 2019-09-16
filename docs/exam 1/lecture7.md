@@ -31,7 +31,8 @@ September 11, 2019
 ## principal strains
 
 -   Principal strains are found in exactly the same way as principal values discussed in Chapter 1
-- <!-- .element style="list-style-type:none" -->`$$\det[e_{ij} e\delta_{ij}]=0$$`
+- <!-- .element style="list-style-type:none" -->
+$$\det[e_{ij} e\delta_{ij}]=0$$
 -   Invariants can also be found in the same fashion as in any other tensor
 
 $$\\begin{aligned}
@@ -60,7 +61,7 @@ $$\\begin{bmatrix}
 
 -   Consider a rectangular prism with edges oriented in the principal directions
 
-![A rectangular prism before and after some volumetric stretch](..\images\dilatation.png) <!-- .element width="50%" -->
+![A rectangular prism before and after some volumetric stretch](../images/dilatation.png) <!-- .element width="50%" -->
 
 ----
 ## volume change
@@ -68,8 +69,10 @@ $$\\begin{bmatrix}
 -   The volume before deformation is *V* = *LWH*
 -   The volume after deformation is given by *V*<sup>′</sup> = *L*<sup>′</sup>*W*<sup>′</sup>*H*<sup>′</sup>
 -   We can relate the side lengths after deformation to strains
-- <!-- .element style="list-style-type:none" -->   $$e\_1 = \\frac{L^\\prime - L}{L}$$
-- <!-- .element style="list-style-type:none" -->   $$Le_1 + L = L^\prime$$
+- <!-- .element style="list-style-type:none" -->   
+$$e\_1 = \\frac{L^\\prime - L}{L}$$
+- <!-- .element style="list-style-type:none" -->   
+$$Le_1 + L = L^\prime$$
 -   We can now write the volume as *V*<sup>′</sup> = *L*(1 + *e*<sub>1</sub>)*W*(1 + *e*<sub>2</sub>)*H*(1 + *e*<sub>3</sub>)
 
 ----
@@ -84,11 +87,14 @@ $$\\begin{bmatrix}
 ## volume change
 
 -   A “dilatation” is defined as the change in volume divided by the original volume
-- <!-- .element style="list-style-type:none" -->   $$\\frac{\\Delta V}{V} = \\frac{V^\\prime - V}{V}$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\frac{\\Delta V}{V} = \\frac{V^\\prime - V}{V}$$
 -   Substituting the relationships found earlier
-- <!-- .element style="list-style-type:none" -->   $$\\frac{V^\\prime - V}{V} = \\frac{LWH(1+e\_1+e\_2+e\_3) - LWH}{LWH}$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\frac{V^\\prime - V}{V} = \\frac{LWH(1+e\_1+e\_2+e\_3) - LWH}{LWH}$$
 -   Which simplifies to
-- <!-- .element style="list-style-type:none" -->	 `$$e_1 + e_2 + e_3 = \vartheta_1 $$`
+- <!-- .element style="list-style-type:none" -->	 
+$$e_1 + e_2 + e_3 = \vartheta_1 $$
 
 ---
 # special strain definitions
@@ -103,7 +109,8 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 -   The *deviatoric strain* is found by subtracting the spherical strain from the strain tensor
-- <!-- .element style="list-style-type:none" -->   $$\\hat{e}\_{ij} = e\_{ij} - \\frac{1}{3} e\_{kk} \\delta\_{ij}$$
+- <!-- .element style="list-style-type:none" -->   
+$$\\hat{e}\_{ij} = e\_{ij} - \\frac{1}{3} e\_{kk} \\delta\_{ij}$$
 
 ---
 # strain transformation
@@ -162,7 +169,7 @@ $$\\begin{aligned}
 ----
 ## example
 
-![strain gage rosettes example problem](..\images\rosette-example.png) <!-- .element width="70%" -->
+![strain gage rosettes example problem](../images/rosette-example.png) <!-- .element width="70%" -->
 
 ----
 ## example
@@ -171,14 +178,16 @@ $$\\begin{aligned}
 -   Note that *e*<sub>*y*</sub> = *ϵ*<sub>*b*</sub> = −0.002
 -   Set coordinate system so that *ϵ*<sub>*b*</sub> = *e*<sub>*x*</sub><sup>′</sup>.
 -   Use equation for *e*<sub>*x*</sub><sup>′</sup> with *θ* = 30.
-- <!-- .element style="list-style-type:none" -->   $$e^\\prime\_x = \\frac{e\_x + e\_y}{2} + \\frac{e\_x - e\_y}{2}\\cos 60 + e\_{xy} \\sin 60$$
+- <!-- .element style="list-style-type:none" -->   
+$$e^\\prime\_x = \\frac{e\_x + e\_y}{2} + \\frac{e\_x - e\_y}{2}\\cos 60 + e\_{xy} \\sin 60$$
 
 ----
 ## example
 
 -   We have two unknowns in this equation, so we need another
 -   We can use the equation for *e*<sub>*y*</sub><sup>′</sup> with *θ* = 60 so that *ϵ*<sub>*b*</sub> = *e*<sub>*x*</sub><sup>′</sup>
-- <!-- .element style="list-style-type:none" -->   $$e^\\prime\_y = \\frac{e\_x + e\_y}{2} - \\frac{e\_x - e\_y}{2}\\cos 120 - e\_{xy} \\sin 120$$
+- <!-- .element style="list-style-type:none" -->   
+$$e^\\prime\_y = \\frac{e\_x + e\_y}{2} - \\frac{e\_x - e\_y}{2}\\cos 120 - e\_{xy} \\sin 120$$
 
 ----
 ## example
@@ -261,8 +270,10 @@ $$\\begin{aligned}
     1.  Re-arrange so dummy indexes are adjacent
         *Q*<sub>*ip*</sub>*a*<sub>*pq*</sub>*Q*<sub>*jq*</sub>
     2.  Identify which (if any) tensors are transposed (dummy indexes should be on the inside of adjacent terms without a transpose)
-- <!-- .element style="list-style-type:none" -->        *Q*<sub>*ip*</sub> *a* <sub>*pq*</sub> <span style="color:red">Q <sub>*jq*</sub></span>
-- <!-- .element style="list-style-type:none" -->        \[*Q*\]\[*a*\]\[*Q*\]<sup>*T*</sup>
+- <!-- .element style="list-style-type:none" -->        
+_Q_<sub>*ip*</sub> *a* <sub>*pq*</sub> <span style="color:red">Q <sub>*jq*</sub></span>
+- <!-- .element style="list-style-type:none" -->        
+\[*Q*\]\[*a*\]\[*Q*\]<sup>*T*</sup>
 
 ----
 ## example
@@ -271,22 +282,28 @@ $$\\begin{aligned}
     *A*<sub>*ik*</sub>*B*<sub>*jl*</sub>*C*<sub>*ml*</sub>*D*<sub>*mk*</sub>
 
   1.  <!-- .element class="fragment" -->Re-arrange to so that dummy indexes are in adjacent terms
-		-   <!-- .element style="list-style-type:none" class="fragment" -->        *A*<sub>*ik*</sub>*D*<sub>*mk*</sub>*C*<sub>*ml*</sub>*B*<sub>*jl*</sub>
+		-   <!-- .element style="list-style-type:none" class="fragment" -->        
+_A_<sub>*ik*</sub>*D*<sub>*mk*</sub>*C*<sub>*ml*</sub>*B*<sub>*jl*</sub>
 
   2.  <!-- .element class="fragment" -->Identify which terms are transposed
-		- <!-- .element style="list-style-type:none" class="fragment" --> *A*<sub>*ik*</sub> <span style="color:red">*D*<sub>*mk*</sub></span>*C* <sub>*ml*</sub> <span style="color:red">*B*<sub>*jl*</sub></span>
-		- <!-- .element style="list-style-type:none" class="fragment" --> \[*A*\]\[*D*\]<sup>*T*</sup>\[*C*\]\[*B*\]<sup>*T*</sup>
+		- <!-- .element style="list-style-type:none" class="fragment" --> 
+_A_<sub>*ik*</sub> <span style="color:red">*D*<sub>*mk*</sub></span>*C* <sub>*ml*</sub> <span style="color:red">*B*<sub>*jl*</sub></span>
+		- <!-- .element style="list-style-type:none" class="fragment" --> 
+\[*A*\]\[*D*\]<sup>*T*</sup>\[*C*\]\[*B*\]<sup>*T*</sup>
 
 ----
 ## solving 
 
 -   Solve the following equation for *E*<sub>*k*</sub> in terms of *C*<sub>*ij*</sub>, *V*<sub>*ij*</sub>, and *a*<sub>*i*</sub>.
-- <!-- .element style="list-style-type:none" -->   *E*<sub>*k*</sub>*δ*<sub>*ik*</sub> = *C*<sub>*kj*</sub>(*V*<sub>*ij*</sub>*a*<sub>*k*</sub> − *E*<sub>*k*</sub>*δ*<sub>*ij*</sub>)
+- <!-- .element style="list-style-type:none" -->   
+_E_<sub>*k*</sub>*δ*<sub>*ik*</sub> = *C*<sub>*kj*</sub>(*V*<sub>*ij*</sub>*a*<sub>*k*</sub> − *E*<sub>*k*</sub>*δ*<sub>*ij*</sub>)
 -   Solve the following equation for *U*<sub>*k*</sub> in terms of *a*<sub>*i*</sub> and *P*<sub>*j*</sub>
--   <!-- .element style="list-style-type:none" -->$$\\mu \\left\\{\\delta\_{kj}a\_ia\_i + \\frac{1}{1-2\\nu}a\_ka\_j\\right\\}U\_k = P\_j$$
+-   <!-- .element style="list-style-type:none" -->
+$$\\mu \\left\\{\\delta\_{kj}a\_ia\_i + \\frac{1}{1-2\\nu}a\_ka\_j\\right\\}U\_k = P\_j$$
 - <!-- .element style="list-style-type:none" -->    Hint: First solve for *U*<sub>*k*</sub>*a*<sub>*k*</sub>, then substitute that relationship to solve for *U*<sub>*k*</sub>
 -   Solve the following equation for *A*<sub>*ij*</sub> in terms of *B*<sub>*ij*</sub>
-- <!-- .element style="list-style-type:none" -->   *B*<sub>*ij*</sub> = *A*<sub>*ij*</sub> + *A*<sub>*kk*</sub>*δ*<sub>*ij*</sub>
+- <!-- .element style="list-style-type:none" -->   
+_B_<sub>*ij*</sub> = *A*<sub>*ij*</sub> + *A*<sub>*kk*</sub>*δ*<sub>*ij*</sub>
 - <!-- .element style="list-style-type:none" -->    Hint: First solve for *A*<sub>*kk*</sub> in terms of *B*<sub>*ij*</sub>, then substitute that to solve for *A*<sub>*ij*</sub>
 
 ----

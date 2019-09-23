@@ -12,7 +12,7 @@ September 23, 2019
 -   Sep 30 - Equilibrium Equations
 -   Oct 2 - Material Characterization, HW3 Due
 
-----
+---
 # exam
 
 ----
@@ -68,6 +68,9 @@ $$\\begin{aligned}
 	\\hat{n}&=\\hat{e}\_2: &\\quad \\hat{t}^n = t\_i^{(\\hat{e}\_2)} \\hat{e}\_i = t\_1^{(\\hat{e}\_2)} \\hat{e}\_1 + t\_2^{(\\hat{e}\_2)} \\hat{e}\_2 + t\_3^{(\\hat{e}\_2)} \\hat{e}\_3
 \\end{aligned}$$
 
+----
+## traction
+
 -   And on the 3-face:
 
 $$\\begin{aligned}
@@ -94,7 +97,7 @@ $$\\sigma\_{ij} = t\_j^{(\\hat{e}\_i)}$$
 
 -   If we consider the balance of forces in the *x*<sub>1</sub>-direction
 
-_t_<sub>1</sub>*d**A* − *σ*<sub>11</sub>*d**A*<sub>1</sub> − *σ*<sub>21</sub>*d**A*<sub>2</sub> − *σ*<sub>31</sub>*d**A*<sub>3</sub> + *b*<sub>1</sub>*ρ**d**V* = 0
+_t_<sub>1</sub>*dA* − *σ*<sub>11</sub>*dA*<sub>1</sub> − *σ*<sub>21</sub>*dA*<sub>2</sub> − *σ*<sub>31</sub>*dA*<sub>3</sub> + *b*<sub>1</sub>*ρdV* = 0
 
 -   The area components are:
 
@@ -111,13 +114,16 @@ $$\\begin{aligned}
 
 $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 dA + b\_1 \\rho \\frac{1}{3}h dA = 0$$
 
--   If we let *h* → 0 and divide by *d**A*
+-   If we let *h* → 0 and divide by *dA*
 
 _t_<sub>1</sub> = *σ*<sub>11</sub>*n*<sub>1</sub> + *σ*<sub>21</sub>*n*<sub>2</sub> + *σ*<sub>31</sub>*n*<sub>3</sub>
 
 -   We can write this in index notation as
 
 _t_<sub>1</sub> = *σ*<sub>*i*1</sub>*n*<sub>*i*</sub>
+
+----
+## traction
 
 -   We find, similarly
 
@@ -131,9 +137,9 @@ $$\\begin{aligned}
 
 -   We can further combine these results in index notation as
 
-_t_<sub>*j*</sub> = *σ*<sub>*i**j*</sub>*n*<sub>*i*</sub>
+_t_<sub>*j*</sub> = *σ*<sub>*ij*</sub>*n*<sub>*i*</sub>
 
--   This means with knowledge of the nine components of *σ*<sub>*i**j*</sub>, we can find the traction vector at any point on any surface
+-   This means with knowledge of the nine components of *σ*<sub>*ij*</sub>, we can find the traction vector at any point on any surface
 
 ----
 ## example
@@ -153,6 +159,9 @@ _t_<sub>*i*</sub>*A* − *p*<sub>*i*</sub> = 0
 
 -   We find $t\_1 = \\frac{P}{A} = \\sigma\_{11}$, *t*<sub>2</sub> = 0 = *σ*<sub>12</sub> and *t*<sub>3</sub> = 0 = *σ*<sub>13</sub>
 
+----
+## example
+
 -   No force is applied in the other directions, so it is trivial to find the rest of the stress tensor
 
 $$\\sigma\_{ij} = \\begin{bmatrix}
@@ -166,7 +175,7 @@ $$\\sigma\_{ij} = \\begin{bmatrix}
 
 -   We can now consider any arbitrary angle of interior cut.
 -   The normal for a cut as shown in the diagram will be *n*<sub>*i*</sub> = ⟨cos*θ*, sin*θ*, 0⟩.
--   We can again use *t*<sub>*j*</sub> = *σ*<sub>*i**j*</sub>*n*<sub>*i*</sub> to find *t*<sub>*j*</sub> for any angle *θ*.
+-   We can again use *t*<sub>*j*</sub> = *σ*<sub>*ij*</sub>*n*<sub>*i*</sub> to find *t*<sub>*j*</sub> for any angle *θ*.
 
 $$\\begin{aligned}
 	t\_1 &= \\frac{P}{A} \\cos \\theta \\\\

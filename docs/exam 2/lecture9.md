@@ -395,7 +395,7 @@ $$\\sigma\_{ij} = \\begin{bmatrix} X & 0 & 0\\\\
 
 </div>
 
-![group problem 1](../images/group-3-1.png)
+![group problem 1](../images/group-3-1.png) <!-- .element width="40%" -->
 
 ----
 ## group two

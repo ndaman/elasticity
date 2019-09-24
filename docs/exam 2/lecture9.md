@@ -245,7 +245,7 @@ det\[*σ*<sub>*ij*</sub> − *σδ*<sub>*ij*</sub>\]=0
 ----
 ## tractions
 
-<div class="left">
+<div class="left"> <!-- .element width="55%" -->
 	
 -   We can use what we know about principal values to find some interesting things about the tractions
 -   Consider the traction vector on an arbitrary internal face, and decompose into Normal and Shear components.
@@ -386,15 +386,16 @@ $$\\sigma\_{ij} = \\begin{bmatrix} X & 0 & 0\\\\
 	0 & Y & 0\\\\
 0 & 0 & 0\\end{bmatrix}$$
 
--   Find the traction vector, as well as the normal and shearing stresses on some oblique plane, *S*
 
 </div>
 
 <div class="right">
 	
-![group problem 1](../images/group-3-1.png)
+-   Find the traction vector, as well as the normal and shearing stresses on some oblique plane, *S*
 
 </div>
+
+![group problem 1](../images/group-3-1.png)
 
 ----
 ## group two

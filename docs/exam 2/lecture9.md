@@ -47,7 +47,7 @@ $$\\hat{t}^n(x,\\hat{n}) = -\\hat{t}^n(x,-\\hat{n})$$
 ----
 ## traction
 
-![traction illustrated on a cube](../images/traction-cube.png)
+![traction illustrated on a cube](../images/traction-cube.png) <!-- .element width="40%" -->
 
 ----
 ## traction
@@ -78,11 +78,19 @@ $$\\begin{aligned}
 ----
 ## stress tensor
 
+<div class="left">
+
 -   To simplify the notation, we introduce the stress tensor
 
 $$\\sigma\_{ij} = t\_j^{(\\hat{e}\_i)}$$
 
+</div>
+
+<div class="right">
+	
 ![stress tensor illustrated on a cube](../images/stress-cube.png)
+
+</div>
 
 ----
 ## traction
@@ -144,7 +152,7 @@ _t_<sub>*j*</sub> = *σ*<sub>*ij*</sub>*n*<sub>*i*</sub>
 
 -   Consider a block of material with a uniformly distributed force acting on the 1-face. Find the tractions on an arbitrary interior plane
 
-![traction cut on some arbitrary plane](../images/traction-cut.png)
+![traction cut on some arbitrary plane](../images/traction-cut.png) <!-- .element width="50%" -->
 
 ----
 ## example
@@ -237,10 +245,18 @@ det\[*σ*<sub>*ij*</sub> − *σδ*<sub>*ij*</sub>\]=0
 ----
 ## tractions
 
+<div class="left">
+	
 -   We can use what we know about principal values to find some interesting things about the tractions
 -   Consider the traction vector on an arbitrary internal face, and decompose into Normal and Shear components.
 
+</div>
+
+<div class="right">
+	
 ![arbitrary body with arbitrary loading applied](../images/potato.PNG)
+
+</div>
 
 ----
 ## tractions
@@ -293,7 +309,7 @@ $$\\begin{aligned}
 ----
 ## mohr’s circle
 
-![mohr's circle](../images/mohr.PNG)
+![mohr's circle](../images/mohr.PNG) <!-- .element width="60%" -->
 
 ---
 # maximum shear stress
@@ -362,6 +378,8 @@ $$\\tau\_{max} = \\sqrt{\\left(\\frac{\\sigma\_y-\\sigma\_x}{2}\\right)^2+\\tau\
 ----
 ## group one
 
+<div class="left">
+
 -   The stress state in a rectangle under biaxial loading is
 
 $$\\sigma\_{ij} = \\begin{bmatrix} X & 0 & 0\\\\
@@ -370,18 +388,40 @@ $$\\sigma\_{ij} = \\begin{bmatrix} X & 0 & 0\\\\
 
 -   Find the traction vector, as well as the normal and shearing stresses on some oblique plane, *S*
 
-**TODO** insert figure
+</div>
+
+<div class="right">
+	
+![group problem 1](../images/group-3-1.png)
+
+</div>
 
 ----
 ## group two
 
+<div class="left">
+	
 -   For the figure shown, what must the traction be on the other faces for the stress to be uniform and in equilibrium?
 
-**TODO** insert figure
+</div>
+
+<div class="right">
+	
+![group problem 2](../images/group-3-2.png)
+
+</div>
 
 ----
 ## group three
 
+<div class="left">
+	
 -   For the figure shown, find the (uniform) stress tensor. What must the traction be on the last face?
 
-**TODO** insert figure
+</div>
+
+<div class="right">
+	
+![group problem 3](../images/group-3-3.png)
+
+</div>

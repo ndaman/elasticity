@@ -10,7 +10,7 @@ September 25, 2019
 -   Sep 30 - Equilibrium Equations
 -   Oct 2 - Material Characterization, HW3 Due
 -   Oct 7 - Thermoelasticity
--   Oct 9 - 
+-   Oct 9 - Boundary Conditions
 
 ----
 ## outline

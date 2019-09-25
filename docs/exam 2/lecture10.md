@@ -49,7 +49,7 @@ $$\\hat{\\sigma}\_{ij} = \\sigma\_{ij} - \\tilde{\\sigma}\_{ij}$$
 ----
 ## octahedral stress
 
-![illustration of normal vector for octahedral stress](../images/octahedral.svg)
+![illustration of normal vector for octahedral stress](../images/octahedral.svg) <!-- .element width="40%" -->
 
 ----
 ## octahedral stress
@@ -87,6 +87,9 @@ $$\\begin{aligned}
 	&= \\sigma\_{ij} n\_j \\sigma\_{ik} n\_k - N^2\\\\
 	&= \\sigma\_1^2 n\_1^2 + \\sigma\_2^2 n\_2^2 + \\sigma\_3^2 n\_3^2 - N^2\\\\
 \\end{aligned}$$
+
+----
+## octahedral stress
 
 -   We can simplify this to
 
@@ -265,14 +268,22 @@ _b_ + 2*cx*<sub>1</sub> + *fx*<sub>2</sub> + 4 = 0
 ----
 ## cylindrical coordinates
 
-**TODO** insert figure
+![axes for cylindrical coordinates](../images/cylindrical.svg) <!-- .element width="30%" -->
 
 ----
 ## stress in cylindrical coordinates
 
+<div class="left">
+	
 -   We can also define stress in a cylindrical coordinate system
 
+</div>
+
+<div class="right">
+	
 ![an illustration of the stress tensor terms in cylindrical coordinates](../images/cylindrical.PNG)
+
+</div>
 
 ----
 ## stress in cylindrical coordinates
@@ -299,9 +310,17 @@ $$\\begin{aligned}
 ----
 ## spherical coordinates
 
+<div class="left">
+	
 -   We can do the same thing in spherical coordinates
 
+</div>
+
+<div class="right">
+	
 ![an illustration of the stress tensor terms in spherical coordinates](../images/spherical.PNG)
+
+</div>
 
 ----
 ## spherical coordinates

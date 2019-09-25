@@ -40,7 +40,7 @@ October 2, 2019
 
 <div class="right">
 	
-TODO insert figure
+![drawing of the problem described](../images/11-example.svg)
 
 </div>
 
@@ -77,9 +77,17 @@ $$\\frac{\\partial \\sigma\_z}{\\partial z} + r^2 g = 0$$
 ----
 ## example
 
+<div class="left">
+	
 -   Since we desire to find the stress at any point, we introduce a variable to indicate the coordinate of our free body diagram cut
 
-**TODO insert figure**
+</div>
+
+<div class="right">
+	
+![section cut of hanging cylinder](../images/11-example-2.svg)
+
+</div>
 
 ----
 ## example
@@ -130,7 +138,7 @@ $$\\begin{aligned}
 ----
 ## shear tests
 
-![shear test](../images/shear2.jpg)
+![shear test](../images/shear2.jpg) <!-- .element width="40%" -->
 
 ----
 ## shear tests
@@ -183,6 +191,9 @@ $$\\begin{aligned}
 -   Due to the symmetry in *σ*<sub>*ij*</sub> and *ϵ*<sub>*ij*</sub>, however, many of these are redundant
 -   For this reason (as well as convenience in writing), many will often form a matrix equation, with *σ* and *ϵ* acting as vectors.
 
+----
+## matrix form
+
 $$\\begin{Bmatrix}
 	\\sigma\_1 \\\\ \\sigma\_2 \\\\ \\sigma\_3 \\\\ \\sigma\_4 \\\\ \\sigma\_5 \\\\ \\sigma\_6
 	\\end{Bmatrix} = \\begin{bmatrix}
@@ -214,6 +225,9 @@ $$\\begin{aligned}
 
 _σ_<sub>11</sub> = *C*<sub>1111</sub>*ϵ*<sub>11</sub> + 2*C*<sub>1112</sub>*ϵ*<sub>12</sub> + 2*C*<sub>1113</sub>*ϵ*<sub>13</sub> + *C*<sub>1122</sub>*ϵ*<sub>22</sub> + 2*C*<sub>1123</sub>*ϵ*<sub>23</sub> + *C*<sub>1133</sub>*ϵ*<sub>33</sub>
 
+----
+## matrix form
+
 -   In matrix form, we write the normal terms first, and we include the factor of 2 in the strain vector, giving
 
 _σ_<sub>1</sub> = *C*<sub>11</sub>*ϵ*<sub>1</sub> + *C*<sub>12</sub>*ϵ*<sub>2</sub> + *C*<sub>13</sub>*ϵ*<sub>3</sub> + *C*<sub>14</sub>*ϵ*<sub>4</sub> + *C*<sub>15</sub>*ϵ*<sub>5</sub> + *C*<sub>16</sub>*ϵ*<sub>6</sub>
@@ -232,7 +246,7 @@ $$\\epsilon\_{ij} = \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk
 ----
 ## simple tension
 
-![uniaxial tension](../images/uniaxial_tension.jpg)
+![uniaxial tension](../images/uniaxial_tension.jpg) <!-- .element width="35%" -->
 
 ----
 ## strain measurement
@@ -257,16 +271,24 @@ $$\\epsilon\_{ij} = \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk
 -   Can be applied in any direction, very accurate
 -   Must be perfectly adhered, subject to user-error in attaching, can require complicated electronics to read results
 
-![image of strain gauge on a specimen](../images/strain-gauge-on-specimen-.jpeg)
+![image of strain gauge on a specimen](../images/strain-gauge-on-specimen-.jpeg) <!-- .element width="35%" -->
 
 ----
 ## digital image correlation
+
+<div class="left">
 
 -   Gives full-field strain tensor
 -   Requires expensive equipment, software
 -   Cannot compute values near the edges
 
+</div>
+
+<div class="right">
+	
 ![image showing digital image correlation](../images/dic.jpg)
+
+</div>
 
 ----
 ## simple tension

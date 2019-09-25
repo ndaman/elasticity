@@ -2,7 +2,7 @@
 ## Theory of Elasticity
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
-September 25, 2019
+September 30, 2019
 
 ----
 ## upcoming schedule
@@ -49,7 +49,7 @@ $$\\hat{\\sigma}\_{ij} = \\sigma\_{ij} - \\tilde{\\sigma}\_{ij}$$
 ----
 ## octahedral stress
 
-TODO figure
+![illustration of normal vector for octahedral stress](../images/octahedral.pdf)
 
 ----
 ## octahedral stress
@@ -65,6 +65,9 @@ $$\\sigma\_{ij} = \\begin{bmatrix}
 -   The normal vector for the octahedral plane in this system is
 
 $$n^o = \\frac{1}{\\sqrt{3}}\\langle 1, 1, 1 \\rangle$$
+
+----
+## octahedral stress
 
 -   And the octahedral normal stress can be found by
 
@@ -109,6 +112,10 @@ $$\\sigma\_e = \\sigma\_{VM} = \\frac{1}{\\sqrt{2}}\\sqrt{(\\sigma\_1-\\sigma\_2
 -   The Cauchy stress tensor is expressed in the deformed coordinate system
 -   This is appropriate for small deformation problems, where the un-deformed and deformed systems are nearly identical
 -   For large deformation problems, we may wish to define stress in terms of the un-deformed coordinate system
+
+----
+## large deformation
+
 -   Lagrangian stress is defined as
 
 $$\\sigma\_{pi}^L = \\frac{\\rho^0}{\\rho}\\sigma\_{ji} \\frac{\\partial x\_p^0}{\\partial x\_j}$$
@@ -148,6 +155,9 @@ $$\\sigma\_{pq}^K = \\frac{\\rho^0}{\\rho}\\sigma\_{ji} \\frac{\\partial x\_p^0}
 
 ![an arbitrary body under arbitrary remote loading with internal body forces](../images/equilibrium.PNG)
 
+----
+## static equilibrium
+
 -   We primarily deal with bodies in static equilibrium
 -   This means that all forces and moments must sum to zero
 -   For a closed sub-domain of volume *V* and surface area *S* with internal body forces and applied tractions, we find
@@ -164,6 +174,9 @@ $$\\sigma\_{pq}^K = \\frac{\\rho^0}{\\rho}\\sigma\_{ji} \\frac{\\partial x\_p^0}
 -   We can also apply the divergence theorem to convert the surface integral to a volume integral
 
 ∭<sub>*V*</sub>(*σ*<sub>*ji*, *j*</sub> + *F*<sub>*i*</sub>)*dV* = 0
+
+----
+## static equilibrium
 
 -   Since the volume is arbitrary (we could choose any volume and the conditions for equilibrium would still hold), the integrand must vanish
 

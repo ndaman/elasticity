@@ -49,7 +49,7 @@ $$\\hat{\\sigma}\_{ij} = \\sigma\_{ij} - \\tilde{\\sigma}\_{ij}$$
 ----
 ## octahedral stress
 
-![illustration of normal vector for octahedral stress](../images/octahedral.pdf)
+![illustration of normal vector for octahedral stress](../images/octahedral.svg)
 
 ----
 ## octahedral stress

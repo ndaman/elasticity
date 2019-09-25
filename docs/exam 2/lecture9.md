@@ -95,8 +95,17 @@ $$\\sigma\_{ij} = t\_j^{(\\hat{e}\_i)}$$
 ----
 ## traction
 
+<div class="left">
+	
 -   We can find some interesting information about the traction vector by considering an arbitrary tetrahedron with some traction $\\hat{t}^{(n)}$ applied to the surface
 
+</div>
+
+<div class="right">
+	
+![An arbitrary tetrahedron with some traction applied on the surface](../images/traction-equilibrium.png)
+
+</div>
 
 ----
 ## traction

@@ -254,14 +254,14 @@ det\[*σ*<sub>*ij*</sub> − *σδ*<sub>*ij*</sub>\]=0
 ----
 ## tractions
 
-<div class="left"> <!-- .element width="55%" -->
+<div class="left"> <!-- .element width="65%" -->
 	
 -   We can use what we know about principal values to find some interesting things about the tractions
 -   Consider the traction vector on an arbitrary internal face, and decompose into Normal and Shear components.
 
 </div>
 
-<div class="right">
+<div class="right"> <!-- .element width="35%" -->
 	
 ![arbitrary body with arbitrary loading applied](../images/potato.PNG)
 

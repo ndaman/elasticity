@@ -87,11 +87,6 @@ _σ_<sub>*ij*</sub> = *λϵ*<sub>*kk*</sub>*δ*<sub>*ij*</sub> + 2*μϵ*
 ----
 ## example
 
-TODO: figure
-
-----
-## example
-
 -   Use stress equation
 
 _σ_<sub>*ij*</sub> = *λϵ*<sub>*kk*</sub>*δ*<sub>*ij*</sub> + 2*μϵ*<sub>*ij*</sub> − (3*λ* + 2*μ*)*α*(*T* − *T*<sub>0</sub>)*δ*<sub>*ij*</sub>
@@ -113,6 +108,9 @@ $$\\begin{aligned}
 	\\hat{e}\_2 &= \\langle 0, 1, 0 \\rangle\\\\
 	\\hat{e}\_3 &= \\langle 0, 0, -1 \\rangle\\\\
 \\end{aligned}$$
+
+----
+## monoclinic symmetry
 
 -   This gives
 
@@ -146,8 +144,7 @@ $$\\epsilon\_{ij}^\\prime = \\begin{bmatrix}
 
 -   Symmetry requires that *σ*<sub>*ij*</sub> = *σ*<sub>*ij*</sub><sup>′</sup>, therefore
 
-$$\\hspace\*{-1.5cm}
-\\begin{bmatrix}
+$$\\begin{bmatrix}
 	C\_{11} & C\_{12} & C\_{13} & C\_{14} & C\_{15} & C\_{16}\\\\
 	C\_{21} & C\_{22} & C\_{23} & C\_{24} & C\_{25} & C\_{26}\\\\
 	C\_{31} & C\_{32} & C\_{33} & C\_{34} & C\_{35} & C\_{36}\\\\
@@ -186,6 +183,9 @@ $$C\_{ij} = \\begin{bmatrix}
 -   Composite materials are often treated as orthotropic, as are many crystals
 -   If we use the same method multiple times, we find that
 
+----
+## orthotropic symmetry
+
 $$C\_{ij} = \\begin{bmatrix}
 	C\_{11} & C\_{12} & C\_{13} & 0 & 0 & 0\\\\
 	C\_{21} & C\_{22} & C\_{23} & 0 & 0 & 0\\\\
@@ -206,7 +206,7 @@ $$C\_{ij} = \\begin{bmatrix}
 -   Perpendicular to the fiber, the material is the same in any direction (isotropic)
 
 ----
-## transversely isotropic symmetry
+## transverse isotropy
 
 -   To satisfy these conditions, the stiffness must be
 

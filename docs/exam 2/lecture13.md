@@ -2,310 +2,329 @@
 ## Theory of Elasticity
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
-October 2, 2019
+October 9, 2019
 
 ----
 ## upcoming schedule
 
--   Oct 2 - Material Characterization, HW3 Due
--   Oct 7 - Thermoelasticity
--   Oct 9 - Boundary Conditions
+-   Oct 9 - Boundary Conditions, HW4 Due
 -   Oct 14 - Fall Break (no class)
+-   Oct 16 - Problem Formulation
+-   Oct 21 - Solution Strategies
 
 ----
 ## outline
 
 <!-- vim-markdown-toc GFM -->
 
-* elastic constants
-* thermoelasticity
-* material symmetries
-* poisson’s ratio
-* group problems
+* field equations
+* boundary conditions
+* stress formulation
 
 <!-- vim-markdown-toc -->
 
 ---
-# elastic constants
+# field equations
 
 ----
-## isotropic materials
+## field equations
 
-| | *λ*= | *μ* = *G*= | *E*= | *ν*= | *K*= |
-|-:|---:|----------:|-------:|-----:|-----:|
-|  *λ*, *μ*|                                     |                                  |  $\\frac{\\mu(3\\lambda + 2\\mu)}{\\lambda + \\mu}$|  $\\frac{\\lambda}{2(\\lambda + \\mu)}$|  $\\frac{3\\lambda + 2\\mu}{3}$|
-|  *G*, *E*|              $\\frac{G(2G-E)}{E-3G}$|                                  |                                                    |                      $\\frac{E-2G}{2G}$|            $\\frac{GE}{3(3G-E}$|
-|  *G*, *ν*|            $\\frac{2G\\nu}{1-2\\nu}$|                                  |                                       2*G*(1 + *G*)|                                        |       $\\frac{2G(1+G)}{3(1-2G}$|
-|  *E*, *ν*|  $\\frac{\\nu E}{(1+\\nu)(1-2\\nu)}$|            $\\frac{E}{2(1+\\nu)}$|                                                    |                                        |          $\\frac{E}{3(1-2\\nu}$|
-|  *K*, *E*|             $\\frac{3K(3K-E)}{9K-E}$|               $\\frac{3EK}{9K-E}$|                                                    |                      $\\frac{3K-E}{6K}$|                                |
-|  *ν*, *K*|             $\\frac{3K\\nu}{1+\\nu}$|  $\\frac{3K(1-2\\nu)}{2(1+\\nu)}$|                                      3*K*(1 − 2*ν*)|                                        |                                |
+-   Field equations that we have already found
+-   Strain-displacement
 
+$$\\epsilon\_{ij} = \\frac{1}{2}(u\_{i,j} + u\_{j,i})$$
 
----
-# thermoelasticity
+-   Equilibrium
 
-----
-## thermal expansion
+$$ \sigma_{ij,j} + F_i = 0 $$
 
--   Thermal expansion/contraction is fairly well known
--   Most materials shrink at colder temperatures, but this is not always the case
--   Thermal deformations will alter the strain field
--   We can decompose strain into mechanical and thermal components
-
-_ϵ_<sub>*ij*</sub> = *ϵ*<sub>*ij*</sub><sup>(*M*)</sup> + *ϵ*<sub>*ij*</sub><sup>(*T*)</sup>
-
-----
-## thermal expansion
-
--   Thermal strains can be written in terms of a coefficient of thermal expansion tensor
-
-_ϵ_<sub>*ij*</sub><sup>(*T*)</sup> = *α*<sub>*ij*</sub>(*T* − *T*<sub>0</sub>)
-
--   For isotropic materials, this relationship is simplified to
-
-_ϵ_<sub>*ij*</sub><sup>(*T*)</sup> = *α*(*T* − *T*<sub>0</sub>)*δ*<sub>*ij*</sub>
-
-----
-## thermal expansion
-
--   We can combine the previous results with Hooke’s law to find
-
-$$\\epsilon\_{ij} = \\frac{1+\\nu}{E}\\sigma\_{ij} -\\frac{\\nu}{E}\\sigma\_{kk}\\delta\_{ij} + \\alpha (T-T\_0)\\delta\_{ij}$$
-
--   We can also invert this relationship to find the stress
--   Written in terms of Lamé constants, we find
-
-_σ_<sub>*ij*</sub> = *λϵ*<sub>*kk*</sub>*δ*<sub>*ij*</sub> + 2*μϵ*<sub>*ij*</sub> − (3*λ* + 2*μ*)*α*(*T* − *T*<sub>0</sub>)*δ*<sub>*ij*</sub>
-
-----
-## example
-
--   A modern-day alchemist is trying to make diamonds from charcoal.
--   He hypothesized that it is easier to build a rigid fixture, and then force the charcoal to expand via thermal expansion, than it is to apply the necessary pressure at room temperature.
--   What temperature is needed to provide a stress of 1 GPa in the charcoal, which has *α* = 5*x*10<sup>−6</sup>/<sup>∘</sup>*C*, *E* = 5*GPa*, *ν* = 0.3
-
-----
-## example
-
-TODO: figure
-
-----
-## example
-
--   Use stress equation
-
-_σ_<sub>*ij*</sub> = *λϵ*<sub>*kk*</sub>*δ*<sub>*ij*</sub> + 2*μϵ*<sub>*ij*</sub> − (3*λ* + 2*μ*)*α*(*T* − *T*<sub>0</sub>)*δ*<sub>*ij*</sub>
-
--   Convert material properties to Lamé constants
-
----
-# material symmetries
-
-----
-## monoclinic symmetry
-
--   *Monoclinic symmetry* means the material is symmetric about one axis
--   This symmetry is common in many types of crystals
--   e.g. the *x*<sub>*i*</sub><sup>′</sup> coordinate system is given by
+-   Constitutive (Hooke’s Law)
 
 $$\\begin{aligned}
-	\\hat{e}\_1 &= \\langle 1, 0, 0 \\rangle\\\\
-	\\hat{e}\_2 &= \\langle 0, 1, 0 \\rangle\\\\
-	\\hat{e}\_3 &= \\langle 0, 0, -1 \\rangle\\\\
-\\end{aligned}$$
-
--   This gives
-
-$$Q\_{ij} = \\begin{bmatrix}
-	1 & 0 & 0 \\\\
-	0 & 1 & 0 \\\\
-	0 & 0 & -1
-\\end{bmatrix}$$
-
-----
-## monoclinic symmetry
-
--   The transformed stress is given by
-
-$$\\sigma\_{ij}^\\prime = \\begin{bmatrix}
-	\\sigma\_{11} & \\sigma\_{12} & -\\sigma\_{13}\\\\
-	\\sigma\_{12} & \\sigma\_{22} & -\\sigma\_{23}\\\\
-	-\\sigma\_{13} & -\\sigma\_{23} & \\sigma\_{33}\\\\
-\\end{bmatrix}$$
-
--   Similarly we can transform the strain tensor
-
-$$\\epsilon\_{ij}^\\prime = \\begin{bmatrix}
-	\\epsilon\_{11} & \\epsilon\_{12} & -\\epsilon\_{13}\\\\
-	\\epsilon\_{12} & \\epsilon\_{22} & -\\epsilon\_{23}\\\\
-	-\\epsilon\_{13} & -\\epsilon\_{23} & \\epsilon\_{33}\\\\
-\\end{bmatrix}$$
-
-----
-## monoclinic symmetry
-
--   Symmetry requires that *σ*<sub>*ij*</sub> = *σ*<sub>*ij*</sub><sup>′</sup>, therefore
-
-$$\\hspace\*{-1.5cm}
-\\begin{bmatrix}
-	C\_{11} & C\_{12} & C\_{13} & C\_{14} & C\_{15} & C\_{16}\\\\
-	C\_{21} & C\_{22} & C\_{23} & C\_{24} & C\_{25} & C\_{26}\\\\
-	C\_{31} & C\_{32} & C\_{33} & C\_{34} & C\_{35} & C\_{36}\\\\
-	C\_{41} & C\_{42} & C\_{43} & C\_{44} & C\_{45} & C\_{46}\\\\
-	C\_{51} & C\_{52} & C\_{53} & C\_{54} & C\_{55} & C\_{56}\\\\
-	C\_{61} & C\_{62} & C\_{63} & C\_{64} & C\_{65} & C\_{66}\\\\
-\\end{bmatrix} = \\begin{bmatrix}
-	C\_{11} & C\_{12} & C\_{13} & -C\_{14} & -C\_{15} & C\_{16}\\\\
-	C\_{21} & C\_{22} & C\_{23} & -C\_{24} & -C\_{25} & C\_{26}\\\\
-	C\_{31} & C\_{32} & C\_{33} & -C\_{34} & -C\_{35} & C\_{36}\\\\
-	-C\_{41} & -C\_{42} & -C\_{43} & C\_{44} & C\_{45} & -C\_{46}\\\\
-	-C\_{51} & -C\_{52} & -C\_{53} & C\_{54} & C\_{55} & -C\_{56}\\\\
-	C\_{61} & C\_{62} & C\_{63} & -C\_{64} & -C\_{65} & C\_{66}\\\\
-\\end{bmatrix}$$
-
-----
-## monoclinic symmetry
-
--   The only way for this equation to be satisfied is if
-
-$$C\_{ij} = \\begin{bmatrix}
-	C\_{11} & C\_{12} & C\_{13} & 0 & 0 & C\_{16}\\\\
-	C\_{21} & C\_{22} & C\_{23} & 0 & 0 & C\_{26}\\\\
-	C\_{31} & C\_{32} & C\_{33} & 0 & 0 & C\_{36}\\\\
-	0 & 0 & 0 & C\_{44} & C\_{45} & 0\\\\
-	0 & 0 & 0 & C\_{54} & C\_{55} & 0\\\\
-	C\_{61} & C\_{62} & C\_{63} & 0 & 0 & C\_{66}\\\\
-\\end{bmatrix}$$
-
--   This has only 13 independent terms
-
-----
-## orthotropic symmetry
-
--   *Orthotropic symmetry* is essentially monoclinic symmetry repeated about all three axes
--   Composite materials are often treated as orthotropic, as are many crystals
--   If we use the same method multiple times, we find that
-
-$$C\_{ij} = \\begin{bmatrix}
-	C\_{11} & C\_{12} & C\_{13} & 0 & 0 & 0\\\\
-	C\_{21} & C\_{22} & C\_{23} & 0 & 0 & 0\\\\
-	C\_{31} & C\_{32} & C\_{33} & 0 & 0 & 0\\\\
-	0 & 0 & 0 & C\_{44} & 0 & 0\\\\
-	0 & 0 & 0 & 0 & C\_{55} & 0\\\\
-	0 & 0 & 0 & 0 & 0 & C\_{66}\\\\
-\\end{bmatrix}$$
-
--   Which has only 9 independent terms
-
-----
-## transversely isotropic symmetry
-
--   *Transverse isotropy* occurs when a material is monoclinic in one axis, and perfectly symmetric (isotropic) in the other plane
--   For example, many micromechanical models of composites look at only one fiber surrounded by matrix
--   In the fiber direction, the material is monoclinic
--   Perpendicular to the fiber, the material is the same in any direction (isotropic)
-
-----
-## transversely isotropic symmetry
-
--   To satisfy these conditions, the stiffness must be
-
-$$C\_{ij} = \\begin{bmatrix}
-	C\_{11} & C\_{12} & C\_{13} & 0 & 0 & 0\\\\
-	C\_{12} & C\_{11} & C\_{13} & 0 & 0 & 0\\\\
-	C\_{13} & C\_{13} & C\_{33} & 0 & 0 & 0\\\\
-	0 & 0 & 0 & C\_{44} & 0 & 0\\\\
-	0 & 0 & 0 & 0 & C\_{44} & 0\\\\
-	0 & 0 & 0 & 0 & 0 & \\frac{1}{2}(C\_{11}-C\_{12})
-\\end{bmatrix}$$
-
--   Here there are five independent material constants
-
-----
-## isotropic symmetry
-
--   An *isotropic* material has the same properties in any direction
--   Therefore the stiffness matrix must be unchanged in any rotation
-
-$$C\_{ij} = \\begin{bmatrix}
-	C\_{11} & C\_{12} & C\_{12} & 0 & 0 & 0\\\\
-	C\_{12} & C\_{11} & C\_{12} & 0 & 0 & 0\\\\
-	C\_{12} & C\_{12} & C\_{11} & 0 & 0 & 0\\\\
-	0 & 0 & 0 & \\frac{1}{2}(C\_{11}-C\_{12}) & 0 & 0\\\\
-	0 & 0 & 0 & 0 & \\frac{1}{2}(C\_{11}-C\_{12}) & 0\\\\
-	0 & 0 & 0 & 0 & 0 & \\frac{1}{2}(C\_{11}-C\_{12})
-\\end{bmatrix}$$
-
----
-# poisson’s ratio
-
-----
-## poisson’s ratio
-
--   Poisson’s ratio, *ν*, is defined as
-
-$$\\nu = -\\frac{d \\epsilon\_{transverse}}{d \\epsilon\_{axial}}$$
-
-![poisson's ratio](../images/poissons.png)
-
-----
-## poisson’s ratio
-
--   For isotropic materials, there is only one Poisson’s ratio in the material
--   For anisotropic materials (transversely isotropic, orthotropic, etc.) there are multiple
--   The subscript notation for Poisson’s ratios is *ν*<sub>*ij*</sub> where extension is applied in direction *i*, with a resulting contraction in direction *j*
-
-----
-## poisson’s ratio
-
--   In an orthotropic material, there are three independent Poisson’s ratios, the others may be obtained from the following relationship
-
-$$\\begin{aligned}
-	\\frac{\\nu\_{21}}{E\_2} &= \\frac{\\nu\_{12}}{E\_1}\\\\
-	\\frac{\\nu\_{31}}{E\_3} &= \\frac{\\nu\_{13}}{E\_1}\\\\
-	\\frac{\\nu\_{32}}{E\_3} &= \\frac{\\nu\_{23}}{E\_2}
+	\\sigma\_{ij} &= \\lambda \\epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij}\\\\
+	\\epsilon\_{ij} &= \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij}
 \\end{aligned}$$
 
 ----
-## poisson’s ratio
+## field equations
 
--   In transversely isotropic materials, there are only two independent Poisson’s ratios
--   If the *x*-direction is monoclinic, then the Poisson’s ratios are
+-   There are 15 unique field equations to solve for the 15 unknowns
+-   3 displacements (*u*<sub>*i*</sub>), 6 unique strain tensor terms (*ϵ*<sub>*ij*</sub>), and 6 unique stress tensor terms (*σ*<sub>*ij*</sub>)
+-   These equations also depend on a knowledge of the material behavior (*λ*, *μ*) and body forces (usually gravity or zero)
+
+----
+## compatibility equations
+
+-   If continuous, single-valued displacements are specified, differentiation will result in well-behaved strain field
+-   The inverse relationship, integration of a strain field to find displacement, may not always be true
+-   There are cases where we can integrate a strain field to find a set of discontinuous displacements
+
+----
+## compatibility equations
+
+-   The compatibility equations enforce continuity of displacements to prevent this from occurring
+-   To enforce this condition we consider the strain-displacement relations:
+
+$$\\epsilon\_{ij} = \\frac{1}{2}(u\_{i,j} + u\_{j,i})$$
+
+-   and differentiate with respect to *x*<sub>*k*</sub> and *x*<sub>*l*</sub>
+
+$$\\epsilon\_{ij,kl} = \\frac{1}{2}(u\_{i,jkl} + u\_{j,ikl})$$
+
+-   Or
+
+$$2\epsilon_{ij,kl} = u_{i,jkl} + u_{j,ikl}$$
+
+----
+## compatibility equations
+
+-   We can eliminate the displacement terms from the equation by interchanging the indexes to generate new equations
 
 $$\\begin{aligned}
-	\\nu\_{12} &= \\nu\_{13}\\\\
-	\\nu\_{21} &= \\nu\_{31}\\\\
-	\\nu\_{23} &= \\nu\_{32}\\\\
-	\\frac{\\nu\_{12}}{E\_1} &= \\frac{\\nu\_{21}}{E\_2}
+	2\\epsilon\_{ik,jl} &= u\_{i,jkl} + u\_{k,ijl} \\\\
+	2\\epsilon\_{jl,ik} &= u\_{j,ikl} + u\_{l,ijk}
+\\end{aligned}$$
+
+-   Solving for *u*<sub>*i*, *jkl*</sub> and *u*<sub>*j*, *ikl*</sub>
+
+$$\\begin{aligned}
+	u\_{i,jkl} &= 2\\epsilon\_{ik,jl} - u\_{k,ijl} \\\\
+	u\_{j,ikl} &= 2\\epsilon\_{jl,ik} - u\_{l,ijk}
 \\end{aligned}$$
 
 ----
-## poisson’s ratio
+## compatibility equations
 
--   Physical considerations
--   You will prove this in the homework, but if we require the moduli to be positive, we find that the Poisson’s ratio must be
+-   Substituting these values into the equations gives
 
-$$-1 &lt; \\nu &lt; \\frac{1}{2}$$
+$$2\epsilon_{ij,kl} = 2\epsilon_{ik,jl} = u_{k,ijl} + 2 \epsilon_{jl,ik} - u_{l,ijk}$$
+
+-   We now consider one more change of index equation
+	
+$$2\epsilon_{kl,ij} = u_{k,ijl} + u_{l,ijk}$$
+
+-   and substituting this result gives
+
+$$2\epsilon_{ij,kl} = 2\epsilon_{ik,jl} + 2\epsilon_{jl,ik} - 2\epsilon_{kl,ij}$$
+
+-   Or, simplified
+
+$$\epsilon_{ij,kl} + \epsilon_{kl,ij} - \epsilon_{ik,jl} - \epsilon_{jl,ik} = 0$$
+
+----
+## compatibility equations
+
+-   The so-called *Saint-Venant compatibility equations* in full are a system of 81 equations, but only six are useful (although even these six are not entirely linearly independent)
+-   These six are found by setting *k* = *l*, or in expanded form
+
+$$\\begin{aligned}
+	\\frac{\\partial^2 \\epsilon\_x}{\\partial y^2} + \\frac{\\partial^2 \\epsilon\_y}{\\partial x^2} &= 2\\frac{\\partial^2 \\epsilon\_{xy}}{\\partial x \\partial y}\\\\
+	\\frac{\\partial^2 \\epsilon\_y}{\\partial z^2} + \\frac{\\partial^2 \\epsilon\_z}{\\partial y^2} &= 2\\frac{\\partial^2 \\epsilon\_{yz}}{\\partial y \\partial z}\\\\
+	\\frac{\\partial^2 \\epsilon\_z}{\\partial x^2} + \\frac{\\partial^2 \\epsilon\_x}{\\partial z^2} &= 2\\frac{\\partial^2 \\epsilon\_{zx}}{\\partial z \\partial x}\\\\
+	\\frac{\\partial^2 \\epsilon\_x}{\\partial y \\partial z} &= \\frac{\\partial}{\\partial x} \\left(-\\frac{\\partial \\epsilon\_{yz}}{\\partial x} + \\frac{\\partial \\epsilon\_{zx}}{\\partial y} + \\frac{\\partial \\epsilon\_{xy}}{\\partial z}\\right)\\\\
+	\\frac{\\partial^2 \\epsilon\_y}{\\partial z \\partial x} &= \\frac{\\partial}{\\partial y} \\left(-\\frac{\\partial \\epsilon\_{zx}}{\\partial y} + \\frac{\\partial \\epsilon\_{xy}}{\\partial z} + \\frac{\\partial \\epsilon\_{yz}}{\\partial x}\\right)\\\\
+	\\frac{\\partial^2 \\epsilon\_z}{\\partial x \\partial y} &= \\frac{\\partial}{\\partial z} \\left(-\\frac{\\partial \\epsilon\_{xy}}{\\partial z} + \\frac{\\partial \\epsilon\_{yz}}{\\partial x} + \\frac{\\partial \\epsilon\_{zx}}{\\partial y}\\right)
+\\end{aligned}$$
+
+----
+## compatibility equations
+
+-   The compatibility equations are necessary to ensure that the strain field is valid and will produce a continuous displacement field
+-   While these equations are important and necessary in solving elasticity problems, they are not sufficient
+-   15 equations with 15 “unknowns” but each of these “unknowns” could actually be a function with many more unknowns, we need to develop framework for simplifying the problem into something we can solve
 
 ---
-# group problems
+# boundary conditions
 
 ----
-## group one
+## boundary conditions
 
--   Consider some arbitrary, isotropic material under uni-axial tension
--   What occurs when $\\nu = \\frac{1}{2}$?
--   What about when *ν* &lt; 0?
-
-----
-## group two
-
--   Consider a ±45<sup>∘</sup> laminate (which has an in-plane poisson’s ratio of 0.8) bonded on top of aluminum (which has an in-plane poisson’s ratio of 0.3)
--   What happens when this is loaded in tension? Why might this create problems in the adhesive joining the two?
+-   Boundary conditions commonly specify how a body is supported and/or how it is loaded
+-   Mathematically we treat this conditions as *displacements* or *tractions* at boundary points.
+-   Symmetry boundary conditions are also common, can reduce computational cost and simplify analytic solutions.
 
 ----
-## group three
+## boundary conditions
 
--   Use the table provided in these notes (or in the text) to re-write Hooke’s Law in terms of Young’s Modulus, *E* and shear modulus *G*.
+![illustration of boundary conditions](../images/bcs.PNG)
+
+
+----
+## symmetric boundaries
+
+![illustration of symmetric boundaries](../images/symmetric.PNG)
+
+----
+## coordinate systems
+
+![coordinate systems](../images/coordinates.PNG)
+
+----
+## boundaries
+
+-   In many systems, the boundaries are parallel to the coordinate system, but this is not always the case
+
+![boundaries not parallel to coordinate system](../images/noncoordinate.PNG)
+
+----
+## boundaries
+
+-   We often translate traction boundary conditions into stress boundary conditions using Cauchy’s Stress Theorem
+-   When the condition is on a face parallel to the coordinate system, this gives a zero-stress condition
+
+*t*<sub>*j*</sub> = *σ*<sub>*ij*</sub>*n*<sub>*i*</sub>
+
+-   This results in *σ*<sub>*xy*</sub> = *σ*<sub>*yy*</sub> = 0
+
+-   When the boundary is not parallel to the coordinate system, we do not necessarily have any zero-stress conditions
+
+$$\\begin{aligned}
+	t\_x &= \\sigma\_x n\_x + \\tau\_{xy} n\_y = 0 \\\\
+	t\_y &= \\tau\_{xy} n\_x + \\sigma\_y n\_y = 0 \\\\
+\\end{aligned}$$
+
+----
+## interfaces
+
+-   When we deal with multiple materials, we must prescribe conditions at the interface of these materials
+-   Some common *interface conditions* are
+    -   *Perfectly bonded interface* where displacements and tractions are continuous at the interface
+    -   *Slip interface* where only normal displacements and tractions are continuous at the interface, with no tangential traction and potentially discontinuous tangential displacement
+
+---
+# stress formulation
+
+----
+## stress formulation
+
+-   For traction problems (i.e. traction is defined on all surfaces) it is convenient to re-formulate field equations in terms of stress only
+-   Since displacements are eliminated, we will need to use the compatibility equations to ensure a continuous displacement field
+-   It is desirable for this formulation to write the compatibility equations in terms of stress
+
+----
+## stress formulation
+
+-   We start by using Hooke’s law for each of the strain terms
+
+$$\\epsilon\_{ij} = \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij}$$
+
+-   After some tedious algebra, we find
+
+$$\\sigma\_{ij,kk} + \\sigma\_{kk,ij} - \\sigma\_{ik,jk} - \\sigma\_{jk,ik} = \\frac{\\nu}{1+\\nu} (\\sigma\_{mm,kk}\\delta\_{ij} + \\sigma\_{mm,ij}\\delta\_{kk} - \\sigma\_{mm,jk}\\delta\_{ik} - \\sigma\_{mm,ik}\\delta\_{jk})$$
+
+----
+## stress formulation
+
+-   If we also include the equilibrium equations (*σ*<sub>*ij*, *j*</sub> − *F*<sub>*i*</sub>) in the formulation, we find
+
+$$\\sigma\_{ij,kk} + \\frac{1}{1+\\nu}\\sigma\_{kk,ij} = \\frac{\\nu}{1+\\nu}\\sigma\_{mm,kk}\\delta\_{ij} - F\_{i,j} - F\_{j,i}$$
+
+-   We can further simplify the equation by consider the case when *i* = *j* and nothing that
+
+$$\\sigma\_{ii,kk} = -\\frac{1+\\nu}{1-\\nu}F\_{i,i}$$
+
+-   Which we can substitute into the equation to find
+
+$$\\sigma\_{ij,kk} + \\frac{1}{1+\\nu}\\sigma\_{kk,ij} = -\\frac{\\nu}{1+\\nu}\\delta\_{ij}F\_{k,k} - F\_{i,j} - F\_{j,i}$$
+
+----
+## beltrami-michell compatibility
+
+-   The compatibility equations in terms of stress are commonly known as the *Beltrami-Michell compatibility equations*
+-   When there are no body forces, we can write the six expanded form equations as
+
+$$\\begin{aligned}
+	(1+\\nu) \\nabla^2 \\sigma\_x + \\frac{\\partial^2}{\\partial x^2} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\ (1+\\nu) \\nabla^2 \\sigma\_y + \\frac{\\partial^2}{\\partial y^2} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
+	(1+\\nu) \\nabla^2 \\sigma\_z + \\frac{\\partial^2}{\\partial z^2} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
+	(1+\\nu) \\nabla^2 \\tau\_{xy} + \\frac{\\partial^2}{\\partial x \\partial y} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
+	(1+\\nu) \\nabla^2 \\tau\_{yz} + \\frac{\\partial^2}{\\partial y \\partial z} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
+	(1+\\nu) \\nabla^2 \\tau\_{zx} + \\frac{\\partial^2}{\\partial z \\partial x} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
+\\end{aligned}$$
+
+----
+## stress formulation
+
+-   When working with traction boundary problems, these compatibility equations, together with the equilibrium equations, are sufficient to solve the problem
+-   These partial differential equations are not easy to solve, and analytic problems approached this way are often solved only in 2D
+-   Solutions are also commonly based on *stress functions*, which gives a base equation form that automatically satisfies equilibrium
+
+----
+## solution methods
+
+-   Direct method
+    -   Solved via direction integration
+    -   Limited to very simple geometries
+-   Inverse method
+    -   Choose a basic form for the solution based on our knowledge of the problem
+    -   Solve for coefficients
+    -   Usually we know the answer before we know the problem, it can be difficult to find useful problems for our solution
+-   Semi-inverse method
+    -   Only part of the solution is assumed
+    -   Use direct integration to find the rest
+
+---
+example
+
+----
+## Levy’s problem
+
+-   Find the stresses in a semi-infinite wedge due to fluid pressure and its own self-weight
+
+![levy's problem](../images/levee.PNG)
+
+----
+## Levy’s problem
+
+-   Since pressure varies linearly with depth, we will assume a linear state of stress
+
+$$\\begin{aligned}
+	\\sigma\_{x} &= a\_1 x + b\_1 y + c\_1\\\\
+	\\sigma\_{y} &= a\_2 x + b\_2 y + c\_2\\\\
+	\\tau\_{xy} &= a\_{12}x + b\_{12} y + c\_{12}\\\\
+\\end{aligned}$$
+
+-   This leaves 9 coefficients to be determined
+
+----
+## Levy’s problem
+
+-   First let us consider the boundary conditions at the apex of the dam
+-   If we let the origin be at the apex of the dam, which must be traction free, we find
+
+*c*<sub>1</sub> = *c*<sub>2</sub> = *c*<sub>12</sub> = 0
+
+----
+## Levy’s problem
+
+-   Next let us consider the equilibrium equations
+
+$$\\begin{aligned}
+	\\sigma\_{x,x} + \\tau\_{xy,y} + \\rho b\_x &= 0\\\\
+	\\tau\_{xy,x} + \\sigma\_{y,y} + \\rho b\_y &= 0
+\\end{aligned}$$
+
+-   Which in this case become
+
+$$\\begin{aligned}
+	a\_1 + b\_{12} + 0 &= 0\\\\
+	a\_{12} + b\_2 - \\rho g &= 0
+\\end{aligned}$$
+
+----
+## Levy’s problem
+
+-   The stresses can now be written as
+
+$$\\begin{aligned}
+	\\sigma\_x &= a\_1 x + b\_1 y\\\\
+	\\sigma\_y &= a\_2 x + b\_2 y\\\\
+	\\tau\_{xy} &= -b\_2 x + \\rho g x - a\_1 y
+\\end{aligned}$$
+
+----
+## Levy’s problem
+
+-   The compatibility equations are all satisfied, as these linear functions will all go to zero when taking second derivatives
+-   We now consider the boundary conditions along both faces
 
 

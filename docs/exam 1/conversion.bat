@@ -1,6 +1,6 @@
 @ECHO OFF
 SETLOCAL
-SET "sourcedir=D:\Sync\Teaching\Elasticity\Lectures\Chapter 4\"
+SET "sourcedir=D:\Sync\Teaching\Elasticity\Lectures\Chapter 5\"
 PUSHD "%sourcedir%"
 FOR /f "delims=" %%a IN (
  'dir /b /s /a-d *.tex'

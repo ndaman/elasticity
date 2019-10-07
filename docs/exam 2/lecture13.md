@@ -33,7 +33,7 @@ October 9, 2019
 $$\begin{aligned}
 	\epsilon_{ij} &= \frac{1}{2}(u_{i,j} + u_{j,i}) &\qquad \text{Strain-Displacement} \\\\
 	\sigma_{ij,j} + F_i &= 0 &\qquad \text{Equilibrium} \\\\
-	\sigma_{ij} &= \lambda \epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij} &\qqud \text{Constitutive (Hooke's Law)}\\\\
+	\sigma_{ij} &= \lambda \epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij} &\qquad \text{Constitutive (Hooke's Law)}\\\\
 	\epsilon_{ij} &= \frac{1+\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij}
 \end{aligned}$$
 
@@ -52,7 +52,7 @@ $$\begin{aligned}
 -   There are cases where we can integrate a strain field to find a set of discontinuous displacements
 
 ----
-## compatibility equations
+## compatibility 
 
 -   The compatibility equations enforce continuity of displacements to prevent this from occurring
 -   To enforce this condition we consider the strain-displacement relations:
@@ -68,7 +68,7 @@ $$\\epsilon\_{ij,kl} = \\frac{1}{2}(u\_{i,jkl} + u\_{j,ikl})$$
 $$2\epsilon_{ij,kl} = u_{i,jkl} + u_{j,ikl}$$
 
 ----
-## compatibility equations
+## compatibility 
 
 -   We can eliminate the displacement terms from the equation by interchanging the indexes to generate new equations
 
@@ -104,7 +104,7 @@ $$2\epsilon_{ij,kl} = 2\epsilon_{ik,jl} + 2\epsilon_{jl,ik} - 2\epsilon_{kl,ij}$
 $$\epsilon_{ij,kl} + \epsilon_{kl,ij} - \epsilon_{ik,jl} - \epsilon_{jl,ik} = 0$$
 
 ----
-## compatibility equations
+## compatibility 
 
 -   The so-called *Saint-Venant compatibility equations* in full are a system of 81 equations, but only six are useful (although even these six are not entirely linearly independent)
 -   These six are found by setting *k* = *l*, or in expanded form

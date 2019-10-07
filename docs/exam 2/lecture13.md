@@ -29,21 +29,13 @@ October 9, 2019
 ----
 ## field equations
 
--   Field equations that we have already found
--   Strain-displacement
 
-$$\\epsilon\_{ij} = \\frac{1}{2}(u\_{i,j} + u\_{j,i})$$
-
--   Equilibrium
-
-$$ \sigma_{ij,j} + F_i = 0 $$
-
--   Constitutive (Hooke’s Law)
-
-$$\\begin{aligned}
-	\\sigma\_{ij} &= \\lambda \\epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij}\\\\
-	\\epsilon\_{ij} &= \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij}
-\\end{aligned}$$
+$$\begin{aligned}
+	\epsilon_{ij} &= \frac{1}{2}(u_{i,j} + u_{j,i}) &\qquad \text{Strain-Displacement} \\\\
+	\sigma_{ij,j} + F_i &= 0 &\qquad \text{Equilibrium} \\\\
+	\sigma_{ij} &= \lambda \epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij} &\qqud \text{Constitutive (Hooke's Law)}\\\\
+	\epsilon_{ij} &= \frac{1+\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij}
+\end{aligned}$$
 
 ----
 ## field equations

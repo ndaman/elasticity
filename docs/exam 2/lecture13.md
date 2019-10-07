@@ -20,6 +20,7 @@ October 9, 2019
 * field equations
 * boundary conditions
 * stress formulation
+* example
 
 <!-- vim-markdown-toc -->
 
@@ -31,9 +32,9 @@ October 9, 2019
 
 
 $$\begin{aligned}
-	\epsilon_{ij} &= \frac{1}{2}(u_{i,j} + u_{j,i}) &\text{Strain-Displacement} \\\\
-	\sigma_{ij,j} + F_i &= 0 &\text{Equilibrium} \\\\
-	\sigma_{ij} &= \lambda \epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij} &\text{Constitutive (Hooke's Law)}\\\\
+	\epsilon_{ij} &= \frac{1}{2}(u_{i,j} + u_{j,i}) \qquad \text{Strain-Displacement} \\\\
+	\sigma_{ij,j} + F_i &= 0 \qquad \text{Equilibrium} \\\\
+	\sigma_{ij} &= \lambda \epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij} \qquad \text{Constitutive (Hooke's Law)}\\\\
 	\epsilon_{ij} &= \frac{1+\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij} &
 \end{aligned}$$
 
@@ -58,6 +59,9 @@ $$\begin{aligned}
 -   To enforce this condition we consider the strain-displacement relations:
 
 $$\\epsilon\_{ij} = \\frac{1}{2}(u\_{i,j} + u\_{j,i})$$
+
+----
+## compatibility
 
 -   and differentiate with respect to *x*<sub>*k*</sub> and *x*<sub>*l*</sub>
 
@@ -85,7 +89,7 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 ----
-## compatibility equations
+## compatibility 
 
 -   Substituting these values into the equations gives
 
@@ -94,6 +98,9 @@ $$2\epsilon_{ij,kl} = 2\epsilon_{ik,jl} = u_{k,ijl} + 2 \epsilon_{jl,ik} - u_{l,
 -   We now consider one more change of index equation
 	
 $$2\epsilon_{kl,ij} = u_{k,ijl} + u_{l,ijk}$$
+
+----
+## compatibility
 
 -   and substituting this result gives
 
@@ -109,6 +116,9 @@ $$\epsilon_{ij,kl} + \epsilon_{kl,ij} - \epsilon_{ik,jl} - \epsilon_{jl,ik} = 0$
 -   The so-called *Saint-Venant compatibility equations* in full are a system of 81 equations, but only six are useful (although even these six are not entirely linearly independent)
 -   These six are found by setting *k* = *l*, or in expanded form
 
+----
+## compatibility
+
 $$\\begin{aligned}
 	\\frac{\\partial^2 \\epsilon\_x}{\\partial y^2} + \\frac{\\partial^2 \\epsilon\_y}{\\partial x^2} &= 2\\frac{\\partial^2 \\epsilon\_{xy}}{\\partial x \\partial y}\\\\
 	\\frac{\\partial^2 \\epsilon\_y}{\\partial z^2} + \\frac{\\partial^2 \\epsilon\_z}{\\partial y^2} &= 2\\frac{\\partial^2 \\epsilon\_{yz}}{\\partial y \\partial z}\\\\
@@ -119,7 +129,7 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 ----
-## compatibility equations
+## compatibility 
 
 -   The compatibility equations are necessary to ensure that the strain field is valid and will produce a continuous displacement field
 -   While these equations are important and necessary in solving elasticity problems, they are not sufficient
@@ -156,7 +166,7 @@ $$\\begin{aligned}
 
 -   In many systems, the boundaries are parallel to the coordinate system, but this is not always the case
 
-![boundaries not parallel to coordinate system](../images/noncoordinate.PNG)
+![boundaries not parallel to coordinate system](../images/noncoordinate.PNG) <!-- .element width="50%" -->
 
 ----
 ## boundaries
@@ -167,6 +177,9 @@ $$\\begin{aligned}
 *t*<sub>*j*</sub> = *σ*<sub>*ij*</sub>*n*<sub>*i*</sub>
 
 -   This results in *σ*<sub>*xy*</sub> = *σ*<sub>*yy*</sub> = 0
+
+----
+## boundaries
 
 -   When the boundary is not parallel to the coordinate system, we do not necessarily have any zero-stress conditions
 
@@ -211,19 +224,22 @@ $$\\sigma\_{ij,kk} + \\sigma\_{kk,ij} - \\sigma\_{ik,jk} - \\sigma\_{jk,ik} = \\
 
 $$\\sigma\_{ij,kk} + \\frac{1}{1+\\nu}\\sigma\_{kk,ij} = \\frac{\\nu}{1+\\nu}\\sigma\_{mm,kk}\\delta\_{ij} - F\_{i,j} - F\_{j,i}$$
 
--   We can further simplify the equation by consider the case when *i* = *j* and nothing that
+-   We can further simplify the equation by considering the case when *i* = *j* and noting that
 
 $$\\sigma\_{ii,kk} = -\\frac{1+\\nu}{1-\\nu}F\_{i,i}$$
+
+----
+## stress formulation
 
 -   Which we can substitute into the equation to find
 
 $$\\sigma\_{ij,kk} + \\frac{1}{1+\\nu}\\sigma\_{kk,ij} = -\\frac{\\nu}{1+\\nu}\\delta\_{ij}F\_{k,k} - F\_{i,j} - F\_{j,i}$$
 
-----
-## beltrami-michell compatibility
-
 -   The compatibility equations in terms of stress are commonly known as the *Beltrami-Michell compatibility equations*
 -   When there are no body forces, we can write the six expanded form equations as
+
+----
+## beltrami-michell 
 
 $$\\begin{aligned}
 	(1+\\nu) \\nabla^2 \\sigma\_x + \\frac{\\partial^2}{\\partial x^2} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\ (1+\\nu) \\nabla^2 \\sigma\_y + \\frac{\\partial^2}{\\partial y^2} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
@@ -250,12 +266,16 @@ $$\\begin{aligned}
     -   Choose a basic form for the solution based on our knowledge of the problem
     -   Solve for coefficients
     -   Usually we know the answer before we know the problem, it can be difficult to find useful problems for our solution
+
+----
+## solution methods
+
 -   Semi-inverse method
     -   Only part of the solution is assumed
     -   Use direct integration to find the rest
 
 ---
-example
+# example
 
 ----
 ## Levy’s problem

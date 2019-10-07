@@ -31,10 +31,10 @@ October 9, 2019
 
 
 $$\begin{aligned}
-	\epsilon_{ij} &= \frac{1}{2}(u_{i,j} + u_{j,i}) &\qquad \text{Strain-Displacement} \\\\
-	\sigma_{ij,j} + F_i &= 0 &\qquad \text{Equilibrium} \\\\
-	\sigma_{ij} &= \lambda \epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij} &\qquad \text{Constitutive (Hooke's Law)}\\\\
-	\epsilon_{ij} &= \frac{1+\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij}
+	\epsilon_{ij} &= \frac{1}{2}(u_{i,j} + u_{j,i}) &\text{Strain-Displacement} \\\\
+	\sigma_{ij,j} + F_i &= 0 &\text{Equilibrium} \\\\
+	\sigma_{ij} &= \lambda \epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij} &\text{Constitutive (Hooke's Law)}\\\\
+	\epsilon_{ij} &= \frac{1+\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij} &
 \end{aligned}$$
 
 ----

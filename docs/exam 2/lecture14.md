@@ -9,9 +9,9 @@ October 16, 2019
 
 -   Oct 16 - Problem Formulation
 -   Oct 21 - Solution Strategies
--   Oct 23 - Strain Energy, HW 5 Due
--   Oct 28 - Exam 2 Review
--   Oct 30 - Exam 2
+-   Oct 23 - Exam 2 Review, HW 5 Due
+-   Oct 28 - Exam 2 
+-   Oct 30 - SPTE, Strain Energy
 
 ----
 ## outline

@@ -1,63 +1,77 @@
-<span>upcoming schedule</span>
+# AE731
+## Theory of Elasticity
+Dr. Nicholas Smith<br/>
+Wichita State University, Department of Aerospace Engineering
+October 21, 2019
 
--   Oct 23 - Exam 2 Review
+----
+## upcoming schedule
 
--   Oct 25 - Strain Energy, HW 5 Due
+-   Oct 21 - Solution Strategies
+-   Oct 23 - Exam 2 Review, HW 5 Due
+-   Oct 28 - Exam 2 
+-   Oct 30 - SPTE, Strain Energy
 
--   Oct 30 - Exam 2
+----
+## outline
 
-### outline
+<!-- vim-markdown-toc GFM -->
 
-\[sections numbered\]
+* exam
+* stress and equilibrium
+* material behavior
+* problem formulation
 
-Exam
-====
+<!-- vim-markdown-toc -->
 
-<span>exam format</span>
+---
+# exam
+
+----
+## exam format
 
 -   Similar format to last exam
-
 -   Three problems
-
 -   Focus on organizing your work clearly to maximize partial credit
 
--   Equation sheet has been modified (cylindrical and spherical equations, only axi-symmetric form)
+---
+# stress and equilibrium
 
-Stress and Equilibrium
-======================
-
-<span>topics</span>
+----
+## topics
 
 -   Traction
-
 -   Stress transformation
-
 -   Principal stress
-
 -   Equilibrium
 
-<span>derivations</span>
+----
+## derivations
 
 -   Cauchy’s stress theorem
-
 -   Max shear stress for plane stress
-
 -   Mohr’s circle
 
-<span>stress tensor</span>
+----
+## stress tensor
 
 -   To simplify the notation, we introduce the stress tensor
-    $$\\sigma\_{ij} = t\_j^{(\\hat{e}\_i)}$$
 
-(0,0,0) – (2,0,0); (2,0,0) – (2,2,0) – (0,2,0); (0,2,0) – (0,0,0); (0,0,2) – (2,0,2) – (2,2,2) – (0,2,2) – (0,0,2); (2,0,0) – (2,0,2); (2,2,0) – (2,2,2); (0,2,0) – (0,2,2); (0,0,0) – (0,0,2); (1,1,2) – (1,1,3) node\[above\] <span>*σ*<sub>33</sub></span>; (1,1,2) – (2,1,2) node\[above\] <span>*σ*<sub>31</sub></span>; (1,1,2) – (1,2,2) node\[above\] <span>*σ*<sub>32</sub></span>; (2,1,1) – (3,1,1) node\[left\] <span>*σ*<sub>11</sub></span>; (2,1,1) – (2,1,2) node\[below left\] <span>*σ*<sub>13</sub></span>; (2,1,1) – (2,2,1) node\[above left\] <span>*σ*<sub>12</sub></span>; (1,2,1) – (1,3,1) node\[right\] <span>*σ*<sub>22</sub></span>; (1,2,1) – (2,2,1) node at (1.5,2,1.3) <span>*σ*<sub>21</sub></span>; (1,2,1) – (1,2,2) node\[below right\] <span>*σ*<sub>23</sub></span>;
+$$\\sigma\_{ij} = t\_j^{(\\hat{e}\_i)}$$
 
-<span>traction</span>
+(0,0,0) – (2,0,0); (2,0,0) – (2,2,0) – (0,2,0); (0,2,0) – (0,0,0); (0,0,2) – (2,0,2) – (2,2,2) – (0,2,2) – (0,0,2); (2,0,0) – (2,0,2); (2,2,0) – (2,2,2); (0,2,0) – (0,2,2); (0,0,0) – (0,0,2); (1,1,2) – (1,1,3) node\[above\] ----
+## *σ*<sub>33</sub></span>; (1,1,2) – (2,1,2) node\[above\] <span>*σ*<sub>31</sub></span>; (1,1,2) – (1,2,2) node\[above\] <span>*σ*<sub>32</sub></span>; (2,1,1) – (3,1,1) node\[left\] <span>*σ*<sub>11</sub></span>; (2,1,1) – (2,1,2) node\[below left\] <span>*σ*<sub>13</sub></span>; (2,1,1) – (2,2,1) node\[above left\] <span>*σ*<sub>12</sub></span>; (1,2,1) – (1,3,1) node\[right\] <span>*σ*<sub>22</sub></span>; (1,2,1) – (2,2,1) node at (1.5,2,1.3) <span>*σ*<sub>21</sub></span>; (1,2,1) – (1,2,2) node\[below right\] <span>*σ*<sub>23</sub>;
+
+----
+## traction
 
 -   We can find some interesting information about the traction vector by considering an arbitrary tetrahedron with some traction $\\hat{t}^{(n)}$ applied to the surface
 
-    (2,0,0) – (3,0,0) node\[below left\] <span>*x*<sub>1</sub></span>; (0,1.5,0) – (0,3,0) node\[right\] <span>*x*<sub>2</sub></span>; (0,0,1.5) – (0,0,3) node\[above\] <span>*x*<sub>3</sub></span>; (2,0,0) – (0,0,0) – (0,1.5,0); (0,0,0) – (0,0,1.5); (2,0,0) – (0,1.5,0) – (0,0,1.5) – (2,0,0); (1,.75,.75) – (2,1.5,1.5) node\[above\] <span>$\\hat{n}$</span>; (1,.75,.75) – (1,2,1) node \[right\] <span>$\\hat{t}^{(n)}$</span>;
+    (2,0,0) – (3,0,0) node\[below left\] ----
+## *x*<sub>1</sub></span>; (0,1.5,0) – (0,3,0) node\[right\] <span>*x*<sub>2</sub></span>; (0,0,1.5) – (0,0,3) node\[above\] <span>*x*<sub>3</sub></span>; (2,0,0) – (0,0,0) – (0,1.5,0); (0,0,0) – (0,0,1.5); (2,0,0) – (0,1.5,0) – (0,0,1.5) – (2,0,0); (1,.75,.75) – (2,1.5,1.5) node\[above\] <span>$\\hat{n}$</span>; (1,.75,.75) – (1,2,1) node \[right\] <span>$\\hat{t}^{(n)}$;
 
-<span>traction</span>
+----
+## traction
 
 -   If we consider the balance of forces in the *x*<sub>1</sub>-direction
     *t*<sub>1</sub>*d**A* − *σ*<sub>11</sub>*d**A*<sub>1</sub> − *σ*<sub>21</sub>*d**A*<sub>2</sub> − *σ*<sub>31</sub>*d**A*<sub>3</sub> + *b*<sub>1</sub>*ρ**d**V* = 0
@@ -71,7 +85,8 @@ Stress and Equilibrium
 
 -   And $dV = \\frac{1}{3}h dA$.
 
-<span>traction</span>
+----
+## traction
 $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 dA + b\_1 \\rho \\frac{1}{3}h dA = 0$$
 
 -   If we let *h* → 0 and divide by *d**A*
@@ -86,21 +101,24 @@ $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 d
             t\_3 &= \\sigma\_{i3} n\_i\\\\
             \\end{aligned}$$
 
-<span>traction</span>
+----
+## traction
 
 -   We can further combine these results in index notation as
     *t*<sub>*j*</sub> = *σ*<sub>*i**j*</sub>*n*<sub>*i*</sub>
 
 -   This means with knowledge of the nine components of *σ*<sub>*i**j*</sub>, we can find the traction vector at any point on any surface
 
-<span>maximum shear stress</span>
+----
+## maximum shear stress
 
 -   For plane stress problems, we can also use the stress transformation equations to find the maximum shear stress
 
 -   We desire to maximize this equation:
     $$\\tau^\\prime\_{xy} = \\frac{\\sigma\_y - \\sigma\_x}{2}\\sin 2\\theta + \\tau\_{xy} \\cos 2\\theta$$
 
-<span>maximum shear stress</span>
+----
+## maximum shear stress
 
 -   Taking the derivative with respect to *θ* gives
     $$\\frac{\\partial}{\\partial \\theta} (\\tau^\\prime\_{xy}) = (\\sigma\_y-\\sigma\_x)\\cos 2\\theta - 2\\tau\_{xy} \\sin 2\\theta = 0$$
@@ -108,7 +126,8 @@ $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 d
 -   Which we can use to find 2*θ*
     $$2\\theta = \\tan ^{-1} \\left(\\frac{(\\sigma\_y-\\sigma\_x)}{2\\tau\_{xy}}\\right)$$
 
-<span>maximum shear stress</span>
+----
+## maximum shear stress
 
 -   Substituting back into the original equation gives
     $$\\tau^\\prime\_{max} = \\frac{\\sigma\_y - \\sigma\_x}{2}\\sin \\left\[\\tan ^{-1} \\left(\\frac{(\\sigma\_y-\\sigma\_x)}{2\\tau\_{xy}}\\right)\\right\] + \\tau\_{xy} \\cos \\left\[\\tan ^{-1} \\left(\\frac{(\\sigma\_y-\\sigma\_x)}{2\\tau\_{xy}}\\right)\\right\]$$
@@ -119,7 +138,8 @@ $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 d
             \\cos (\\tan ^{-1} (x)) &= \\frac{1}{\\sqrt{1+x^2}}\\\\
             \\end{aligned}$$
 
-<span>maximum shear stress</span>
+----
+## maximum shear stress
 
 -   We note that
     $$\\sqrt{1+ \\left(\\frac{\\sigma\_y - \\sigma\_x}{2 \\tau\_{xy}}\\right)^2} = \\frac{\\sqrt{(\\sigma\_y-\\sigma\_x)^2+4\\tau\_{xy}^2}}{2\\tau\_{xy}}$$
@@ -127,12 +147,14 @@ $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 d
 -   And thus we find
     $$\\tau\_{max} = \\frac{(\\sigma\_y-\\sigma\_x)^2}{2 \\sqrt{(\\sigma\_y-\\sigma\_x)^2+4\\tau\_{xy}^2}} + \\frac{4\\tau\_{xy}^2}{2 \\sqrt{(\\sigma\_y-\\sigma\_x)^2+4\\tau\_{xy}^2}}$$
 
-<span>maximum shear stress</span>
+----
+## maximum shear stress
 
 -   Adding the terms and simplifying, we find
     $$\\tau\_{max} = \\sqrt{\\left(\\frac{\\sigma\_y-\\sigma\_x}{2}\\right)^2+\\tau\_{xy}^2}$$
 
-<span>tractions</span>
+----
+## tractions
 
 -   We can use what we know about principal values to find some interesting things about the tractions
 
@@ -140,7 +162,8 @@ $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 d
 
     <img src="potato" alt="image" /> \[fig:potato\]
 
-<span>tractions</span>
+----
+## tractions
 
 -   The normal component can be found using the dot product
     $$N = \\hat{T}^n \\cdot \\hat{n}$$
@@ -148,7 +171,8 @@ $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 d
 -   The shear component can be found using the Pythagorean theorem
     $$S^2 = |\\hat{T}^n|^2 - N^2$$
 
-<span>tractions</span>
+----
+## tractions
 
 -   We now use the stress tensor in the principal direction to simplify the calculations
     $$\\begin{aligned}
@@ -158,7 +182,8 @@ $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 d
             &= \\sigma\_1 n\_1^2 + \\sigma\_2 n\_2^2 + \\sigma\_3 n\_3^2
             \\end{aligned}$$
 
-<span>tractions</span>
+----
+## tractions
 
 -   We also know that
     $$\\begin{aligned}
@@ -168,7 +193,8 @@ $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 d
             &= \\sigma\_1^2 n\_1^2 + \\sigma\_2^2 n\_2^2 + \\sigma\_3^2 n\_3^2
             \\end{aligned}$$
 
-<span>mohr’s circle</span>
+----
+## mohr’s circle
 
 -   If we constrain the normal vector to be a unit vector we can formulate the following inequalities
     $$\\begin{aligned}
@@ -179,22 +205,23 @@ $$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 d
 
 -   These inequalities form what is known as Mohr’s circle
 
-<span>mohr’s circle</span>
+----
+## mohr’s circle
 
 <img src="mohr" alt="image" /> \[fig:mohr\]
 
-Material Behavior
-=================
+---
+# material behavior
 
-<span>topics</span>
+----
+## topics
 
 -   Hooke’s Law
-
 -   Physical meaning of elastic constants
-
 -   Thermal expansion
 
-<span>hooke’s law</span>
+----
+## hooke’s law
 
 -   Can be written in terms of strain
     $$\\epsilon\_{ij} = \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij}$$
@@ -202,7 +229,8 @@ Material Behavior
 -   Or stress
     *σ*<sub>*i**j*</sub> = *λ**ϵ*<sub>*k**k*</sub>*δ*<sub>*i**j*</sub> + 2*μ**ϵ*<sub>*i**j*</sub>
 
-<span>hooke’s law</span>
+----
+## hooke’s law
 
 -   We should use a form appropriate for the material constants being used in the problem
 
@@ -217,7 +245,8 @@ Material Behavior
 
 \[tab:addlabel\]
 
-<span>physical meaning</span>
+----
+## physical meaning
 
 -   Young’s modulus
 
@@ -227,7 +256,8 @@ Material Behavior
 
 -   Bulk modulus
 
-<span>thermoelasticity</span>
+----
+## thermoelasticity
 
 -   Separate strain into mechanical and thermal components
     *ϵ*<sub>*i**j*</sub> = *ϵ*<sub>*i**j*</sub><sup>(*M*)</sup> + *ϵ*<sub>*i**j*</sub><sup>(*T*)</sup>
@@ -235,7 +265,8 @@ Material Behavior
 -   For isotropic materials:
     *ϵ*<sub>*i**j*</sub><sup>(*T*)</sup> = *α*(*T* − *T*<sub>0</sub>)*δ*<sub>*i**j*</sub>
 
-<span>thermoelasticity</span>
+----
+## thermoelasticity
 
 -   We can combine this with Hooke’s Law to find
     $$\\epsilon\_{ij} = \\frac{1+\\nu}{E}\\sigma\_{ij} -\\frac{\\nu}{E}\\sigma\_{kk}\\delta\_{ij} + \\alpha (T-T\_0)\\delta\_{ij}$$
@@ -243,30 +274,27 @@ Material Behavior
 -   Or formulated in terms of stress (and Lamé constants)
     *σ*<sub>*i**j*</sub> = *λ**ϵ*<sub>*k**k*</sub>*δ*<sub>*i**j*</sub> + 2*μ**ϵ*<sub>*i**j*</sub> − (3*λ* + 2*μ*)*α*(*T* − *T*<sub>0</sub>)*δ*<sub>*i**j*</sub>
 
-Problem Formulation
-===================
+---
+# problem formulation
 
-<span>topics</span>
+----
+## topics
 
 -   Boundary conditions
-
 -   Compatibility
-
 -   Beltrami-Michell
-
 -   Navier’s Equations
-
 -   Superposition
 
-<span>boundary conditions</span>
+----
+## boundary conditions
 
 -   Traction
-
 -   Displacement
-
 -   Mixed
 
-<span>compatibility equations</span>
+----
+## compatibility equations
 
 -   If continuous, single-valued displacements are specified, differentiation will result in well-behaved strain field
 
@@ -274,7 +302,8 @@ Problem Formulation
 
 -   There are cases where we can integrate a strain field to find a set of discontinuous displacements
 
-<span>compatibility equations</span>
+----
+## compatibility equations
 
 -   The compatibility equations enforce continuity of displacements to prevent this from occurring
 
@@ -287,7 +316,8 @@ Problem Formulation
 -   Or
     2*ϵ*<sub>*i**j*, *k**l*</sub> = *u*<sub>*i*, *j**k**l*</sub> + *u*<sub>*j*, *i**k**l*</sub>
 
-<span>compatibility equations</span>
+----
+## compatibility equations
 
 -   We can eliminate the displacement terms from the equation by interchanging the indexes to generate new equations
     $$\\begin{aligned}
@@ -301,7 +331,8 @@ Problem Formulation
             u\_{j,ikl} &= 2\\epsilon\_{jl,ik} - u\_{l,ijk}
             \\end{aligned}$$
 
-<span>compatibility equations</span>
+----
+## compatibility equations
 
 -   Substituting these values into the equations gives
     2*ϵ*<sub>*i**j*, *k**l*</sub> = 2*ϵ*<sub>*i**k*, *j**l*</sub> − *u*<sub>*k*, *i**j**l*</sub> + 2*ϵ*<sub>*j**l*, *i**k*</sub> − *u*<sub>*l*, *i**j**k*</sub>
@@ -315,7 +346,8 @@ Problem Formulation
 -   Or, simplified
     *ϵ*<sub>*i**j*, *k**l*</sub> + *ϵ*<sub>*k**l*, *i**j*</sub> − *ϵ*<sub>*i**k*, *j**l*</sub> − *ϵ*<sub>*j**l*, *i**k*</sub> = 0
 
-<span>beltrami-michell</span>
+----
+## beltrami-michell
 
 -   When working with stress functions, it is convenient to check compatibility of the stress function directly
 
@@ -323,7 +355,8 @@ Problem Formulation
 
 -   These are known as the Beltrami-Michell equations
 
-<span>navier’s equations</span>
+----
+## navier’s equations
 
 -   Similarly, we can write the equilibrium equations in terms of displacement
 

@@ -1,260 +1,423 @@
-<span>upcoming schedule</span>
+# AE731
+## Theory of Elasticity
+Dr. Nicholas Smith<br/>
+Wichita State University, Department of Aerospace Engineering
+October 21, 2019
 
--   Oct 18 - Formulation and Solution Strategies
+----
+## upcoming schedule
 
--   Oct 23 - Exam 2 Review
+-   Oct 21 - Solution Strategies
+-   Oct 23 - Exam 2 Review, HW 5 Due
+-   Oct 28 - Exam 2 
+-   Oct 30 - SPTE, Strain Energy
 
--   Oct 25 - Strain Energy, HW 5 Due
+----
+## outline
 
--   Oct 30 - Exam 2
+<!-- vim-markdown-toc GFM -->
 
-### outline
+* exam
+* group problems
+* stress and equilibrium
+* material behavior
+* problem formulation
 
-\[sections numbered\]
+<!-- vim-markdown-toc -->
 
-Review
-======
+---
+# exam
 
-<span>field equations</span>
+----
+## exam format
 
--   Field equations that we have already found
+-   Similar format to last exam
+-   Three problems
+-   Focus on organizing your work clearly to maximize partial credit
 
--   Strain-displacement
-    $$\\epsilon\_{ij} = \\frac{1}{2}(u\_{i,j} + u\_{j,i})$$
+---
+# group problems
 
+----
+## problem one - thermoelasticity
+
+As a first-order model of the problem of freezing water in a glass bottle, we treat water as a thermoelastic solid and the glass as a fixed boundary.
+Find the stress and strain field in the water as a function of the elastic properties ($E,\nu$) and the coefficient of thermal expansion ($\alpha$).
+
+----
+## problem two - inverse solution
+
+Consider the stress field
+
+$$ \sigma = \begin{bmatrix} Ay & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \end{bmatrix}  $$
+
+Show that this is a valid solution to an elasticity problem.
+What problem does it solve?
+
+----
+## problem three - semi-inverse
+
+To solve the problem of torsion in prismatic bars we consider the displacement field
+
+$$ u = -\alpha y z, \qquad v = -\alpha x z, \qquad w = w(x,y) $$
+
+Solve this problem using the boundary conditions for a solid square cross-section.
+
+---
+# stress and equilibrium
+
+----
+## topics
+
+-   Traction
+-   Stress transformation
+-   Principal stress
 -   Equilibrium
-    *σ*<sub>*i**j*, *j*</sub> + *F*<sub>*i*</sub> = 0
 
--   Constitutive (Hooke’s Law)
-    $$\\begin{aligned}
-            \\sigma\_{ij} &= \\lambda \\epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij}\\\\
-            \\epsilon\_{ij} &= \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij}
-            \\end{aligned}$$
+----
+## derivations
 
-<span>field equations</span>
+-   Cauchy’s stress theorem
+-   Max shear stress for plane stress
+-   Mohr’s circle
 
--   There are 15 unique field equations to solve for the 15 unknowns
+----
+## stress tensor
 
--   3 displacements (*u*<sub>*i*</sub>), 6 unique strain tensor terms (*ϵ*<sub>*i**j*</sub>), and 6 unique stress tensor terms (*σ*<sub>*i**j*</sub>)
+-   To simplify the notation, we introduce the stress tensor
 
--   These equations also depend on a knowledge of the material behavior (*λ*, *μ*) and body forces (usually gravity or zero)
+$$\\sigma\_{ij} = t\_j^{(\\hat{e}\_i)}$$
 
-<span>compatibility equations</span>
+![stress tensor illustrated on a cube](../images/stress-cube.png)
+
+----
+## traction
+
+-   We can find some interesting information about the traction vector by considering an arbitrary tetrahedron with some traction $\\hat{t}^{(n)}$ applied to the surface
+
+
+----
+## traction
+
+-   If we consider the balance of forces in the *x*<sub>1</sub>-direction
+
+_t_<sub>1</sub>*dA* − *σ*<sub>11</sub>*dA*<sub>1</sub> − *σ*<sub>21</sub>*dA*<sub>2</sub> − *σ*<sub>31</sub>*dA*<sub>3</sub> + *b*<sub>1</sub>*ρdV* = 0
+
+-   The area components are:
+
+$$\\begin{aligned}
+	dA\_1 &= n\_1 dA\\\\
+	dA\_2 &= n\_2 dA\\\\
+	dA\_3 &= n\_3 dA\\\\
+\\end{aligned}$$
+
+-   And $dV = \\frac{1}{3}h dA$.
+
+----
+## traction
+
+$$t\_1 dA - \\sigma\_{11} n\_1 dA - \\sigma\_{21} n\_2 dA - \\sigma\_{31} n\_3 dA + b\_1 \\rho \\frac{1}{3}h dA = 0$$
+
+-   If we let *h* → 0 and divide by *dA*
+
+_t_<sub>1</sub> = *σ*<sub>11</sub>*n*<sub>1</sub> + *σ*<sub>21</sub>*n*<sub>2</sub> + *σ*<sub>31</sub>*n*<sub>3</sub>
+
+-   We can write this in index notation as
+
+_t_<sub>1</sub> = *σ*<sub>*i*1</sub>*n*<sub>*i*</sub>
+
+----
+## traction
+
+-   We find, similarly
+
+$$\\begin{aligned}
+	t\_2 &= \\sigma\_{i2} n\_i\\\\
+	t\_3 &= \\sigma\_{i3} n\_i\\\\
+\\end{aligned}$$
+
+----
+## traction
+
+-   We can further combine these results in index notation as
+
+_t_<sub>*j*</sub> = *σ*<sub>*ij*</sub>*n*<sub>*i*</sub>
+
+-   This means with knowledge of the nine components of *σ*<sub>*ij*</sub>, we can find the traction vector at any point on any surface
+
+----
+## maximum shear stress
+
+-   For plane stress problems, we can also use the stress transformation equations to find the maximum shear stress
+-   We desire to maximize this equation:
+
+$$\\tau^\\prime\_{xy} = \\frac{\\sigma\_y - \\sigma\_x}{2}\\sin 2\\theta + \\tau\_{xy} \\cos 2\\theta$$
+
+----
+## maximum shear stress
+
+-   Taking the derivative with respect to *θ* gives
+
+$$\\frac{\\partial}{\\partial \\theta} (\\tau^\\prime\_{xy}) = (\\sigma\_y-\\sigma\_x)\\cos 2\\theta - 2\\tau\_{xy} \\sin 2\\theta = 0$$
+
+-   Which we can use to find 2*θ*
+
+$$2\\theta = \\tan ^{-1} \\left(\\frac{(\\sigma\_y-\\sigma\_x)}{2\\tau\_{xy}}\\right)$$
+
+----
+## maximum shear stress
+
+-   Substituting back into the original equation gives
+
+$$\\tau^\\prime\_{max} = \\frac{\\sigma\_y - \\sigma\_x}{2}\\sin \\left\[\\tan ^{-1} \\left(\\frac{(\\sigma\_y-\\sigma\_x)}{2\\tau\_{xy}}\\right)\\right\] + \\tau\_{xy} \\cos \\left\[\\tan ^{-1} \\left(\\frac{(\\sigma\_y-\\sigma\_x)}{2\\tau\_{xy}}\\right)\\right\]$$
+
+-   Note that
+
+$$\\begin{aligned}
+	\\sin (\\tan ^{-1} (x)) &= \\frac{x}{\\sqrt{1+x^2}}\\\\
+	\\cos (\\tan ^{-1} (x)) &= \\frac{1}{\\sqrt{1+x^2}}\\\\
+\\end{aligned}$$
+
+----
+## maximum shear stress
+
+-   We note that
+
+$$\\sqrt{1+ \\left(\\frac{\\sigma\_y - \\sigma\_x}{2 \\tau\_{xy}}\\right)^2} = \\frac{\\sqrt{(\\sigma\_y-\\sigma\_x)^2+4\\tau\_{xy}^2}}{2\\tau\_{xy}}$$
+
+-   And thus we find
+
+$$\\tau\_{max} = \\frac{(\\sigma\_y-\\sigma\_x)^2}{2 \\sqrt{(\\sigma\_y-\\sigma\_x)^2+4\\tau\_{xy}^2}} + \\frac{4\\tau\_{xy}^2}{2 \\sqrt{(\\sigma\_y-\\sigma\_x)^2+4\\tau\_{xy}^2}}$$
+
+----
+## maximum shear stress
+
+-   Adding the terms and simplifying, we find
+
+$$\\tau\_{max} = \\sqrt{\\left(\\frac{\\sigma\_y-\\sigma\_x}{2}\\right)^2+\\tau\_{xy}^2}$$
+
+----
+## tractions
+
+<div class="left"> <!-- .element width="65%" -->
+	
+-   We can use what we know about principal values to find some interesting things about the tractions
+-   Consider the traction vector on an arbitrary internal face, and decompose into Normal and Shear components.
+
+</div>
+
+<div class="right"> <!-- .element width="35%" -->
+	
+![arbitrary body with arbitrary loading applied](../images/potato.PNG)
+
+</div>
+
+----
+## tractions
+
+-   The normal component can be found using the dot product
+
+$$N = \\hat{T}^n \\cdot \\hat{n}$$
+
+-   The shear component can be found using the Pythagorean theorem
+
+$$S^2 = |\\hat{T}^n|^2 - N^2$$
+
+----
+## tractions
+
+-   We now use the stress tensor in the principal direction to simplify the calculations
+
+$$\\begin{aligned}
+	N &= \\hat{T}^n \\cdot \\hat{n}\\\\
+	&= T^n\_i n\_i \\\\
+	&= \\sigma\_{ji} n\_j n\_i\\\\
+	&= \\sigma\_1 n\_1^2 + \\sigma\_2 n\_2^2 + \\sigma\_3 n\_3^2
+\\end{aligned}$$
+
+----
+## tractions
+
+-   We also know that
+
+$$\\begin{aligned}
+	|\\hat{T}^n|^2 &= \\hat{T}^n \\cdot \\hat{T}^n\\\\
+	&= T\_i^n T\_i^n \\\\
+	&= \\sigma\_{ji} n\_j \\sigma\_{ki} n\_k\\\\
+	&= \\sigma\_1^2 n\_1^2 + \\sigma\_2^2 n\_2^2 + \\sigma\_3^2 n\_3^2
+\\end{aligned}$$
+
+----
+## mohr’s circle
+
+-   If we constrain the normal vector to be a unit vector we can formulate the following inequalities
+
+$$\\begin{aligned}
+	S^2 + (N-\\sigma\_2)(N-\\sigma\_3) &\\ge 0\\\\
+	S^2 + (N-\\sigma\_3)(N-\\sigma\_1) &\\le 0\\\\
+	S^2 + (N-\\sigma\_1)(N-\\sigma\_2) &\\ge 0\\\\
+\\end{aligned}$$
+
+-   These inequalities form what is known as Mohr’s circle
+
+----
+## mohr’s circle
+
+![mohr's circle](../images/mohr.PNG) <!-- .element width="60%" -->
+
+---
+# material behavior
+
+----
+## topics
+
+-   Hooke’s Law
+-   Physical meaning of elastic constants
+-   Thermal expansion
+
+----
+## hooke’s law
+
+-   Can be written in terms of strain
+
+$$\\epsilon\_{ij} = \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij}$$
+
+-   Or stress
+
+_σ_<sub>*ij*</sub> = *λϵ*<sub>*kk*</sub>*δ*<sub>*ij*</sub> + 2*μϵ*<sub>*ij*</sub>
+
+----
+## isotropic materials
+
+| | *λ*= | *μ* = *G*= | *E*= | *ν*= | *K*= |
+|-:|---:|----------:|-------:|-----:|-----:|
+|  *λ*, *μ*|                                     |                                  |  $\\frac{\\mu(3\\lambda + 2\\mu)}{\\lambda + \\mu}$|  $\\frac{\\lambda}{2(\\lambda + \\mu)}$|  $\\frac{3\\lambda + 2\\mu}{3}$|
+|  *G*, *E*|              $\\frac{G(2G-E)}{E-3G}$|                                  |                                                    |                      $\\frac{E-2G}{2G}$|            $\\frac{GE}{3(3G-E}$|
+|  *G*, *ν*|            $\\frac{2G\\nu}{1-2\\nu}$|                                  |                                       2*G*(1 + *G*)|                                        |       $\\frac{2G(1+G)}{3(1-2G}$|
+|  *E*, *ν*|  $\\frac{\\nu E}{(1+\\nu)(1-2\\nu)}$|            $\\frac{E}{2(1+\\nu)}$|                                                    |                                        |          $\\frac{E}{3(1-2\\nu}$|
+|  *K*, *E*|             $\\frac{3K(3K-E)}{9K-E}$|               $\\frac{3EK}{9K-E}$|                                                    |                      $\\frac{3K-E}{6K}$|                                |
+|  *ν*, *K*|             $\\frac{3K\\nu}{1+\\nu}$|  $\\frac{3K(1-2\\nu)}{2(1+\\nu)}$|                                      3*K*(1 − 2*ν*)|                                        |                                |
+
+----
+## physical meaning
+
+-   Young’s modulus
+-   Poisson’s ratio
+-   Shear modulus
+-   Bulk modulus
+
+----
+## thermoelasticity
+
+-   Separate strain into mechanical and thermal components
+
+_ϵ_<sub>*ij*</sub> = *ϵ*<sub>*ij*</sub><sup>(*M*)</sup> + *ϵ*<sub>*ij*</sub><sup>(*T*)</sup>
+
+-   For isotropic materials:
+
+_ϵ_<sub>*ij*</sub><sup>(*T*)</sup> = *α*(*T* − *T*<sub>0</sub>)*δ*<sub>*ij*</sub>
+
+----
+## thermoelasticity
+
+-   We can combine this with Hooke’s Law to find
+
+$$\\epsilon\_{ij} = \\frac{1+\\nu}{E}\\sigma\_{ij} -\\frac{\\nu}{E}\\sigma\_{kk}\\delta\_{ij} + \\alpha (T-T\_0)\\delta\_{ij}$$
+
+-   Or formulated in terms of stress (and Lamé constants)
+
+_σ_<sub>*ij*</sub> = *λϵ*<sub>*kk*</sub>*δ*<sub>*ij*</sub> + 2*μϵ*<sub>*ij*</sub> − (3*λ* + 2*μ*)*α*(*T* − *T*<sub>0</sub>)*δ*<sub>*ij*</sub>
+
+---
+# problem formulation
+
+----
+## topics
+
+-   Boundary conditions
+-   Compatibility
+-   Beltrami-Michell
+-   Navier’s Equations
+-   Superposition
+
+----
+## boundary conditions
+
+-   Traction
+-   Displacement
+-   Mixed
+
+----
+## compatibility equations
 
 -   If continuous, single-valued displacements are specified, differentiation will result in well-behaved strain field
-
 -   The inverse relationship, integration of a strain field to find displacement, may not always be true
-
 -   There are cases where we can integrate a strain field to find a set of discontinuous displacements
 
-<span>compatibility equations</span>
+----
+## compatibility equations
 
 -   The compatibility equations enforce continuity of displacements to prevent this from occurring
-
 -   To enforce this condition we consider the strain-displacement relations:
-    $$\\epsilon\_{ij} = \\frac{1}{2}(u\_{i,j} + u\_{j,i})$$
+
+$$\\epsilon\_{ij} = \\frac{1}{2}(u\_{i,j} + u\_{j,i})$$
 
 -   and differentiate with respect to *x*<sub>*k*</sub> and *x*<sub>*l*</sub>
-    $$\\epsilon\_{ij,kl} = \\frac{1}{2}(u\_{i,jkl} + u\_{j,ikl})$$
+
+$$\\epsilon\_{ij,kl} = \\frac{1}{2}(u\_{i,jkl} + u\_{j,ikl})$$
 
 -   Or
-    2*ϵ*<sub>*i**j*, *k**l*</sub> = *u*<sub>*i*, *j**k**l*</sub> + *u*<sub>*j*, *i**k**l*</sub>
 
-<span>compatibility equations</span>
+2*ϵ*<sub>*ij*, *kl*</sub> = *u*<sub>*i*, *jkl*</sub> + *u*<sub>*j*, *ikl*</sub>
 
--   The so-called *Saint-Venant compatibility equations* in full are a system of 81 equations, but only six are useful (although even these six are not entirely linearly independent)
+----
+## compatibility equations
 
--   These six are found by setting *k* = *l*, or in expanded form
-    $$\\begin{aligned}
-            \\frac{\\partial^2 \\epsilon\_x}{\\partial y^2} + \\frac{\\partial^2 \\epsilon\_y}{\\partial x^2} &= 2\\frac{\\partial^2 \\epsilon\_{xy}}{\\partial x \\partial y}\\\\
-            \\frac{\\partial^2 \\epsilon\_y}{\\partial z^2} + \\frac{\\partial^2 \\epsilon\_z}{\\partial y^2} &= 2\\frac{\\partial^2 \\epsilon\_{yz}}{\\partial y \\partial z}\\\\
-            \\frac{\\partial^2 \\epsilon\_z}{\\partial x^2} + \\frac{\\partial^2 \\epsilon\_x}{\\partial z^2} &= 2\\frac{\\partial^2 \\epsilon\_{zx}}{\\partial z \\partial x}\\\\
-            \\frac{\\partial^2 \\epsilon\_x}{\\partial y \\partial z} &= \\frac{\\partial}{\\partial x} \\left(-\\frac{\\partial \\epsilon\_{yz}}{\\partial x} + \\frac{\\partial \\epsilon\_{zx}}{\\partial y} + \\frac{\\partial \\epsilon\_{xy}}{\\partial z}\\right)\\\\
-            \\frac{\\partial^2 \\epsilon\_y}{\\partial z \\partial x} &= \\frac{\\partial}{\\partial y} \\left(-\\frac{\\partial \\epsilon\_{zx}}{\\partial y} + \\frac{\\partial \\epsilon\_{xy}}{\\partial z} + \\frac{\\partial \\epsilon\_{yz}}{\\partial x}\\right)\\\\
-            \\frac{\\partial^2 \\epsilon\_z}{\\partial x \\partial y} &= \\frac{\\partial}{\\partial z} \\left(-\\frac{\\partial \\epsilon\_{xy}}{\\partial z} + \\frac{\\partial \\epsilon\_{yz}}{\\partial x} + \\frac{\\partial \\epsilon\_{zx}}{\\partial y}\\right)
-            \\end{aligned}$$
+-   We can eliminate the displacement terms from the equation by interchanging the indexes to generate new equations
 
-<span>beltrami-michell compatibility</span>
+$$\\begin{aligned}
+	2\\epsilon\_{ik,jl} &= u\_{i,jkl} + u\_{k,ijl} \\\\
+	2\\epsilon\_{jl,ik} &= u\_{j,ikl} + u\_{l,ijk}
+\\end{aligned}$$
 
--   The compatibility equations in terms of stress are commonly known as the *Beltrami-Michell compatibility equations*
+-   Solving for *u*<sub>*i*, *jkl*</sub> and *u*<sub>*j*, *ikl*</sub>
 
--   When there are no body forces, we can write the six expanded form equations as
-    $$\\begin{aligned}
-            (1+\\nu) \\nabla^2 \\sigma\_x + \\frac{\\partial^2}{\\partial x^2} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
-            (1+\\nu) \\nabla^2 \\sigma\_y + \\frac{\\partial^2}{\\partial y^2} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
-            (1+\\nu) \\nabla^2 \\sigma\_z + \\frac{\\partial^2}{\\partial z^2} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
-            (1+\\nu) \\nabla^2 \\tau\_{xy} + \\frac{\\partial^2}{\\partial x \\partial y} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
-            (1+\\nu) \\nabla^2 \\tau\_{yz} + \\frac{\\partial^2}{\\partial y \\partial z} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
-            (1+\\nu) \\nabla^2 \\tau\_{zx} + \\frac{\\partial^2}{\\partial z \\partial x} (\\sigma\_x + \\sigma\_y + \\sigma\_z) &= 0\\\\
-            \\end{aligned}$$
+$$\\begin{aligned}
+	u\_{i,jkl} &= 2\\epsilon\_{ik,jl} - u\_{k,ijl} \\\\
+	u\_{j,ikl} &= 2\\epsilon\_{jl,ik} - u\_{l,ijk}
+\\end{aligned}$$
 
-<span>stress formulation</span>
+----
+## compatibility equations
 
--   For traction problems (i.e. traction is defined on all surfaces) it is convenient to re-formulate field equations in terms of stress only
+-   Substituting these values into the equations gives
 
--   Since displacements are eliminated, we will need to use the compatibility equations to ensure a continuous displacement field
+2*ϵ*<sub>*ij*, *kl*</sub> = 2*ϵ*<sub>*ik*, *jl*</sub> − *u*<sub>*k*, *ijl*</sub> + 2*ϵ*<sub>*jl*, *ik*</sub> − *u*<sub>*l*, *ijk*</sub>
 
--   It is desirable for this formulation to write the compatibility equations in terms of stress
+-   We now consider one more change of index equation
 
-<span>boundary conditions</span>
+2*ϵ*<sub>*kl*, *ij*</sub> = *u*<sub>*k*, *ijl*</sub> + *u*<sub>*l*, *ijk*</sub>
 
-<img src="bcs" alt="image" /> \[fig:bcs\]
+-   and substituting this result gives
 
-<span>symmetric boundaries</span>
+2*ϵ*<sub>*ij*, *kl*</sub> = 2*ϵ*<sub>*ik*, *jl*</sub> + 2*ϵ*<sub>*jl*, *ik*</sub> − 2*ϵ*<sub>*kl*, *ij*</sub>
 
-<img src="symmetric" alt="image" /> \[fig:symmetric\]
+-   Or, simplified
 
-<span>boundaries</span>
+_ϵ_<sub>*ij*, *kl*</sub> + *ϵ*<sub>*kl*, *ij*</sub> − *ϵ*<sub>*ik*, *jl*</sub> − *ϵ*<sub>*jl*, *ik*</sub> = 0
 
--   In many systems, the boundaries are parallel to the coordinate system, but this is not always the case
+----
+## beltrami-michell
 
-<img src="noncoordinate" alt="image" /> \[fig:noncoordinate\]
+-   When working with stress functions, it is convenient to check compatibility of the stress function directly
+-   Using Hooke’s Law, we can formulate compatibility in terms of stress
+-   These are known as the Beltrami-Michell equations
 
-<span>solution procedure</span>
+----
+## navier’s equations
 
--   Solution procedure for stress/traction problems:
-
--   Assume stress function
-
--   Must be capable of meeting boundary conditions (linear, quadratic, etc.)
-
--   Enforce equilibrium
-
--   Check compatibility
-
--   Enforce boundary conditions
-
-Displacement Formulation
-========================
-
-<span>displacement formulation</span>
-
--   Just as we posed all field equations in terms of stress for traction problems, it is convenient to pose all the field equations in terms of displacement when dealing with displacement boundary conditions
-
--   We can use the strain-displacement relations in Hooke’s law to find
-    *σ*<sub>*i**j*</sub> = *λ**u*<sub>*k*, *k*</sub>*δ*<sub>*i**j*</sub> + *μ*(*u*<sub>*i*, *j*</sub> + *u*<sub>*j*, *i*</sub>)
-
-<span>navier’s equations</span>
-
--   We can substitute this relationship into the equilibrium equations to find
-    *μ**u*<sub>*i*, *k**k*</sub> + (*λ* + *μ*)*u*<sub>*k*, *k**i*</sub> + *F*<sub>*i*</sub> = 0
-
--   This is known as *Navier’s* or *Lamé’s equations* and is sometimes written in vector form as
-    *μ*∇<sup>2</sup>**u** + (*λ* + *μ*)∇(∇ ⋅ **u**)+**F** = 0
-
-<span>solutions</span>
-
--   General solutions to Navier’s equations are very difficult to obtain (as with the stress solution)
-
--   Later in the course, we will learn about *stress functions* and *displacement potential functions*
-
--   These functions provide a starting point to simplify solving this complicated partial differential equations
-
-<span>example</span>
-
--   Determine when the following quadratic displacement field will be in equilibrium
-    $$\\begin{aligned}
-            u &= a\_1 x^2 + b\_1 y^2 + c\_1 xy + d\_1 x + e\_1 y + f\_1\\\\
-            v &= a\_2 x^2 + b\_2 y^2 + c\_2 xy + d\_2 x + e\_2 y + f\_2\\\\
-            w &= a\_3 x^2 + b\_3 y^2 + c\_3 xy + d\_3 x + e\_3 y + f\_3\\\\
-            \\end{aligned}$$
-
-<span>example</span>
-
--   We use the equilibrium equations in displacement
-    *μ**u*<sub>*i*, *k**k*</sub> + (*λ* + *μ*)*u*<sub>*k*, *k**i*</sub> + *F*<sub>*i*</sub> = 0
-
--   If we consider *u*<sub>*i*, *k**k*</sub>, we find
-    $$\\begin{aligned}
-            u\_{1,kk} &= 2a\_1 + 2b\_1\\\\
-            u\_{2,kk} &= 2a\_2 + 2b\_2\\\\
-            u\_{3,kk} &= 2a\_3 + 2b\_3
-            \\end{aligned}$$
-
-<span>example</span>
-
--   The next term is more difficult, so first let us note that *u*<sub>*k*, *k**i*</sub> = (*u*<sub>*k*, *k*</sub>)<sub>,*i*</sub>
-
--   This gives
-    *u*<sub>*k*, *k**i*</sub> = (2*a*<sub>1</sub>*x* + *c*<sub>1</sub>*y* + *d*<sub>1</sub> + 2*b*<sub>2</sub>*y* + *c*<sub>2</sub>*x* + *e*<sub>2</sub> + 0)<sub>,*i*</sub>
-
--   We can now differentiate this to find
-    $$\\begin{aligned}
-            u\_{k,k1} &= 2a\_1 + c\_2\\\\
-            u\_{k,k2} &= c\_1 + 2b\_2\\\\
-            u\_{k,k3} &= 0
-            \\end{aligned}$$
-
-<span>example</span>
-
--   Finally, we can obtain the equilibrium equations as
-    $$\\begin{aligned}
-            \\mu(2a\_1 + 2b\_1) + (\\lambda+\\mu)(2a\_1 + c\_2) + F\_x &= 0\\\\
-            \\mu(2a\_2 + 2b\_2) + (\\lambda+\\mu)(c\_1 + 2b\_2) + F\_y &= 0\\\\
-            \\mu(2a\_3 + 2b\_3) + (\\lambda+\\mu)(0) + F\_z &= 0
-            \\end{aligned}$$
-
-Principle of Superposition
-==========================
-
-<span>principle of superposition</span>
-
--   Any problem governed by linear equations can be superposed
-
--   By the principle of superposition if
-    *σ*<sub>*i**j*</sub><sup>(1)</sup>, *ϵ*<sub>*i**j*</sub><sup>(1)</sup>, *u*<sub>*i*</sub><sup>(1)</sup>
-     are the solution to an elasticity problem with body forces *F*<sub>*i*</sub><sup>(1)</sup> and surface tractions *t*<sub>*i*</sub><sup>(1)</sup> and
-    *σ*<sub>*i**j*</sub><sup>(2)</sup>, *ϵ*<sub>*i**j*</sub><sup>(2)</sup>, *u*<sub>*i*</sub><sup>(2)</sup>
-     are the solution to an elasticity problem with body forces *F*<sub>*i*</sub><sup>(2)</sup> and surface tractions *t*<sub>*i*</sub><sup>(2)</sup>, then
-    *σ*<sub>*i**j*</sub><sup>(1)</sup> + *σ*<sub>*i**j*</sub><sup>(2)</sup>, *ϵ*<sub>*i**j*</sub><sup>(1)</sup> + *ϵ*<sub>*i**j*</sub><sup>(2)</sup>, *u*<sub>*i*</sub><sup>(1)</sup> + *u*<sub>*i*</sub><sup>(2)</sup>
-     are the solution to that problem with body forces *F*<sub>*i*</sub><sup>(1)</sup> + *F*<sub>*i*</sub><sup>(2)</sup> and surface tractions *t*<sub>*i*</sub><sup>(1)</sup> + *t*<sub>*i*</sub><sup>(2)</sup>
-
-<span>principle of superposition</span>
-
--   Superposition is a very useful tool in real elasticity problems
-
--   A large number of basic elasticity solutions have already been solved, these can be looked up
-
--   Basic problems often do not have direct real-world applications
-
--   Many real-world problems can be broken down into the sum of multiple basic problems
-
-<span>principle of superposition</span>
-
-<img src="superposition1" alt="image" /> \[fig:superposition1\]
-
-Saint-Venant’s Principle
-========================
-
-<span>saint-venant’s principle</span>
-
--   The stress, strain, and displacement fields caused by statically equivalent forces are approximately the same far away from the load points
-
-<img src="saint-venant" alt="image" /> \[fig:saint-venant\]
-
-<span>saint-venant’s principle</span>
-
--   Often the stress/strain field we are concerned with is far away from the load point
-
--   In this case we can use a statically equivalent load
-
--   We apply the load in whatever way makes the problem easiest
-
-Examples
-========
-
-<span>baseball</span>
-
--   Consider a baseball with an incombressible rubber core
-
--   Model the stress field due to some external pressure, *p* given the governing equation is
-    $$\\frac{d}{dr} \\left( \\frac{1}{r^2} \\frac{d}{dr}(r^2 u\_r)\\right) = 0$$
-
-<span>hollow cylinder</span>
-
--   Consider a long, hollow cylinder with pressure applied on both the inner and outer faces
-
--   Find the stress field given the governing equation
-    $$\\frac{\\partial}{\\partial r} \\left( \\frac{1}{r} \\frac{\\partial}{\\partial r} (ru\_r)\\right) = 0$$
+-   Similarly, we can write the equilibrium equations in terms of displacement
+-   This is convenient when dealing with displacement boundary conditions
+-   Known as Navier’s equations
 
 

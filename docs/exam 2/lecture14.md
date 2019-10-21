@@ -259,7 +259,7 @@ are the solution to that problem with body forces *F*<sub>*i*</sub><sup>(1)</sup
 ----
 ## baseball
 
--   Consider a baseball with an incombressible rubber core
+-   Consider a baseball with an incompressible rubber core
 -   Model the stress field due to some external pressure, *p* given the governing equation is
 
 $$\\frac{\partial}{\partial r} \\left( \\frac{1}{r^2} \\frac{\partial }{\partial r}(r^2 u\_r)\\right) = 0$$

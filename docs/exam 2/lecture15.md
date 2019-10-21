@@ -84,11 +84,19 @@ Solve this problem using the boundary conditions for a solid square cross-sectio
 ----
 ## stress tensor
 
+<div class="left">
+	
 -   To simplify the notation, we introduce the stress tensor
 
 $$\\sigma\_{ij} = t\_j^{(\\hat{e}\_i)}$$
 
+</div>
+
+<div class="right">
+	
 ![stress tensor illustrated on a cube](../images/stress-cube.png)
+
+</div>
 
 ----
 ## traction
@@ -348,14 +356,14 @@ _σ_<sub>*ij*</sub> = *λϵ*<sub>*kk*</sub>*δ*<sub>*ij*</sub> + 2*μϵ*
 -   Mixed
 
 ----
-## compatibility equations
+## compatibility 
 
 -   If continuous, single-valued displacements are specified, differentiation will result in well-behaved strain field
 -   The inverse relationship, integration of a strain field to find displacement, may not always be true
 -   There are cases where we can integrate a strain field to find a set of discontinuous displacements
 
 ----
-## compatibility equations
+## compatibility 
 
 -   The compatibility equations enforce continuity of displacements to prevent this from occurring
 -   To enforce this condition we consider the strain-displacement relations:
@@ -371,7 +379,7 @@ $$\\epsilon\_{ij,kl} = \\frac{1}{2}(u\_{i,jkl} + u\_{j,ikl})$$
 2*ϵ*<sub>*ij*, *kl*</sub> = *u*<sub>*i*, *jkl*</sub> + *u*<sub>*j*, *ikl*</sub>
 
 ----
-## compatibility equations
+## compatibility 
 
 -   We can eliminate the displacement terms from the equation by interchanging the indexes to generate new equations
 
@@ -388,7 +396,7 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 ----
-## compatibility equations
+## compatibility 
 
 -   Substituting these values into the equations gives
 

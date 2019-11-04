@@ -58,7 +58,7 @@ $$dU = \\int\_0^{\\sigma\_x} \\sigma d\\left(u + \\frac{\\partial u}{\\partial x
 
 -   Or, simplifying
 
-$$dU = \\int\_0^{\\sigma\_x} d\\left(\\frac{\\partial u}{\\partial x}dx\\right)dydz$$
+$$dU = \\int\_0^{\\sigma\_x} \\sigma d\\left(\\frac{\\partial u}{\\partial x}dx\\right)dydz$$
 
 ----
 ## strain energy
@@ -69,7 +69,7 @@ $$\\frac{\\partial u}{\\partial x} = \\epsilon\_x = \\frac{\\sigma\_x}{E}$$
 
 -   Substituting this gives
 
-$$dU = \\int\_0^{\\sigma\_x} \\frac{d \\sigma}{E}dxdydz = \\frac{\\sigma\_x^2}{2E} dx dy dz$$
+$$dU = \\int\_0^{\\sigma\_x} \\sigma \\frac{d \\sigma}{E}dxdydz = \\frac{\\sigma\_x^2}{2E} dx dy dz$$
 
 ----
 ## strain energy

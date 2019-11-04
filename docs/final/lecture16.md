@@ -10,7 +10,7 @@ November 4, 2019
 -   Nov 4 - Strain Energy
 -   Nov 6 - Strain Energy
 -   Nov 11 - 2D Problems
--   Nov 13 - Airy Stress Functions
+-   Nov 13 - Airy Stress Functions, HW 6 Due
 
 ----
 ## outline
@@ -18,6 +18,7 @@ November 4, 2019
 <!-- vim-markdown-toc GFM -->
 
 * strain energy
+* uniqueness of elasticity problems
 * group problems
 
 <!-- vim-markdown-toc -->
@@ -35,11 +36,18 @@ November 4, 2019
 ----
 ## strain energy
 
+<div class="left">
+
 -   The strain energy must be equal to the net work done
 -   Recall “work” is force times displacement (force in direction of displacement)
 
+</div>
+
+<div class="right">
+	
 ![work done](../images/work.PNG)
 
+</div>
 
 ----
 ## strain energy
@@ -51,6 +59,9 @@ $$dU = \\int\_0^{\\sigma\_x} \\sigma d\\left(u + \\frac{\\partial u}{\\partial x
 -   Or, simplifying
 
 $$dU = \\int\_0^{\\sigma\_x} d\\left(\\frac{\\partial u}{\\partial x}dx\\right)dydz$$
+
+----
+## strain energy
 
 -   We can use strain-displacement and Hooke’s Law to say
 
@@ -74,10 +85,17 @@ $$U = \\frac{\\sigma\_x^2}{2E} = \\frac{E \\epsilon\_x^2}{2} = \\frac{1}{2}\\sig
 ----
 ## strain energy
 
+<div class="right">
+	
 -   We can also visualize the strain energy graphically as the area under the stress-strain curve
 
+</div>
+
+<div class="left">
+	
 ![strain energy visualization](../images/strain_energy.PNG)
 
+</div>
 
 ----
 ## strain energy
@@ -114,6 +132,9 @@ $$U = \\frac{1}{2} \\sigma\_{ij} \\epsilon\_{ij}$$
 
 _U_<sub>*t*</sub> = ∭<sub>*V*</sub>*Udxdydz*
 
+----
+## strain energy
+
 -   As we did before for the uniaxial case, we can write the strain energy density in terms of stress or strain only using Hooke’s Law
 
 $$\\begin{aligned}
@@ -126,6 +147,10 @@ $$\\begin{aligned}
 
 -   If we fully expand both versions, we find that each term is squared
 -   This means the strain energy must be positive
+
+----
+## strain energy
+
 -   Another interesting feature we note is that
 
 $$\\sigma\_{ij} = \\frac{\\partial U\_\\epsilon}{\\partial \\epsilon\_{ij}}$$
@@ -134,7 +159,7 @@ $$\\sigma\_{ij} = \\frac{\\partial U\_\\epsilon}{\\partial \\epsilon\_{ij}}$$
 
 $$\\epsilon\_{ij} = \\frac{\\partial U\_\\sigma}{\\partial \\sigma\_{ij}}$$
 
--   These relationships do not depend on stress-strain relations being linear, and is often used to derive stresses and strains in non-linear materials (*hyperelasticity*)
+-   These relationships do not depend on stress-strain relations being linear, and are often used to derive stresses and strains in non-linear materials (*hyperelasticity*)
 
 ----
 ## strain energy
@@ -157,9 +182,15 @@ _C_<sub>*ijkl*</sub> = *C*<sub>*klij*</sub>
 
 _U_ = *U*<sub>*V*</sub> + *U*<sub>*D*</sub>
 
+----
+## strain energy
+
 -   The volumetric portion can be found using the spherical or hydrostatic components of stress and strain
 
 $$U\_V = \\frac{1}{2} \\tilde{\\sigma\_{ij}} \\tilde{\\epsilon\_{ij}} = \\frac{1}{6}\\sigma\_{jj} \\epsilon\_{kk}$$
+
+----
+## strain energy
 
 -   The distortional portion can be found as
 
@@ -168,7 +199,7 @@ $$U\_D = \\frac{1}{12\\mu} \\left\[(\\sigma\_x - \\sigma\_y)^2 + (\\sigma\_y - \
 -   Some failure theories make use of the distortional strain energy
 
 ---
-uniqueness of elasticity problems
+# uniqueness of elasticity problems
 
 ----
 ## uniqueness
@@ -211,6 +242,9 @@ $$\\begin{aligned}
 	&= \\int\_S \\sigma\_{ij}n\_j u\_i dS - \\int\_V \\sigma\_{ij,j}u\_i dV
 \\end{aligned}$$
 
+----
+## uniqueness
+
 -   Note that a symmetric matrix times an antisymmetric matrix =0
 -   We know that *σ*<sub>*ij*</sub>*n*<sub>*j*</sub> = 0 on surfaces where tractions are defined and that *u*<sub>*i*</sub> = 0 on the other surfaces, so the first integral goes to zero
 -   We also know by equilibrium that *σ*<sub>*ij*, *j*</sub> = 0, so the second integral will also be 0
@@ -229,7 +263,7 @@ $$\\begin{aligned}
 # group problems
 
 ----
-## Group 1 - uniaxial tension
+## uniaxial tension
 
 -   We can establish bounds on physical constants by recalling that the strain energy must always be positive and considering certain states of stress
 
@@ -244,7 +278,7 @@ $$\\sigma\_{ij} = \\begin{bmatrix}
 -   Find the strain energy and use it to place bounds on the modulus of Elasticity, *E*
 
 ----
-## Group 2 - simple shear
+## simple shear
 
 -   If we consider uniform simple shear
 
@@ -257,7 +291,7 @@ $$\\sigma\_{ij} = \\begin{bmatrix}
 -   Find the strain energy and use it to place bounds on Poisson’s Ratio
 
 ----
-## Group 3 - hydrostatic pressure
+## hydrostatic pressure
 
 -   We can also consider hydrostatic pressure
 

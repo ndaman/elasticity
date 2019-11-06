@@ -60,8 +60,6 @@ $$\\begin{aligned}
 	w &= 0
 \\end{aligned}$$
 
--   Results will be the same at every cross-section, so we may consider only a 2D cross-section
-
 ----
 ## plane strain
 
@@ -94,7 +92,11 @@ $$\\begin{aligned}
 -   Recall that for equilibrium we have
 
 _σ_<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
+
 _τ_<sub>*xz*</sub> = *τ*<sub>*yz*</sub> = 0, so those terms will vanish
+
+----
+## plane strain
 
 -   Although *σ*<sub>*zz*</sub> ≠ 0, it only appears with a derivative of *z*, and it is a function of *x* and *y* only, so *σ*<sub>*zz*</sub> will not appear in any non-trivial equilibrium equation
 
@@ -114,9 +116,7 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 ----
-## plane strain
-
--   We can also reduce the compatibility equations
+## compatibility
 
 $$\\begin{aligned}
 	\\frac{\\partial^2 \\epsilon\_x}{\\partial y^2} + \\frac{\\partial^2 \\epsilon\_y}{\\partial x^2} &= 2\\frac{\\partial^2 \\epsilon\_{xy}}{\\partial x \\partial y}\\\\
@@ -151,9 +151,6 @@ $$\\begin{aligned}
 	\\tau\_{yz}(x,y,\\pm L) &= 0
 \\end{aligned}$$
 
--   Which give the same results as the infinite body plane strain assumptions
--   When the ends are not “fixed and frictionless” we can use Saint-Venants principle to apply plane strain in an approximate sense
-
 ---
 # plane stress
 
@@ -169,6 +166,9 @@ $$\\begin{aligned}
 	\\tau\_{xy} &= \\tau\_{xy}(x,y)\\\\
 	\\sigma\_z &= \\tau\_{xz} = \\tau\_{yz} = 0
 \\end{aligned}$$
+
+----
+## plane stress
 
 -   To maintain these assumptions, there can be no body forces in the *z*-direction and no applied tractions in the *z*-direction.
 -   Other body forces must be independent of *z*, or distributed symmetrically such that the average may be used.
@@ -187,9 +187,7 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 ----
-## plane stress
-
--   We can now find the displacements using the strain-displacement relationships
+## strain-displacement
 
 $$\\begin{aligned}
 	\\epsilon\_{x} &= \\frac{\\partial u}{\\partial x}\\\\
@@ -234,6 +232,9 @@ $$\\begin{aligned}
 
 -   We can convert this to *E*, *ν* to better compare with the plane stress equation
 
+----
+## navier equations
+
 $$\\begin{aligned}
 	\\lambda + \\mu &= \\frac{\\nu E}{(1+\\nu)(1-2\\nu)} + \\frac{E}{2(1+\\nu)}\\\\
 	&= \\frac{2\\nu E}{2(1+\\nu)(1-2\\nu)} + \\frac{E(1-2\\nu)}{2(1+\\nu)(1-2\\nu)}\\\\
@@ -273,26 +274,23 @@ $$\\nabla^2 (\\sigma\_{xx} + \\sigma\_{yy}) = -(1+\\nu)\\left(\\frac{\\partial F
 ## generalized plane stress
 
 -   Some approximations introduced inconsistencies in the plane stress formulation
--   We can formulate plane stress problems in an alternate fashion to avoid these inconsistencies
 -   Generalized plane stress is based on averaging the field quantities through the thickness
 
 $$\\bar{\\psi} = \\frac{1}{2h} \\int\_{-h}^{h}\\psi (x,y,z) dz$$
 
 ----
-## generalized plane stress
+## generalized 
 
 -   We again assume that the thickness, 2*h*, is much smaller than the other dimensions
 -   We also assume that tractions on the surfaces *z* = ±*h* are zero
 -   Edge loadings must have no *z* component and are independent of *z*
 -   Body forces also cannot have a *z* component and must be independent of *z* or symmetrically distributed through the thickness
--   As in plane stress, this will give *w* as a linear function of *z* which means
+-   This gives *w* as a linear function of *z* which means
 
 _w_(*x*, *y*, *z*)= − *w*(*x*, *y*, −*z*)
 
 ----
-## generalized plane stress
-
--   If we take the average value of all field variables we find
+## average field variables
 
 $$\\begin{aligned}
 	\\bar{u} &= \\bar{u}(x,y)\\\\
@@ -317,6 +315,9 @@ $$\\begin{aligned}
 	\\frac{\\partial \\bar{\\tau\_{xy}}}{\\partial x} + \\frac{\\partial \\bar{\\sigma\_{y}}}{\\partial y} + \\bar{F}\_y &= 0
 \\end{aligned}$$
 
+----
+## generalized plane stress
+
 -   Or in terms of displacements
 
 $$\\begin{aligned}
@@ -330,6 +331,9 @@ $$\\begin{aligned}
 -   The compatibility relations reduce to
 
 $$\\nabla^2 (\\bar{\\sigma\_x} + \\bar{\\sigma\_y}) = - \\frac{2(\\lambda^\* + \\mu)}{\\lambda^\* + 2\\mu} \\left(\\frac{\\partial \\bar{F}\_x}{\\partial x} + \\frac{\\partial \\bar{F}\_y}{\\partial y}\\right)$$
+
+----
+## compatibility
 
 -   When we write the coefficient $\\frac{2(\\lambda^\* + \\mu)}{\\lambda^\* + 2\\mu}$ in terms of *E* and *ν*, we find
 

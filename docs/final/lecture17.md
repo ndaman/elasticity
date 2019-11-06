@@ -8,7 +8,7 @@ November 6, 2019
 ## upcoming schedule
 
 -   Nov 6 - Strain Energy
--   Nov 11 - 2D Problems
+-   Nov 11 - **Class Canceled**
 -   Nov 13 - Airy Stress Functions, HW 6 Due
 -   Nov 18 - Airy Stress
 
@@ -38,6 +38,9 @@ $$\\begin{aligned}
 	u\_i &= 0 \\qquad \\text{Along displacement boundary} \\\\
 \\end{aligned}$$
 
+----
+## clapeyron’s theorem
+
 -   This means that for any elastic body we can say
 
 2∫<sub>*V*</sub>*UdV* = ∫<sub>*S*</sub>*σ*<sub>*ij*</sub>*n*<sub>*j*</sub>*u*<sub>*i*</sub>*dS* − ∫<sub>*V*</sub>*σ*<sub>*ij*, *j*</sub>*u*<sub>*i*</sub>*dV*
@@ -57,7 +60,6 @@ _T_<sub>*i*</sub><sup>*n*</sup> = *σ*<sub>*ij*</sub>*n*<sub>*j*</sub>
 
 2∫<sub>*V*</sub>*UdV* = ∫<sub>*S*</sub>*T*<sub>*i*</sub><sup>*n*</sup>*u*<sub>*i*</sub>*dS* + ∫<sub>*V*</sub>*F*<sub>*i*</sub>*u*<sub>*i*</sub>*dV*
 
--   This means that the strain energy is equal to half the work done by the body forces and surface tractions.
 
 ----
 ## betti/rayleigh reciprocal theorem
@@ -71,7 +73,7 @@ _T_<sub>*i*</sub><sup>*n*</sup> = *σ*<sub>*ij*</sub>*n*<sub>*j*</sub>
 _T_<sub>*i*</sub><sup>(1)</sup>, *F*<sub>*i*</sub><sup>(1)</sup>, *u*<sub>*i*</sub><sup>(1)</sup>and*T*<sub>*i*</sub><sup>(2)</sup>, *F*<sub>*i*</sub><sup>(2)</sup>, *u*<sub>*i*</sub><sup>(2)</sup>
 
 ----
-## betti/rayleigh reciprocal theorem
+## reciprocal theorem
 
 -   We now consider the work done by the forces in the first system acting through the displacements of the second system
 
@@ -82,7 +84,7 @@ _T_<sub>*i*</sub><sup>(1)</sup>, *F*<sub>*i*</sub><sup>(1)</sup>, *u*<sub>*i
 ∫<sub>*V*</sub>*σ*<sub>*ij*</sub><sup>(2)</sup>*ϵ*<sub>*ij*</sub><sup>(1)</sup> = ∫<sub>*S*</sub>*T*<sub>*i*</sub><sup>(2)</sup>*u*<sub>*i*</sub><sup>(1)</sup>*dS* + ∫<sub>*V*</sub>*F*<sub>*i*</sub><sup>(2)</sup>*u*<sub>*i*</sub><sup>(1)</sup>*dV*
 
 ----
-## betti/rayleigh reciprocal theorem
+## reciprocal theorem
 
 -   We can now use Hooke’s Law and symmetry to say that
 
@@ -107,7 +109,6 @@ _σ_<sub>*ij*</sub><sup>(1)</sup>*ϵ*<sub>*ij*</sub><sup>(2)</sup> = *C*<sub
 
 -   The solution format we developed in Chapter 5 is known as *Strong Form*, and is not always a convenient solution form
 -   We can use energy and work principles to develop additional solution methods
--   *Virtual Work* forms the basis for many of these methods
 -   *Virtual Displacement* is a fictitious displacement such that the forces acting on the point remain unchanged
 -   The work done by these forces is known as *Virtual Work*
 
@@ -116,6 +117,10 @@ _σ_<sub>*ij*</sub><sup>(1)</sup>*ϵ*<sub>*ij*</sub><sup>(2)</sup> = *C*<sub
 
 -   If we consider the elastic boundary-value problem, with tractions applied over the boundary *S*<sub>*t*</sub> and displacements applied over the boundary *S*<sub>*u*</sub>.
 -   Virtual displacements denoted by *δu*<sub>*i*</sub> and are arbitrary, but cannot violate the displacement boundary condition, thus *δu*<sub>*i*</sub> = 0 on *S*<sub>*u*</sub>.
+
+----
+## virtual work 
+
 -   Virtual work done by surface and body forces can be written as
 
 _δW_ = ∫<sub>*S*<sub>*t*</sub></sub>*T*<sub>*i*</sub><sup>*n*</sup>*δu*<sub>*i*</sub>*dS* + ∫<sub>*V*</sub>*F*<sub>*i*</sub>*δu*<sub>*i*</sub>*dV*
@@ -127,8 +132,6 @@ _δW_ = ∫<sub>*S*</sub>*T*<sub>*i*</sub><sup>*n*</sup>*δu*<sub>*i*</sub>*
 ----
 ## virtual work
 
--   We can follow the procedure from the uniqueness derivation in reverse
-
 $$\\begin{aligned}
 	\\delta W &= \\int\_{S} T\_i^n \\delta u\_i dS + \\int\_V F\_i \\delta u\_i dV\\\\
 	&= \\int\_{S} \\sigma\_{ij}n\_j \\delta u\_i dS + \\int\_V F\_i \\delta u\_i dV\\\\
@@ -138,6 +141,10 @@ $$\\begin{aligned}
 	&= \\int\_V \\sigma\_{ij}\\delta \\epsilon\_{ij} dV
 \\end{aligned}$$
 
+----
+## virtual work
+
+-   We can follow the procedure from the uniqueness derivation in reverse
 -   Notice that this gives the usual strain energy relationship, but without the factor of one-half.
 -   This is because stress is constant during virtual displacement
 
@@ -152,6 +159,9 @@ $$\\begin{aligned}
 -   We can also move all terms to the same side of the equation to write
 
 _δ_(∫<sub>*V*</sub>*U*−∫<sub>*S*</sub>*T*<sub>*i*</sub><sup>*n*</sup>*u*<sub>*i*</sub>−∫<sub>*V*</sub>*F*<sub>*i*</sub>*u*<sub>*i*</sub>*dV*) = 0
+
+----
+## virtual work
 
 -   Or, written in terms of virtual work
 
@@ -192,6 +202,9 @@ _σ_<sub>*ij*</sub>*δϵ*<sub>*ij*</sub> = *σ*<sub>*ij*</sub>*δu*<sub>*i*,
 
 ∫<sub>*V*</sub>\[*σ*<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub>\]*δu*<sub>*i*</sub>*dV* + ∫<sub>*S*</sub>(*T*<sub>*i*</sub><sup>*n*</sup> − *σ*<sub>*ij*</sub>*n*<sub>*j*</sub>)*δu*<sub>*i*</sub>*dS* = 0
 
+----
+## virtual work
+
 -   This will be satisfied if
 
 _σ_<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0  (equilibrium)
@@ -225,20 +238,16 @@ $$\\begin{aligned}
 	w &= w\_0 + \\sum\_{j=1}^{N}c\_jw\_j\\\\
 \\end{aligned}$$
 
--   The unknown constants are chosen to minimize the total potential energy.
-
 ----
 ## ritz method
 
--   To minimize the total potential energy
+-   Where the unknown constants are chosen to minimize the total potential energy.
 
 $$\\begin{aligned}
 	\\frac{\\partial \\Pi}{\\partial a\_j} &= 0\\\\
 	\\frac{\\partial \\Pi}{\\partial b\_j} &= 0\\\\
 	\\frac{\\partial \\Pi}{\\partial c\_j} &= 0\\\\
 \\end{aligned}$$
-
--   The Ritz method is often used for simple shapes (rods, beams, plates, shells) where we typically only consider one component of the displacement.
 
 ----
 ## example
@@ -266,7 +275,7 @@ $$U = \\frac{\\sigma\_{11}^2}{2E} = \\frac{M^2 y^2}{2EI^2} = \\frac{E}{2}\\left(
 -   We integrate over the volume to find the total strain energy in the beam
 
 $$\\begin{aligned}
-	U\_T &= \\int\_0^L \\left\[\\iiint\_A \\frac{E}{2}\\left(\\frac{d^2 w}{dx^2}\\right)^2 y^2 dA \\right\] dx\\\\
+	U\_T &= \\int\_0^L \\left\[\\iint\_A \\frac{E}{2}\\left(\\frac{d^2 w}{dx^2}\\right)^2 y^2 dA \\right\] dx\\\\
 	&= \\int\_0^L \\frac{EI}{2}\\left(\\frac{d^2 w}{dx^2}\\right)^2 dx
 \\end{aligned}$$
 
@@ -290,6 +299,9 @@ $$\\begin{aligned}
 	w(0) &= 0\\\\
 	0 &= a\_0 + a\_1 \\left(\\frac{0}{L}\\right) + a\_2 \\left(\\frac{0}{L}\\right)^2
 \\end{aligned}$$
+
+----
+## example
 
 -   And
 
@@ -321,6 +333,9 @@ $$\\begin{aligned}
 	\\frac{\\partial \\Pi}{\\partial a\_2} &= \\frac{4EIa\_2}{L^3} - P = 0\\\\
 	a\_2 &= \\frac{PL^3}{4EI}
 \\end{aligned}$$
+
+----
+## example
 
 -   Thus our approximate solution is
 

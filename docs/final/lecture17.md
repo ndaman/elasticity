@@ -360,4 +360,4 @@ $$w = \\frac{Px^2}{6EI}(3L-x)$$
 -   If we considered one more term in our trial, we would have recovered the exact solution
 -   In this case, more terms would be redundant
 -   We could have also considered a trigonometric function
--   A worked example with more terms considered is [here](https://mybinder.org/v2/gh/ndaman/elasticity/b837bc1bc71dcf583bd69156a51214a2d881643e)
+-   A worked example with more terms considered is [here](https://hub.gke.mybinder.org/user/ndaman-elasticity-o5knvww2/notebooks/example/ritz.ipynb)

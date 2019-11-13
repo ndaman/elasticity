@@ -9,7 +9,7 @@ November 13, 2019
 
 -   Nov 13 - 2D Problem Formulation, HW 6 Due
 -   Nov 18 - Airy Stress
--   Nov 20 - Airy Stress
+-   Nov 20 - Airy Stress, HW 7 Due
 -   Nov 25 - Airy Stress
 -   Nov 27 - No Class (Thanksgiving Break)
 

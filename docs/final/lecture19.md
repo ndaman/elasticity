@@ -2,14 +2,13 @@
 ## Theory of Elasticity
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
-November 13, 2019
+November 18, 2019
 
 ----
 ## upcoming schedule
 
--   Nov 13 - 2D Problem Formulation, HW 6 Due
 -   Nov 18 - Airy Stress
--   Nov 20 - Airy Stress
+-   Nov 20 - Airy Stress, Homework 7 Due
 -   Nov 25 - Airy Stress
 -   Nov 27 - No Class (Thanksgiving Break)
 
@@ -18,327 +17,333 @@ November 13, 2019
 
 <!-- vim-markdown-toc GFM -->
 
-* two-dimensional problems
-* plane strain
-* plane stress
-* generalized plane stress
+* airy stress functions
+* polar coordinates
+* polynomial solutions
 
 <!-- vim-markdown-toc -->
 
 ---
-# two-dimensional problems
+# airy stress functions
 
 ----
-## 2d problems
+## airy stress function
 
--   As we learned in Chapter 5, it is often very difficult to solve full problems in 3D
--   Some problems contain symmetry, or particular geometries which allow certain simplifications to be made
--   In this chapter we will consider the following 2D formulations
-    -   Plane strain
-    -   Plane stress
-    -   Generalized plane stress
-    -   Antiplane strain
-
-----
-## 2d problems
-
--   Airy stress functions provide a systematic method for solving 2D problems
--   We will also develop Airy stress function solution methods in polar (cylindrical or spherical) coordinates
-
----
-# plane strain
-
-----
-## plane strain
-
--   Plane strain is a state we consider for very long bodies
--   If the body is sufficiently long, then the deformation field can be considered to be a function of *x* and *y* only
+-   A stress function technique that can be used to solve many planar problems is known as the *Airy stress function*
+-   This method reduces the governing equations for a planar problem to a single unknown function
+-   We assume first that body forces are derivable from a *potential function*, *V*
 
 $$\\begin{aligned}
-	u &= u(x,y)\\\\
-	v &= v(x,y)\\\\
-	w &= 0
+	F\_x &= -\\frac{\\partial V}{\\partial x}\\\\
+	F\_y &= -\\frac{\\partial V}{\\partial y}
 \\end{aligned}$$
 
--   Results will be the same at every cross-section, so we may consider only a 2D cross-section
+-   How restrictive is this assumption?
+-   Most body forces are linear (gravity) and can easily be represented this way
 
 ----
-## plane strain
+## airy stress function
 
--   We can use the strain-displacement relations to find the corresponding strains from our assumptions on the displacement
+-   Consider the following
 
 $$\\begin{aligned}
-	\\epsilon\_{xx} &= \\frac{\\partial u}{\\partial x}\\\\
-	\\epsilon\_{yy} &= \\frac{\\partial v}{\\partial y}\\\\
-	\\epsilon\_{xy} &= \\frac{1}{2}\\left(\\frac{\\partial u}{\\partial y} + \\frac{\\partial v}{\\partial x}\\right)\\\\
-	\\epsilon\_{zz} &= \\epsilon\_{xz} = \\epsilon\_{yz} = 0
+	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
+	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
+	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
 \\end{aligned}$$
 
-----
-## plane strain
-
--   We can use Hooke’s law to find the stresses
-
-$$\\begin{aligned}
-	\\sigma\_{xx} &= \\lambda(\\epsilon\_{xx} + \\epsilon\_{yy}) + 2\\mu \\epsilon\_{xx}\\\\
-	\\sigma\_{yy} &= \\lambda(\\epsilon\_{xx} + \\epsilon\_{yy}) + 2\\mu \\epsilon\_{yy}\\\\
-	\\sigma\_{zz} &= \\lambda(\\epsilon\_{xx} + \\epsilon\_{yy})\\\\
-	\\tau\_{xy} &= 2\\mu \\epsilon\_{xy} \\\\
-	\\tau\_{xz} &= \\tau\_{yz} = 0
-\\end{aligned}$$
-
-----
-## plane strain
-
--   We can use these relationships to reduce the equilibrium equations.
--   Recall that for equilibrium we have
-
-_σ_<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
-_τ_<sub>*xz*</sub> = *τ*<sub>*yz*</sub> = 0, so those terms will vanish
-
--   Although *σ*<sub>*zz*</sub> ≠ 0, it only appears with a derivative of *z*, and it is a function of *x* and *y* only, so *σ*<sub>*zz*</sub> will not appear in any non-trivial equilibrium equation
-
-$$\\begin{aligned}
-	\\frac{\\partial \\sigma\_{xx}}{\\partial x} + \\frac{\\partial \\tau\_{xy}}{\\partial y} + F\_x &= 0\\\\
-	\\frac{\\partial \\tau\_{xy}}{\\partial x} +\\frac{\\partial \\sigma\_{yy}}{\\partial y} +  F\_y &= 0
-\\end{aligned}$$
-
-----
-## plane strain
-
--   We can use the strain-displacement equations and Hooke’s Law to write Navier’s equations for plane strain
-
-$$\\begin{aligned}
-	\\mu \\nabla^2 u + (\\lambda + \\mu) \\frac{\\partial}{\\partial x} \\left(\\frac{\\partial u}{\\partial x} + \\frac{\\partial v}{\\partial y}\\right) + F\_x &= 0\\\\
-	\\mu \\nabla^2 v + (\\lambda + \\mu) \\frac{\\partial}{\\partial y} \\left(\\frac{\\partial u}{\\partial x} + \\frac{\\partial v}{\\partial y}\\right) + F\_x &= 0
-\\end{aligned}$$
-
-----
-## plane strain
-
--   We can also reduce the compatibility equations
-
-$$\\begin{aligned}
-	\\frac{\\partial^2 \\epsilon\_x}{\\partial y^2} + \\frac{\\partial^2 \\epsilon\_y}{\\partial x^2} &= 2\\frac{\\partial^2 \\epsilon\_{xy}}{\\partial x \\partial y}\\\\
-	\\frac{\\partial^2 \\epsilon\_y}{\\partial z^2} + \\frac{\\partial^2 \\epsilon\_z}{\\partial y^2} &= 2\\frac{\\partial^2 \\epsilon\_{yz}}{\\partial y \\partial z}\\\\
-	\\frac{\\partial^2 \\epsilon\_z}{\\partial x^2} + \\frac{\\partial^2 \\epsilon\_x}{\\partial z^2} &= 2\\frac{\\partial^2 \\epsilon\_{zx}}{\\partial z \\partial x}\\\\
-	\\frac{\\partial^2 \\epsilon\_x}{\\partial y \\partial z} &= \\frac{\\partial}{\\partial x} \\left(-\\frac{\\partial \\epsilon\_{yz}}{\\partial x} + \\frac{\\partial \\epsilon\_{zx}}{\\partial y} + \\frac{\\partial \\epsilon\_{xy}}{\\partial z}\\right)\\\\
-	\\frac{\\partial^2 \\epsilon\_y}{\\partial z \\partial x} &= \\frac{\\partial}{\\partial y} \\left(-\\frac{\\partial \\epsilon\_{zx}}{\\partial y} + \\frac{\\partial \\epsilon\_{xy}}{\\partial z} + \\frac{\\partial \\epsilon\_{yz}}{\\partial x}\\right)\\\\
-	\\frac{\\partial^2 \\epsilon\_z}{\\partial x \\partial y} &= \\frac{\\partial}{\\partial z} \\left(-\\frac{\\partial \\epsilon\_{xy}}{\\partial z} + \\frac{\\partial \\epsilon\_{yz}}{\\partial x} + \\frac{\\partial \\epsilon\_{zx}}{\\partial y}\\right)
-\\end{aligned}$$
-
-----
-## plane strain
-
--   The only non-trivial term from the compatibility equations is
-
-$$\\frac{\\partial^2 \\epsilon\_x}{\\partial y^2} + \\frac{\\partial^2 \\epsilon\_y}{\\partial x^2} = 2\\frac{\\partial^2 \\epsilon\_{xy}}{\\partial x \\partial y}$$
-
--   This can also be written in terms of stress (Beltrami-Mitchell)
-
-$$\\nabla^2(\\sigma\_x + \\sigma\_y) = -\\frac{1}{1-\\nu}\\left(\\frac{\\partial F\_x}{\\partial x} + \\frac{\\partial F\_y}{\\partial y}\\right)$$
-
-----
-## plane strain
-
--   Plane strain is exact for a body of infinite length, but can also be useful for real shapes of finite length
--   Consider a long body with fixed and frictionless ends.
--   The boundary conditions for this case are
-
-$$\\begin{aligned}
-	w(x,y,\\pm L) &= 0\\\\
-	\\tau\_{xz}(x,y,\\pm L) &= 0\\\\
-	\\tau\_{yz}(x,y,\\pm L) &= 0
-\\end{aligned}$$
-
--   Which give the same results as the infinite body plane strain assumptions
--   When the ends are not “fixed and frictionless” we can use Saint-Venants principle to apply plane strain in an approximate sense
-
----
-# plane stress
-
-----
-## plane stress
-
--   If the thickness of a body is small compared to the other dimensions, we assume that there can not be much variation in any of the stress components in that direction
--   The assumptions for plane stress can be summarized as
-
-$$\\begin{aligned}
-	\\sigma\_x &= \\sigma\_x(x,y)\\\\
-	\\sigma\_y &= \\sigma\_y(x,y)\\\\
-	\\tau\_{xy} &= \\tau\_{xy}(x,y)\\\\
-	\\sigma\_z &= \\tau\_{xz} = \\tau\_{yz} = 0
-\\end{aligned}$$
-
--   To maintain these assumptions, there can be no body forces in the *z*-direction and no applied tractions in the *z*-direction.
--   Other body forces must be independent of *z*, or distributed symmetrically such that the average may be used.
-
-----
-## plane stress
-
--   We can use Hooke’s law to find the corresponding values of strain
-
-$$\\begin{aligned}
-	\\epsilon\_x &= \\frac{1}{E}(\\sigma\_x - \\nu \\sigma\_y)\\\\
-	\\epsilon\_y &= \\frac{1}{E}(\\sigma\_y - \\nu \\sigma\_x)\\\\
-	\\epsilon\_z &= -\\frac{\\nu}{E}(\\sigma\_x + \\sigma\_y)\\\\
-	\\epsilon\_{xy} &= \\frac{1+\\nu}{E}\\tau\_{xy}\\\\
-	\\epsilon\_{xz} &= \\epsilon\_{yz} = 0
-\\end{aligned}$$
-
-----
-## plane stress
-
--   We can now find the displacements using the strain-displacement relationships
-
-$$\\begin{aligned}
-	\\epsilon\_{x} &= \\frac{\\partial u}{\\partial x}\\\\
-	\\epsilon\_{y} &= \\frac{\\partial v}{\\partial y}\\\\
-	\\epsilon\_{z} &= \\frac{\\partial w}{\\partial z}\\\\
-	\\epsilon\_{xy} &= \\frac{1}{2}\\left(\\frac{\\partial u}{\\partial y} + \\frac{\\partial v}{\\partial x}\\right)\\\\
-	\\epsilon\_{yz} &= \\frac{1}{2}\\left(\\frac{\\partial v}{\\partial z} + \\frac{\\partial w}{\\partial y}\\right) = 0\\\\
-	\\epsilon\_{xz} &= \\frac{1}{2}\\left(\\frac{\\partial u}{\\partial z} + \\frac{\\partial w}{\\partial x}\\right) = 0\\\\
-\\end{aligned}$$
-
-----
-## plane stress
-
--   Since strain in the *z*-direction is not zero, *w* becomes a linear function of *z*
--   We also find that *u* and *v* will also be functions of *z*
--   These effects are normally neglected, leading to an approximation in the formulation
--   This is why we cannot use the full 3D compatibility equations to assess compatibility of a body with an assumed state of plane stress
-
-----
-## plane stress
-
--   The equilibrium equations reduce the same form in plane stress as they did for plane strain
-
-$$\\begin{aligned}
-	\\frac{\\partial \\sigma\_{xx}}{\\partial x} + \\frac{\\partial \\tau\_{xy}}{\\partial y} + F\_x &= 0\\\\
-	\\frac{\\partial \\tau\_{xy}}{\\partial x} +\\frac{\\partial \\sigma\_{yy}}{\\partial y} +  F\_y &= 0
-\\end{aligned}$$
-
--   But the Navier equations in terms of displacement do not reduce to exactly the same form
-
-$$\\begin{aligned}
-	\\mu \\nabla^2 u + \\frac{E}{2(1-\\nu)} \\frac{\\partial}{\\partial x} \\left(\\frac{\\partial u}{\\partial x} + \\frac{\\partial v}{\\partial y}\\right) + F\_x &= 0\\\\
-	\\mu \\nabla^2 v + \\frac{E}{2(1-\\nu)} \\frac{\\partial}{\\partial y} \\left(\\frac{\\partial u}{\\partial x} + \\frac{\\partial v}{\\partial y}\\right) + F\_y &= 0
-\\end{aligned}$$
-
-----
-## navier equations
-
--   The factor in the plane strain Navier equations is
-
-(*λ* + *μ*)
-
--   We can convert this to *E*, *ν* to better compare with the plane stress equation
-
-$$\\begin{aligned}
-	\\lambda + \\mu &= \\frac{\\nu E}{(1+\\nu)(1-2\\nu)} + \\frac{E}{2(1+\\nu)}\\\\
-	&= \\frac{2\\nu E}{2(1+\\nu)(1-2\\nu)} + \\frac{E(1-2\\nu)}{2(1+\\nu)(1-2\\nu)}\\\\
-	&= \\frac{2\\nu E + E - 2\\nu E}{2(1+\\nu)(1-2\\nu)}\\\\
-	&= \\frac{E}{2(1+\\nu)(1-2\\nu)}
-\\end{aligned}$$
+-   The function *ϕ* = *ϕ*(*x*, *y*) is known as the Airy stress function
+-   When constructed in this way, equilibrium is automatically satisfied
 
 ----
 ## compatibility
 
--   Due to the approximations we made earlier, we neglect all compatibility equations with *ϵ*<sub>*z*</sub>, even though these may not be zero
+-   Substituting the Airy Stress function and potential function into the relationships, we find
 
-$$\\frac{\\partial^2 \\epsilon\_x}{\\partial y^2} + \\frac{\\partial^2 \\epsilon\_y}{\\partial x^2} = 2 \\frac{\\partial^2 \\epsilon\_{xy}}{\\partial x \\partial y}$$
+$$\\begin{aligned}
+	\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} &= - \\frac{1-2\\nu}{1-\\nu}\\left(\\frac{\\partial^2 V}{\\partial x^2} + \\frac{\\partial^2 V}{\\partial y^2}\\right) &\\text{plane strain}\\\\
+	\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} &= - (1-\\nu)\\left(\\frac{\\partial^2 V}{\\partial x^2} + \\frac{\\partial^2 V}{\\partial y^2}\\right) &\\text{plane stress}
+\\end{aligned}$$
 
--   or in terms of stress
+-   If there are no body forces, or the potential function satisfies Laplace’s Equation
 
-$$\\nabla^2 (\\sigma\_{xx} + \\sigma\_{yy}) = -(1+\\nu)\\left(\\frac{\\partial F\_x}{\\partial x} + \\frac{\\partial F\_y}{\\partial y}\\right)$$
+∇<sup>2</sup>*V* = 0
 
-----
-## conversion
+Then both plane stress and plane strain reduce to
 
--   While plane strain and plane stress give similar results, they are not identical
--   We can convert between plane strain and plane stress by replacing *E* and *ν*
-
-
-|                              |               *E*              |         *ν*         |
-|:----------------------------:|:------------------------------:|:-------------------:|
-| Plane stress to plane strain |      $\\frac{E}{1-\\nu^2}$     | $\\frac{v}{1-\\nu}$ |
-| Plane strain to plane stress | $\\frac{E(1+2\\nu)}{1+\\nu^2}$ | $\\frac{v}{1+\\nu}$ |
-
--   When *ν* = 0, plane strain and plane stress give identical results
+$$\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} = 0$$
 
 ---
-# generalized plane stress
+# polar coordinates
 
 ----
-## generalized plane stress
+## strain-displacement
 
--   Some approximations introduced inconsistencies in the plane stress formulation
--   We can formulate plane stress problems in an alternate fashion to avoid these inconsistencies
--   Generalized plane stress is based on averaging the field quantities through the thickness
-
-$$\\bar{\\psi} = \\frac{1}{2h} \\int\_{-h}^{h}\\psi (x,y,z) dz$$
-
-----
-## generalized plane stress
-
--   We again assume that the thickness, 2*h*, is much smaller than the other dimensions
--   We also assume that tractions on the surfaces *z* = ±*h* are zero
--   Edge loadings must have no *z* component and are independent of *z*
--   Body forces also cannot have a *z* component and must be independent of *z* or symmetrically distributed through the thickness
--   As in plane stress, this will give *w* as a linear function of *z* which means
-
-_w_(*x*, *y*, *z*)= − *w*(*x*, *y*, −*z*)
-
-----
-## generalized plane stress
-
--   If we take the average value of all field variables we find
+-   For planar problems we can reduce the strain-displacement relationships we learned previously
 
 $$\\begin{aligned}
-	\\bar{u} &= \\bar{u}(x,y)\\\\
-	\\bar{v} &= \\bar{v}(x,y)\\\\
-	\\bar{w} &= \\bar{w}(x,y)\\\\
-	\\bar{\\sigma\_z} &= \\bar{\\tau\_{xz}} = \\bar{\\tau\_{yz}} = 0\\\\
-	\\bar{\\sigma\_x} &= \\lambda^\*(\\bar{\\epsilon\_x}+\\bar{\\epsilon\_y}) + 2\\mu \\bar{\\epsilon\_x}\\\\
-	\\bar{\\sigma\_y} &= \\lambda^\*(\\bar{\\epsilon\_x}+\\bar{\\epsilon\_y}) + 2\\mu \\bar{\\epsilon\_y}\\\\
-	\\bar{\\tau\_{xy}} &= 2\\mu \\bar{\\epsilon\_{xy}}\\\\
-	\\bar{\\epsilon\_z} &= - \\frac{\\lambda}{\\lambda + 2\\mu} (\\bar{\\epsilon\_x}+ \\bar{\\epsilon\_y})
+	\\epsilon\_r &= \\frac{\\partial u\_r}{\\partial r}, \\epsilon\_\\theta = \\frac{1}{r}\\left(u\_r + \\frac{\\partial u\_\\theta}{\\partial \\theta}\\right), \\epsilon\_z = \\frac{\\partial u\_z}{\\partial z}\\\\
+	\\epsilon\_{r \\theta} &= \\frac{1}{2} \\left(\\frac{1}{r} \\frac{\\partial u\_r}{\\partial \\theta} + \\frac{\\partial u\_\\theta}{\\partial r} - \\frac{u\_\\theta}{r}\\right) \\\\
+	\\epsilon\_{\\theta z} &= \\frac{1}{2} \\left(\\frac{\\partial u\_\\theta}{\\partial z} + \\frac{1}{r}\\frac{\\partial u\_z}{\\partial \\theta}\\right)\\\\
+	\\epsilon\_{zr} &= \\frac{1}{2}\\left(\\frac{\\partial u\_r}{\\partial z} + \\frac{\\partial u\_z}{\\partial r}\\right)
 \\end{aligned}$$
-
--   Where $\\lambda^\* = \\frac{2\\lambda \\mu}{\\lambda + 2\\mu}$
 
 ----
-## generalized plane stress
+## strain-displacement
 
--   We can also write the equilibrium equations in terms of the averaged values
-
-$$\\begin{aligned}
-	\\frac{\\partial \\bar{\\sigma\_x}}{\\partial x} + \\frac{\\partial \\bar{\\tau\_{xy}}}{\\partial x} + \\bar{F}\_x &= 0\\\\
-	\\frac{\\partial \\bar{\\tau\_{xy}}}{\\partial x} + \\frac{\\partial \\bar{\\sigma\_{y}}}{\\partial y} + \\bar{F}\_y &= 0
-\\end{aligned}$$
-
--   Or in terms of displacements
+-   Which becomes
 
 $$\\begin{aligned}
-	\\mu \\nabla^2 \\bar{u} + (\\lambda^\* + \\mu) \\frac{\\partial}{\\partial x} \\left(\\frac{\\partial \\bar{u}}{\\partial x} + \\frac{\\partial \\bar{v}}{\\partial y}\\right) + \\bar{F}\_x &= 0\\\\
-	\\mu \\nabla^2 \\bar{u} + (\\lambda^\* + \\mu) \\frac{\\partial}{\\partial y} \\left(\\frac{\\partial \\bar{u}}{\\partial x} + \\frac{\\partial \\bar{v}}{\\partial y}\\right) + \\bar{F}\_y &= 0
+	\\epsilon\_r &= \\frac{\\partial u\_r}{\\partial r}\\\\
+	\\epsilon\_\\theta &= \\frac{1}{r}\\left(u\_r + \\frac{\\partial u\_\\theta}{\\partial \\theta}\\right)\\\\
+	\\epsilon\_{r \\theta} &= \\frac{1}{2} \\left(\\frac{1}{r} \\frac{\\partial u\_r}{\\partial \\theta} + \\frac{\\partial u\_\\theta}{\\partial r} - \\frac{u\_\\theta}{r}\\right) \\\\
 \\end{aligned}$$
+
+----
+## integration
+
+-   When we change variables in integration, we also need to account for the proper change in dV
+-   *dV* = *dxdydz* ≠ *drdθdz*
+-   We can find the correct *dV* by calculating the Jacobian
+
+$$dV = dx dy dz = |\\frac{\\partial(x,y,z)}{\\partial(r,\\theta,z)}| dr d\\theta dz$$
+
+$$dV = \\begin{vmatrix}
+	\\frac{\\partial x}{\\partial r} & \\frac{\\partial x}{\\partial \\theta} & \\frac{\\partial x}{\\partial z}\\\\
+	\\frac{\\partial y}{\\partial r} & \\frac{\\partial y}{\\partial \\theta} & \\frac{\\partial y}{\\partial z}\\\\
+	\\frac{\\partial z}{\\partial r} & \\frac{\\partial z}{\\partial \\theta} & \\frac{\\partial z}{\\partial z}
+\\end{vmatrix} dr d\\theta dz = r dr d\\theta dz$$
+
+----
+## hooke’s law
+
+-   The tensor equation for Hooke’s Law is valid in polar/cylindrical/spherical coordinates too
+-   We only need special equations when differentiating or integrating
+
+$$\\begin{aligned}
+	\\sigma\_{ij} &= \\lambda \\epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij} - (3\\lambda + 2\\mu)\\alpha\\Delta T \\delta\_{ij}\\\\
+	\\epsilon\_{ij} &= \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij} + \\alpha\\Delta T \\delta\_{ij}
+\\end{aligned}$$
+
+----
+## equilibrium
+
+-   We have already found the equilibrium equations in polar coordinates, they are
+
+$$\\begin{aligned}
+	\\frac{\\partial \\sigma\_r}{\\partial r} + \\frac{1}{r} \\frac{\\partial \\tau\_{r \\theta}}{\\partial \\theta} + \\frac{1}{r}(\\sigma\_r - \\sigma\_\\theta) + F\_r &= 0 \\\\
+	\\frac{\\partial \\tau\_{r \\theta}}{\\partial r} + \\frac{1}{r} \\frac{\\partial \\sigma\_\\theta}{\\partial \\theta} + \\frac{2}{r}\\tau\_{r\\theta} + F\_\\theta &= 0
+\\end{aligned}$$
+
+----
+## equilibrium
+
+-   The equilibrium equations can be written in terms of displacement (Navier equations)
+-   These are only useful when using a displacement formulation, but we are using stress functions
+-   Instead we need the Beltrami-Mitchell compatibility equations
 
 ----
 ## compatibility
 
--   The compatibility relations reduce to
+-   Substituting stress-strain relations into the compatibility equations gives
 
-$$\\nabla^2 (\\bar{\\sigma\_x} + \\bar{\\sigma\_y}) = - \\frac{2(\\lambda^\* + \\mu)}{\\lambda^\* + 2\\mu} \\left(\\frac{\\partial \\bar{F}\_x}{\\partial x} + \\frac{\\partial \\bar{F}\_y}{\\partial y}\\right)$$
-
--   When we write the coefficient $\\frac{2(\\lambda^\* + \\mu)}{\\lambda^\* + 2\\mu}$ in terms of *E* and *ν*, we find
-
-$$\\frac{2(\\lambda^\* + \\mu)}{\\lambda^\* + 2\\mu} = 1 + \\nu$$
-
--   Which means this is an identical result to the simple plane stress derivation
--   Thus the generalized plane stress method is not particularly useful
+$$\\begin{aligned}
+	\\nabla^2 (\\sigma\_r + \\sigma\_\\theta) &= -\\frac{1}{1-\\nu}\\left(\\frac{\\partial F\_r}{\\partial r} + \\frac{F\_r}{r} + \\frac{1}{r}\\frac{\\partial F\_\\theta}{\\partial \\theta}\\right) & \\text{(Plane Strain)}\\\\
+	\\nabla^2 (\\sigma\_r + \\sigma\_\\theta) &= -(1+\\nu)\\left(\\frac{\\partial F\_r}{\\partial r} + \\frac{F\_r}{r} + \\frac{1}{r}\\frac{\\partial F\_\\theta}{\\partial \\theta}\\right) & \\text{(Plane Stress)}
+\\end{aligned}$$
 
 ----
-## beam example
+## airy stress functions
 
-![beam bending example](../images/figure_1.png)
+-   When the body forces are zero, we find
+
+$$\\begin{aligned}
+	\\sigma\_r &= \\frac{1}{r}\\frac{\\partial \\phi}{\\partial r} + \\frac{1}{r^2}\\frac{\\partial^2 \\phi}{\\partial \\theta^2}\\\\
+	\\sigma\_\\theta &= \\frac{\\partial^2 \\phi}{\\partial r^2}\\\\
+	\\tau\_{r\\theta} &= -\\frac{\\partial}{\\partial r} \\left( \\frac{1}{r} \\frac{\\partial \\phi}{\\partial \\theta} \\right)
+\\end{aligned}$$
+
+----
+## airy stress functions
+
+-   When body forces are zero, we find the following biharmonic equation for the Beltrami-Mitchell equations
+
+∇<sup>4</sup>*ϕ* = 0
+
+-   Where the Laplacian is
+
+$$\\nabla^2 = \\frac{\\partial^2}{\\partial r^2} + \\frac{1}{r}\\frac{\\partial}{\\partial r} + \\frac{1}{r^2} \\frac{\\partial^2}{\\partial \\theta^2}$$
+
+----
+## polar coordinates
+
+-   Recall that an Airy Stress function must satisfy the Beltrami-Mitchell compatibility equations
+
+$$\\nabla^4 \\phi = \\left(\\frac{\\partial ^2}{\\partial r^2} + \\frac{1}{r} \\frac{\\partial}{\\partial r} + \\frac{1}{r^2}\\frac{\\partial ^2}{\\partial \\theta^2}\\right)^2\\phi = 0$$
+
+-   One method which gives several useful solutions assumes that the Airy Stress function has the form *ϕ*(*r*, *θ*)=*f*(*r*)*e*<sup>*bθ*</sup>
+
+-   Substituting this into the compatibility equations (and canceling the common *e*<sup>*bθ*</sup>) term gives
+
+$$f^{\\prime \\prime \\prime \\prime} + \\frac{2}{r} f^{\\prime \\prime \\prime} - \\frac{1-2b^2}{r^2}f^{\\prime \\prime} + \\frac{1-2b^2}{r^3}f^{\\prime} + \\frac{b^2(4+b^2)}{r^4}f = 0$$
+
+----
+## polar coordinates
+
+-   To solve this, we perform a change of variables, letting *r* = *e*<sup>*ξ*</sup>, which gives
+
+_f_<sup>′′′′</sup> − 4*f*<sup>′′′</sup> + (4 + 2*b*<sup>2</sup>)*f*<sup>′′</sup> − 4*b*<sup>2</sup>*f*<sup>′</sup> + *b*<sup>2</sup>(4 + *b*<sup>2</sup>)*f* = 0
+
+-   We now consider *f* to have the form *f* = *e*<sup>*aξ*</sup> which generates the characteristic equation
+
+(*a*<sup>2</sup> + *b*<sup>2</sup>)(*a*<sup>2</sup> − 4*a* + 4 + *b*<sup>2</sup>)=0
+
+-   And has solutions
+
+$$\\begin{aligned}
+	a &= \\pm ib, \\pm 2ib\\\\
+	\\text{OR}\\\\
+	b &= \\pm ia, \\pm i(a-2)
+\\end{aligned}$$
+
+----
+## polar coordinates
+
+-   If we consider only solutions which are periodic in *θ*, we find
+
+$$\\begin{aligned}
+	\\phi &= a\_0 + a\_1 \\log r + a\_2 r^2 + a\_3 r^2 \\log r \\\\
+	&+ (a\_4 + a\_5 \\log r + a\_6 r^2 + a\_7 r^2 \\log r)\\theta \\\\
+	&+ \\left(a\_{11}r + a\_{12}r\\log r + \\frac{a\_{13}}{r} + a\_{14}r^3 + a\_{15}r\\theta + a\_{16} r\\theta \\log r\\right) \\cos \\theta\\\\
+	&+  \\left(b\_{11}r + b\_{12}r\\log r + \\frac{b\_{13}}{r} + b\_{14}r^3 + b\_{15}r\\theta + b\_{16} r\\theta \\log r\\right) \\sin \\theta\\\\
+	&+ \\sum\_{n=2}^{\\infty} (a\_{n1}r^n + a\_{n2}r^{2+n}+a\_{n3}r^{-n}+a\_{n4}r^{2-n})\\cos n\\theta\\\\
+	&+ \\sum\_{n=2}^{\\infty} (b\_{n1}r^n + b\_{n2}r^{2+n}+a\_{n3}r^{-n}+b\_{n4}r^{2-n})\\sin n\\theta\\\\
+\\end{aligned}$$
+
+----
+## polar coordinates
+
+-   For axisymmetric problems, all field quantities are independent of *θ*
+-   This reduces the general solution to
+
+_ϕ_ = *a*<sub>0</sub> + *a*<sub>1</sub>log*r* + *a*<sub>2</sub>*r*<sup>2</sup> + *a*<sub>3</sub>*r*<sup>2</sup>log*r*
+
+----
+## polar coordinates
+
+![table with pre-calculated airy stress terms in polar coordinates](../images/polar-table1.png)
+
+----
+## polar coordinates
+
+![continued table of polar coordinate airy stress terms](../images/polar-table2.png)
+
+---
+# polynomial solutions
+
+----
+## airy stress function solutions
+
+-   To solve a problem using Airy stress functions, we need to solve this biharmonic equation
+
+$$\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} = 0$$
+
+-   One solution to this is the power series
+
+$$\\phi(x,y) = \\sum\_{m=0}^{\\infty} \\sum\_{n=0}^{\\infty} A\_{mn} x^m y^n$$
+
+----
+## power series solution
+
+-   Note that terms for *m* + *n* ≤ 1 do not contribute to the stress, and can be neglected
+-   Also note that for *m* + *n* ≤ 3 compatibility is automatically satisfied
+-   For *m* + *n* ≥ 4 the coefficients must be related for compatibility to be satisfied
+
+----
+## example
+
+![a simple tension example problem](../images/tension.PNG)
+
+----
+## example
+
+-   What are the boundary conditions in terms of the stress tensor?
+
+$$\\begin{aligned}
+	\\sigma\_x (\\pm l,y) &= T\\\\
+	\\sigma\_y (x, \\pm c) &= 0\\\\
+	\\tau\_{xy} (\\pm l, y) &= \\tau\_{xy} (x, \\pm c) = 0
+\\end{aligned}$$
+
+-   What is the simplest form of polynomial stress function that would satisfy these boundary conditions?
+
+$$\\begin{aligned}
+	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
+	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
+	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
+\\end{aligned}$$
+
+----
+## saint venant’s principle
+
+-   Some boundary conditions are cumbersome to model exactly
+-   In this case we can use Saint Venant’s principle to express a statically equivalent version of the boundary conditions
+
+----
+## example
+
+![a simple bending example using saint venant's principle](../images/bending.PNG)
+
+----
+## example
+
+-   Locally along the ends, there will be some tractions in order to apply the bending moment
+-   These tractions will cancel out, however, so we can use Saint Venant’s principle to avoid modeling them explicitly
+
+$$\\begin{aligned}
+	\\sigma\_y (x, \\pm c) &= 0\\\\
+	\\tau\_{xy} (x, \\pm c) &= \\tau\_{xy} (\\pm L, y) = 0\\\\
+	\\int\_{-c}^{c}\\sigma\_x (\\pm l,y)dy &= 0\\\\
+	\\int\_{-c}^{c}\\sigma\_x (\\pm l,y)ydy &= -M
+\\end{aligned}$$
+
+----
+## example
+
+-   What is the simplest form of polynomial stress function that would satisfy these boundary conditions?
+
+$$\\begin{aligned}
+	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
+	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
+	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
+\\end{aligned}$$
+
+----
+## example
+
+![a distributed load example](../images/distributed.PNG)
+
+----
+## example
+
+-   In this case we can write the boundary conditions as
+
+$$\\begin{aligned}
+	\\tau\_{xy}(x, \\pm c) &= 0\\\\
+	\\sigma\_y (x,c) &= 0\\\\
+	\\sigma\_y (x,-c) &= -w\\\\
+	\\int\_{-c}^{c} \\sigma\_x (\\pm l, y) dy &= 0\\\\
+	\\int\_{-c}^{c} \\sigma\_x (\\pm l, y) ydy &= 0\\\\
+	\\int\_{-c}^{c} \\tau\_{xy} (\\pm l, y) dy &= \\mp wl\\\\
+\\end{aligned}$$
+
+----
+## example
+
+-   And find that the stress function
+
+$$\\phi = Ax^2 + Bx^2 y + Cx^2 y^3 + Dy^3 - \\frac{1}{5}C y^5$$
+
+-   Can satisfy the boundary conditions as well as compatibility
+
+

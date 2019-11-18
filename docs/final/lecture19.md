@@ -18,8 +18,8 @@ November 18, 2019
 <!-- vim-markdown-toc GFM -->
 
 * airy stress functions
-* polar coordinates
 * polynomial solutions
+* polar coordinates
 
 <!-- vim-markdown-toc -->
 
@@ -31,6 +31,10 @@ November 18, 2019
 
 -   A stress function technique that can be used to solve many planar problems is known as the *Airy stress function*
 -   This method reduces the governing equations for a planar problem to a single unknown function
+
+----
+## body forces
+
 -   We assume first that body forces are derivable from a *potential function*, *V*
 
 $$\\begin{aligned}
@@ -38,8 +42,12 @@ $$\\begin{aligned}
 	F\_y &= -\\frac{\\partial V}{\\partial y}
 \\end{aligned}$$
 
+----
+## body forces
+
 -   How restrictive is this assumption?
 -   Most body forces are linear (gravity) and can easily be represented this way
+-   Only a body force with some form of coupling between axes (a function of both $x$ and $y$) would be difficult to represent this way
 
 ----
 ## airy stress function
@@ -53,7 +61,7 @@ $$\\begin{aligned}
 \\end{aligned}$$
 
 -   The function *ϕ* = *ϕ*(*x*, *y*) is known as the Airy stress function
--   When constructed in this way, equilibrium is automatically satisfied
+-   Equilibrium automatically satisfied
 
 ----
 ## compatibility
@@ -65,6 +73,9 @@ $$\\begin{aligned}
 	\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} &= - (1-\\nu)\\left(\\frac{\\partial^2 V}{\\partial x^2} + \\frac{\\partial^2 V}{\\partial y^2}\\right) &\\text{plane stress}
 \\end{aligned}$$
 
+----
+## compatibility
+
 -   If there are no body forces, or the potential function satisfies Laplace’s Equation
 
 ∇<sup>2</sup>*V* = 0
@@ -74,12 +85,124 @@ Then both plane stress and plane strain reduce to
 $$\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} = 0$$
 
 ---
+# polynomial solutions
+
+----
+## airy stress solutions
+
+-   To solve a problem using Airy stress functions, we need to solve this biharmonic equation
+
+$$\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} = 0$$
+
+-   One solution to this is the power series
+
+$$\\phi(x,y) = \\sum\_{m=0}^{\\infty} \\sum\_{n=0}^{\\infty} A\_{mn} x^m y^n$$
+
+----
+## power series solution
+
+-   Note that terms for *m* + *n* ≤ 1 do not contribute to the stress, and can be neglected
+-   Also note that for *m* + *n* ≤ 3 compatibility is automatically satisfied
+-   For *m* + *n* ≥ 4 the coefficients must be related for compatibility to be satisfied
+
+----
+## example
+
+![a simple tension example problem](../images/tension.PNG)
+
+----
+## example
+
+-   What are the boundary conditions in terms of the stress tensor?
+
+$$\\begin{aligned}
+	\\sigma\_x (\\pm l,y) &= T\\\\
+	\\sigma\_y (x, \\pm c) &= 0\\\\
+	\\tau\_{xy} (\\pm l, y) &= \\tau\_{xy} (x, \\pm c) = 0
+\\end{aligned}$$
+
+----
+## example
+
+-   What is the simplest form of polynomial stress function that would satisfy these boundary conditions?
+
+$$\\begin{aligned}
+	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
+	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
+	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
+\\end{aligned}$$
+
+----
+## saint venant’s principle
+
+-   Some boundary conditions are cumbersome to model exactly
+-   In this case we can use Saint Venant’s principle to express a statically equivalent version of the boundary conditions
+
+----
+## example
+
+![a simple bending example using saint venant's principle](../images/bending.PNG)
+
+----
+## example
+
+-   Locally along the ends, there will be some tractions in order to apply the bending moment
+-   These tractions will cancel out, however, so we can use Saint Venant’s principle to avoid modeling them explicitly
+
+----
+## example
+
+$$\\begin{aligned}
+	\\sigma\_y (x, \\pm c) &= 0\\\\
+	\\tau\_{xy} (x, \\pm c) &= \\tau\_{xy} (\\pm L, y) = 0\\\\
+	\\int\_{-c}^{c}\\sigma\_x (\\pm l,y)dy &= 0\\\\
+	\\int\_{-c}^{c}\\sigma\_x (\\pm l,y)ydy &= -M
+\\end{aligned}$$
+
+----
+## example
+
+-   What is the simplest form of polynomial stress function that would satisfy these boundary conditions?
+
+$$\\begin{aligned}
+	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
+	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
+	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
+\\end{aligned}$$
+
+----
+## example
+
+![a distributed load example](../images/distributed.PNG)
+
+----
+## boundary conditions
+
+$$\\begin{aligned}
+	\\tau\_{xy}(x, \\pm c) &= 0\\\\
+	\\sigma\_y (x,c) &= 0\\\\
+	\\sigma\_y (x,-c) &= -w\\\\
+	\\int\_{-c}^{c} \\sigma\_x (\\pm l, y) dy &= 0\\\\
+	\\int\_{-c}^{c} \\sigma\_x (\\pm l, y) ydy &= 0\\\\
+	\\int\_{-c}^{c} \\tau\_{xy} (\\pm l, y) dy &= \\mp wl\\\\
+\\end{aligned}$$
+
+----
+## example
+
+-   And find that the stress function
+
+$$\\phi = Ax^2 + Bx^2 y + Cx^2 y^3 + Dy^3 - \\frac{1}{5}C y^5$$
+
+-   Can satisfy the boundary conditions as well as compatibility
+
+---
 # polar coordinates
 
 ----
 ## strain-displacement
 
--   For planar problems we can reduce the strain-displacement relationships we learned previously
+-   Reduced strain-displacement:
 
 $$\\begin{aligned}
 	\\epsilon\_r &= \\frac{\\partial u\_r}{\\partial r}, \\epsilon\_\\theta = \\frac{1}{r}\\left(u\_r + \\frac{\\partial u\_\\theta}{\\partial \\theta}\\right), \\epsilon\_z = \\frac{\\partial u\_z}{\\partial z}\\\\
@@ -105,6 +228,9 @@ $$\\begin{aligned}
 -   When we change variables in integration, we also need to account for the proper change in dV
 -   *dV* = *dxdydz* ≠ *drdθdz*
 -   We can find the correct *dV* by calculating the Jacobian
+
+----
+## jacobian
 
 $$dV = dx dy dz = |\\frac{\\partial(x,y,z)}{\\partial(r,\\theta,z)}| dr d\\theta dz$$
 
@@ -183,6 +309,9 @@ $$\\nabla^4 \\phi = \\left(\\frac{\\partial ^2}{\\partial r^2} + \\frac{1}{r} \\
 
 -   One method which gives several useful solutions assumes that the Airy Stress function has the form *ϕ*(*r*, *θ*)=*f*(*r*)*e*<sup>*bθ*</sup>
 
+----
+## polar coordinates 
+
 -   Substituting this into the compatibility equations (and canceling the common *e*<sup>*bθ*</sup>) term gives
 
 $$f^{\\prime \\prime \\prime \\prime} + \\frac{2}{r} f^{\\prime \\prime \\prime} - \\frac{1-2b^2}{r^2}f^{\\prime \\prime} + \\frac{1-2b^2}{r^3}f^{\\prime} + \\frac{b^2(4+b^2)}{r^4}f = 0$$
@@ -198,7 +327,10 @@ _f_<sup>′′′′</sup> − 4*f*<sup>′′′</sup> + (4 + 2*b*<
 
 (*a*<sup>2</sup> + *b*<sup>2</sup>)(*a*<sup>2</sup> − 4*a* + 4 + *b*<sup>2</sup>)=0
 
--   And has solutions
+----
+## polar coordinates
+
+-   This has solutions
 
 $$\\begin{aligned}
 	a &= \\pm ib, \\pm 2ib\\\\
@@ -237,113 +369,5 @@ _ϕ_ = *a*<sub>0</sub> + *a*<sub>1</sub>log*r* + *a*<sub>2</sub>*r*<
 ## polar coordinates
 
 ![continued table of polar coordinate airy stress terms](../images/polar-table2.png)
-
----
-# polynomial solutions
-
-----
-## airy stress function solutions
-
--   To solve a problem using Airy stress functions, we need to solve this biharmonic equation
-
-$$\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} = 0$$
-
--   One solution to this is the power series
-
-$$\\phi(x,y) = \\sum\_{m=0}^{\\infty} \\sum\_{n=0}^{\\infty} A\_{mn} x^m y^n$$
-
-----
-## power series solution
-
--   Note that terms for *m* + *n* ≤ 1 do not contribute to the stress, and can be neglected
--   Also note that for *m* + *n* ≤ 3 compatibility is automatically satisfied
--   For *m* + *n* ≥ 4 the coefficients must be related for compatibility to be satisfied
-
-----
-## example
-
-![a simple tension example problem](../images/tension.PNG)
-
-----
-## example
-
--   What are the boundary conditions in terms of the stress tensor?
-
-$$\\begin{aligned}
-	\\sigma\_x (\\pm l,y) &= T\\\\
-	\\sigma\_y (x, \\pm c) &= 0\\\\
-	\\tau\_{xy} (\\pm l, y) &= \\tau\_{xy} (x, \\pm c) = 0
-\\end{aligned}$$
-
--   What is the simplest form of polynomial stress function that would satisfy these boundary conditions?
-
-$$\\begin{aligned}
-	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
-	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
-	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
-\\end{aligned}$$
-
-----
-## saint venant’s principle
-
--   Some boundary conditions are cumbersome to model exactly
--   In this case we can use Saint Venant’s principle to express a statically equivalent version of the boundary conditions
-
-----
-## example
-
-![a simple bending example using saint venant's principle](../images/bending.PNG)
-
-----
-## example
-
--   Locally along the ends, there will be some tractions in order to apply the bending moment
--   These tractions will cancel out, however, so we can use Saint Venant’s principle to avoid modeling them explicitly
-
-$$\\begin{aligned}
-	\\sigma\_y (x, \\pm c) &= 0\\\\
-	\\tau\_{xy} (x, \\pm c) &= \\tau\_{xy} (\\pm L, y) = 0\\\\
-	\\int\_{-c}^{c}\\sigma\_x (\\pm l,y)dy &= 0\\\\
-	\\int\_{-c}^{c}\\sigma\_x (\\pm l,y)ydy &= -M
-\\end{aligned}$$
-
-----
-## example
-
--   What is the simplest form of polynomial stress function that would satisfy these boundary conditions?
-
-$$\\begin{aligned}
-	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
-	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
-	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
-\\end{aligned}$$
-
-----
-## example
-
-![a distributed load example](../images/distributed.PNG)
-
-----
-## example
-
--   In this case we can write the boundary conditions as
-
-$$\\begin{aligned}
-	\\tau\_{xy}(x, \\pm c) &= 0\\\\
-	\\sigma\_y (x,c) &= 0\\\\
-	\\sigma\_y (x,-c) &= -w\\\\
-	\\int\_{-c}^{c} \\sigma\_x (\\pm l, y) dy &= 0\\\\
-	\\int\_{-c}^{c} \\sigma\_x (\\pm l, y) ydy &= 0\\\\
-	\\int\_{-c}^{c} \\tau\_{xy} (\\pm l, y) dy &= \\mp wl\\\\
-\\end{aligned}$$
-
-----
-## example
-
--   And find that the stress function
-
-$$\\phi = Ax^2 + Bx^2 y + Cx^2 y^3 + Dy^3 - \\frac{1}{5}C y^5$$
-
--   Can satisfy the boundary conditions as well as compatibility
 
 

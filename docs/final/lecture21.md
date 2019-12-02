@@ -1,7 +1,7 @@
 # AE731
 ## Theory of Elasticity
 Dr. Nicholas Smith<br/>
-Wichita State University, Department of Aerospace Engineering
+Wichita State University, Department of Aerospace Engineering<br/>
 December 2, 2019
 
 ----
@@ -75,6 +75,10 @@ $$\\bar{f(z)} = u(x,y) - i v(x,y)$$
 -   In Elasticity, complex variables are advantageous in many situations
 -   Conformal mappings - allows a solution for a simple shape to be mapped onto a more complicated shape
 -   With complex methods we can handle singularities, and quantify the order of a singularity
+
+----
+## uses for complex variables
+
 -   Multivalued displacements (dislocations)
 -   Fracture mechanics
 -   Westergaard functions (crack analysis)
@@ -87,7 +91,7 @@ $$\\bar{f(z)} = u(x,y) - i v(x,y)$$
 ----
 ## mapping
 
-![mapping](../images/mapping.PNG)
+![mapping](../images/mapping.PNG) <!-- .element width="50%" -->
 
 ----
 ## westergaard stress function
@@ -103,7 +107,7 @@ $$\\begin{aligned}
 ----
 ## crack example
 
-![westergaard](../images/westergaard.PNG)
+![westergaard](../images/westergaard.PNG) <!-- .element width="50%" -->
 
 ----
 ## crack example

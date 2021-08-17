@@ -159,9 +159,9 @@ August 17, 2021
 <div class="left">
 
 - Ch 6 - Energy principles
-		- 2 Nov - 9 Nov (3 lectures)
+  - 2 Nov - 9 Nov (3 lectures)
 - Ch 7-8 - 2D problems
-		- 11 Nov - 18 Nov (3 lectures)
+  - 11 Nov - 18 Nov (3 lectures)
 - Ch 10 - Complex variables
     - 30 Nov - 2 Dec
     
@@ -415,7 +415,7 @@ _c_<sub>*ij*</sub> = *a*<sub>*ik*</sub>*b*<sub>*kj*</sub>
 
 -   This textbook uses a special shortcut notation for the symmetric and anti-symmetric portions of a tensor
     -   Symmetric: `$a_{(ij)} = \frac{1}{2}(a_{ij}+a_{ji})$`
-    -   Anti-symmetric: `$a_{\[ij\]} = \frac{1}{2}(a_{ij}-a_{ji})$`
+    -   Anti-symmetric: `$a_{[ij]} = \frac{1}{2}(a_{ij}-a_{ji})$`
 
 ----
 ## special symbols
@@ -449,7 +449,7 @@ _c_<sub>*ij*</sub> = *a*<sub>*ik*</sub>*b*<sub>*kj*</sub>
 
 -   *alternating symbol* or *permutation symbol*
 
-`$$\epsilon_{ijk} = \left\\{
+`$$\epsilon_{ijk} = \left\{
 \begin{array}{rl}
 1 & \text{if $ijk$ is an even permutation of 1,2,3}\\
 -1 & \text{if $ijk$ is an odd permutation of 1,2,3}\\
@@ -471,14 +471,14 @@ _c_<sub>*ij*</sub> = *a*<sub>*ik*</sub>*b*<sub>*kj*</sub>
 
 -   We use the alternating symbol for writing determinants and cross-products
 
-`$$\det\[a_{ij}\] = |a_{ij}| = \begin{vmatrix}
+`$$\det[a_{ij}] = |a_{ij}| = \begin{vmatrix}
 a_{11} & a_{12} & a_{13}\\
 a_{21} & a_{22} & a_{23}\\
 a_{31} & a_{32} & a_{33}
 \end{vmatrix}
 = \epsilon_{ijk}a_{i1} a_{j2} a_{k3}$$`
 
-`$$\det\[a_{ij}\] = \frac{1}{6}\epsilon_{ijk} \epsilon_{pqr}a_{ip}a_{jq}a_{kr}$$`
+`$$\det[a_{ij}] = \frac{1}{6}\epsilon_{ijk} \epsilon_{pqr}a_{ip}a_{jq}a_{kr}$$`
 
 ----
 ## cross product

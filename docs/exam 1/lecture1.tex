@@ -1,0 +1,965 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  letterpaper,
+  ignorenonframetext,
+  aspectratio=43,
+  handout,
+  12pt]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{metropolis}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\newif\ifbibliography
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+% Make links footnotes instead of hotlinks:
+\DeclareRobustCommand{\href}[2]{#2\footnote{\url{#1}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\makeatletter
+\makeatother
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{\Oldincludegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{#2}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{}
+\date{}
+
+\begin{document}
+
+
+\begin{frame}{Theory of Elasticity}
+\protect\hypertarget{theory-of-elasticity}{}
+Dr.~Nicholas Smith
+
+Wichita State University, Department of Aerospace Engineering August 17,
+2021
+\end{frame}
+
+\begin{frame}{upcoming schedule}
+\protect\hypertarget{upcoming-schedule}{}
+\begin{itemize}
+\tightlist
+\item
+  Aug 17 - Intro to Elasticity
+\item
+  Aug 19 - Coordinate Transformation
+\item
+  Aug 24 - Principal Values
+\item
+  Aug 26 - Tensor Calculus
+\end{itemize}
+\end{frame}
+
+\begin{frame}{outline}
+\protect\hypertarget{outline}{}
+\begin{itemize}
+\tightlist
+\item
+  introduction
+\item
+  syllabus and schedule
+\item
+  calculus of tensors
+\item
+  examples
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{tentative outline}
+\protect\hypertarget{tentative-outline}{}
+\begin{itemize}
+\tightlist
+\item
+  Chapter 1 - Calculus of tensors
+
+  \begin{itemize}
+  \tightlist
+  \item
+    17 Aug - 26 Aug (4 lectures)
+  \end{itemize}
+\item
+  Chapter 2 - Kinematics
+
+  \begin{itemize}
+  \tightlist
+  \item
+    2 Sep - 9 Sep (3 lectures)
+  \end{itemize}
+\item
+  Exam 1 (covers Chapter 1-2)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    16 Sep
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{tentative outline}
+\protect\hypertarget{tentative-outline-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Chapter 3 - Stress
+
+  \begin{itemize}
+  \tightlist
+  \item
+    21 Sep - 28 (3 lectures)
+  \end{itemize}
+\item
+  Chapter 4 - Constitutive equations
+
+  \begin{itemize}
+  \tightlist
+  \item
+    30 Sep - 7 Oct (3 lectures)
+  \end{itemize}
+\item
+  Chapter 5 - Solution strategies
+
+  \begin{itemize}
+  \tightlist
+  \item
+    14 Oct - 21 Oct (3 lectures)
+  \end{itemize}
+\item
+  Exam 2 (Chapters 3-5)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    28 Oct
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{tentative outline}
+\protect\hypertarget{tentative-outline-2}{}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  Ch 6 - Energy principles - 2 Nov - 9 Nov (3 lectures)
+\item
+  Ch 7-8 - 2D problems - 11 Nov - 18 Nov (3 lectures)
+\item
+  Ch 10 - Complex variables
+
+  \begin{itemize}
+  \tightlist
+  \item
+    30 Nov - 2 Dec
+  \end{itemize}
+\end{itemize}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  Special topics
+
+  \begin{itemize}
+  \tightlist
+  \item
+    No homework
+  \item
+    Not on final exam
+  \item
+    Anisotropic elasticity
+  \item
+    Heterogeneous materials
+  \item
+    Numerical applications (finite elements)
+  \end{itemize}
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{final exam}
+\protect\hypertarget{final-exam}{}
+\begin{itemize}
+\tightlist
+\item
+  Tuesday 7 December
+\item
+  5:40 - 7:30 pm
+\item
+  Cannot take final exam at any other time, make travel plans
+  accordingly
+\item
+  Comprehensive
+\end{itemize}
+\end{frame}
+
+\begin{frame}{grades}
+\protect\hypertarget{grades}{}
+\begin{itemize}
+\tightlist
+\item
+  Grade breakdown
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Homework 5\%
+  \item
+    Exam 1 30\%
+  \item
+    Exam 2 30\%
+  \item
+    Final Exam 35\%
+  \end{itemize}
+\item
+  Follow a traditional grading scale
+\end{itemize}
+\end{frame}
+
+\begin{frame}{class expectations}
+\protect\hypertarget{class-expectations}{}
+\begin{itemize}
+\tightlist
+\item
+  Consider the cost (to you or others) of your being in class
+\item
+  I ask that you refrain from distracting behaviors during class
+\item
+  When you have something more important than class to take care of it,
+  please take care of it outside of class
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{scalars}
+\protect\hypertarget{scalars}{}
+\begin{itemize}
+\tightlist
+\item
+  Scalar
+
+  \begin{itemize}
+  \tightlist
+  \item
+    single value (at a point)
+  \item
+    e.g.~temperature, density
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{vectors}
+\protect\hypertarget{vectors}{}
+\begin{itemize}
+\tightlist
+\item
+  Vector
+
+  \begin{itemize}
+  \tightlist
+  \item
+    expressed in terms of coordinate system
+  \item
+    one-dimensional array
+  \item
+    e.g.~displacement
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{matrices}
+\protect\hypertarget{matrices}{}
+\begin{itemize}
+\tightlist
+\item
+  Matrix
+
+  \begin{itemize}
+  \tightlist
+  \item
+    two-dimensional array
+  \item
+    e.g.~stress, strain
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{scalars, vectors, matrices}
+\protect\hypertarget{scalars-vectors-matrices}{}
+\[\rho = 25\]
+
+\[u = (x,y)\]
+
+\[[\sigma] = \begin{bmatrix}
+\sigma_{xx} & \sigma_{xy} \\
+\sigma_{yx} & \sigma_{yy}
+\end{bmatrix}\]
+\end{frame}
+
+\begin{frame}{scalars, vectors, matrices}
+\protect\hypertarget{scalars-vectors-matrices-1}{}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  In two dimensions
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Scalars have 1 term
+  \item
+    Vectors have 2 terms
+  \item
+    Matrices have 4 terms
+  \end{itemize}
+\end{itemize}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  In three dimensions
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Scalars have 1 term
+  \item
+    Vectors have 3 terms
+  \item
+    Matrices have 9 terms
+  \end{itemize}
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{tensors}
+\protect\hypertarget{tensors}{}
+\begin{itemize}
+\tightlist
+\item
+  Formal definition for tensors later in the course
+\item
+  Scalar = 0-order tensor
+\item
+  Vector = 1st-order tensor
+\item
+  Matrix = 2nd-order tensor
+\end{itemize}
+\end{frame}
+
+\begin{frame}{tensors}
+\protect\hypertarget{tensors-1}{}
+\begin{itemize}
+\tightlist
+\item
+  We will also use higher-order tensors in this course
+\item
+  High-order tensors are difficult to write
+\item
+  It can even be difficult to distinguish vectors, scalars, and matrices
+  in some notations
+\item
+  Index notation is used to address these problems
+\end{itemize}
+\end{frame}
+
+\begin{frame}{index notation}
+\protect\hypertarget{index-notation}{}
+\begin{itemize}
+\tightlist
+\item
+  Use subscripts to indicate when a variable has multiple values
+\item
+  \(\rho\) has no subscript, and thus it must be a scalar
+\item
+  \(u_i\) has one subscript, \emph{i}, indicating it has multiple values
+\item
+  ``Multiple'' means the number of coordinate system axes, unless
+  otherwise specified.
+\item
+  \(u_i = (u_1, u_2, u_3)\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{index notation}
+\protect\hypertarget{index-notation-1}{}
+\begin{itemize}
+\item
+  \(\sigma_{ij}\) has two subscripts, \emph{i} and \emph{j}, meaning it
+  spans the coordinate system in two directions.
+\item
+  \texttt{\$\textbackslash{}sigma\_\{ij\}\ =\ \textbackslash{}begin\{bmatrix\}\ \ \ \ \ \textbackslash{}sigma\_\{11\}\ \&\ \textbackslash{}sigma\_\{12\}\textbackslash{}\textbackslash{}\ \ \ \ \ \textbackslash{}sigma\_\{21\}\ \&\ \textbackslash{}sigma\_\{22\}\ \ \ \ \ \textbackslash{}end\{bmatrix\}\$}
+\item
+  We can use this notation for any order of tensor
+\item
+  In 3D, we need a fourth-order tensor to define material stiffness, we
+  write this in index notation as
+\item
+  \(C_{ijkl}\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{addition}
+\protect\hypertarget{addition}{}
+\begin{itemize}
+\tightlist
+\item
+  We can do arithmetic in index notation
+\item
+  \(a_i + b_i = (a_1+b_1, a_2+b_2, a_3+b_3)\)
+\item
+  We can also use a different index in the two variables to create a
+  matrix
+\item
+  \texttt{\$c\_\{ij\}\ =\ a\_i\ +\ b\_j\ =\ \textbackslash{}begin\{bmatrix\}\ \ \ \ \ a\_1\ +\ b\_1\ \&\ a\_1\ +\ b\_2\ \textbackslash{}\textbackslash{}\ \ \ \ \ a\_2\ +\ b\_1\ \&\ a\_2\ +\ b\_2\ \ \ \ \ \textbackslash{}end\{bmatrix\}\$}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{multiplication}
+\protect\hypertarget{multiplication}{}
+\begin{itemize}
+\tightlist
+\item
+  We can multiply a scalar by a vector
+\item
+  \(\lambda a_i = (\lambda a_1, \lambda a_2)\)
+\item
+  Or multiply two vectors
+\item
+  \texttt{\$c\_\{ij\}\ =\ a\_i\ b\_j\ =\ \textbackslash{}begin\{bmatrix\}\ \ \ \ \ a\_1\ b\_1\ \&\ a\_1\ b\_2\ \textbackslash{}\textbackslash{}\ \ \ \ \ a\_2\ b\_1\ \&\ a\_2\ b\_2\ \ \ \ \ \textbackslash{}end\{bmatrix\}\$}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{math laws}
+\protect\hypertarget{math-laws}{}
+\begin{itemize}
+\tightlist
+\item
+  The usual laws (commutative, associative, distributive) still apply
+\item
+  \(a_i + b_i = b_i + a_i\)
+\item
+  \(a_{ij} b_k = b_k a_{ij}\)
+\item
+  \(a_i + (b_i + c_i) = (a_i + b_i) + c_i\)
+\item
+  \(a_i(b_{jk}c_l) = (a_i b_{kj})c_l\)
+\item
+  \(a_{ij}(b_k + c_k) = a_{ij}b_k + a_{ij}c_k\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{equality}
+\protect\hypertarget{equality}{}
+\begin{itemize}
+\tightlist
+\item
+  What does this mean?
+
+  \begin{itemize}
+  \item
+    \emph{a}\emph{i} = \emph{b}\emph{i}
+  \item
+    \emph{a}1 = \emph{b}1, \emph{a}2 = \emph{b}2, etc.
+  \end{itemize}
+\item
+  What about this?
+
+  \begin{itemize}
+  \item
+    \emph{a}\emph{i} = \emph{b}\emph{j}
+  \item
+    Doesn't make sense, incorrect use of index notation
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{dummy index}
+\protect\hypertarget{dummy-index}{}
+\begin{itemize}
+\tightlist
+\item
+  When an index is repeated in the same term, it is referred to as a
+  ``dummy index''
+\item
+  The dummy index indicates summation over all axes
+\item
+  e.g.~\emph{a}\emph{ii} = \emph{a}11 + \emph{a}22 + \emph{a}33
+\item
+  Note: summation on a matrix will reduce to a scalar, summation on
+  higher order tensors will reduce the order by 2
+\end{itemize}
+\end{frame}
+
+\begin{frame}{dummy index}
+\protect\hypertarget{dummy-index-1}{}
+\begin{itemize}
+\tightlist
+\item
+  The dummy index can be triggered by any repeated index in a .
+\item
+  Summation or not?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{a}\emph{i} + \emph{b}\emph{ij}\emph{c}\emph{j}
+  \item
+    \emph{a}\emph{ij} + \emph{b}\emph{ij}
+  \item
+    \emph{a}\emph{ij} + \emph{b}\emph{ij}\emph{c}\emph{j}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{matrix multiplication}
+\protect\hypertarget{matrix-multiplication}{}
+\begin{itemize}
+\item
+  How can we write matrix multiplication in index notation?
+\item
+  \texttt{\$\textbackslash{}begin\{bmatrix\}\ \ \ \ \ a\_\{11\}\ \&\ a\_\{12\}\ \textbackslash{}\textbackslash{}\ \ \ \ \ a\_\{21\}\ \&\ a\_\{22\}\ \ \ \ \ \textbackslash{}end\{bmatrix\}\ \ \ \ \ \textbackslash{}begin\{bmatrix\}\ \ \ \ \ b\_\{11\}\ \&\ b\_\{12\}\ \textbackslash{}\textbackslash{}\ \ \ \ \ b\_\{21\}\ \&\ b\_\{22\}\ \ \ \ \ \textbackslash{}end\{bmatrix\}\ =\ \ \ \ \ \textbackslash{}begin\{bmatrix\}\ \ \ \ \ c\_\{11\}\ \&\ c\_\{12\}\ \textbackslash{}\textbackslash{}\ \ \ \ \ c\_\{21\}\ \&\ c\_\{22\}\ \ \ \ \ \textbackslash{}end\{bmatrix\}\$}
+\item
+  \emph{c}11 = \emph{a}11\emph{b}11 + \emph{a}12\emph{b}21
+\item
+  \emph{c}12 = \emph{a}11\emph{b}21 + \emph{a}12\emph{b}22
+\item
+  \emph{c}\emph{ij} = \emph{a}\emph{ik}\emph{b}\emph{kj}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{symmetry}
+\protect\hypertarget{symmetry}{}
+\begin{itemize}
+\tightlist
+\item
+  Symmetry can be a very powerful tool in Elasticity
+\item
+  Here we define some useful forms of symmetry in index notation
+\item
+  Symmetric
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{a}\emph{ij\ldots z} = \emph{a}\emph{z\ldots ji}
+  \item
+    \emph{a}\emph{ij\ldots m\ldots n\ldots z} =
+    \emph{a}\emph{ij\ldots n\ldots m\ldots z}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{anti-symmetry}
+\protect\hypertarget{anti-symmetry}{}
+\begin{itemize}
+\tightlist
+\item
+  Anti-symmetric (skew symmetric)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{a}\emph{ij\ldots z} = -\emph{a}\emph{z\ldots ji}
+  \item
+    \emph{a}\emph{ij\ldots m\ldots n\ldots z} =
+    -\emph{a}\emph{ij\ldots n\ldots m\ldots z}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{symmetry}
+\protect\hypertarget{symmetry-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Useful identity
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If \emph{a}\emph{ij\ldots m\ldots n\ldots k} is symmetric in
+    \emph{mn} and \emph{b}\emph{pq\ldots m\ldots n\ldots r} is
+    antisymmetric in \emph{mn}, then the product is zero
+  \item
+    \emph{a}\emph{ij\ldots m\ldots n\ldots k}\emph{b}\emph{pq\ldots m\ldots n\ldots r}
+    = 0
+  \end{itemize}
+\item
+  We can also write any tensor as the sum of its symmetric and
+  anti-symmetric parts
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(a_{ij} = \frac{1}{2} (a_{ij} + a_{ji}) + \frac{1}{2} (a_{ij} - a_{ji})\)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{symmetry}
+\protect\hypertarget{symmetry-2}{}
+\begin{itemize}
+\tightlist
+\item
+  This textbook uses a special shortcut notation for the symmetric and
+  anti-symmetric portions of a tensor
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Symmetric: \(a_{(ij)} = \frac{1}{2}(a_{ij}+a_{ji})\)
+  \item
+    Anti-symmetric: \(a_{[ij]} = \frac{1}{2}(a_{ij}-a_{ji})\)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{special symbols}
+\protect\hypertarget{special-symbols}{}
+\begin{itemize}
+\tightlist
+\item
+  For convenience we define two symbols in index notation
+\item
+  \emph{Kronecker delta} is a general tensor form of the Identity Matrix
+\end{itemize}
+
+\[\delta_{ij} = \left\{
+\begin{array}{ll}
+1& \text{if $i=j$}\\
+0& \text{otherwise}
+\end{array}
+\right. = \begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Is also used for higher order tensors
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Kronecker delta}
+\protect\hypertarget{kronecker-delta}{}
+\begin{itemize}
+\tightlist
+\item
+  \(\delta_{ij} = \delta_{ji}\)
+\item
+  \(\delta_{ij} = 3\)
+\item
+  \(\delta_{ij} a_j = a_i\)
+\item
+  \(\delta_{ij}a_{ij} = a_{ii}\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{special symbols}
+\protect\hypertarget{special-symbols-1}{}
+\begin{itemize}
+\tightlist
+\item
+  \emph{alternating symbol} or \emph{permutation symbol}
+\end{itemize}
+
+\[\epsilon_{ijk} = \left\{
+\begin{array}{rl}
+1 & \text{if $ijk$ is an even permutation of 1,2,3}\\
+-1 & \text{if $ijk$ is an odd permutation of 1,2,3}\\
+0 & \text{otherwise}
+\end{array}
+\right.\]
+\end{frame}
+
+\begin{frame}{permutation symbol}
+\protect\hypertarget{permutation-symbol}{}
+\begin{itemize}
+\tightlist
+\item
+  This symbol is not used as frequently as the \emph{Kronecker delta}
+\item
+  For our uses in this course, it is enough to know that 123, 231, and
+  312 are even permutations
+\item
+  321, 132, 213 are odd permutations
+\item
+  all other indexes are zero
+\item
+  \(\epsilon_{ijk}\epsilon_{imn} = \delta_{jm} \delta_{kn} - \delta_{jn}\delta_{mk}\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{determinant}
+\protect\hypertarget{determinant}{}
+\begin{itemize}
+\tightlist
+\item
+  We use the alternating symbol for writing determinants and
+  cross-products
+\end{itemize}
+
+\[\det[a_{ij}] = |a_{ij}| = \begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{vmatrix}
+= \epsilon_{ijk}a_{i1} a_{j2} a_{k3}\]
+
+\[\det[a_{ij}] = \frac{1}{6}\epsilon_{ijk} \epsilon_{pqr}a_{ip}a_{jq}a_{kr}\]
+\end{frame}
+
+\begin{frame}{cross product}
+\protect\hypertarget{cross-product}{}
+\begin{itemize}
+\tightlist
+\item
+  The cross-product can be written as a determinant:
+\end{itemize}
+
+\[\hat{a} \times \hat{b} = \begin{vmatrix}
+\hat{e}_1 & \hat{e}_2 & \hat{e}_3\\
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3
+\end{vmatrix}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Or in index notation
+\end{itemize}
+
+\[\hat{a} \times \hat{b} = \epsilon_{ijk} \hat{e}_i a_j b_k \]
+\end{frame}
+
+\begin{frame}{partial derivative}
+\protect\hypertarget{partial-derivative}{}
+\begin{itemize}
+\tightlist
+\item
+  We indicate (partial) derivatives using a comma
+\item
+  In three dimensions, we take the partial derivative with respect to
+  each variable (\emph{x}, \emph{y}, \emph{z} or \emph{x}1, \emph{x}2,
+  \emph{x}3)
+\item
+  For example a scalar property, such as density, can have a different
+  value at any point in space
+\item
+  \(\rho = \rho(x_1, x_2, x_3)\)
+\end{itemize}
+
+\[\rho_{,i} = \frac{\partial}{\partial x_i} \rho = \left\langle \frac{\partial \rho }{\partial x_1}, \frac{\partial \rho }{\partial x_2}, \frac{\partial \rho }{\partial x_3} \right\rangle\]
+\end{frame}
+
+\begin{frame}{partial derivative}
+\protect\hypertarget{partial-derivative-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Similarly, if we take the partial derivative of a vector, it produces
+  a matrix
+\end{itemize}
+
+\[u_{i,j} = \frac{\partial}{\partial x_j} u_i = \begin{bmatrix}
+\frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2} & \frac{\partial u_1}{\partial x_3}\\
+\frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2} & \frac{\partial u_2}{\partial x_3}\\
+\frac{\partial u_3}{\partial x_1} & \frac{\partial u_3}{\partial x_2} & \frac{\partial u_3}{\partial x_3}
+\end{bmatrix}\]
+\end{frame}
+
+
+\begin{frame}{example 1}
+\protect\hypertarget{example-1}{}
+\begin{itemize}
+\item
+  Write the following in conventional notation \emph{T}\emph{ij},
+  \emph{j} + \emph{F}\emph{i} = 0
+\item
+  The comma indicates a partial derivative
+\item
+  The first index, \emph{i}, is not repeated in any terms, so it is a
+  ``free index''
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This means in a 3D coordinate system, we will have at least three
+    equations
+  \end{itemize}
+\item
+  The second index, \emph{j}, is repeated in the first term, indicating
+  summation.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We will have exactly three equations
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{example 1 (solution)}
+\protect\hypertarget{example-1-solution}{}
+\emph{T}\emph{ij}, \emph{j} + \emph{F}\emph{i} = 0
+
+\[\begin{aligned}
+\frac{\partial T_{11}}{\partial x_1} + \frac{\partial T_{12}}{\partial x_2} + \frac{\partial T_{13}}{\partial x_3} + F_1= 0\\
+\frac{\partial T_{21}}{\partial x_1} + \frac{\partial T_{22}}{\partial x_2} + \frac{\partial T_{23}}{\partial x_3} + F_2= 0\\
+\frac{\partial T_{31}}{\partial x_1} + \frac{\partial T_{32}}{\partial x_2} + \frac{\partial T_{33}}{\partial x_3} + F_3= 0\\end{aligned}\]
+\end{frame}
+
+\begin{frame}{example 2}
+\protect\hypertarget{example-2}{}
+\begin{itemize}
+\tightlist
+\item
+  Identify whether the following expressions represent a scalar, vector,
+  or matrix
+\item
+  If index notation is used incorrectly, give a reason why
+\item
+  \emph{A}\emph{i} = \emph{B}\emph{i}
+\item
+  \emph{A}\emph{i} = \emph{B}\emph{i} + \emph{C}\emph{i}\emph{D}\emph{i}
+\item
+  \(\delta_{ij}A_iB_j\)
+\item
+  \(\phi = \frac{\partial F_i}{\partial x_i}\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{example 2 (solution)}
+\protect\hypertarget{example-2-solution}{}
+\begin{itemize}
+\tightlist
+\item
+  Vector equation
+\item
+  Incorrect use of index notation, \emph{i} used as both free and dummy
+  index
+\item
+  Scalar value (both indexes are dummy indexes)
+\item
+  Scalar value (could also be written \emph{F}\emph{i}, \emph{i})
+\end{itemize}
+\end{frame}
+
+\end{document}

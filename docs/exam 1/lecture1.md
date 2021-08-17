@@ -290,10 +290,10 @@ August 17, 2021
 ## index notation
 
 -   `$\sigma_{ij}$` has two subscripts, *i* and *j*, meaning it spans the coordinate system in two directions.
--   `$\sigma_{ij} = \begin{bmatrix}
+`$$\sigma_{ij} = \begin{bmatrix}
     \sigma_{11} & \sigma_{12}\\
     \sigma_{21} & \sigma_{22}
-    \end{bmatrix}$`
+ \end{bmatrix}$$`
 
 -   We can use this notation for any order of tensor
 -   In 3D, we need a fourth-order tensor to define material stiffness, we write this in index notation as
@@ -305,10 +305,10 @@ August 17, 2021
 -   We can do arithmetic in index notation
 -   `$a_i + b_i = (a_1+b_1, a_2+b_2, a_3+b_3)$`
 -   We can also use a different index in the two variables to create a matrix
--   `$c_{ij} = a_i + b_j = \begin{bmatrix}
+`$$c_{ij} = a_i + b_j = \begin{bmatrix}
     a_1 + b_1 & a_1 + b_2 \\
     a_2 + b_1 & a_2 + b_2
-    \end{bmatrix}$`
+\end{bmatrix}$$`
 
 ----
 ## multiplication
@@ -316,10 +316,10 @@ August 17, 2021
 -   We can multiply a scalar by a vector
 -   `$\lambda a_i = (\lambda a_1, \lambda a_2)$`
 -   Or multiply two vectors
--   `$c_{ij} = a_i b_j = \begin{bmatrix}
+`$$c_{ij} = a_i b_j = \begin{bmatrix}
     a_1 b_1 & a_1 b_2 \\
     a_2 b_1 & a_2 b_2
-    \end{bmatrix}$`
+    \end{bmatrix}$$`
 
 ----
 ## math laws
@@ -336,12 +336,12 @@ August 17, 2021
 
 -   What does this mean? <!-- .element class="fragment" -->
     -  <!-- .element class="fragment" -->  
-_a_<sub>*i*</sub> = *b*<sub>*i*</sub> 
+`$a_i = b_i$`
     -  <!-- .element class="fragment" --> 
-_a_<sub>1</sub> = *b*<sub>1</sub>, *a*<sub>2</sub> = *b*<sub>2</sub>, etc. 
+`$a_1 = b_1$`, `$a_2 = b_2$`, etc.
 -   What about this? <!-- .element class="fragment" --> 
     -  <!-- .element class="fragment" --> 
-_a_<sub>*i*</sub> = *b*<sub>*j*</sub> 
+`$a_i = b_j$`
     -  <!-- .element class="fragment" -->  Doesn’t make sense, incorrect use of index notation 
 
 ----
@@ -349,7 +349,7 @@ _a_<sub>*i*</sub> = *b*<sub>*j*</sub>
 
 -   When an index is repeated in the same term, it is referred to as a “dummy index”
 -   The dummy index indicates summation over all axes
--   e.g. *a*<sub>*ii*</sub> = *a*<sub>11</sub> + *a*<sub>22</sub> + *a*<sub>33</sub>
+-   e.g. `$a_{ii} = a_{11} + a_{22} + a_{33}$`
 -   Note: summation on a matrix will reduce to a scalar, summation on higher order tensors will reduce the order by 2
 
 ----
@@ -357,34 +357,34 @@ _a_<sub>*i*</sub> = *b*<sub>*j*</sub>
 
 -   The dummy index can be triggered by any repeated index in a .
 -   Summation or not?
-    -   *a*<sub>*i*</sub> + *b*<sub>*ij*</sub>*c*<sub>*j*</sub>
-    -   *a*<sub>*ij*</sub> + *b*<sub>*ij*</sub>
-    -   *a*<sub>*ij*</sub> + *b*<sub>*ij*</sub>*c*<sub>*j*</sub>
+    -   `$a_i + b_{ij}c_j$`
+    -   `$a_{ij} + b_{ij}$`
+    -   `$a_{ij} + b_{ij}c_j$`
 
 ----
 ## matrix multiplication
 
 -   How can we write matrix multiplication in index notation?
 
--   `$\begin{bmatrix}
+`$$begin{bmatrix}
     a_{11} & a_{12} \\
     a_{21} & a_{22}
-    \end{bmatrix}
-    \begin{bmatrix}
+\end{bmatrix}
+\begin{bmatrix}
     b_{11} & b_{12} \\
     b_{21} & b_{22}
-    \end{bmatrix} =
-    \begin{bmatrix}
+\end{bmatrix} =
+\begin{bmatrix}
     c_{11} & c_{12} \\
     c_{21} & c_{22}
-    \end{bmatrix}$`
+\end{bmatrix}$$`
 
 -   <!-- .element class="fragment"-->
-_c_<sub>11</sub> = *a*<sub>11</sub>*b*<sub>11</sub> + *a*<sub>12</sub>*b*<sub>21</sub>
+`$c_{11} = a_{11}b_{11} + a_{12}b_{21}$`
 -   <!-- .element class="fragment"-->
-_c_<sub>12</sub> = *a*<sub>11</sub>*b*<sub>21</sub> + *a*<sub>12</sub>*b*<sub>22</sub>
+`$c_{12} = a_{11}b_{21} + a_{12}b_{22}$`
 -   <!-- .element class="fragment" -->
-_c_<sub>*ij*</sub> = *a*<sub>*ik*</sub>*b*<sub>*kj*</sub>
+`$c_{ij} = a_{ik}b_{kj}$`
 
 ----
 ## symmetry
@@ -392,21 +392,21 @@ _c_<sub>*ij*</sub> = *a*<sub>*ik*</sub>*b*<sub>*kj*</sub>
 -   Symmetry can be a very powerful tool in Elasticity
 -   Here we define some useful forms of symmetry in index notation
 -   Symmetric
-    -   *a*<sub>*ij...z*</sub> = *a*<sub>*z...ji*</sub>
-    -   *a*<sub>*ij...m...n...z*</sub> = *a*<sub>*ij...n...m...z*</sub>
+    -   `$a_{ij ... z} = a_{z ... ji}$`
+    -   `$a_{ij .. m ... n ... z} = a_{ij ... n ... m ... z}$`
 
 ----
 ## anti-symmetry
 -   Anti-symmetric (skew symmetric)
-    -   *a*<sub>*ij...z*</sub> = -*a*<sub>*z...ji*</sub>
-    -   *a*<sub>*ij...m...n...z*</sub> = -*a*<sub>*ij...n...m...z*</sub>
+    -   `$a_{ij ... z} = -a_{z ... ji}$`
+    -   `$a_{ij ... m ... n ... z} = -a_{ij ... n ... m ... z}$`
 
 ----
 ## symmetry
 
 -   Useful identity
-    -   If *a*<sub>*ij...m...n...k*</sub> is symmetric in *mn* and *b*<sub>*pq...m...n...r*</sub> is antisymmetric in *mn*, then the product is zero
-    -   *a*<sub>*ij...m...n...k*</sub>*b*<sub>*pq...m...n...r*</sub> = 0
+    -   If `$a_{ij ... m ... n ... k}$` is symmetric in *mn* and `$b_{pq ... m ... n ...r}$` is antisymmetric in *mn*, then the product is zero
+    -   `$a_{ij ... m ... n ... k} b_{pq ... m ... n ...r} = 0$`
 -   We can also write any tensor as the sum of its symmetric and anti-symmetric parts
     -   `$a_{ij} = \frac{1}{2} (a_{ij} + a_{ji}) + \frac{1}{2} (a_{ij} - a_{ji})$`
 
@@ -449,7 +449,7 @@ _c_<sub>*ij*</sub> = *a*<sub>*ik*</sub>*b*<sub>*kj*</sub>
 
 -   *alternating symbol* or *permutation symbol*
 
-`$$\epsilon_{ijk} = \left\{
+`$$\epsilon_{ijk} = \left \{
 \begin{array}{rl}
 1 & \text{if $ijk$ is an even permutation of 1,2,3}\\
 -1 & \text{if $ijk$ is an odd permutation of 1,2,3}\\
@@ -523,7 +523,7 @@ b_1 & b_2 & b_3
 ## example 1
 
 -   Write the following in conventional notation
-    *T*<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
+`$$T_{ij,j} + F_i = 0$$`
 -   <!-- .element class="fragment" --> The comma indicates a partial derivative
 -   <!-- .element class="fragment" --> The first index, 
 _i_, is not repeated in any terms, so it is a “free index”
@@ -535,7 +535,7 @@ _j_, is repeated in the first term, indicating summation.
 ----
 ## example 1 (solution)
 
-*T*<sub>*ij*, *j*</sub> + *F*<sub>*i*</sub> = 0
+`$$T_{ij,j} + F_i = 0$$`
 
 `$$\begin{aligned}
 \frac{\partial T_{11}}{\partial x_1} + \frac{\partial T_{12}}{\partial x_2} + \frac{\partial T_{13}}{\partial x_3} + F_1= 0\\
@@ -547,8 +547,8 @@ _j_, is repeated in the first term, indicating summation.
 
 -   Identify whether the following expressions represent a scalar, vector, or matrix
 -   If index notation is used incorrectly, give a reason why
--   *A*<sub>*i*</sub> = *B*<sub>*i*</sub>
--   *A*<sub>*i*</sub> = *B*<sub>*i*</sub> + *C*<sub>*i*</sub>*D*<sub>*i*</sub>
+-   `$A_i = B_i$`
+-   `$A_i = B_i + C_i D_i$`
 -   `$\delta_{ij}A_iB_j$`
 -   `$\phi = \frac{\partial F_i}{\partial x_i}$`
 
@@ -558,6 +558,6 @@ _j_, is repeated in the first term, indicating summation.
 -   Vector equation
 -   Incorrect use of index notation, *i* used as both free and dummy index
 -   Scalar value (both indexes are dummy indexes)
--   Scalar value (could also be written *F*<sub>*i*, *i*</sub>)
+-   Scalar value (could also be written `$F_{i,i}$`)
 
 

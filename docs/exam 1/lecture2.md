@@ -321,7 +321,7 @@ _j_, is repeated in the first term, indicating summation.
 ----
 ## contraction
 
--   *T*<sub>*ii*</sub> is the contraction of *T*<sub>*ij*</sub>
+-   `$T_{ii}$` is the contraction of `$T_{ij}$`
 -   This can often be a useful tool in solving tensor equations
 -   `$T_{ij} = \lambda \Delta \delta_{ij} + 2\mu E_{ij}$`
 -   `$T_{ii} = \lambda \Delta \delta_{ii} + 2\mu E_{ii}$`

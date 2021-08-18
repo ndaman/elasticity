@@ -329,7 +329,7 @@ _j_, is repeated in the first term, indicating summation.
 ----
 ## example
 
--   Solve the equation below for *U*<sub>*k*</sub> in terms of *P*<sub>*i*</sub> and *a*<sub>*i*</sub>.
+-   Solve the equation below for `$U_k$` in terms of *P*<sub>*i*</sub> and *a*<sub>*i*</sub>.
 -   <!-- .element style="list-style-type: none" --> 
 `$$\mu \left[ \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_j \right] U_k = P_j$$`
 -   <!-- .element class="fragment" --> Multiply both sides by 

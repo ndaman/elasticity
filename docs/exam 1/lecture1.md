@@ -366,7 +366,7 @@ August 17, 2021
 
 -   How can we write matrix multiplication in index notation?
 
-`$$begin{bmatrix}
+`$$\begin{bmatrix}
     a_{11} & a_{12} \\
     a_{21} & a_{22}
 \end{bmatrix}
@@ -540,7 +540,8 @@ _j_, is repeated in the first term, indicating summation.
 `$$\begin{aligned}
 \frac{\partial T_{11}}{\partial x_1} + \frac{\partial T_{12}}{\partial x_2} + \frac{\partial T_{13}}{\partial x_3} + F_1= 0\\
 \frac{\partial T_{21}}{\partial x_1} + \frac{\partial T_{22}}{\partial x_2} + \frac{\partial T_{23}}{\partial x_3} + F_2= 0\\
-\frac{\partial T_{31}}{\partial x_1} + \frac{\partial T_{32}}{\partial x_2} + \frac{\partial T_{33}}{\partial x_3} + F_3= 0\\\end{aligned}$$`
+\frac{\partial T_{31}}{\partial x_1} + \frac{\partial T_{32}}{\partial x_2} + \frac{\partial T_{33}}{\partial x_3} + F_3= 0
+\end{aligned}$$`
 
 ----
 ## example 2

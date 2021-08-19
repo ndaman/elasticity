@@ -1,0 +1,453 @@
+# AE731
+## Theory of Elasticity
+Dr. Nicholas Smith
+
+
+Wichita State University, Department of Aerospace Engineering
+August 19, 2021
+
+
+## upcoming schedule
+
+-   Aug 19 - Coordinate Transformation
+-   Aug 24 - Principal Values
+-   Aug 26 - Tensor Calculus
+-   Aug 27 - Homework 1 Due
+-   Aug 31 - Displacement and Strain
+
+
+## outline
+
+<!-- vim-markdown-toc GFM -->
+
+* review
+* examples
+* index notation algebra
+* group problems
+* coordinate transformation
+* examples
+
+<!-- vim-markdown-toc -->
+
+
+# review
+
+
+## office hours
+
+-   Homework will generally be due on Fridays
+-   Feel free to e-mail me for an appointment outside office hours if the time does not work for you
+
+
+## homework
+
+-   Homework 1 is available on Blackboard if you want to start working on it
+-   Covers all of Chapter 1, relatively difficult, don’t wait until last minute
+-   Study groups help a lot (but submit your own work)
+
+
+## index notation
+
+Free index vs. dummy index
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+-   is not repeated on any term
+-   takes all values (1,2,3)
+-   e.g. \\(u_i = (u_1, u_2, u_3)\\)
+-   must match across terms in an express or equation
+
+:::
+::: {.column width="50%"}
+-   is repeated on at least one term
+-   indicates summation over all values
+-   e.g. \\(\sigma_{ii} = \sigma_{11} + \sigma_{22} + \sigma_{33}\\)
+-   can not be used more than twice in the same term (\\(A_{ij}B_{jk}C_{kl}\\) is good, \\(A_{ij}B_{ij}C_{ij}\\) is not)
+
+:::
+::::::::::::::
+
+## symmetry
+
+-   We can break any tensor up into symmetric and anti-symmetric portions
+-   <!-- .element style="list-style-type: none" --> 
+\\(a_{ij} = \frac{1}{2} (a_{ij} + a_{ji}) + \frac{1}{2} (a_{ij} - a_{ji})\\)
+
+
+## example
+
+-   Find symmetric and anti-symmetric portions of
+
+\\[\begin{bmatrix}
+1 & 4 & 3\\
+2 & 1 & 5\\
+4 & 3 & 6
+\end{bmatrix}\\]
+
+
+## example symmetric portion
+
+\\[a_{(ij)} = \frac{1}{2}(a_{ij} + a_{ji})\\]
+
+\\[a_{(ij)} = \frac{1}{2} \left (
+\begin{bmatrix}
+1 & 4 & 3\\
+2 & 1 & 5\\
+4 & 3 & 6
+\end{bmatrix}+
+\begin{bmatrix}
+1 & 2 & 4\\
+4 & 1 & 3\\
+3 & 5 & 6
+\end{bmatrix}\right)
+= \begin{bmatrix}
+1 & 3 & 3.5\\
+3 & 1 & 4\\
+3.5 & 4 & 6
+\end{bmatrix}\\]
+
+
+## example anti-symmetric portion
+
+\\[a_{(ij)} = \frac{1}{2}(a_{ij} - a_{ji})\\]
+
+\\[a_{(ij)} = \frac{1}{2} \left (
+\begin{bmatrix}
+1 & 4 & 3\\
+2 & 1 & 5\\
+4 & 3 & 6
+\end{bmatrix}-
+\begin{bmatrix}
+1 & 2 & 4\\
+4 & 1 & 3\\
+3 & 5 & 6
+\end{bmatrix}\right)
+= \begin{bmatrix}
+0 & 1 & -0.5\\
+-1 & 0 & 1\\
+0.5 & -1 & 0
+\end{bmatrix}\\]
+
+
+## special symbols
+
+-   For convenience we define two symbols in index notation
+-   *Kronecker delta* is a general tensor form of the Identity Matrix
+
+\\[\delta_{ij} = \left\{
+\begin{array}{ll}
+1& \text{if $i=j$}\\
+0& \text{otherwise}
+\end{array}
+\right. = \begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}\\]
+
+-   Is also used for higher order tensors
+
+
+## Kronecker delta
+
+-   \\(\delta_{ij} = \delta_{ji}\\)
+-   \\(\delta_{ij} = 3\\)
+-   \\(\delta_{ij} a_j = a_i\\)
+-   \\(\delta_{ij}a_{ij} = a_{ii}\\)
+
+
+## partial derivative
+
+-   We indicate (partial) derivatives using a comma
+-   In three dimensions, we take the partial derivative with respect to each variable \\((x, y, z)\\) or \\((x_1, x_2, x_3)\\)
+-   For example a scalar property, such as density, can have a different value at any point in space
+-   \\(\rho = \rho(x_1, x_2, x_3)\\)
+
+\\[\rho_{,i} = \frac{\partial}{\partial x_i} \rho = \left\langle \frac{\partial \rho }{\partial x_1}, \frac{\partial \rho }{\partial x_2}, \frac{\partial \rho }{\partial x_3} \right\rangle\\]
+
+
+## partial derivative
+
+-   Similarly, if we take the partial derivative of a vector, it produces a matrix
+
+\\[u_{i,j} = \frac{\partial}{\partial x_j} u_i = \begin{bmatrix}
+\frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2} & \frac{\partial u_1}{\partial x_3}\\
+\frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2} & \frac{\partial u_2}{\partial x_3}\\
+\frac{\partial u_3}{\partial x_1} & \frac{\partial u_3}{\partial x_2} & \frac{\partial u_3}{\partial x_3}
+\end{bmatrix}\\]
+
+
+# index notation algebra
+
+
+## substitution
+
+-   When solving tensor equations, we often need to manipulate expressions
+-   We need to make sure the correct indexes are used when substituting, for example
+-   \\(a_i = U_{im}b_m\\)
+-   \\(b_i = V_{im}c_m\\)
+-   To substitute the second into the first, we need to change indexes
+
+
+## substitution
+
+-   We need to change the free index, *i*, to *m* in the second equation
+-   Since *m* is already used as the dummy index, we need to change that too
+-   \\(b_m = V_{mj}c_j\\)
+-   We can now make the substitution
+-   \\(a_i = U_{im} V_{mj}c_j\\)
+
+
+## multiplication
+
+-   We need to be careful with indexes when multiplying expressions
+-   \\(p = a_m b_m\\) and \\(q = c_m d_m\\)
+-   We can express, *pq*, but remember the dummy index cannot be repeated more than once
+-   \\(pq \ne a_m b_m c_m d_m\\)
+-   Instead we must change the dummy index in one of the expressions first
+-   \\(pq = a_m b_m c_n d_n\\)
+
+
+## factoring
+
+-   In the following expression, we would like to factor out *n*, but it has different indexes
+-   \\(T_{ij}n_j - \lambda n_i = 0\\)
+-   Recall \\(\delta_{ij}a_j = a_i\\), we can rewrite \\(n_i = \delta_{ij}n_j\\)
+-   \\(T_{ij}n_j = \lambda \delta_{ij}n_j = 0\\)
+-   \\(T_{ij} - \lambda \delta_{ji})n_j = 0\\)
+
+
+## contraction
+
+-   \\(T_{ii}\\) is the contraction of \\(T_{ij}\\)
+-   This can often be a useful tool in solving tensor equations
+-   \\(T_{ij} = \lambda \Delta \delta_{ij} + 2\mu E_{ij}\\)
+-   \\(T_{ii} = \lambda \Delta \delta_{ii} + 2\mu E_{ii}\\)
+
+
+## example
+
+-   Solve the equation below for \\(U_k\\) in terms of \\(P_i\\) and \\(a_i\\).
+\\[\mu \left[ \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_j \right] U_k = P_j\\]
+Multiply both sides by 
+\\(a_j\\)
+\\[\mu \left[ a_j \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_j a_j \right] U_k = P_j a_j\\]
+The dummy indexes can be changed
+\\[\mu \left[ a_j \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_i a_i \right] U_k = P_j a_j\\]
+
+
+## example
+
+-   \\(a_j \delta_{kj} = a_k\\)
+\\[\mu U_k \left[ a_k a_i a_i + \frac{1}{1-2\nu} a_k a_i a_i \right] = P_j a_j\\]
+Factoring
+\\[\mu U_k a_k a_i a_i \left[ 1 + \frac{1}{1-2\nu} \right] = P_j a_j\\]
+Simplifying
+\\[\mu U_k a_k a_i a_i \left[ \frac{2(1-\nu)}{1-2\nu} \right] = P_j a_j\\]
+
+
+## example
+
+-   Solve for \\(U_k a_k\\)
+\\[U_k a_k = \frac{P_j a_j(1-2\nu)}{2\mu a_i a_i (1-\nu) }\\]
+This is a scalar equation, we need to find \\(U_k\\) but we substitute this back into the original equation.
+First, expand the original equation
+\\[\mu U_k \delta_{kj} a_i a_i + \mu U_k \frac{1}{1-2\nu} a_k a_j = P_j\\]
+
+
+## example
+
+-   After substitution, we find
+\\[\mu U_j a_i a_i + \mu \frac{1}{1-2\nu} \frac{P_j a_j(1-2\nu)}{2\mu a_i a_i (1-\nu) } a_j = P_j\\]
+The index *j* is repeated too many times, so we need to change \\(P_j a_j\\) to a different index
+\\[\mu U_j a_i a_i + \frac{P_k a_k}{2 a_i a_i (1-\nu) } a_j = P_j\\]
+We can now solve for \\(U_j\\)
+\\[U_j  = \frac{1}{\mu a_i a_i} \left[P_j - \frac{P_k a_k}{2 a_i a_i (1-\nu) } a_j\right]\\]
+
+
+
+# group problems
+
+
+## group 1 
+
+Identify the dummy and free indexes in each of the following expressions. Indicate the tensor order of the expression. If index notation is used incorrectly, identify why it is used incorrectly and propose a correction.
+
+1.  \\(a_i b_j c_k + d_{ijk}\\)
+2.  \\(a_{ii}b_k + c_{kk} d_j\\)
+3.  \\(C_{ijkl}\epsilon_{kl}\\)
+
+
+## group 2 
+
+Is it possible to factor \\(n_i\\) from the following equation? If so, factor it.
+
+\\[T_{ij} n_j - \lambda n_i = 0\\]
+
+
+## group 3 
+
+Find the symmetric, \\(S_{ij}\\), and anti-symmetric, \\(A_{ij}\\), portions of \\(T_{ij}\\).
+Verify that \\(S_{ij} + A_{ij} = T_{ij}\\)
+
+\\[T_{ij} = \begin{bmatrix}
+      1 & 0 & 3\\
+      0 & 1 & 2\\
+      3 & 0 & 3
+ \end{bmatrix}\\]
+
+
+# coordinate transformation
+
+
+## two dimensions
+
+![2D axis to illustrate coordinate transformation](../images/transform2D.png) <!-- .element width="80%" -->
+
+
+## dimensions
+
+-   The vector, *v*, remains fixed, but we transform our coordinate system
+-   In the new coordinate system, the \\(x_2^\prime\\) portion of *v* is zero.
+-   To transform the coordinate system, we first define some unit vectors.
+-   \\(\hat{e}_1\\) is a unit vector in the direction of \\(x_1\\), while \\(\hat{e}_1^\prime\\) is a unit vector in the direction of \\(x_1^\prime\\)
+
+
+## two dimensions
+
+![2D axis with unit vectors along the axes to illustrate coordinate transformation](../images/transform2D-unit.png) <!-- .element width="80%" --> 
+
+
+## two dimensions
+
+-   For this example, let us assume \\(v = \langle 2, 2 \rangle\\) and \\(\theta = 45^\circ\\)
+-   We can write the transformed unit vectors, \\(\hat{e}_1^\prime\\) and \\(\hat{e}_2^\prime\\) in terms of \\(\hat{e}_1\\), \\(\hat{e}_2\\) and the angle of rotation, \\(\theta\\).
+
+\\[\begin{aligned}
+\hat{e}_1^\prime &= \langle \hat{e}_1 \cos \theta , \hat{e}_2 \sin \theta\rangle\\
+\hat{e}_2^\prime &= \langle -\hat{e}_1 \sin \theta , \hat{e}_2 \cos \theta \rangle\end{aligned}\\]
+
+
+## two dimensions
+
+-   We can write the vector, *v*, in terms of the unit vectors describing our axis system
+-   \\(v = v_1 \hat{e}_1 + v_2 \hat{e}_2\\)
+-   (note: \\(\hat{e}_1=\langle 1, 0 \rangle\\) and \\(\hat{e}_2 = \langle 0,1 \rangle\\) )
+-   \\(v = \langle 2, 2 \rangle = 2\langle 1, 0\rangle + 2\langle 0, 1 \rangle\\)
+
+
+
+## general 
+
+-   Coordinate transformation can become much more complicated in three dimensions, and with higher-order tensors
+-   It is convenient to define a general form of the coordinate transformation in index notation
+-   We define \\(Q_{ij}\\) as the cosine of the angle between the \\(x_i^\prime\\) axis and the \\(x_j\\) axis.
+-   This is also referred to as the “direction cosine”
+\\[Q_{ij} = \cos(x_i^\prime, x_j)\\]
+
+
+## general 
+
+-   We can use this form on our 2D transformation example
+
+\\[\begin{aligned}
+Q_{ij} &= \cos (x_i^\prime, x_j)\ &= \begin{bmatrix}
+\cos (x_1^\prime, x_1) & \cos (x_1^\prime, x_2)\\
+\cos (x_2^\prime, x_1) & \cos (x_2^\prime, x_2)
+\end{bmatrix}\ &= \begin{bmatrix}
+\cos \theta & \cos (90-\theta)\\
+\cos (90+\theta) & \cos \theta
+\end{bmatrix} \ &= \begin{bmatrix}
+\cos \theta & \sin \theta \\
+-\sin \theta & \cos \theta
+\end{bmatrix}\end{aligned}\\]
+
+
+## general 
+
+-   We can transform any-order tensor using \\(Q_{ij}\\)
+-   Vectors (first-order tensors): \\(v_i^\prime = Q_{ij}v_j\\)
+-   Matrices (second-order tensors): \\(\sigma_{mn}^\prime = Q_{mi}Q_{nj}\sigma_{ij}\\)
+-   Fourth-order tensors: \\(C_{ijkl}^\prime = Q_{im}Q_{jn}Q_{ko}Q_{lp}C_{mnop}\\)
+
+
+## general 
+
+-   We can similarly use \\(Q_{ij}\\) to find tensors in the original coordinate system
+-   Vectors (first-order tensors): \\(v_i = Q_{ji}v_j^\prime\\)
+-   Matrices (second-order tensors): \\(\sigma_{mn} = Q_{im}Q_{jn}\sigma_{ij}^\prime\\)
+-   Fourth-order tensors: \\(C_{ijkl} = Q_{mi}Q_{nj}Q_{ok}Q_{pl}C_{mnop}^\prime\\)
+
+
+## mental and emotional health warning
+
+-   Some texts flip the definition of \\(Q_{ij}\\), and then flip their transformation law accordingly
+-   Any time you use tensor transformation, make sure you are following a consistent set of transformation laws
+
+
+## general 
+
+-   We can derive some interesting properties of the transformation tensor, \\(Q_{ij}\\)
+-   We know that \\(v_i = Q_{ji}v_j^\prime\\) and that \\(v_i^\prime = Q_{ij}v_j\\)
+-   If we substitute (changing the appropriate indexes) we find:
+-   \\(v_i = Q_{ji}Q_{jk}v_k\\)
+-   We can now use the Kronecker Delta to substitute \\(v_i = \delta_{ik}v_k\\) which gives
+-   \\(\delta_{ik}v_k} = Q_{ji}Q_{jk}v_k\\)
+
+
+# examples
+
+
+## example
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+![empty 3D coordinate system with axes labeled for example problem](../images/example-a.png)
+
+:::
+::: {.column width="50%"}
+-   Find \\(Q_{ij}^1\\) for rotation of \\(60^\circ\\) about \\(x_2\\)
+-   Find \\(Q_{ij}^2\\) for rotation of \\(30^\circ\\) about \\(x_3^\prime\\)
+-   Find \\(e_i^{\prime \prime}\\) after both rotations 
+
+:::
+::::::::::::::
+
+## example
+
+![3d coordinate system after first rotation](../images/example-b.png) <!-- .element width="50%" --> 
+
+
+## example
+
+![3d coordinate system after second rotation](../images/example-c.png)<!-- .element width="50%" --> 
+
+
+## example
+
+-   \\(Q_{ij}^1 = \cos(x_i^\prime, x_j)\\)
+-   \\(Q_{ij}^2 = \cos(x_i^\prime, x_j)\\)
+
+\\[Q_{ij}^1 = \begin{bmatrix}
+\cos 60 & \cos 90 & \cos 150\\
+\cos 90 & \cos 0 & \cos 90\\
+\cos 30 & \cos 90 & \cos 60
+\end{bmatrix}\\]
+\\[Q_{ij}^2 = \begin{bmatrix}
+\cos 30 & \cos 60 & \cos 90\\
+\cos 120 & \cos 30 & \cos 90\\
+\cos 90 & \cos 90 & \cos 0
+\end{bmatrix}\\]
+
+
+## example
+
+-   We now use \\(Q_{ij}\\) to find \\(\hat{e}_i^\prime\\) and \\(\hat{e}_i^{\prime \prime}\\)
+-   First, we need to write \\(\hat{e}_i\\) in a manner more consistent with index notation
+-   We will indicate axis direction with a superscript, e.g. \\(\hat{e}_1 = e_i^1\\)
+-   \\(e_i^\prime = Q_{ij}^1 e_j\\)
+-   \\(e_i^{\prime \prime} = Q_{ij}^2 e_j^\prime\\)
+-   How do we find \\(e_i^{\prime \prime}\\) in terms of \\(e_i\\)?
+-   \\(e_i^{\prime \prime} = Q_{ij}^2 Q_{jk}^1 e_k\\)
+
+

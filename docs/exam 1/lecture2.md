@@ -392,7 +392,7 @@ Q_{ij} &= \cos (x_i^\prime, x_j)\\ &= \begin{bmatrix}
 -   If we substitute (changing the appropriate indexes) we find:
 -   `$v_i = Q_{ji}Q_{jk}v_k$`
 -   We can now use the Kronecker Delta to substitute `$v_i = \delta_{ik}v_k$` which gives
--   `$\delta_{ik}v_k} = Q_{ji}Q_{jk}v_k$`
+-   `$\delta_{ik}v_k = Q_{ji}Q_{jk}v_k$`
 
 ---
 # examples

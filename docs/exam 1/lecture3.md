@@ -287,7 +287,7 @@ August 24, 2021
 `$$\begin{aligned}
 	I_\alpha &= a_{ii}\\
 	II_\alpha &= \frac{1}{2}(a_{ii} a_{jj} - a_{ij}a_{ij})\\
-	III_\alpha &= \det \[ a_{ij}\]
+	III_\alpha &= \det [ a_{ij}]
 \end{aligned}$$`
 
 ----

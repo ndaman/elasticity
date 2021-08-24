@@ -126,7 +126,7 @@ August 24, 2021
 
 -   And we find
 
-`$$A_{mn} = Q_{mi}Q_{nj}A_{ij}$`
+`$$A_{mn} = Q_{mi}Q_{nj}A_{ij}$$`
 
 `$$A_{ij}^\prime = \begin{bmatrix}
 	5 & 0 \\

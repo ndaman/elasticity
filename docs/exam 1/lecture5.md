@@ -71,16 +71,20 @@ Wichita State University, Department of Aerospace Engineering
 -   For example, consider the 2D deformation
 
 `$$\begin{Bmatrix}
-		x_1 \\ x_2
+		x_1 \\
+    x_2
 	\end{Bmatrix} =
 	\begin{Bmatrix}
-		2 x_1^0 \\ x_2^0
+		2 x_1^0 \\
+    x_2^0
 	\end{Bmatrix} \quad \text{or} \quad
 	\begin{Bmatrix}
-		x_1^0 \\ x_2^0
+		x_1^0 \\
+    x_2^0
 	\end{Bmatrix}
 		= \begin{Bmatrix}
-		\frac{1}{2} x_1 \\ x_2
+		\frac{1}{2} x_1 \\
+    x_2
 \end{Bmatrix}$$`
 
 ----
@@ -181,7 +185,8 @@ Displacement is identical in Eulerian and Lagrangian descriptions
   \frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2}\\
 \frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2}   \end{bmatrix}$$`
 `$$F = \begin{bmatrix}
-  1 & 0 \\ 0 & 1
+  1 & 0 \\
+  0 & 1
 \end{bmatrix}$$`
 
 ----
@@ -213,7 +218,8 @@ Displacement is identical in Eulerian and Lagrangian descriptions
 	\frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2}\\
 \frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2}   \end{bmatrix}$$`
 `$$F = \begin{bmatrix}
-	\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta
+	\cos \theta & -\sin \theta \\
+  \sin \theta & \cos \theta
 \end{bmatrix}$$`
 
 ----
@@ -246,7 +252,8 @@ Displacement is identical in Eulerian and Lagrangian descriptions
 	\frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2}\\
 \frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2}   \end{bmatrix}$$`
 `$$F = \begin{bmatrix}
-	1 & \frac{1}{2} \\ 0 & 1
+	1 & \frac{1}{2} \\
+  0 & 1
 \end{bmatrix}$$`
 
 ----
@@ -256,7 +263,8 @@ Displacement is identical in Eulerian and Lagrangian descriptions
 -   We can design an experiment with a state of pure shear by inducing this deformation
 
 `$$F = \begin{bmatrix}
-	1 & \frac{1}{2} \\ \frac{1}{2} & 1
+	1 & \frac{1}{2} \\
+  \frac{1}{2} & 1
 \end{bmatrix}$$`
 
 -   We can integrate our usual relationship to find `$u_1$` and `$u_2$`
@@ -414,9 +422,13 @@ Displacement is identical in Eulerian and Lagrangian descriptions
 -   Calculate the deformation gradient, strain tensor, and rotation tensor for the given deformation
 
 `$$\begin{Bmatrix}
-	u_1 \\ u_2 \\ u_3
+	u_1 \\
+  u_2 \\
+  u_3
 	\end{Bmatrix} = \begin{Bmatrix}
-	xy^2z \\ xz \\ z^3
+	xy^2z \\
+  xz \\
+  z^3
 \end{Bmatrix}$$`
 
 - Deformation gradient:

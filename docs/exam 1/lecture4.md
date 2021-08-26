@@ -139,11 +139,11 @@ end; end; end; end;
 -   Some useful relations
 
 `$$\begin{aligned}
-	\[A\]\[A\]\[B\] & = A_{ij} B_{jk}\\
-	\[A\]\[B\]^T & = A_{ij} B_{kj}\\
-	\[A\]^T\[B\] & = A_{ji} B_{jk}\\
-	tr(\[A\]\[B\]) & = A_{ij} B_{ji}\\
-	tr(\[A\]\[B\]^T) & = A_{ij} B_{ij}
+	[A][A][B] & = A_{ij} B_{jk}\\
+	[A][B]^T & = A_{ij} B_{kj}\\
+	[A]^T[B] & = A_{ji} B_{jk}\\
+	tr([A][B]) & = A_{ij} B_{ji}\\
+	tr([A][B]^T) & = A_{ij} B_{ij}
 \end{aligned}$$`
 
 ----

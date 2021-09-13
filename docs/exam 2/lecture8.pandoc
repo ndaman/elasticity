@@ -1,10 +1,12 @@
 # AE731
 ## Theory of Elasticity
-Dr. Nicholas Smith<br/>
+Dr. Nicholas Smith
+
+
 Wichita State University, Department of Aerospace Engineering
 September 14, 2021
 
-----
+
 ## upcoming schedule
 
 -   Sep 14 - Exam return, Traction vector
@@ -14,170 +16,170 @@ September 14, 2021
 -   Sep 23 - Material Characterization
 -   Sep 24 - Homework 3 Due
 
----
+
 # exam
 
-----
+
 ## average
 
 
-----
+
 ## problems
 
 
----
+
 # traction vector and stress tensor
 
-----
+
 ## traction
 
 ![traction vector illustration](../images/traction.PNG)
 
-----
+
 ## traction
 
 -   The traction vector is defined as
 
-`$$\hat{t}^n(x,\hat{n}) = \lim\limits_{\Delta A \to 0} \frac{\Delta \hat{f}}{\Delta A}$$`
+\\[\hat{t}^n(x,\hat{n}) = \lim\limits_{\Delta A \to 0} \frac{\Delta \hat{f}}{\Delta A}\\]
 
 -   By Newton’s third law (action-reaction principle)
 
-`$$\hat{t}^n(x,\hat{n}) = -\hat{t}^n(x,-\hat{n})$$`
+\\[\hat{t}^n(x,\hat{n}) = -\hat{t}^n(x,-\hat{n})\\]
 
-----
+
 ## traction
 
 ![traction illustrated on a cube](../images/traction-cube.png)
 
-----
+
 ## traction
 
--   If we consider the special case where the normal vectors, `$\hat{n}$`, align with the coordinate system (`$\hat{e}_1$`,`$\hat{e}_2$`,`$\hat{e}_3$`)
+-   If we consider the special case where the normal vectors, $\hat{n}$, align with the coordinate system ($\hat{e}_1$,$\hat{e}_2$,$\hat{e}_3$)
 
 -   On the 1-face:
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\hat{n}&=\hat{e}_1: &\quad \hat{t}^n = t_i^{(\hat{e}_1)} \hat{e}_i = t_1^{(\hat{e}_1)} \hat{e}_1 + t_2^{(\hat{e}_1)} \hat{e}_2 + t_3^{(\hat{e}_1)} \hat{e}_3
-\end{aligned}$$`
+\end{aligned}\\]
 
 -   On the 2-face:
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\hat{n}&=\hat{e}_2: &\quad \hat{t}^n = t_i^{(\hat{e}_2)} \hat{e}_i = t_1^{(\hat{e}_2)} \hat{e}_1 + t_2^{(\hat{e}_2)} \hat{e}_2 + t_3^{(\hat{e}_2)} \hat{e}_3
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## traction
 
 -   And on the 3-face:
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\hat{n}&=\hat{e}_3: &\quad \hat{t}^n = t_i^{(\hat{e}_3)} \hat{e}_i = t_1^{(\hat{e}_3)} \hat{e}_1 + t_2^{(\hat{e}_3)} \hat{e}_2 + t_3^{(\hat{e}_3)} \hat{e}_3
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## stress tensor
 
 -   To simplify the notation, we introduce the stress tensor
 
-`$$\sigma_{ij} = t_j^{(\hat{e}_i)}$$`
+\\[\sigma_{ij} = t_j^{(\hat{e}_i)}\\]
 
 ![stress tensor illustrated on a cube](../images/stress-cube.png)
 
-----
+
 ## traction
 
--   We can find some interesting information about the traction vector by considering an arbitrary tetrahedron with some traction `$\hat{t}^{(n)}$` applied to the surface
+-   We can find some interesting information about the traction vector by considering an arbitrary tetrahedron with some traction \\(\hat{t}^{(n)}\\) applied to the surface
 
-----
+
 ## traction
 
--   If we consider the balance of forces in the `$x_1$`-direction
+-   If we consider the balance of forces in the \\(x_1\\)-direction
 
-`$$t_1 dA - \sigma_{11}dA_1 - \sigma_{21}dA_2 - \sigma_{31}dA_3 + b_1 \rho dV = 0$$`
+\\[t_1 dA - \sigma_{11}dA_1 - \sigma_{21}dA_2 - \sigma_{31}dA_3 + b_1 \rho dV = 0\\]
 
 -   The area components are:
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	dA_1 &= n_1 dA\\
 	dA_2 &= n_2 dA\\
 	dA_3 &= n_3 dA\\
-\end{aligned}$$`
+\end{aligned}\\]
 
--   And `$dV = \frac{1}{3}h dA$`.
+-   And \\(dV = \frac{1}{3}h dA\\).
 
-----
+
 ## traction
 
-`$$t_1 dA - \sigma_{11} n_1 dA - \sigma_{21} n_2 dA - \sigma_{31} n_3 dA + b_1 \rho \frac{1}{3}h dA = 0$$`
+\\[t_1 dA - \sigma_{11} n_1 dA - \sigma_{21} n_2 dA - \sigma_{31} n_3 dA + b_1 \rho \frac{1}{3}h dA = 0\\]
 
--   If we let `$h \to 0$` and divide by `$dA$`
+-   If we let \\(h \to 0\\) and divide by \\(dA\\)
 
-`$$t_1 = \sigma_{11}n_1 + \sigma_{21}n_2 + \sigma_{31}n_3$$`
+\\[t_1 = \sigma_{11}n_1 + \sigma_{21}n_2 + \sigma_{31}n_3\\]
 
 -   We can write this in index notation as
 
-`$$t_1 = \sigma_{i1}n_i$$`
+\\[t_1 = \sigma_{i1}n_i\\]
 
-----
+
 ## traction
 
 -   We find, similarly
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	t_2 &= \sigma_{i2} n_i\\
 	t_3 &= \sigma_{i3} n_i\\
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## traction
 
 -   We can further combine these results in index notation as
 
-`$$t_j = \sigma_{ij}n_i$$`
+\\[t_j = \sigma_{ij}n_i\\]
 
--   This means with knowledge of the nine components of `$\sigma_{ij}$`, we can find the traction vector at any point on any surface
+-   This means with knowledge of the nine components of \\(\sigma_{ij}\\), we can find the traction vector at any point on any surface
 
-----
+
 ## example
 
 -   Consider a block of material with a uniformly distributed force acting on the 1-face. Find the tractions on an arbitrary interior plane
 
 ![traction cut on some arbitrary plane](../images/traction-cut.png)
 
-----
+
 ## example
 
--   First we consider a vertical cut on the interior 1-face (`$n_i = \langle 1, 0, 0 \rangle$`)
--   Next we represent the force *P* as a vector, `$p_i = \langle P, 0, 0 \rangle$`
+-   First we consider a vertical cut on the interior 1-face (\\(n_i = \langle 1, 0, 0 \rangle\\))
+-   Next we represent the force *P* as a vector, \\(p_i = \langle P, 0, 0 \rangle\\)
 -   Balancing forces yields
 
-`$t_i A - p_i = 0$`
+\\(t_i A - p_i = 0\\)
 
--   We find `$t_1 = \frac{P}{A} = \sigma_{11}$`, `$t_2 = 0 = \sigma_{12}$` and `$t_3 = 0 = \sigma_{13}$`
+-   We find \\(t_1 = \frac{P}{A} = \sigma_{11}\\), \\(t_2 = 0 = \sigma_{12}\\) and \\(t_3 = 0 = \sigma_{13}\\)
 
-----
+
 ## example
 
 -   No force is applied in the other directions, so it is trivial to find the rest of the stress tensor
 
-`$$\sigma_{ij} = \begin{bmatrix}
+\\[\sigma_{ij} = \begin{bmatrix}
 	P/A & 0 & 0\\
 	0 & 0 & 0\\
 	0 & 0 & 0
-\end{bmatrix}$$`
+\end{bmatrix}\\]
 
-----
+
 ## example
 
 -   We can now consider any arbitrary angle of interior cut.
--   The normal for a cut as shown in the diagram will be `$n_i = \langle cos \theta, \sin \theta, 0 \rangle$`.
--   We can again use `$t_j = \sigma_{ij}n_i$` to find `$t_j$` for any angle
+-   The normal for a cut as shown in the diagram will be \\(n_i = \langle cos \theta, \sin \theta, 0 \rangle\\).
+-   We can again use \\(t_j = \sigma_{ij}n_i\\) to find \\(t_j\\) for any angle
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	t_1 &= \frac{P}{A} \cos \theta \\
 	t_2 &= 0\\
 	t_3 &= 0
-\end{aligned}$$`
+\end{aligned}\\]
 
 

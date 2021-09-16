@@ -341,7 +341,7 @@ September 16, 2021
 
 -   Substituting back into the original equation gives
 
-`$$\tau^\prime_{max} = \frac{\sigma_y - \sigma_x}{2}\sin \left\[\tan ^{-1} \left(\frac{(\sigma_y-\sigma_x)}{2\tau_{xy}}\right)\right\] + \tau_{xy} \cos \left\[\tan ^{-1} \left(\frac{(\sigma_y-\sigma_x)}{2\tau_{xy}}\right)\right\]$$`
+`$$\tau^\prime_{max} = \frac{\sigma_y - \sigma_x}{2}\sin \left[\tan ^{-1} \left(\frac{(\sigma_y-\sigma_x)}{2\tau_{xy}}\right)\right] + \tau_{xy} \cos \left[\tan ^{-1} \left(\frac{(\sigma_y-\sigma_x)}{2\tau_{xy}}\right)\right]$$`
 
 -   Note that
 

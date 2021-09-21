@@ -1,10 +1,12 @@
 # AE731
 ## Theory of Elasticity
-Dr. Nicholas Smith<br/>
+Dr. Nicholas Smith
+
+
 Wichita State University, Department of Aerospace Engineering
 September 30, 2021
 
-----
+
 ## upcoming schedule
 
 -   Sep 30 - Boundary Conditions
@@ -14,7 +16,7 @@ September 30, 2021
 -   Oct 8 - Homework 4 Self-grade Due, Homework 5 Due
 -   (Oct 12) - Fall Break (No Class)
 
-----
+
 ## outline
 
 <!-- vim-markdown-toc GFM -->
@@ -26,171 +28,171 @@ September 30, 2021
 
 <!-- vim-markdown-toc -->
 
----
+
 # field equations
 
-----
+
 ## field equations
 
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\epsilon_{ij} &= \frac{1}{2}(u_{i,j} + u_{j,i}) \qquad \text{Strain-Displacement} \\
 	\sigma_{ij,j} + F_i &= 0 \qquad \text{Equilibrium} \\
 	\sigma_{ij} &= \lambda \epsilon_{kk}\delta_{ij} + 2\mu \epsilon_{ij} \qquad \text{Constitutive (Hooke's Law)}\\
 	\epsilon_{ij} &= \frac{1+\nu}{E}\sigma_{ij} - \frac{\nu}{E}\sigma_{kk} \delta_{ij} &
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## field equations
 
 -   There are 15 unique field equations to solve for the 15 unknowns
--   3 displacements (`$u_i$`), 6 unique strain tensor terms (`$\epsilon_{ij}$`), and 6 unique stress tensor terms (`$\sigma_{ij}$`)
--   These equations also depend on a knowledge of the material behavior (`$\lambda, \mu$`) and body forces (usually gravity or zero)
+-   3 displacements (\\(u_i\\)), 6 unique strain tensor terms (\\(\epsilon_{ij}\\)), and 6 unique stress tensor terms (\\(\sigma_{ij}\\))
+-   These equations also depend on a knowledge of the material behavior (\\(\lambda, \mu\\)) and body forces (usually gravity or zero)
 
-----
+
 ## compatibility equations
 
 -   If continuous, single-valued displacements are specified, differentiation will result in well-behaved strain field
 -   The inverse relationship, integration of a strain field to find displacement, may not always be true
 -   There are cases where we can integrate a strain field to find a set of discontinuous displacements
 
-----
+
 ## compatibility 
 
 -   The compatibility equations enforce continuity of displacements to prevent this from occurring
 -   To enforce this condition we consider the strain-displacement relations:
 
-`$$\epsilon_{ij} = \frac{1}{2}(u_{i,j} + u_{j,i})$$`
+\\[\epsilon_{ij} = \frac{1}{2}(u_{i,j} + u_{j,i})\\]
 
-----
+
 ## compatibility
 
--   and differentiate with respect to `$x_k$` and `$x_l$`
+-   and differentiate with respect to \\(x_k\\) and \\(x_l\\)
 
-`$$\epsilon_{ij,kl} = \frac{1}{2}(u_{i,jkl} + u_{j,ikl})$$`
+\\[\epsilon_{ij,kl} = \frac{1}{2}(u_{i,jkl} + u_{j,ikl})\\]
 
 -   Or
 
-`$$2\epsilon_{ij,kl} = u_{i,jkl} + u_{j,ikl}$$`
+\\[2\epsilon_{ij,kl} = u_{i,jkl} + u_{j,ikl}\\]
 
-----
+
 ## compatibility 
 
 -   We can eliminate the displacement terms from the equation by interchanging the indexes to generate new equations
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	2\epsilon_{ik,jl} &= u_{i,jkl} + u_{k,ijl} \\
 	2\epsilon_{jl,ik} &= u_{j,ikl} + u_{l,ijk}
-\end{aligned}$$`
+\end{aligned}\\]
 
--   Solving for `$u_{i,jkl}$` and `$u_{j,ikl}$`
+-   Solving for \\(u_{i,jkl}\\) and \\(u_{j,ikl}\\)
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	u_{i,jkl} &= 2\epsilon_{ik,jl} - u_{k,ijl} \\
 	u_{j,ikl} &= 2\epsilon_{jl,ik} - u_{l,ijk}
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## compatibility 
 
 -   Substituting these values into the equations gives
 
-`$$2\epsilon_{ij,kl} = 2\epsilon_{ik,jl} = u_{k,ijl} + 2 \epsilon_{jl,ik} - u_{l,ijk}$$`
+\\[2\epsilon_{ij,kl} = 2\epsilon_{ik,jl} = u_{k,ijl} + 2 \epsilon_{jl,ik} - u_{l,ijk}\\]
 
 -   We now consider one more change of index equation
 	
-`$$2\epsilon_{kl,ij} = u_{k,ijl} + u_{l,ijk}$$`
+\\[2\epsilon_{kl,ij} = u_{k,ijl} + u_{l,ijk}\\]
 
-----
+
 ## compatibility
 
 -   and substituting this result gives
 
-`$$2\epsilon_{ij,kl} = 2\epsilon_{ik,jl} + 2\epsilon_{jl,ik} - 2\epsilon_{kl,ij}$$`
+\\[2\epsilon_{ij,kl} = 2\epsilon_{ik,jl} + 2\epsilon_{jl,ik} - 2\epsilon_{kl,ij}\\]
 
 -   Or, simplified
 
-`$$\epsilon_{ij,kl} + \epsilon_{kl,ij} - \epsilon_{ik,jl} - \epsilon_{jl,ik} = 0$$`
+\\[\epsilon_{ij,kl} + \epsilon_{kl,ij} - \epsilon_{ik,jl} - \epsilon_{jl,ik} = 0\\]
 
-----
+
 ## compatibility 
 
 -   The so-called *Saint-Venant compatibility equations* in full are a system of 81 equations, but only six are useful (although even these six are not entirely linearly independent)
 -   These six are found by setting *k*=*l*, or in expanded form
 
-----
+
 ## compatibility
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\frac{\partial^2 \epsilon_x}{\partial y^2} + \frac{\partial^2 \epsilon_y}{\partial x^2} &= 2\frac{\partial^2 \epsilon_{xy}}{\partial x \partial y}\\
 	\frac{\partial^2 \epsilon_y}{\partial z^2} + \frac{\partial^2 \epsilon_z}{\partial y^2} &= 2\frac{\partial^2 \epsilon_{yz}}{\partial y \partial z}\\
 	\frac{\partial^2 \epsilon_z}{\partial x^2} + \frac{\partial^2 \epsilon_x}{\partial z^2} &= 2\frac{\partial^2 \epsilon_{zx}}{\partial z \partial x}\\
 	\frac{\partial^2 \epsilon_x}{\partial y \partial z} &= \frac{\partial}{\partial x} \left(-\frac{\partial \epsilon_{yz}}{\partial x} + \frac{\partial \epsilon_{zx}}{\partial y} + \frac{\partial \epsilon_{xy}}{\partial z}\right)\\
 	\frac{\partial^2 \epsilon_y}{\partial z \partial x} &= \frac{\partial}{\partial y} \left(-\frac{\partial \epsilon_{zx}}{\partial y} + \frac{\partial \epsilon_{xy}}{\partial z} + \frac{\partial \epsilon_{yz}}{\partial x}\right)\\
 	\frac{\partial^2 \epsilon_z}{\partial x \partial y} &= \frac{\partial}{\partial z} \left(-\frac{\partial \epsilon_{xy}}{\partial z} + \frac{\partial \epsilon_{yz}}{\partial x} + \frac{\partial \epsilon_{zx}}{\partial y}\right)
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## compatibility 
 
 -   The compatibility equations are necessary to ensure that the strain field is valid and will produce a continuous displacement field
 -   While these equations are important and necessary in solving elasticity problems, they are not sufficient
 -   15 equations with 15 “unknowns” but each of these “unknowns” could actually be a function with many more unknowns, we need to develop framework for simplifying the problem into something we can solve
 
----
+
 # boundary conditions
 
-----
+
 ## boundary conditions
 
 -   Boundary conditions commonly specify how a body is supported and/or how it is loaded
 -   Mathematically we treat this conditions as *displacements* or *tractions* at boundary points.
 -   Symmetry boundary conditions are also common, can reduce computational cost and simplify analytic solutions.
 
-----
+
 ## boundary conditions
 
 ![illustration of boundary conditions](../images/bcs.PNG)
 
 
-----
+
 ## symmetric boundaries
 
 ![illustration of symmetric boundaries](../images/symmetric.PNG)
 
-----
+
 ## coordinate systems
 
 ![coordinate systems](../images/coordinates.PNG)
 
-----
+
 ## boundaries
 
 -   In many systems, the boundaries are parallel to the coordinate system, but this is not always the case
 
 ![boundaries not parallel to coordinate system](../images/noncoordinate.PNG) <!-- .element width="50%" -->
 
-----
+
 ## boundaries
 
 -   We often translate traction boundary conditions into stress boundary conditions using Cauchy’s Stress Theorem
 -   When the condition is on a face parallel to the coordinate system, this gives a zero-stress condition
 
-`$$t_j = \sigma_{ij} n_i$$`
+\\[t_j = \sigma_{ij} n_i\\]
 
--   This results in `$\sigma_{xy} = \sigma_{yy} = 0$`
+-   This results in \\(\sigma_{xy} = \sigma_{yy} = 0\\)
 
-----
+
 ## boundaries
 
 -   When the boundary is not parallel to the coordinate system, we do not necessarily have any zero-stress conditions
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	t_x &= \sigma_x n_x + \tau_{xy} n_y = 0 \\
 	t_y &= \tau_{xy} n_x + \sigma_y n_y = 0 \\
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## interfaces
 
 -   When we deal with multiple materials, we must prescribe conditions at the interface of these materials
@@ -198,67 +200,67 @@ September 30, 2021
     -   *Perfectly bonded interface* where displacements and tractions are continuous at the interface
     -   *Slip interface* where only normal displacements and tractions are continuous at the interface, with no tangential traction and potentially discontinuous tangential displacement
 
----
+
 # stress formulation
 
-----
+
 ## stress formulation
 
 -   For traction problems (i.e. traction is defined on all surfaces) it is convenient to re-formulate field equations in terms of stress only
 -   Since displacements are eliminated, we will need to use the compatibility equations to ensure a continuous displacement field
 -   It is desirable for this formulation to write the compatibility equations in terms of stress
 
-----
+
 ## stress formulation
 
 -   We start by using Hooke’s law for each of the strain terms
 
-`$$\epsilon_{ij} = \frac{1+\nu}{E}\sigma_{ij} - \frac{\nu}{E}\sigma_{kk} \delta_{ij}$$`
+\\[\epsilon_{ij} = \frac{1+\nu}{E}\sigma_{ij} - \frac{\nu}{E}\sigma_{kk} \delta_{ij}\\]
 
 -   After some tedious algebra, we find
 
-`$$\sigma_{ij,kk} + \sigma_{kk,ij} - \sigma_{ik,jk} - \sigma_{jk,ik} = \frac{\nu}{1+\nu} (\sigma_{mm,kk}\delta_{ij} + \sigma_{mm,ij}\delta_{kk} - \sigma_{mm,jk}\delta_{ik} - \sigma_{mm,ik}\delta_{jk})$$`
+\\[\sigma_{ij,kk} + \sigma_{kk,ij} - \sigma_{ik,jk} - \sigma_{jk,ik} = \frac{\nu}{1+\nu} (\sigma_{mm,kk}\delta_{ij} + \sigma_{mm,ij}\delta_{kk} - \sigma_{mm,jk}\delta_{ik} - \sigma_{mm,ik}\delta_{jk})\\]
 
-----
+
 ## stress formulation
 
--   If we also include the equilibrium equations (`$\sigma_{ij,j} - F_i$`) in the formulation, we find
+-   If we also include the equilibrium equations (\\(\sigma_{ij,j} - F_i\\)) in the formulation, we find
 
-`$$\sigma_{ij,kk} + \frac{1}{1+\nu}\sigma_{kk,ij} = \frac{\nu}{1+\nu}\sigma_{mm,kk}\delta_{ij} - F_{i,j} - F_{j,i}$$`
+\\[\sigma_{ij,kk} + \frac{1}{1+\nu}\sigma_{kk,ij} = \frac{\nu}{1+\nu}\sigma_{mm,kk}\delta_{ij} - F_{i,j} - F_{j,i}\\]
 
 -   We can further simplify the equation by considering the case when *i*=*j* and noting that
 
-`$$\sigma_{ii,kk} = -\frac{1+\nu}{1-\nu}F_{i,i}$$`
+\\[\sigma_{ii,kk} = -\frac{1+\nu}{1-\nu}F_{i,i}\\]
 
-----
+
 ## stress formulation
 
 -   Which we can substitute into the equation to find
 
-`$$\sigma_{ij,kk} + \frac{1}{1+\nu}\sigma_{kk,ij} = -\frac{\nu}{1+\nu}\delta_{ij}F_{k,k} - F_{i,j} - F_{j,i}$$`
+\\[\sigma_{ij,kk} + \frac{1}{1+\nu}\sigma_{kk,ij} = -\frac{\nu}{1+\nu}\delta_{ij}F_{k,k} - F_{i,j} - F_{j,i}\\]
 
 -   The compatibility equations in terms of stress are commonly known as the *Beltrami-Michell compatibility equations*
 -   When there are no body forces, we can write the six expanded form equations as
 
-----
+
 ## beltrami-michell 
 
-`$$\begin{aligned}
-	(1+\nu) \nabla^2 \sigma_x + \frac{\partial^2}{\partial x^2} (\sigma_x + \sigma_y + \sigma_z) &= 0\\ (1+\nu) \nabla^2 \sigma_y + \frac{\partial^2}{\partial y^2} (\sigma_x + \sigma_y + \sigma_z) &= 0\\
+\\[\begin{aligned}
+	(1+\nu) \nabla^2 \sigma_x + \frac{\partial^2}{\partial x^2} (\sigma_x + \sigma_y + \sigma_z) &= 0\ (1+\nu) \nabla^2 \sigma_y + \frac{\partial^2}{\partial y^2} (\sigma_x + \sigma_y + \sigma_z) &= 0\\
 	(1+\nu) \nabla^2 \sigma_z + \frac{\partial^2}{\partial z^2} (\sigma_x + \sigma_y + \sigma_z) &= 0\\
 	(1+\nu) \nabla^2 \tau_{xy} + \frac{\partial^2}{\partial x \partial y} (\sigma_x + \sigma_y + \sigma_z) &= 0\\
 	(1+\nu) \nabla^2 \tau_{yz} + \frac{\partial^2}{\partial y \partial z} (\sigma_x + \sigma_y + \sigma_z) &= 0\\
 	(1+\nu) \nabla^2 \tau_{zx} + \frac{\partial^2}{\partial z \partial x} (\sigma_x + \sigma_y + \sigma_z) &= 0\\
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## stress formulation
 
 -   When working with traction boundary problems, these compatibility equations, together with the equilibrium equations, are sufficient to solve the problem
 -   These partial differential equations are not easy to solve, and analytic problems approached this way are often solved only in 2D
 -   Solutions are also commonly based on *stress functions*, which gives a base equation form that automatically satisfies equilibrium
 
-----
+
 ## solution methods
 
 -   Direct method
@@ -269,73 +271,73 @@ September 30, 2021
     -   Solve for coefficients
     -   Usually we know the answer before we know the problem, it can be difficult to find useful problems for our solution
 
-----
+
 ## solution methods
 
 -   Semi-inverse method
     -   Only part of the solution is assumed
     -   Use direct integration to find the rest
 
----
+
 # example
 
-----
+
 ## Levy’s problem
 
 -   Find the stresses in a semi-infinite wedge due to fluid pressure and its own self-weight
 
 ![levy's problem](../images/levee.PNG)
 
-----
+
 ## Levy’s problem
 
 -   Since pressure varies linearly with depth, we will assume a linear state of stress
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\sigma_{x} &= a_1 x + b_1 y + c_1\\
 	\sigma_{y} &= a_2 x + b_2 y + c_2\\
 	\tau_{xy} &= a_{12}x + b_{12} y + c_{12}\\
-\end{aligned}$$`
+\end{aligned}\\]
 
 -   This leaves 9 coefficients to be determined
 
-----
+
 ## Levy’s problem
 
 -   First let us consider the boundary conditions at the apex of the dam
 -   If we let the origin be at the apex of the dam, which must be traction free, we find
 
-`$$c_1 = c_2 = c_{12} = 0$$`
+\\[c_1 = c_2 = c_{12} = 0\\]
 
-----
+
 ## Levy’s problem
 
 -   Next let us consider the equilibrium equations
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\sigma_{x,x} + \tau_{xy,y} + \rho b_x &= 0\\
 	\tau_{xy,x} + \sigma_{y,y} + \rho b_y &= 0
-\end{aligned}$$`
+\end{aligned}\\]
 
 -   Which in this case become
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	a_1 + b_{12} + 0 &= 0\\
 	a_{12} + b_2 - \rho g &= 0
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## Levy’s problem
 
 -   The stresses can now be written as
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\sigma_x &= a_1 x + b_1 y\\
 	\sigma_y &= a_2 x + b_2 y\\
 	\tau_{xy} &= -b_2 x + \rho g x - a_1 y
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## Levy’s problem
 
 -   The compatibility equations are all satisfied, as these linear functions will all go to zero when taking second derivatives

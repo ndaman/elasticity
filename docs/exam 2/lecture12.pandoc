@@ -1,10 +1,12 @@
-# AE731
+
 ## Theory of Elasticity
-Dr. Nicholas Smith<br/>
+Dr. Nicholas Smith
+
+
 Wichita State University, Department of Aerospace Engineering
 September 28, 2021
 
-----
+
 ## upcoming schedule
 
 -   Sep 28 - Thermoelasticity
@@ -15,7 +17,7 @@ September 28, 2021
 -   Oct 8 - Homework 4 Self-grade Due, Homework 5 Due
 -   (Oct 12) - Fall Break (No Class)
 
-----
+
 ## outline
 
 <!-- vim-markdown-toc GFM -->
@@ -28,26 +30,26 @@ September 28, 2021
 
 <!-- vim-markdown-toc -->
 
----
+
 # elastic constants
 
-----
+
 ## isotropic materials
 
-|                  | `$\lambda = $`                    | `$\mu = G = $`                  | *E*=                                           | `$\nu$`                              | *K*=                          |
+|                  | \\(\lambda = \\)                    | \\(\mu = G = \\)                  | *E*=                                           | \\(\nu\\)                              | *K*=                          |
 | -:               | ---:                              | ----------:                     | -------:                                       | -----:                               | -----:                        |
-| `$\lambda, \mu$` |                                   |                                 | `$\frac{\mu(3\lambda + 2\mu)}{\lambda + \mu}$` | `$\frac{\lambda}{2(\lambda + \mu)}$` | `$\frac{3\lambda + 2\mu}{3}$` |
-| *G*,*E*         | `$\frac{G(2G-E)}{E-3G}$`          |                                 |                                                | `$\frac{E-2G}{2G}$`                  | `$\frac{GE}{3(3G-E}$`         |
-| `$G, \nu$`       | `$\frac{2G\nu}{1-2\nu}$`          |                                 | `$2G(1+\nu)$`                                  |                                      | `$\frac{2G(1+G)}{3(1-2G}$`    |
-| `$E, \nu$`       | `$\frac{\nu E}{(1+\nu)(1-2\nu)}$` | `$\frac{E}{2(1+\nu)}$`          |                                                |                                      | `$\frac{E}{3(1-2\nu}$`        |
-| *K*,*E*          | `$\frac{3K(3K-E)}{9K-E}$`         | `$\frac{3EK}{9K-E}$`            |                                                | `$\frac{3K-E}{6K}$`                  |                               |
-| `$\nu, K$`       | `$\frac{3K\nu}{1+\nu}$`           | `$\frac{3K(1-2\nu)}{2(1+\nu)}$` | `$3K(1-2\nu)$`                                 |                                      |                               |
+| \\(\lambda, \mu\\) |                                   |                                 | \\(\frac{\mu(3\lambda + 2\mu)}{\lambda + \mu}\\) | \\(\frac{\lambda}{2(\lambda + \mu)}\\) | \\(\frac{3\lambda + 2\mu}{3}\\) |
+| *G*,*E*         | \\(\frac{G(2G-E)}{E-3G}\\)          |                                 |                                                | \\(\frac{E-2G}{2G}\\)                  | \\(\frac{GE}{3(3G-E}\\)         |
+| \\(G, \nu\\)       | \\(\frac{2G\nu}{1-2\nu}\\)          |                                 | \\(2G(1+\nu)\\)                                  |                                      | \\(\frac{2G(1+G)}{3(1-2G}\\)    |
+| \\(E, \nu\\)       | \\(\frac{\nu E}{(1+\nu)(1-2\nu)}\\) | \\(\frac{E}{2(1+\nu)}\\)          |                                                |                                      | \\(\frac{E}{3(1-2\nu}\\)        |
+| *K*,*E*          | \\(\frac{3K(3K-E)}{9K-E}\\)         | \\(\frac{3EK}{9K-E}\\)            |                                                | \\(\frac{3K-E}{6K}\\)                  |                               |
+| \\(\nu, K\\)       | \\(\frac{3K\nu}{1+\nu}\\)           | \\(\frac{3K(1-2\nu)}{2(1+\nu)}\\) | \\(3K(1-2\nu)\\)                                 |                                      |                               |
 
 
----
+
 # thermoelasticity
 
-----
+
 ## thermal expansion
 
 -   Thermal expansion/contraction is fairly well known
@@ -55,99 +57,99 @@ September 28, 2021
 -   Thermal deformations will alter the strain field
 -   We can decompose strain into mechanical and thermal components
 
-`$$\epsilon_{ij} = \epsilon_{ij}^M + \epsilon_{ij}^T$$`
+\\[\epsilon_{ij} = \epsilon_{ij}^M + \epsilon_{ij}^T\\]
 
-----
+
 ## thermal expansion
 
 -   Thermal strains can be written in terms of a coefficient of thermal expansion tensor
 
-`$$\epsilon_{ij}^T = \alpha_{ij}(T-T_0)$$`
+\\[\epsilon_{ij}^T = \alpha_{ij}(T-T_0)\\]
 
 -   For isotropic materials, this relationship is simplified to
 
-`$$\epsilon_{ij}^T = \alpha (T-T_0) \delta_{ij}$$`
+\\[\epsilon_{ij}^T = \alpha (T-T_0) \delta_{ij}\\]
 
-----
+
 ## thermal expansion
 
 -   We can combine the previous results with Hooke’s law to find
 
-`$$\epsilon_{ij} = \frac{1+\nu}{E}\sigma_{ij} -\frac{\nu}{E}\sigma_{kk}\delta_{ij} + \alpha (T-T_0)\delta_{ij}$$`
+\\[\epsilon_{ij} = \frac{1+\nu}{E}\sigma_{ij} -\frac{\nu}{E}\sigma_{kk}\delta_{ij} + \alpha (T-T_0)\delta_{ij}\\]
 
 -   We can also invert this relationship to find the stress
 -   Written in terms of Lamé constants, we find
 
-`$$\sigma_{ij} = \lambda \epsilon_{kk} \delta_{ij} + 2\mu \epsilon_{ij} - (3\lambda + 2\mu) \alpha (T - T_0) \delta_{ij}$$`
+\\[\sigma_{ij} = \lambda \epsilon_{kk} \delta_{ij} + 2\mu \epsilon_{ij} - (3\lambda + 2\mu) \alpha (T - T_0) \delta_{ij}\\]
 
-----
+
 ## example
 
 -   A modern-day alchemist is trying to make diamonds from charcoal.
 -   He hypothesized that it is easier to build a rigid fixture, and then force the charcoal to expand via thermal expansion, than it is to apply the necessary pressure at room temperature.
--   What temperature is needed to provide a stress of 1 GPa in the charcoal, which has `$$\alpha = 5\times10^{-6}/ ^\circ\text{C}$$`, `$E = 5 \text{ GPa}$`, `$\nu = 0.3$`
+-   What temperature is needed to provide a stress of 1 GPa in the charcoal, which has \\[\alpha = 5\times10^{-6}/ ^\circ\text{C}\\], \\(E = 5 \text{ GPa}\\), \\(\nu = 0.3\\)
 
-----
+
 ## example
 
 -   Use stress equation
 
-`$$\sigma_{ij} = \lambda \epsilon_{kk} \delta_{ij} + 2\mu \epsilon_{ij} - (3\lambda + 2\mu) \alpha (T - T_0)\delta_{ij}$$`
+\\[\sigma_{ij} = \lambda \epsilon_{kk} \delta_{ij} + 2\mu \epsilon_{ij} - (3\lambda + 2\mu) \alpha (T - T_0)\delta_{ij}\\]
 
 -   Convert material properties to Lamé constants
 
----
+
 # material symmetries
 
-----
+
 ## monoclinic symmetry
 
 -   *Monoclinic symmetry* means the material is symmetric about one axis
 -   This symmetry is common in many types of crystals
--   e.g. the `$x_i^\prime$` coordinate system is given by
+-   e.g. the \\(x_i^\prime\\) coordinate system is given by
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\hat{e}_1 &= \langle 1, 0, 0 \rangle\\
 	\hat{e}_2 &= \langle 0, 1, 0 \rangle\\
 	\hat{e}_3 &= \langle 0, 0, -1 \rangle\\
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## monoclinic symmetry
 
 -   This gives
 
-`$$Q_{ij} = \begin{bmatrix}
+\\[Q_{ij} = \begin{bmatrix}
 	1 & 0 & 0 \\
 	0 & 1 & 0 \\
 	0 & 0 & -1
-\end{bmatrix}$$`
+\end{bmatrix}\\]
 
-----
+
 ## monoclinic symmetry
 
 -   The transformed stress is given by
 
-`$$\sigma_{ij}^\prime = \begin{bmatrix}
+\\[\sigma_{ij}^\prime = \begin{bmatrix}
 	\sigma_{11} & \sigma_{12} & -\sigma_{13}\\
 	\sigma_{12} & \sigma_{22} & -\sigma_{23}\\
 	-\sigma_{13} & -\sigma_{23} & \sigma_{33}\\
-\end{bmatrix}$$`
+\end{bmatrix}\\]
 
 -   Similarly we can transform the strain tensor
 
-`$$\epsilon_{ij}^\prime = \begin{bmatrix}
+\\[\epsilon_{ij}^\prime = \begin{bmatrix}
 	\epsilon_{11} & \epsilon_{12} & -\epsilon_{13}\\
 	\epsilon_{12} & \epsilon_{22} & -\epsilon_{23}\\
 	-\epsilon_{13} & -\epsilon_{23} & \epsilon_{33}\\
-\end{bmatrix}$$`
+\end{bmatrix}\\]
 
-----
+
 ## monoclinic symmetry
 
--   Symmetry requires that `$\sigma_{ij} = \sigma_{ij}^\prime$`, therefore
+-   Symmetry requires that \\(\sigma_{ij} = \sigma_{ij}^\prime\\), therefore
 
-`$$\begin{bmatrix}
+\\[\begin{bmatrix}
 	C_{11} & C_{12} & C_{13} & C_{14} & C_{15} & C_{16}\\
 	C_{21} & C_{22} & C_{23} & C_{24} & C_{25} & C_{26}\\
 	C_{31} & C_{32} & C_{33} & C_{34} & C_{35} & C_{36}\\
@@ -161,46 +163,46 @@ September 28, 2021
 	-C_{41} & -C_{42} & -C_{43} & C_{44} & C_{45} & -C_{46}\\
 	-C_{51} & -C_{52} & -C_{53} & C_{54} & C_{55} & -C_{56}\\
 	C_{61} & C_{62} & C_{63} & -C_{64} & -C_{65} & C_{66}\\
-\end{bmatrix}$$`
+\end{bmatrix}\\]
 
-----
+
 ## monoclinic symmetry
 
 -   The only way for this equation to be satisfied is if
 
-`$$C_{ij} = \begin{bmatrix}
+\\[C_{ij} = \begin{bmatrix}
 	C_{11} & C_{12} & C_{13} & 0 & 0 & C_{16}\\
 	C_{21} & C_{22} & C_{23} & 0 & 0 & C_{26}\\
 	C_{31} & C_{32} & C_{33} & 0 & 0 & C_{36}\\
 	0 & 0 & 0 & C_{44} & C_{45} & 0\\
 	0 & 0 & 0 & C_{54} & C_{55} & 0\\
 	C_{61} & C_{62} & C_{63} & 0 & 0 & C_{66}\\
-\end{bmatrix}$$`
+\end{bmatrix}\\]
 
 -   This has only 13 independent terms
 
-----
+
 ## orthotropic symmetry
 
 -   *Orthotropic symmetry* is essentially monoclinic symmetry repeated about all three axes
 -   Composite materials are often treated as orthotropic, as are many crystals
 -   If we use the same method multiple times, we find that
 
-----
+
 ## orthotropic symmetry
 
-`$$C_{ij} = \begin{bmatrix}
+\\[C_{ij} = \begin{bmatrix}
 	C_{11} & C_{12} & C_{13} & 0 & 0 & 0\\
 	C_{21} & C_{22} & C_{23} & 0 & 0 & 0\\
 	C_{31} & C_{32} & C_{33} & 0 & 0 & 0\\
 	0 & 0 & 0 & C_{44} & 0 & 0\\
 	0 & 0 & 0 & 0 & C_{55} & 0\\
 	0 & 0 & 0 & 0 & 0 & C_{66}\\
-\end{bmatrix}$$`
+\end{bmatrix}\\]
 
 -   Which has only 9 independent terms
 
-----
+
 ## transversely isotropic symmetry
 
 -   *Transverse isotropy* occurs when a material is monoclinic in one axis, and perfectly symmetric (isotropic) in the other plane
@@ -208,105 +210,105 @@ September 28, 2021
 -   In the fiber direction, the material is monoclinic
 -   Perpendicular to the fiber, the material is the same in any direction (isotropic)
 
-----
+
 ## transverse isotropy
 
 -   To satisfy these conditions, the stiffness must be
 
-`$$C_{ij} = \begin{bmatrix}
+\\[C_{ij} = \begin{bmatrix}
 	C_{11} & C_{12} & C_{13} & 0 & 0 & 0\\
 	C_{12} & C_{11} & C_{13} & 0 & 0 & 0\\
 	C_{13} & C_{13} & C_{33} & 0 & 0 & 0\\
 	0 & 0 & 0 & C_{44} & 0 & 0\\
 	0 & 0 & 0 & 0 & C_{44} & 0\\
 	0 & 0 & 0 & 0 & 0 & \frac{1}{2}(C_{11}-C_{12})
-\end{bmatrix}$$`
+\end{bmatrix}\\]
 
 -   Here there are five independent material constants
 
-----
+
 ## isotropic symmetry
 
 -   An *isotropic* material has the same properties in any direction
 -   Therefore the stiffness matrix must be unchanged in any rotation
 
-`$$C_{ij} = \begin{bmatrix}
+\\[C_{ij} = \begin{bmatrix}
 	C_{11} & C_{12} & C_{12} & 0 & 0 & 0\\
 	C_{12} & C_{11} & C_{12} & 0 & 0 & 0\\
 	C_{12} & C_{12} & C_{11} & 0 & 0 & 0\\
 	0 & 0 & 0 & \frac{1}{2}(C_{11}-C_{12}) & 0 & 0\\
 	0 & 0 & 0 & 0 & \frac{1}{2}(C_{11}-C_{12}) & 0\\
 	0 & 0 & 0 & 0 & 0 & \frac{1}{2}(C_{11}-C_{12})
-\end{bmatrix}$$`
+\end{bmatrix}\\]
 
----
+
 # poisson’s ratio
 
-----
+
 ## poisson’s ratio
 
--   Poisson’s ratio, `$\nu$`, is defined as
+-   Poisson’s ratio, \\(\nu\\), is defined as
 
-`$$\nu = -\frac{d \epsilon_{transverse}}{d \epsilon_{axial}}$$`
+\\[\nu = -\frac{d \epsilon_{transverse}}{d \epsilon_{axial}}\\]
 
 ![poisson's ratio](../images/poissons.png)
 
-----
+
 ## poisson’s ratio
 
 -   For isotropic materials, there is only one Poisson’s ratio in the material
 -   For anisotropic materials (transversely isotropic, orthotropic, etc.) there are multiple
--   The subscript notation for Poisson’s ratios is `$\nu_{ij}$` where extension is applied in direction *i*, with a resulting contraction in direction *j*
+-   The subscript notation for Poisson’s ratios is \\(\nu_{ij}\\) where extension is applied in direction *i*, with a resulting contraction in direction *j*
 
-----
+
 ## poisson’s ratio
 
 -   In an orthotropic material, there are three independent Poisson’s ratios, the others may be obtained from the following relationship
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\frac{\nu_{21}}{E_2} &= \frac{\nu_{12}}{E_1}\\
 	\frac{\nu_{31}}{E_3} &= \frac{\nu_{13}}{E_1}\\
 	\frac{\nu_{32}}{E_3} &= \frac{\nu_{23}}{E_2}
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## poisson’s ratio
 
 -   In transversely isotropic materials, there are only two independent Poisson’s ratios
 -   If the *x*-direction is monoclinic, then the Poisson’s ratios are
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\nu_{12} &= \nu_{13}\\
 	\nu_{21} &= \nu_{31}\\
 	\nu_{23} &= \nu_{32}\\
 	\frac{\nu_{12}}{E_1} &= \frac{\nu_{21}}{E_2}
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## poisson’s ratio
 
 -   Physical considerations
 -   You will prove this in the homework, but if we require the moduli to be positive, we find that the Poisson’s ratio must be
 
-`$$-1 < \nu < \frac{1}{2}$$`
+\\[-1 < \nu < \frac{1}{2}\\]
 
----
+
 # group problems
 
-----
+
 ## group one
 
 -   Consider some arbitrary, isotropic material under uni-axial tension
--   What occurs when `$\nu = \frac{1}{2}$`? 
--   What about when `$\nu < 0$`?
+-   What occurs when \\(\nu = \frac{1}{2}\\)? 
+-   What about when \\(\nu < 0\\)?
 
-----
+
 ## group two
 
--   Consider a `$\pm 45 ^\circ$` laminate (which has an in-plane poisson’s ratio of 0.8) bonded on top of aluminum (which has an in-plane poisson’s ratio of 0.3)
+-   Consider a \\(\pm 45 ^\circ\\) laminate (which has an in-plane poisson’s ratio of 0.8) bonded on top of aluminum (which has an in-plane poisson’s ratio of 0.3)
 -   What happens when this is loaded in tension? Why might this create problems in the adhesive joining the two?
 
-----
+
 ## group three
 
 -   Use the table provided in these notes (or in the text) to re-write Hooke’s Law in terms of Young’s Modulus, *E* and shear modulus *G*.

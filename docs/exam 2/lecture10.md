@@ -217,7 +217,7 @@ September 21, 2021
 
 -   Expanding the derivative using the chain rule gives
 
-`$$\iiint_V [\epsilon_{ijk}x_{j,l}\sigma_{lk} \epsilon_{ijk}x_j\sigma_{lk,l} + \epsilon_{ijk}x_jF_k ]dV = 0$$`
+`$$\iiint_V [\epsilon_{ijk}x_{j,l}\sigma_{lk} + \epsilon_{ijk}x_j\sigma_{lk,l} + \epsilon_{ijk}x_jF_k ]dV = 0$$`
 
 -   Which can be simplified (recall that `$\sigma_{ji,j} + F_i = 0$`)
 

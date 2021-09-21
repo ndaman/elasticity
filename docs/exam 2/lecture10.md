@@ -222,8 +222,8 @@ September 21, 2021
 -   Which can be simplified (recall that `$\sigma_{ji,j} + F_i = 0$`)
 
 `$$\begin{aligned}
-	\iiint_V \[ \epsilon_{ijk}\delta_{jl}\sigma_{lk} + \epsilon_{ijk}x_j\sigma_{lk,l} + \epsilon_{ijk}x_jF_k \] dV &= 0\\
-	\iiint_V \[ \epsilon_{ijk}\sigma_{jk} - \epsilon_{ijk}x_jF_k + \epsilon_{ijk}x_jF_k \] dV &= 0\\
+	\iiint_V [ \epsilon_{ijk}\delta_{jl}\sigma_{lk} + \epsilon_{ijk}x_j\sigma_{lk,l} + \epsilon_{ijk}x_jF_k ] dV &= 0\\
+	\iiint_V [ \epsilon_{ijk}\sigma_{jk} - \epsilon_{ijk}x_jF_k + \epsilon_{ijk}x_jF_k ] dV &= 0\\
 	\iiint_V \epsilon_{ijk}\sigma_{jk} dV &= 0
 \end{aligned}$$`
 
@@ -341,7 +341,7 @@ September 21, 2021
 
 `$$\begin{aligned}
 	\frac{\partial \sigma_r}{\partial r} + \frac{1}{r} \frac{\partial \tau_{r \phi}}{\partial \phi} + \frac{1}{r \sin \phi}\frac{\partial \tau_{r\theta}}{\partial \theta} + \frac{1}{r}(2\sigma_r - \sigma_\phi - \sigma_\theta + \tau_{r\phi}\cot \phi) + F_r &= 0\\
-	\frac{\partial \tau_{r \phi}}{\partial r} + \frac{1}{r} \frac{\partial \sigma_\phi}{\partial \phi} + \frac{1}{r \sin \phi}\frac{\partial \tau_{\phi \theta}}{\partial \theta} + \frac{1}{r}\[(\sigma_\phi -\sigma_\theta)\cot \phi + 3\tau_{r\phi}\] + F_\phi &= 0\\
+	\frac{\partial \tau_{r \phi}}{\partial r} + \frac{1}{r} \frac{\partial \sigma_\phi}{\partial \phi} + \frac{1}{r \sin \phi}\frac{\partial \tau_{\phi \theta}}{\partial \theta} + \frac{1}{r} [(\sigma_\phi -\sigma_\theta)\cot \phi + 3\tau_{r\phi}] + F_\phi &= 0\\
 	\frac{\partial \tau_{r \theta}}{\partial r} + \frac{1}{r} \frac{\partial \tau_{\phi \theta}}{\partial \phi} + \frac{1}{r \sin \phi}\frac{\partial \sigma_\theta}{\partial \theta} + \frac{1}{r}(2 \tau_{\phi \theta}\cot \phi + 3 \tau_{r \theta}) + F_\theta &= 0
 \end{aligned}$$`
 

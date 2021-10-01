@@ -2,12 +2,13 @@
 ## Theory of Elasticity
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
-October 5, 2021
+September 30, 2021
 
 ----
 ## upcoming schedule
 
--   Oct 5 - Problem Formulation
+-   Sep 30 - Problem Formulation
+-   Oct 5 - Strain Energy
 -   Oct 7 - Exam 2 Review
 -   Oct 8 - Homework 4 Self-grade Due, Homework 5 Due
 -   (Oct 12) - Fall Break (No Class)
@@ -272,4 +273,33 @@ are the solution to that problem with body forces `$F_i^{(1)} + F_i^{(2)}$` and 
 -   Find the stress field given the governing equation
 
 `$$\frac{\partial}{\partial r} \left( \frac{1}{r} \frac{\partial}{\partial r} (ru_r)\right) = 0$$`
+
+---
+# group problems
+
+----
+## problem one - thermoelasticity
+
+As a first-order model of the problem of freezing water in a glass bottle, we treat water as a thermoelastic solid and the glass as a fixed boundary.
+Find the stress and strain field in the water as a function of the elastic properties ($E,\nu$) and the coefficient of thermal expansion ($\alpha$).
+
+----
+## problem two - inverse solution
+
+Consider the stress field
+
+`$$ \sigma = \begin{bmatrix} Ay & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}  $$`
+
+Show that this is a valid solution to an elasticity problem.
+What problem does it solve?
+
+----
+## problem three - semi-inverse
+
+To solve the problem of torsion in prismatic bars we consider the displacement field
+
+`$$ u = -\alpha y z, \qquad v = -\alpha x z, \qquad w = w(x,y) $$`
+
+Solve this problem using the boundary conditions for a solid square cross-section.
+
 

@@ -196,7 +196,7 @@ October 5, 2021
 
 -   The distortional portion can be found as
 
-`$$U_D = \frac{1}{12\mu} \left\[(\sigma_x - \sigma_y)^2 + (\sigma_y - \sigma_z)^2 + (\sigma_z-\sigma_x)^2 + 6(\tau_{xy}^2 + \tau_{yz}^2 + \tau_{zx}^2)\right\]$$`
+`$$U_D = \frac{1}{12\mu} \left[(\sigma_x - \sigma_y)^2 + (\sigma_y - \sigma_z)^2 + (\sigma_z-\sigma_x)^2 + 6(\tau_{xy}^2 + \tau_{yz}^2 + \tau_{zx}^2)\right]$$`
 
 -   Some failure theories make use of the distortional strain energy
 

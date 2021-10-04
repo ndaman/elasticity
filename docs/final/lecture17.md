@@ -275,7 +275,7 @@ October 19, 2021
 -   We integrate over the volume to find the total strain energy in the beam
 
 `$$\begin{aligned}
-	U_T &= \int_0^L \left\[\iint_A \frac{E}{2}\left(\frac{d^2 w}{dx^2}\right)^2 y^2 dA \right\] dx\\
+	U_T &= \int_0^L \left[\iint_A \frac{E}{2}\left(\frac{d^2 w}{dx^2}\right)^2 y^2 dA \right] dx\\
 	&= \int_0^L \frac{EI}{2}\left(\frac{d^2 w}{dx^2}\right)^2 dx
 \end{aligned}$$`
 

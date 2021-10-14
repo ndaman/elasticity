@@ -2,15 +2,17 @@
 ## Theory of Elasticity
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
-November 18, 2019
+October 26, 2021
 
 ----
 ## upcoming schedule
 
--   Nov 18 - Airy Stress
--   Nov 20 - Airy Stress, Homework 7 Due
--   Nov 25 - Airy Stress
--   Nov 27 - No Class (Thanksgiving Break)
+-   Oct 26 - SPTE, Airy Stress Functions
+-   Oct 28 - Airy Stress
+-   Oct 29 - Homework 6 Due
+-   Nov 2 - Airy Stress
+-   Nov 4 - Airy Stress
+-   Nov 5 - HW 7 Due, HW 6 Self-grade Due
 
 ----
 ## outline
@@ -37,10 +39,10 @@ November 18, 2019
 
 -   We assume first that body forces are derivable from a *potential function*, *V*
 
-$$\\begin{aligned}
-	F\_x &= -\\frac{\\partial V}{\\partial x}\\\\
-	F\_y &= -\\frac{\\partial V}{\\partial y}
-\\end{aligned}$$
+`$$\begin{aligned}
+	F_x &= -\frac{\partial V}{\partial x}\\
+	F_y &= -\frac{\partial V}{\partial y}
+\end{aligned}$$`
 
 ----
 ## body forces
@@ -54,13 +56,13 @@ $$\\begin{aligned}
 
 -   Consider the following
 
-$$\\begin{aligned}
-	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
-	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
-	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
-\\end{aligned}$$
+`$$\begin{aligned}
+	\sigma_{xx} &= \frac{\partial^2 \phi}{\partial y^2} + V\\
+	\sigma_{yy} &= \frac{\partial^2 \phi}{\partial x^2} + V\\
+	\tau_{xy} &= -\frac{\partial^2 \phi}{\partial x \partial y}
+\end{aligned}$$`
 
--   The function *ϕ* = *ϕ*(*x*, *y*) is known as the Airy stress function
+-   The function `$\phi = \phi(x,y)$` is known as the Airy stress function
 -   Equilibrium automatically satisfied
 
 ----
@@ -68,21 +70,21 @@ $$\\begin{aligned}
 
 -   Substituting the Airy Stress function and potential function into the relationships, we find
 
-$$\\begin{aligned}
-	\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} &= - \\frac{1-2\\nu}{1-\\nu}\\left(\\frac{\\partial^2 V}{\\partial x^2} + \\frac{\\partial^2 V}{\\partial y^2}\\right) &\\text{plane strain}\\\\
-	\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} &= - (1-\\nu)\\left(\\frac{\\partial^2 V}{\\partial x^2} + \\frac{\\partial^2 V}{\\partial y^2}\\right) &\\text{plane stress}
-\\end{aligned}$$
+`$$\begin{aligned}
+	\frac{\partial^4 \phi}{\partial x^4} + 2\frac{\partial^4 \phi}{\partial x^2 \partial y^2} + \frac{\partial^4 \phi}{\partial y^4} &= - \frac{1-2\nu}{1-\nu}\left(\frac{\partial^2 V}{\partial x^2} + \frac{\partial^2 V}{\partial y^2}\right) &\text{plane strain}\\
+	\frac{\partial^4 \phi}{\partial x^4} + 2\frac{\partial^4 \phi}{\partial x^2 \partial y^2} + \frac{\partial^4 \phi}{\partial y^4} &= - (1-\nu)\left(\frac{\partial^2 V}{\partial x^2} + \frac{\partial^2 V}{\partial y^2}\right) &\text{plane stress}
+\end{aligned}$$`
 
 ----
 ## compatibility
 
 -   If there are no body forces, or the potential function satisfies Laplace’s Equation
 
-∇<sup>2</sup>*V* = 0
+`$$\nabla^2 V = 0$$`
 
 Then both plane stress and plane strain reduce to
 
-$$\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} = 0$$
+`$$\frac{\partial^4 \phi}{\partial x^4} + 2\frac{\partial^4 \phi}{\partial x^2 \partial y^2} + \frac{\partial^4 \phi}{\partial y^4} = 0$$`
 
 ---
 # polynomial solutions
@@ -92,18 +94,18 @@ $$\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partia
 
 -   To solve a problem using Airy stress functions, we need to solve this biharmonic equation
 
-$$\\frac{\\partial^4 \\phi}{\\partial x^4} + 2\\frac{\\partial^4 \\phi}{\\partial x^2 \\partial y^2} + \\frac{\\partial^4 \\phi}{\\partial y^4} = 0$$
+`$$\frac{\partial^4 \phi}{\partial x^4} + 2\frac{\partial^4 \phi}{\partial x^2 \partial y^2} + \frac{\partial^4 \phi}{\partial y^4} = 0$$`
 
 -   One solution to this is the power series
 
-$$\\phi(x,y) = \\sum\_{m=0}^{\\infty} \\sum\_{n=0}^{\\infty} A\_{mn} x^m y^n$$
+`$$\phi(x,y) = \sum_{m=0}^{\infty} \sum_{n=0}^{\infty} A_{mn} x^m y^n$$`
 
 ----
 ## power series solution
 
--   Note that terms for *m* + *n* ≤ 1 do not contribute to the stress, and can be neglected
--   Also note that for *m* + *n* ≤ 3 compatibility is automatically satisfied
--   For *m* + *n* ≥ 4 the coefficients must be related for compatibility to be satisfied
+-   Note that terms for `$m + n \le 1$` do not contribute to the stress, and can be neglected
+-   Also note that for `$m + n \le 3$` compatibility is automatically satisfied
+-   For `$m + n \ge 4$` the coefficients must be related for compatibility to be satisfied
 
 ----
 ## example
@@ -115,22 +117,22 @@ $$\\phi(x,y) = \\sum\_{m=0}^{\\infty} \\sum\_{n=0}^{\\infty} A\_{mn} x^m y^n$$
 
 -   What are the boundary conditions in terms of the stress tensor?
 
-$$\\begin{aligned}
-	\\sigma\_x (\\pm l,y) &= T\\\\
-	\\sigma\_y (x, \\pm c) &= 0\\\\
-	\\tau\_{xy} (\\pm l, y) &= \\tau\_{xy} (x, \\pm c) = 0
-\\end{aligned}$$
+`$$\begin{aligned}
+	\sigma_x (\pm l,y) &= T\\
+	\sigma_y (x, \pm c) &= 0\\
+	\tau_{xy} (\pm l, y) &= \tau_{xy} (x, \pm c) = 0
+\end{aligned}$$`
 
 ----
 ## example
 
 -   What is the simplest form of polynomial stress function that would satisfy these boundary conditions?
 
-$$\\begin{aligned}
-	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
-	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
-	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
-\\end{aligned}$$
+`$$\begin{aligned}
+	\sigma_{xx} &= \frac{\partial^2 \phi}{\partial y^2} + V\\
+	\sigma_{yy} &= \frac{\partial^2 \phi}{\partial x^2} + V\\
+	\tau_{xy} &= -\frac{\partial^2 \phi}{\partial x \partial y}
+\end{aligned}$$`
 
 ----
 ## saint venant’s principle
@@ -152,23 +154,23 @@ $$\\begin{aligned}
 ----
 ## example
 
-$$\\begin{aligned}
-	\\sigma\_y (x, \\pm c) &= 0\\\\
-	\\tau\_{xy} (x, \\pm c) &= \\tau\_{xy} (\\pm L, y) = 0\\\\
-	\\int\_{-c}^{c}\\sigma\_x (\\pm l,y)dy &= 0\\\\
-	\\int\_{-c}^{c}\\sigma\_x (\\pm l,y)ydy &= -M
-\\end{aligned}$$
+`$$\begin{aligned}
+	\sigma_y (x, \pm c) &= 0\\
+	\tau_{xy} (x, \pm c) &= \tau_{xy} (\pm L, y) = 0\\
+	\int_{-c}^{c}\sigma_x (\pm l,y)dy &= 0\\
+	\int_{-c}^{c}\sigma_x (\pm l,y)ydy &= -M
+\end{aligned}$$`
 
 ----
 ## example
 
 -   What is the simplest form of polynomial stress function that would satisfy these boundary conditions?
 
-$$\\begin{aligned}
-	\\sigma\_{xx} &= \\frac{\\partial^2 \\phi}{\\partial y^2} + V\\\\
-	\\sigma\_{yy} &= \\frac{\\partial^2 \\phi}{\\partial x^2} + V\\\\
-	\\tau\_{xy} &= -\\frac{\\partial^2 \\phi}{\\partial x \\partial y}
-\\end{aligned}$$
+`$$\begin{aligned}
+	\sigma_{xx} &= \frac{\partial^2 \phi}{\partial y^2} + V\\
+	\sigma_{yy} &= \frac{\partial^2 \phi}{\partial x^2} + V\\
+	\tau_{xy} &= -\frac{\partial^2 \phi}{\partial x \partial y}
+\end{aligned}$$`
 
 ----
 ## example
@@ -178,21 +180,21 @@ $$\\begin{aligned}
 ----
 ## boundary conditions
 
-$$\\begin{aligned}
-	\\tau\_{xy}(x, \\pm c) &= 0\\\\
-	\\sigma\_y (x,c) &= 0\\\\
-	\\sigma\_y (x,-c) &= -w\\\\
-	\\int\_{-c}^{c} \\sigma\_x (\\pm l, y) dy &= 0\\\\
-	\\int\_{-c}^{c} \\sigma\_x (\\pm l, y) ydy &= 0\\\\
-	\\int\_{-c}^{c} \\tau\_{xy} (\\pm l, y) dy &= \\mp wl\\\\
-\\end{aligned}$$
+`$$\begin{aligned}
+	\tau_{xy}(x, \pm c) &= 0\\
+	\sigma_y (x,c) &= 0\\
+	\sigma_y (x,-c) &= -w\\
+	\int_{-c}^{c} \sigma_x (\pm l, y) dy &= 0\\
+	\int_{-c}^{c} \sigma_x (\pm l, y) ydy &= 0\\
+	\int_{-c}^{c} \tau_{xy} (\pm l, y) dy &= \mp wl\\
+\end{aligned}$$`
 
 ----
 ## example
 
 -   And find that the stress function
 
-$$\\phi = Ax^2 + Bx^2 y + Cx^2 y^3 + Dy^3 - \\frac{1}{5}C y^5$$
+`$$\phi = Ax^2 + Bx^2 y + Cx^2 y^3 + Dy^3 - \frac{1}{5}C y^5$$`
 
 -   Can satisfy the boundary conditions as well as compatibility
 
@@ -204,41 +206,41 @@ $$\\phi = Ax^2 + Bx^2 y + Cx^2 y^3 + Dy^3 - \\frac{1}{5}C y^5$$
 
 -   Reduced strain-displacement:
 
-$$\\begin{aligned}
-	\\epsilon\_r &= \\frac{\\partial u\_r}{\\partial r}, \\epsilon\_\\theta = \\frac{1}{r}\\left(u\_r + \\frac{\\partial u\_\\theta}{\\partial \\theta}\\right), \\epsilon\_z = \\frac{\\partial u\_z}{\\partial z}\\\\
-	\\epsilon\_{r \\theta} &= \\frac{1}{2} \\left(\\frac{1}{r} \\frac{\\partial u\_r}{\\partial \\theta} + \\frac{\\partial u\_\\theta}{\\partial r} - \\frac{u\_\\theta}{r}\\right) \\\\
-	\\epsilon\_{\\theta z} &= \\frac{1}{2} \\left(\\frac{\\partial u\_\\theta}{\\partial z} + \\frac{1}{r}\\frac{\\partial u\_z}{\\partial \\theta}\\right)\\\\
-	\\epsilon\_{zr} &= \\frac{1}{2}\\left(\\frac{\\partial u\_r}{\\partial z} + \\frac{\\partial u\_z}{\\partial r}\\right)
-\\end{aligned}$$
+`$$\begin{aligned}
+	\epsilon_r &= \frac{\partial u_r}{\partial r}, \epsilon_\theta = \frac{1}{r}\left(u_r + \frac{\partial u_\theta}{\partial \theta}\right), \epsilon_z = \frac{\partial u_z}{\partial z}\\
+	\epsilon_{r \theta} &= \frac{1}{2} \left(\frac{1}{r} \frac{\partial u_r}{\partial \theta} + \frac{\partial u_\theta}{\partial r} - \frac{u_\theta}{r}\right) \\
+	\epsilon_{\theta z} &= \frac{1}{2} \left(\frac{\partial u_\theta}{\partial z} + \frac{1}{r}\frac{\partial u_z}{\partial \theta}\right)\\
+	\epsilon_{zr} &= \frac{1}{2}\left(\frac{\partial u_r}{\partial z} + \frac{\partial u_z}{\partial r}\right)
+\end{aligned}$$`
 
 ----
 ## strain-displacement
 
 -   Which becomes
 
-$$\\begin{aligned}
-	\\epsilon\_r &= \\frac{\\partial u\_r}{\\partial r}\\\\
-	\\epsilon\_\\theta &= \\frac{1}{r}\\left(u\_r + \\frac{\\partial u\_\\theta}{\\partial \\theta}\\right)\\\\
-	\\epsilon\_{r \\theta} &= \\frac{1}{2} \\left(\\frac{1}{r} \\frac{\\partial u\_r}{\\partial \\theta} + \\frac{\\partial u\_\\theta}{\\partial r} - \\frac{u\_\\theta}{r}\\right) \\\\
-\\end{aligned}$$
+`$$\begin{aligned}
+	\epsilon_r &= \frac{\partial u_r}{\partial r}\\
+	\epsilon_\theta &= \frac{1}{r}\left(u_r + \frac{\partial u_\theta}{\partial \theta}\right)\\
+	\epsilon_{r \theta} &= \frac{1}{2} \left(\frac{1}{r} \frac{\partial u_r}{\partial \theta} + \frac{\partial u_\theta}{\partial r} - \frac{u_\theta}{r}\right) \\
+\end{aligned}$$`
 
 ----
 ## integration
 
 -   When we change variables in integration, we also need to account for the proper change in dV
--   *dV* = *dxdydz* ≠ *drdθdz*
+-   `$dV = dxdydz \ne dr d\theta dz$`
 -   We can find the correct *dV* by calculating the Jacobian
 
 ----
 ## jacobian
 
-$$dV = dx dy dz = |\\frac{\\partial(x,y,z)}{\\partial(r,\\theta,z)}| dr d\\theta dz$$
+`$$dV = dx dy dz = |\frac{\partial(x,y,z)}{\partial(r,\theta,z)}| dr d\theta dz$$`
 
-$$dV = \\begin{vmatrix}
-	\\frac{\\partial x}{\\partial r} & \\frac{\\partial x}{\\partial \\theta} & \\frac{\\partial x}{\\partial z}\\\\
-	\\frac{\\partial y}{\\partial r} & \\frac{\\partial y}{\\partial \\theta} & \\frac{\\partial y}{\\partial z}\\\\
-	\\frac{\\partial z}{\\partial r} & \\frac{\\partial z}{\\partial \\theta} & \\frac{\\partial z}{\\partial z}
-\\end{vmatrix} dr d\\theta dz = r dr d\\theta dz$$
+`$$dV = \begin{vmatrix}
+	\frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta} & \frac{\partial x}{\partial z}\\
+	\frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta} & \frac{\partial y}{\partial z}\\
+	\frac{\partial z}{\partial r} & \frac{\partial z}{\partial \theta} & \frac{\partial z}{\partial z}
+\end{vmatrix} dr d\theta dz = r dr d\theta dz$$`
 
 ----
 ## hooke’s law
@@ -246,20 +248,20 @@ $$dV = \\begin{vmatrix}
 -   The tensor equation for Hooke’s Law is valid in polar/cylindrical/spherical coordinates too
 -   We only need special equations when differentiating or integrating
 
-$$\\begin{aligned}
-	\\sigma\_{ij} &= \\lambda \\epsilon\_{kk}\\delta\_{ij} + 2\\mu \\epsilon\_{ij} - (3\\lambda + 2\\mu)\\alpha\\Delta T \\delta\_{ij}\\\\
-	\\epsilon\_{ij} &= \\frac{1+\\nu}{E}\\sigma\_{ij} - \\frac{\\nu}{E}\\sigma\_{kk} \\delta\_{ij} + \\alpha\\Delta T \\delta\_{ij}
-\\end{aligned}$$
+`$$\begin{aligned}
+	\sigma_{ij} &= \lambda \epsilon_{kk}\delta_{ij} + 2\mu \epsilon_{ij} - (3\lambda + 2\mu)\alpha\Delta T \delta_{ij}\\
+	\epsilon_{ij} &= \frac{1+\nu}{E}\sigma_{ij} - \frac{\nu}{E}\sigma_{kk} \delta_{ij} + \alpha\Delta T \delta_{ij}
+\end{aligned}$$`
 
 ----
 ## equilibrium
 
 -   We have already found the equilibrium equations in polar coordinates, they are
 
-$$\\begin{aligned}
-	\\frac{\\partial \\sigma\_r}{\\partial r} + \\frac{1}{r} \\frac{\\partial \\tau\_{r \\theta}}{\\partial \\theta} + \\frac{1}{r}(\\sigma\_r - \\sigma\_\\theta) + F\_r &= 0 \\\\
-	\\frac{\\partial \\tau\_{r \\theta}}{\\partial r} + \\frac{1}{r} \\frac{\\partial \\sigma\_\\theta}{\\partial \\theta} + \\frac{2}{r}\\tau\_{r\\theta} + F\_\\theta &= 0
-\\end{aligned}$$
+`$$\begin{aligned}
+	\frac{\partial \sigma_r}{\partial r} + \frac{1}{r} \frac{\partial \tau_{r \theta}}{\partial \theta} + \frac{1}{r}(\sigma_r - \sigma_\theta) + F_r &= 0 \\
+	\frac{\partial \tau_{r \theta}}{\partial r} + \frac{1}{r} \frac{\partial \sigma_\theta}{\partial \theta} + \frac{2}{r}\tau_{r\theta} + F_\theta &= 0
+\end{aligned}$$`
 
 ----
 ## equilibrium
@@ -273,92 +275,92 @@ $$\\begin{aligned}
 
 -   Substituting stress-strain relations into the compatibility equations gives
 
-$$\\begin{aligned}
-	\\nabla^2 (\\sigma\_r + \\sigma\_\\theta) &= -\\frac{1}{1-\\nu}\\left(\\frac{\\partial F\_r}{\\partial r} + \\frac{F\_r}{r} + \\frac{1}{r}\\frac{\\partial F\_\\theta}{\\partial \\theta}\\right) & \\text{(Plane Strain)}\\\\
-	\\nabla^2 (\\sigma\_r + \\sigma\_\\theta) &= -(1+\\nu)\\left(\\frac{\\partial F\_r}{\\partial r} + \\frac{F\_r}{r} + \\frac{1}{r}\\frac{\\partial F\_\\theta}{\\partial \\theta}\\right) & \\text{(Plane Stress)}
-\\end{aligned}$$
+`$$\begin{aligned}
+	\nabla^2 (\sigma_r + \sigma_\theta) &= -\frac{1}{1-\nu}\left(\frac{\partial F_r}{\partial r} + \frac{F_r}{r} + \frac{1}{r}\frac{\partial F_\theta}{\partial \theta}\right) & \text{(Plane Strain)}\\
+	\nabla^2 (\sigma_r + \sigma_\theta) &= -(1+\nu)\left(\frac{\partial F_r}{\partial r} + \frac{F_r}{r} + \frac{1}{r}\frac{\partial F_\theta}{\partial \theta}\right) & \text{(Plane Stress)}
+\end{aligned}$$`
 
 ----
 ## airy stress functions
 
 -   When the body forces are zero, we find
 
-$$\\begin{aligned}
-	\\sigma\_r &= \\frac{1}{r}\\frac{\\partial \\phi}{\\partial r} + \\frac{1}{r^2}\\frac{\\partial^2 \\phi}{\\partial \\theta^2}\\\\
-	\\sigma\_\\theta &= \\frac{\\partial^2 \\phi}{\\partial r^2}\\\\
-	\\tau\_{r\\theta} &= -\\frac{\\partial}{\\partial r} \\left( \\frac{1}{r} \\frac{\\partial \\phi}{\\partial \\theta} \\right)
-\\end{aligned}$$
+`$$\begin{aligned}
+	\sigma_r &= \frac{1}{r}\frac{\partial \phi}{\partial r} + \frac{1}{r^2}\frac{\partial^2 \phi}{\partial \theta^2}\\
+	\sigma_\theta &= \frac{\partial^2 \phi}{\partial r^2}\\
+	\tau_{r\theta} &= -\frac{\partial}{\partial r} \left( \frac{1}{r} \frac{\partial \phi}{\partial \theta} \right)
+\end{aligned}$$`
 
 ----
 ## airy stress functions
 
 -   When body forces are zero, we find the following biharmonic equation for the Beltrami-Mitchell equations
 
-∇<sup>4</sup>*ϕ* = 0
+`$$\nabla^4 \phi = 0$$`
 
 -   Where the Laplacian is
 
-$$\\nabla^2 = \\frac{\\partial^2}{\\partial r^2} + \\frac{1}{r}\\frac{\\partial}{\\partial r} + \\frac{1}{r^2} \\frac{\\partial^2}{\\partial \\theta^2}$$
+`$$\nabla^2 = \frac{\partial^2}{\partial r^2} + \frac{1}{r}\frac{\partial}{\partial r} + \frac{1}{r^2} \frac{\partial^2}{\partial \theta^2}$$`
 
 ----
 ## polar coordinates
 
 -   Recall that an Airy Stress function must satisfy the Beltrami-Mitchell compatibility equations
 
-$$\\nabla^4 \\phi = \\left(\\frac{\\partial ^2}{\\partial r^2} + \\frac{1}{r} \\frac{\\partial}{\\partial r} + \\frac{1}{r^2}\\frac{\\partial ^2}{\\partial \\theta^2}\\right)^2\\phi = 0$$
+`$$\nabla^4 \phi = \left(\frac{\partial ^2}{\partial r^2} + \frac{1}{r} \frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial ^2}{\partial \theta^2}\right)^2\phi = 0$$`
 
--   One method which gives several useful solutions assumes that the Airy Stress function has the form *ϕ*(*r*, *θ*)=*f*(*r*)*e*<sup>*bθ*</sup>
+-   One method which gives several useful solutions assumes that the Airy Stress function has the form `$\phi(r, \theta) = f(r) e^{b\theta}$`
 
 ----
 ## polar coordinates 
 
--   Substituting this into the compatibility equations (and canceling the common *e*<sup>*bθ*</sup>) term gives
+-   Substituting this into the compatibility equations (and canceling the common `$e^{b\theta}$`) term gives
 
-$$f^{\\prime \\prime \\prime \\prime} + \\frac{2}{r} f^{\\prime \\prime \\prime} - \\frac{1-2b^2}{r^2}f^{\\prime \\prime} + \\frac{1-2b^2}{r^3}f^{\\prime} + \\frac{b^2(4+b^2)}{r^4}f = 0$$
+`$$f^{\prime \prime \prime \prime} + \frac{2}{r} f^{\prime \prime \prime} - \frac{1-2b^2}{r^2}f^{\prime \prime} + \frac{1-2b^2}{r^3}f^{\prime} + \frac{b^2(4+b^2)}{r^4}f = 0$$`
 
 ----
 ## polar coordinates
 
--   To solve this, we perform a change of variables, letting *r* = *e*<sup>*ξ*</sup>, which gives
+-   To solve this, we perform a change of variables, letting `$r = e^\xi$`, which gives
 
-_f_<sup>′′′′</sup> − 4*f*<sup>′′′</sup> + (4 + 2*b*<sup>2</sup>)*f*<sup>′′</sup> − 4*b*<sup>2</sup>*f*<sup>′</sup> + *b*<sup>2</sup>(4 + *b*<sup>2</sup>)*f* = 0
+`$$r^{\prime \prime \prime \prime} = 4f^{\prime \prime \prime} + (2+2b^2}) f^{\prime \prime} - 4b^2f^\prime + b^2(4 + b^2)f = 0$$`
 
--   We now consider *f* to have the form *f* = *e*<sup>*aξ*</sup> which generates the characteristic equation
+-   We now consider *f* to have the form `$f = e^{a \xi}$` which generates the characteristic equation
 
-(*a*<sup>2</sup> + *b*<sup>2</sup>)(*a*<sup>2</sup> − 4*a* + 4 + *b*<sup>2</sup>)=0
+`$$(a^2 + b^2)(a^2 - 4a + 4 + b^2)=0$$`
 
 ----
 ## polar coordinates
 
 -   This has solutions
 
-$$\\begin{aligned}
-	a &= \\pm ib, \\pm 2ib\\\\
-	\\text{OR}\\\\
-	b &= \\pm ia, \\pm i(a-2)
-\\end{aligned}$$
+`$$\begin{aligned}
+	a &= \pm ib, \pm 2ib\\
+	\text{OR}\\
+	b &= \pm ia, \pm i(a-2)
+\end{aligned}$$`
 
 ----
 ## polar coordinates
 
--   If we consider only solutions which are periodic in *θ*, we find
+-   If we consider only solutions which are periodic in `$\theta$`, we find
 
-$$\\begin{aligned}
-	\\phi &= a\_0 + a\_1 \\log r + a\_2 r^2 + a\_3 r^2 \\log r \\\\
-	&+ (a\_4 + a\_5 \\log r + a\_6 r^2 + a\_7 r^2 \\log r)\\theta \\\\
-	&+ \\left(a\_{11}r + a\_{12}r\\log r + \\frac{a\_{13}}{r} + a\_{14}r^3 + a\_{15}r\\theta + a\_{16} r\\theta \\log r\\right) \\cos \\theta\\\\
-	&+  \\left(b\_{11}r + b\_{12}r\\log r + \\frac{b\_{13}}{r} + b\_{14}r^3 + b\_{15}r\\theta + b\_{16} r\\theta \\log r\\right) \\sin \\theta\\\\
-	&+ \\sum\_{n=2}^{\\infty} (a\_{n1}r^n + a\_{n2}r^{2+n}+a\_{n3}r^{-n}+a\_{n4}r^{2-n})\\cos n\\theta\\\\
-	&+ \\sum\_{n=2}^{\\infty} (b\_{n1}r^n + b\_{n2}r^{2+n}+a\_{n3}r^{-n}+b\_{n4}r^{2-n})\\sin n\\theta\\\\
-\\end{aligned}$$
+`$$\begin{aligned}
+	\phi &= a_0 + a_1 \log r + a_2 r^2 + a_3 r^2 \log r \\
+	&+ (a_4 + a_5 \log r + a_6 r^2 + a_7 r^2 \log r)\theta \\
+	&+ \left(a_{11}r + a_{12}r\log r + \frac{a_{13}}{r} + a_{14}r^3 + a_{15}r\theta + a_{16} r\theta \log r\right) \cos \theta\\
+	&+  \left(b_{11}r + b_{12}r\log r + \frac{b_{13}}{r} + b_{14}r^3 + b_{15}r\theta + b_{16} r\theta \log r\right) \sin \theta\\
+	&+ \sum_{n=2}^{\infty} (a_{n1}r^n + a_{n2}r^{2+n}+a_{n3}r^{-n}+a_{n4}r^{2-n})\cos n\theta\\
+	&+ \sum_{n=2}^{\infty} (b_{n1}r^n + b_{n2}r^{2+n}+a_{n3}r^{-n}+b_{n4}r^{2-n})\sin n\theta\\
+\end{aligned}$$`
 
 ----
 ## polar coordinates
 
--   For axisymmetric problems, all field quantities are independent of *θ*
+-   For axisymmetric problems, all field quantities are independent of `$\theta$`
 -   This reduces the general solution to
 
-_ϕ_ = *a*<sub>0</sub> + *a*<sub>1</sub>log*r* + *a*<sub>2</sub>*r*<sup>2</sup> + *a*<sub>3</sub>*r*<sup>2</sup>log*r*
+`$$\phi = a_0 + a_1 \log r + a_2 r^2 + a_3 r^2 log r$$`
 
 ----
 ## polar coordinates

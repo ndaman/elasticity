@@ -34,7 +34,7 @@ October 7, 2021
 ## exam format
 
 -   Similar format to last exam
--   Three problems
+-   Four problems
 -   Focus on organizing your work clearly to maximize partial credit
 
 ---

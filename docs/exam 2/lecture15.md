@@ -51,7 +51,11 @@ Find the stress and strain field in the water as a function of the elastic prope
 
 Consider the stress field
 
-`$$ \sigma = \begin{bmatrix} Ay & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}  $$`
+`$$ \sigma = \begin{bmatrix} 
+  Ay & 0 & 0 \\
+  0 & 0 & 0 \\
+  0 & 0 & 0
+\end{bmatrix}  $$`
 
 Show that this is a valid solution to an elasticity problem.
 What problem does it solve?

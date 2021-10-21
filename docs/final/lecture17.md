@@ -7,12 +7,12 @@ October 19, 2021
 ----
 ## upcoming schedule
 
--   Oct 19 - Exam Return, Virtual Work
--   Oct 21 - Airy Stress Functions
+-   Oct 21 - Exam Return, Virtual Work
 -   Oct 22 - Homework 5 Self-Grade Due
--   Oct 26 - Airy Stress
--   Oct 28 - Airy Stress
+-   Oct 26 - SPTE, Variational Calculus
+-   Oct 28 - Variational Calculus
 -   Oct 29 - Homework 6 Due
+-   Nov 2 - 2D Problems
 
 ----
 ## outline

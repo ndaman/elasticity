@@ -31,7 +31,7 @@ October 28, 2021
 -   The Euler-Lagrange equation will be the same
 -   Consider the example
 
-`$$I[y] = \int_{x_0}^{x_1} [p(x)(\dot{y})^2 + q(x) y^2 + f(x)y]dx + h_1y^2(x_1) + h_0y^2(x_0)$$`
+`$$I[y] = \int_{x_0}^{x_1} [p(x)(\dot{y})^2 + q(x) y^2 + 2 f(x)y]dx + h_1y^2(x_1) + h_0y^2(x_0)$$`
 
 ----
 ## boundaries

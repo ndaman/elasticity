@@ -1,10 +1,12 @@
-# AE731
+
 ## Theory of Elasticity
-Dr. Nicholas Smith<br/>
+Dr. Nicholas Smith
+
+
 Wichita State University, Department of Aerospace Engineering
 9 November, 2021
 
-----
+
 ## upcoming schedule
 
 -   Nov 9 - Polar Coordinates
@@ -13,7 +15,7 @@ Wichita State University, Department of Aerospace Engineering
 -   Nov 16 - Airy Stress Review
 -   Nov 18 - Complex Methods
 
-----
+
 ## outline
 
 <!-- vim-markdown-toc GFM -->
@@ -23,235 +25,235 @@ Wichita State University, Department of Aerospace Engineering
 
 <!-- vim-markdown-toc -->
 
----
+
 # polar coordinates
 
-----
+
 ## strain-displacement
 
 -   Reduced strain-displacement:
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\epsilon_r &= \frac{\partial u_r}{\partial r}, \epsilon_\theta = \frac{1}{r}\left(u_r + \frac{\partial u_\theta}{\partial \theta}\right), \epsilon_z = \frac{\partial u_z}{\partial z}\\
 	\epsilon_{r \theta} &= \frac{1}{2} \left(\frac{1}{r} \frac{\partial u_r}{\partial \theta} + \frac{\partial u_\theta}{\partial r} - \frac{u_\theta}{r}\right) \\
 	\epsilon_{\theta z} &= \frac{1}{2} \left(\frac{\partial u_\theta}{\partial z} + \frac{1}{r}\frac{\partial u_z}{\partial \theta}\right)\\
 	\epsilon_{zr} &= \frac{1}{2}\left(\frac{\partial u_r}{\partial z} + \frac{\partial u_z}{\partial r}\right)
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## strain-displacement
 
 -   Which becomes
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\epsilon_r &= \frac{\partial u_r}{\partial r}\\
 	\epsilon_\theta &= \frac{1}{r}\left(u_r + \frac{\partial u_\theta}{\partial \theta}\right)\\
 	\epsilon_{r \theta} &= \frac{1}{2} \left(\frac{1}{r} \frac{\partial u_r}{\partial \theta} + \frac{\partial u_\theta}{\partial r} - \frac{u_\theta}{r}\right) \\
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## integration
 
 -   When we change variables in integration, we also need to account for the proper change in dV
 
-`$$ dV = dx dy dz \ne dr d\theta dz $$`
+\\[ dV = dx dy dz \ne dr d\theta dz \\]
 -   We can find the correct *dV* by calculating the Jacobian
 
-----
+
 ## jacobian
 
-`$$dV = dx dy dz = |\frac{\partial(x,y,z)}{\partial(r,\theta,z)}| dr d\theta dz$$`
+\\[dV = dx dy dz = |\frac{\partial(x,y,z)}{\partial(r,\theta,z)}| dr d\theta dz\\]
 
-`$$dV = \begin{vmatrix}
+\\[dV = \begin{vmatrix}
 	\frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta} & \frac{\partial x}{\partial z}\\
 	\frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta} & \frac{\partial y}{\partial z}\\
 	\frac{\partial z}{\partial r} & \frac{\partial z}{\partial \theta} & \frac{\partial z}{\partial z}
-\end{vmatrix} dr d\theta dz = r dr d\theta dz$$`
+\end{vmatrix} dr d\theta dz = r dr d\theta dz\\]
 
-----
+
 ## hooke’s law
 
 -   The tensor equation for Hooke’s Law is valid in polar/cylindrical/spherical coordinates too
 -   We only need special equations when differentiating or integrating
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\sigma_{ij} &= \lambda \epsilon_{kk}\delta_{ij} + 2\mu \epsilon_{ij} - (3\lambda + 2\mu)\alpha\Delta T \delta_{ij}\\
 	\epsilon_{ij} &= \frac{1+\nu}{E}\sigma_{ij} - \frac{\nu}{E}\sigma_{kk} \delta_{ij} + \alpha\Delta T \delta_{ij}
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## equilibrium
 
 -   We have already found the equilibrium equations in polar coordinates, they are
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\frac{\partial \sigma_r}{\partial r} + \frac{1}{r} \frac{\partial \tau_{r \theta}}{\partial \theta} + \frac{1}{r}(\sigma_r - \sigma_\theta) + F_r &= 0 \\
 	\frac{\partial \tau_{r \theta}}{\partial r} + \frac{1}{r} \frac{\partial \sigma_\theta}{\partial \theta} + \frac{2}{r}\tau_{r\theta} + F_\theta &= 0
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## equilibrium
 
 -   The equilibrium equations can be written in terms of displacement (Navier equations)
 -   These are only useful when using a displacement formulation, but we are using stress functions
 -   Instead we need the Beltrami-Mitchell compatibility equations
 
-----
+
 ## compatibility
 
 -   Substituting stress-strain relations into the compatibility equations gives
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\nabla^2 (\sigma_r + \sigma_\theta) &= -\frac{1}{1-\nu}\left(\frac{\partial F_r}{\partial r} + \frac{F_r}{r} + \frac{1}{r}\frac{\partial F_\theta}{\partial \theta}\right) & \text{(Plane Strain)}\\
 	\nabla^2 (\sigma_r + \sigma_\theta) &= -(1+\nu)\left(\frac{\partial F_r}{\partial r} + \frac{F_r}{r} + \frac{1}{r}\frac{\partial F_\theta}{\partial \theta}\right) & \text{(Plane Stress)}
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## airy stress functions
 
 -   When the body forces are zero, we find
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\sigma_r &= \frac{1}{r}\frac{\partial \phi}{\partial r} + \frac{1}{r^2}\frac{\partial^2 \phi}{\partial \theta^2}\\
 	\sigma_\theta &= \frac{\partial^2 \phi}{\partial r^2}\\
 	\tau_{r\theta} &= -\frac{\partial}{\partial r} \left( \frac{1}{r} \frac{\partial \phi}{\partial \theta} \right)
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## airy stress functions
 
 -   When body forces are zero, we find the following biharmonic equation for the Beltrami-Mitchell equations
 
-`$$ \nabla ^4 \phi = 0$$`
+\\[ \nabla ^4 \phi = 0\\]
 
 -   Where the Laplacian is
 
-`$$\nabla^2 = \frac{\partial^2}{\partial r^2} + \frac{1}{r}\frac{\partial}{\partial r} + \frac{1}{r^2} \frac{\partial^2}{\partial \theta^2}$$`
+\\[\nabla^2 = \frac{\partial^2}{\partial r^2} + \frac{1}{r}\frac{\partial}{\partial r} + \frac{1}{r^2} \frac{\partial^2}{\partial \theta^2}\\]
 
-----
+
 ## polar coordinates
 
 -   Recall that an Airy Stress function must satisfy the Beltrami-Mitchell compatibility equations
 
-`$$\nabla^4 \phi = \left(\frac{\partial ^2}{\partial r^2} + \frac{1}{r} \frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial ^2}{\partial \theta^2}\right)^2\phi = 0$$`
+\\[\nabla^4 \phi = \left(\frac{\partial ^2}{\partial r^2} + \frac{1}{r} \frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial ^2}{\partial \theta^2}\right)^2\phi = 0\\]
 
--   One method which gives several useful solutions assumes that the Airy Stress function has the form `$\phi(r,\theta) = f(r) e^{b\theta}$`
+-   One method which gives several useful solutions assumes that the Airy Stress function has the form \\(\phi(r,\theta) = f(r) e^{b\theta}\\)
 
-----
+
 ## polar coordinates 
 
--   Substituting this into the compatibility equations (and canceling the common `$e^{b\theta}$`) term gives
+-   Substituting this into the compatibility equations (and canceling the common \\(e^{b\theta}\\)) term gives
 
-`$$f^{\prime \prime \prime \prime} + \frac{2}{r} f^{\prime \prime \prime} - \frac{1-2b^2}{r^2}f^{\prime \prime} + \frac{1-2b^2}{r^3}f^{\prime} + \frac{b^2(4+b^2)}{r^4}f = 0$$`
+\\[f^{\prime \prime \prime \prime} + \frac{2}{r} f^{\prime \prime \prime} - \frac{1-2b^2}{r^2}f^{\prime \prime} + \frac{1-2b^2}{r^3}f^{\prime} + \frac{b^2(4+b^2)}{r^4}f = 0\\]
 
-----
+
 ## polar coordinates
 
 -   To solve this, we perform a change of variables, letting `r = e^\xi$`, which gives
 
-`$$ f^{\prime \prime \prime \prime} - 4f^{\prime \prime \prime} + (4 + 2b^2)f^{\prime \prime} - 4b^2 f^\prime + b^2(4 + b^2)f = 0$$`
+\\[ f^{\prime \prime \prime \prime} - 4f^{\prime \prime \prime} + (4 + 2b^2)f^{\prime \prime} - 4b^2 f^\prime + b^2(4 + b^2)f = 0\\]
 
--   We now consider *f* to have the form `$f = e^{a \xi}$` which generates the characteristic equation
+-   We now consider *f* to have the form \\(f = e^{a \xi}\\) which generates the characteristic equation
 
-`$$(a^2 + b^2)(a^2 - 4a + 4 + b^2) = 0$$`
+\\[(a^2 + b^2)(a^2 - 4a + 4 + b^2) = 0\\]
 
-----
+
 ## polar coordinates
 
 -   This has solutions
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	a &= \pm ib, \pm 2ib\\
 	\text{OR}\\
 	b &= \pm ia, \pm i(a-2)
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## polar coordinates
 
--   If we consider only solutions which are periodic in `$\theta$`, we find
+-   If we consider only solutions which are periodic in \\(\theta\\), we find
 
-`$$\begin{aligned}
+\\[\begin{aligned}
 	\phi &= a_0 + a_1 \log r + a_2 r^2 + a_3 r^2 \log r \\
 	&+ (a_4 + a_5 \log r + a_6 r^2 + a_7 r^2 \log r)\theta \\
 	&+ \left(a_{11}r + a_{12}r\log r + \frac{a_{13}}{r} + a_{14}r^3 + a_{15}r\theta + a_{16} r\theta \log r\right) \cos \theta\\
 	&+  \left(b_{11}r + b_{12}r\log r + \frac{b_{13}}{r} + b_{14}r^3 + b_{15}r\theta + b_{16} r\theta \log r\right) \sin \theta\\
 	&+ \sum_{n=2}^{\infty} (a_{n1}r^n + a_{n2}r^{2+n}+a_{n3}r^{-n}+a_{n4}r^{2-n})\cos n\theta\\
 	&+ \sum_{n=2}^{\infty} (b_{n1}r^n + b_{n2}r^{2+n}+a_{n3}r^{-n}+b_{n4}r^{2-n})\sin n\theta\\
-\end{aligned}$$`
+\end{aligned}\\]
 
-----
+
 ## polar coordinates
 
--   For axisymmetric problems, all field quantities are independent of `$\theta$`
+-   For axisymmetric problems, all field quantities are independent of \\(\theta\\)
 -   This reduces the general solution to
 
-`$$ \phi = a_0 + a_1 \log r + a_2 r^2 + a_3 r^2 \log r $$`
+\\[ \phi = a_0 + a_1 \log r + a_2 r^2 + a_3 r^2 \log r \\]
 
-----
+
 ## polar coordinates
 
 ![table with pre-calculated airy stress terms in polar coordinates](../images/polar-table1.png)
 
-----
+
 ## polar coordinates
 
 ![continued table of polar coordinate airy stress terms](../images/polar-table2.png)
 
----
+
 # examples
 
-----
+
 ## tube under uniform pressure
 
 ![tube under uniform pressure](../images/tube.PNG) <!-- .element width="40%" -->
 
-----
+
 ## pressurized hole
 
 ![pressurized hole](../images/pressure_hole.PNG) <!-- .element width="50%" -->
 
-----
+
 ## stress-free hole in tension
 
 ![hole in tension](../images/tension_hole.PNG) <!-- .element width="60%" -->
 
-----
+
 ## stress-free hole in tension
 
 ![plot of stress around hole](../images/plot.PNG) <!-- .element width="50%" -->
 
-----
+
 ## concentrated force
 
 ![concentrated force problem](../images/concentrated.PNG) <!-- .element width="50%" -->
 
-----
+
 ## concentrated force
 
 ![flamant solution](../images/flamant1.PNG) <!-- .element width="60%" -->
 
-----
+
 ## concentrated force
 
 ![flamant solution](../images/flamant2.PNG) <!-- .element width="60%" -->
 
-----
+
 ## wedge
 
 ![wedge problem](../images/wedge.PNG) <!-- .element width="50%" -->
 
-----
+
 ## notch/crack
 
 ![notch or crack problem](../images/crack.PNG) <!-- .element width="60%" -->
 
-----
+
 ## curved beam
 
 ![solution for a curved beam](../images/curved_beam.PNG)
 
-----
+
 ## rotating disk
 
 ![rotating disk problem](../images/rotating_disk.PNG)

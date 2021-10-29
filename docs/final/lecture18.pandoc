@@ -4,17 +4,17 @@ Dr. Nicholas Smith
 
 
 Wichita State University, Department of Aerospace Engineering
-October 21, 2021
+2 November, 2021
 
 
 ## upcoming schedule
 
--   Oct 21 - Airy Stress Functions
--   Oct 22 - Homework 5 Self-Grade Due
--   Oct 26 - SPTE, Airy Stress
--   Oct 28 - Airy Stress
--   Oct 29 - Homework 6 Due
--   Nov 2 - Airy Stress
+-   Nov 2 - 2D Problems
+-   Nov 4 - Airy Stress
+-   Nov 5 - Homework 6 Self-Grade Due
+-   Nov 9 - Polar Coordinates
+-   Nov 11 - Micromechanics Project Presentation
+-   Nov 12 - Homework 7 Due
 
 
 ## outline
@@ -263,10 +263,10 @@ October 21, 2021
 -   We can convert between plane strain and plane stress by replacing *E* and \\(\nu\\)
 
 
-|                              |             *E*             |      \\(\nu\\)      |
-|:----------------------------:|:---------------------------:|:-----------------:|
-| Plane stress to plane strain |     $\frac{E}{1-\nu^2}$     | $\frac{v}{1-\nu}$ |
-| Plane strain to plane stress | $\frac{E(1+2\nu)}{1+\nu^2}$ | $\frac{v}{1+\nu}$ |
+|                              |              *E*              |       \\(\nu\\)       |
+|:----------------------------:|:-----------------------------:|:-------------------:|
+| Plane stress to plane strain |     \\(\frac{E}{1-\nu^2}\\)     | \\(\frac{v}{1-\nu}\\) |
+| Plane strain to plane stress | \\(\frac{E(1+2\nu)}{1+\nu^2}\\) | \\(\frac{v}{1+\nu}\\) |
 
 -   When \\(\nu = 0\\), plane strain and plane stress give identical results
 

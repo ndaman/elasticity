@@ -147,7 +147,7 @@ Wichita State University, Department of Aerospace Engineering
 ----
 ## polar coordinates
 
--   To solve this, we perform a change of variables, letting `r = e^\xi$`, which gives
+-   To solve this, we perform a change of variables, letting `$r = e^\xi$`, which gives
 
 `$$ f^{\prime \prime \prime \prime} - 4f^{\prime \prime \prime} + (4 + 2b^2)f^{\prime \prime} - 4b^2 f^\prime + b^2(4 + b^2)f = 0$$`
 

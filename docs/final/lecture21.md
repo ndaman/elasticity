@@ -2,12 +2,11 @@
 ## Theory of Elasticity
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering<br/>
-18 November, 2021
+23 November, 2021
 
 ----
 ## upcoming schedule
 
--   19 Nov - HW 7 Due
 -   23 Nov - Complex Methods
 -   25 Nov - Thanksgiving (No Class)
 -   30 Nov - Complex Methods
@@ -20,7 +19,7 @@ Wichita State University, Department of Aerospace Engineering<br/>
 
 <!-- vim-markdown-toc GFM -->
 
-* group problems
+* group problems, review
 * complex variable methods
 * research and courses
 
@@ -72,6 +71,45 @@ Wichita State University, Department of Aerospace Engineering<br/>
 -   We also define the complex conjugate of the complex function
 
 `$$\bar{f(z)} = u(x,y) - i v(x,y)$$`
+
+----
+## derivatives
+
+- We can use complex conjugates to define derivatives of complex functions
+
+`$$ \frac{\partial}{\partial x} = \frac{\partial}{\partial z} + \frac{\partial}{\partial \bar{z}} $$`
+`$$ \frac{\partial}{\partial y} = i\left(\frac{\partial}{\partial z} - \frac{\partial}{\partial \bar{z}} \right)$$`
+
+----
+## complex plane strain
+
+`$$ \begin{aligned}
+  \sigma_x &= \lambda \left( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} \right) + 2\mu \frac{\partial u}{\partial x} \\
+  \sigma_x &= \lambda \left( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} \right) + 2\mu \frac{\partial v}{\partial y} \\
+  \tau_{xy} &= \mu \left( \frac{\partial u}{\partial y} + \frac{\partial v}{\partial x} \right) 
+\end{aligned}$$`
+
+----
+## Airy stress compatibility
+
+`$$ \frac{\partial ^4 \phi}{\partial z^2 \partial \bar{z}^2} = 0 $$`
+
+----
+## complex Airy stress
+
+`$$ \phi (z, \bar{z}) = \frac{1}{2} ( z \bar{\gamma(z)} + \bar{z} \gamma{z} + \xi(z) + \bar{\xi(z)})$$`
+
+`$$ \phi (z, \bar{z}) = \Re( \bar{z} \gamma(z) + \xi(z)) $$`
+
+----
+## complex potentials
+
+- It is more convenient to write stresses directly in terms of complex potentials
+- These are derived by combining complex Airy stress functions with Navier's equations
+`$$ \begin{aligned} 
+  \sigma_x + \sigma_y &= 2(\gamma^\prime(z) + \bar{\gamma^\prime(z)})\\
+  \sigma_y - \sigma_x + 2 i \tau_{xy} &= 2(\bar{z}\gamma^{\prime \prime}(z) + \psi^\prime(z))
+\end{aligned}$$`
 
 ----
 ## uses for complex variables
@@ -141,7 +179,7 @@ Wichita State University, Department of Aerospace Engineering<br/>
 ----
 ## micromechanics and multi-scale modeling
 
--   AE 760AA, odd years Spring
+-   AE 760AA, even years Spring
 -   Analytic and computational methods for multi-scale modeling
 -   Particularly applicable to various forms of composites (3D printed, molded composites, etc.)
 

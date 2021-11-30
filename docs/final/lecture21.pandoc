@@ -101,9 +101,9 @@ Wichita State University, Department of Aerospace Engineering
 
 ## complex Airy stress
 
-\\[ \phi (z, \bar{z}) = \frac{1}{2} ( z \bar{\gamma(z)} + \bar{z} \gamma{z} + \xi(z) + \bar{\xi(z)})\\]
+\\[ \phi (z, \bar{z}) = \frac{1}{2} ( z \bar{\gamma(z)} + \bar{z} \gamma{z} + \chi(z) + \bar{\chi(z)})\\]
 
-\\[ \phi (z, \bar{z}) = \Re( \bar{z} \gamma(z) + \xi(z)) \\]
+\\[ \phi (z, \bar{z}) = \Re( \bar{z} \gamma(z) + \chi(z)) \\]
 
 
 ## complex potentials

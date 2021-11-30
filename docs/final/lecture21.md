@@ -2,13 +2,11 @@
 ## Theory of Elasticity
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering<br/>
-23 November, 2021
+30 November, 2021
 
 ----
 ## upcoming schedule
 
--   23 Nov - Complex Methods
--   25 Nov - Thanksgiving (No Class)
 -   30 Nov - Complex Methods
 -   2 Dec - Final Exam Review
 -   3 Dec - HW 8 Due, HW 7 Self-Grade Due
@@ -97,9 +95,9 @@ Wichita State University, Department of Aerospace Engineering<br/>
 ----
 ## complex Airy stress
 
-`$$ \phi (z, \bar{z}) = \frac{1}{2} ( z \bar{\gamma(z)} + \bar{z} \gamma{z} + \xi(z) + \bar{\xi(z)})$$`
+`$$ \phi (z, \bar{z}) = \frac{1}{2} ( z \bar{\gamma(z)} + \bar{z} \gamma{z} + \chi(z) + \bar{\chi(z)})$$`
 
-`$$ \phi (z, \bar{z}) = \Re( \bar{z} \gamma(z) + \xi(z)) $$`
+`$$ \phi (z, \bar{z}) = \Re( \bar{z} \gamma(z) + \chi(z)) $$`
 
 ----
 ## complex potentials
